@@ -1,0 +1,92 @@
+{
+  "folder": "fJhZSFHohYZEbn03",
+  "name": "Bleeding",
+  "type": "feat",
+  "img": "icons/skills/wounds/blood-drip-droplet-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><span style=\"font-family:sans-serif\">Every round that a creature is bleeding, they must succeed a Constitution saving throw DC 15 or take 1D4+number of stacks, and gain another stack of bleeding.<br /><br />Bleeding can be cured with <a href=\"https://www.dandwiki.com/wiki/5e_SRD:Lesser_Restoration\" title=\"5e SRD:Lesser Restoration\" style=\"text-decoration:none;color:rgb(6, 69, 173);background:none rgb(253, 249, 211);font-family:sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal\">lesser restoration</a> . If Bleeding is at Stack 3 or higher, you will need <a href=\"https://www.dandwiki.com/wiki/5e_SRD:Greater_Restoration\" title=\"5e SRD:Greater Restoration\" style=\"text-decoration:none;color:rgb(6, 69, 173);background:none rgb(253, 249, 211);font-family:sans-serif;font-size:14px;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-indent:0px;text-transform:none;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;white-space:normal\">greater restoration</a>. If the weapon used to cause the bleeding has a magical bonus to it, you need to cast a spell slot higher to heal it (eg. +3 longsword needs a lesser restoration of spell slot 5 or higher). Any effect that would stabilize a creature can be used to reduce Bleeding by 1 stage.</span></p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "",
+      "rules": "2014",
+      "revision": 1
+    },
+    "cover": null,
+    "crewed": false,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "prerequisites": {
+      "level": null,
+      "repeatable": false
+    },
+    "properties": [],
+    "requirements": "",
+    "identifier": "bleeding",
+    "activities": {},
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "flags": {
+    "magicitems": {
+      "enabled": false,
+      "default": "",
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "midiProperties": {
+      "confirmTargets": "default",
+      "autoFailFriendly": false,
+      "autoSaveFriendly": false,
+      "critOther": false,
+      "offHandWeapon": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "noConcentrationCheck": false,
+      "toggleEffect": false,
+      "ignoreTotalCover": false,
+      "idr": false,
+      "idi": false,
+      "idv": false,
+      "ida": false
+    },
+    "midi-qol": {
+      "rollAttackPerTarget": "default",
+      "itemCondition": "",
+      "effectCondition": "",
+      "forceCEOff": false
+    },
+    "exportSource": {
+      "world": "teste",
+      "system": "dnd5e",
+      "coreVersion": "12.343",
+      "systemVersion": "4.4.4"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.343",
+    "systemId": "dnd5e",
+    "systemVersion": "4.4.4",
+    "createdTime": 1763572932324,
+    "modifiedTime": 1771118448722,
+    "lastModifiedBy": "yvmeTAX1MhcRJ2ut"
+  }
+}

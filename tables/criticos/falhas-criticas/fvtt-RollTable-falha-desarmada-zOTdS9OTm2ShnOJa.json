@@ -1,0 +1,327 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Falha Desarmada",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "XphZYMuculkUY1wn",
+      "text": "<b>Impactante</b><br />Você recebe metade do dano deste ataque e fica recebe uma penalidade de -2 na CA até o seu próximo turno",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "2Dn1XOr17EoMa2d4",
+      "text": "<b>Crack!</b><br />Você quebra um osso e recebe penalidade de -4 em testes e salvaguardas de Força, Destreza e Constiuição até receber cura",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "S3fhJwkaLRC1IOuV",
+      "text": "<b>Mal jeito</b><br />Você desloca um membro e recebe penalidade de -2 em testes e salvaguardas de Força, Destreza e Constiuição até receber cura",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "Tb7wG1hadu1Nf830",
+      "text": "<b>Morder a Língua</b><br />Você perde parte da língua e não pode falar até receber cura",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "8l6zsVmU1kqO8X0l",
+      "text": "<b>Alvo Errado</b><br />Você atinge a arma do seu oponente e recebe metade do dano normal dela",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "UjvlAmBwfenNcK5u",
+      "text": "<b>Hérnia de Disco</b><br />Você fica atordoado por [[/r 1d4]] rodadas ou até receber uma cura",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "ibHKobOrVmcBaaFy",
+      "text": "<b>Treinamento Intensivo</b><br />Você não descansou bem e começa a sentir o cansaço.<br /><br />Você recebe um ponto de exaustão até o fim da cena. Se esse efeito te levaria ao 4º nivel de exaustão ou maior, rerole a tabela.<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "PuY5fUuA4jj1fB9m",
+      "text": "<b>Maldito Buraco</b><br />Pisa em um buraco e fica preso. Fica imóvel até conseguir se desprender (Atletismo CD 15)",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "ey8HwXtVhrzHgJpz",
+      "text": "<b>Descuidado</b><br />Abre a guarda. Inimigo adjacente faz um ataque corpo a corpo em você como reação",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "lt2CwkdGJoI7Wg1k",
+      "text": "<b>Acerto na Parede</b><br />Acerta algo rígido. Mão fica inutilizada até se curar e recebe metade do dano do seu ataque",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "Gd7DyLTO5rFkDxYl",
+      "text": "<b>Atabalhoado</b><br />Você derruba sua mochila com todos os seus itens a [[/r 1d4]] quadrados de distância",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "rNCMqXksvuAcPN25",
+      "text": "<b>Defesa Aberta</b><br />O próximo ataque contra você é um acerto crítico automático",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "rIhH4kT6xHmekh01",
+      "text": "<b>Bateu a Cabeça</b><br />Você bate a cabeça e fica confuso até o fim do seu próximo turno. Agora e no inicio do próximo turno, role 1d10 para definir o que você faz:<table style=\"width:100%\"><thead><tr><th style=\"width:15%\">d10</th><th style=\"width:85%\">Comportamento</th></tr></thead><tbody><tr><td>1</td><td>A criatura usa todo o seu movimento para se mover em uma direção aleatória. Para determinar a direção, jogue um d8 e atribua uma direção para cada face do dado. A criatura não realiza uma ação neste turno.</td></tr><tr><td>2-6</td><td>A criatura não se move nem realiza ações neste turno.</td></tr><tr><td>7-8</td><td>A criatura usa sua ação para realizar um ataque corpo a corpo contra uma criatura aleatoriamente determinada ao seu alcance. Se não houver nenhuma criatura ao seu alcance, a criatura não faz nada neste turno.</td></tr><tr><td>9-10</td><td>A criatura pode agir e se mover normalmente.</td></tr></tbody></table>",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "izM0kPZiebT6XwAk",
+      "text": "<b>Errei!</b><br />Seu ataque acerta um aliado adjacente a escolha do mestre",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "oohzFpGlabNikrrW",
+      "text": "<b>Tapa na Cara</b><br />Iniciativa do alvo muda para depois da sua. Ele tem um bônus de +2 no próximo ataque",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "JmvzflK8DP7lY7fK",
+      "text": "<b>Pé Torcido</b><br />Você fica lento até o fim da cena",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "3dyQtzRL2RAYrDAI",
+      "text": "<b>Chacoalhada</b><br />Os seus itens caem a [[/r 1d4]] quadrados de distância. Você precisa usar sua ação e movimento para pegar tudo de volta",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "INSwa8Owkw58x9D6",
+      "text": "<b>Encontrão</b><br />Todos aliados adjacentes devem passar em um teste de resistência de Força CD 15 ou ficam caídos",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "9EofukKxUrKyJOee",
+      "text": "<b>Foi Sem Querer</b><br />Acerta a arma do aliado adjacente que cai [[/r 1d6]] quadrados na direção escolhida pelo mestre",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "hjIUJGbLnNwnOVcd",
+      "text": "<b>Ele Está Armado!</b><br />Se não passar em um teste de resistencia de Sabedoria (CD 15) você fica amedrontado pelo alvo por [[/r 1d4]] rodadas",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "exportSource": {
+      "world": "endless-tower",
+      "system": "dnd5e",
+      "coreVersion": "12.343",
+      "systemVersion": "4.4.4"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.1.2",
+    "coreVersion": "12.331",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1691704148921,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "endless-tower",
+  "name": "endless-tower",
+  "title": "Endless Tower",
+  "description": "Personal module with homebrew blessings, combat sounds, critical tables, and custom mechanics for D&D 5e.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Guilherme-SG"
+    }
+  ],
+  "system": ["dnd5e"],
+  "relationships": {
+    "requires": [
+      {
+        "id": "dfreds-convenient-effects",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/abracado-pelo-destino-bless.js",
+    "scripts/bless-remember.js",
+    "scripts/sensorial-deturpation.js",
+    "scripts/prepare-spells-reminder.js",
+    "scripts/cemetery-bless.js",
+    "scripts/play-sounds-hooks.js",
+    "scripts/ragnarok-animations.js",
+    "scripts/whisper-sound.js"
+  ],
+  "styles": [],
+  "languages": []
+}

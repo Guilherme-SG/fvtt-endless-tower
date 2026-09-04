@@ -1,0 +1,327 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Sucesso Impactante",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "5Mbgw5U2xOAhbRAR",
+      "text": "<b>No Estômago!</b><br />Alvo fica enjoado por [[1d4]] rodadas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "piIBbdZWxfek4pl2",
+      "text": "<b>Costelas Quebradas</b><br />O alvo sofre -2 em jogadas de ataque baseadas em Força até receber cura ou realizar um descanso<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "4mIxRgGjka5M2aj7",
+      "text": "<b>Pancada na Cabeça</b><br />O alvo fica atordoado por uma rodada<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "6KQaQS3QV2uWVlxs",
+      "text": "<b>Contusão no Braço</b><br />O alvo fica vulnerável até o fim da cena<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "fBzV82VoDhNpM2wJ",
+      "text": "<b>Beijando o Chão</b><br />Alvo fica caído<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "DqPjketV2P6g9avV",
+      "text": "<b>Ouvindo Sinos</b><br />O alvo fica surdo por [[1d4]] horas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "VX6sLtZHeGVeNcl8",
+      "text": "<b>Joelho Quebrado</b><br />O alvo fica lento até rececer cura e perde 1 ponto de Destreza permanentemente<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "dI31cmImdQ6nmhEH",
+      "text": "<b>Nocaute!</b><br />O alvo deve passar em uma Salvaguarda de Constituição (CD igual ao dano) ou cai inconsciente por 1d4 rodadas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "oKZKaV3lNVYrKrtu",
+      "text": "<b>Vendo Estrelas</b><br />O alvo fica ofuscado por 2 rodadas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "LF9gZ4dH0KmubAyq",
+      "text": "<b>Essa Doeu na Alma!</b><br />O alvo perde um spell slot de [[1d6]]º ciclo. Se for maior do que o ciclo que o alvo pode conjurar, ele perde do maior ciclo que pode conjurar. Se não há spells slots a serem perdidos, role a tabela novamente.<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "Hy0gxX82SKJnHYAj",
+      "text": "<b>Braço Esmagado</b><br />Alvo derruba o que tiver na mão e não pode fazer testes e jogadas de ataque baseados em Força até receber cura<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "VytqUMlCs9hoRNQN",
+      "text": "<b>Lesão Cerebral</b><br />O alvo perde todas as proficiências, e se torna incapaz de conjurar truques e feitiços, até que descanse por 8 horas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "vNe7YlZTzmBaTtmA",
+      "text": "<b>Falta de Ar</b><br />O alvo fica sem respirar por [[1d8]] rodadas<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "fk11ytTLl5mjDb2Q",
+      "text": "<b>Que Dor!</b><br />O alvo fica fraco até o fim da cena<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "mv8HuBnjEn784zL5",
+      "text": "<b>Nariz Destruído</b><br />O alvo perde um ponto de Carisma permanentemente<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "f2SXoRG1LByKPjSJ",
+      "text": "<b>Golpe Brutal</b><br />Dobre novamente a quantidade de dados de dano deste ataque<br />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "o6IRNqw45VeI0xzF",
+      "text": "<b>Quebra!</b><br />Você acerta a manobra quebrar contra o alvo usando o mesmo dano<br /><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "0jGAYFrz5Y2Y21PP",
+      "text": "<b>Armadura Amassada</b><br />A penalidade da armadura do alvo aumenta em +2 até que ela seja consertada<br /><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "Kc43jCgXsvkI9o3V",
+      "text": "<b>Porrada Motivadora</b><br />Um aliado à sua escolha em até 9 m que viu sua ação tem uma condição removida<br /><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "documentCollection": "",
+      "_id": "UlIksFteg3vNoC5M",
+      "text": "<b>Crânio Esmagado</b><br />O alvo deve realizar um teste de resistência de Constituição (CD 10 ou igual ao dano, o que for maior), se falhar cai com 0 de HP estabilizado<br /><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "img": "icons/svg/d20-black.svg",
+      "documentId": null,
+      "flags": {}
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "exportSource": {
+      "world": "endless-tower",
+      "system": "dnd5e",
+      "coreVersion": "12.343",
+      "systemVersion": "4.4.4"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.1.2",
+    "coreVersion": "12.331",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1698453611089,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi"
+  }
+}

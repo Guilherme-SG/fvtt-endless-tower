@@ -1,0 +1,56 @@
+{
+  "name": "Maré de Improbabilidade",
+  "formula": "1d10",
+  "results": [
+    {
+      "range": [1, 1],
+      "text": "<div style='border-left: 5px solid #e0115f; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Explosão de Confetes</h3><p>Uma nuvem de fumaça colorida surge em você. Todas as criaturas (incluindo você) em um raio de 5 ft ficam <b>invisíveis</b>. Esse efeito encerra precocemente se a criatura realizar um ataque ou conjurar uma magia. Caso contrário, a invisibilidade dura até o início do seu próximo turno.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [2, 2],
+      "text": "<div style='border-left: 5px solid #00ffff; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Embaralhar Destinos</h3><p>Você e 1 criatura aleatória que você possa ver a até 30 ft trocam de posição instantaneamente em um flash de luz neon.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [3, 3],
+      "text": "<div style='border-left: 5px solid #7b68ee; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Instabilidade Cronológica</h3><p>Sua idade biológica flutua violentamente. Role [[/r 1d10]]. Se o resultado for <b>par</b>, você rejuvenesce essa quantidade de anos (mínimo de 1 ano de idade). Se for <b>ímpar</b>, você envelhece essa quantidade de anos.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [4, 4],
+      "text": "<div style='border-left: 5px solid #4682b4; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Voz do Trovão</h3><p>Suas próximas palavras saem em um volume ensurdecedor, audível a até 100 ft de distância. Cada criatura em um raio de 5 ft centrado em você deve ser bem-sucedida em uma <b>Salvaguarda de Constituição</b>, ou ficará <b>surda</b> por 1 minuto. As criaturas podem tentar realizar novamente o teste no final de cada um de seus turnos subsequentes.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [5, 5],
+      "text": "<div style='border-left: 5px solid #f0e68c; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Zona de Manteiga</h3><p>O chão em um raio de 10 ft ao seu redor torna-se coberto por uma manteiga escorregadia e dourada. A área é considerada terreno difícil para todas as criaturas. Qualquer criatura que terminar seu turno na área deve ser bem-sucedida em uma <b>Salvaguarda de Destreza.</b> ou ficará <b>caída</b>.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [6, 6],
+      "text": "<div style='border-left: 5px solid #ff69b4; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Hora da Sobremesa</h3><p><b>Efeito:</b> Você e seus itens se transformam em uma gelatina saborosa por um curto período. Seu tipo de criatura torna-se <b>Ooze</b> em adição aos seus outros tipos e você recebe <b>vulnerabilidade a todo tipo de dano</b>.<br><b>Duração:</b> Até o início do seu próximo turno.<br><b>Restrições:</b> Seu deslocamento de caminhada torna-se 25 ft. Você não pode atacar ou conjurar magias.<br><b>O Banquete:</b> Criaturas a até 5 ft podem usar uma Ação ou Reação para realizar um ataque desarmado (inimigos atacam com vantagem, aliados não precisam rolar ataque se você permitir) arrancando um pedaço para degustar.<br><b>Benefício:</b> Quem saboreia você recupera 1d4 + seu bônus de proficiência em pontos de vida.<br><b>Retorno:</b> Se chegar a 0 pontos de vida ou o tempo acabar, você reaparece em sua forma original com os pontos de vida que tinha antes da transformação.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [7, 7],
+      "text": "<div style='border-left: 5px solid #c0c0c0; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Flutuação de Estatura</h3><p>Sua altura física oscila rapidamente. Role [[/r 1d10]]. Se o resultado for <b>par</b>, você aumenta essa quantidade em centímetros. Se for <b>ímpar</b>, você diminui essa quantidade em centímetros.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [8, 8],
+      "text": "<div style='border-left: 5px solid #8b4513; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Generosidade Aleatória</h3><p>Uma chuva de moedas de chocolate cai do céu. Uma criatura aliada aleatória e uma criatura inimiga aleatória a até 30 ft recebem <b>pontos de vida temporários</b> iguais a seu nível + bônus de proficiência.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [9, 9],
+      "text": "<div style='border-left: 5px solid #228b22; padding: 10px; background: rgba(0,0,0,0.05); font-family: sans-serif;'><h3 style='margin-top:0;'>Polimorfia Instável</h3><p>Sua cabeça assume a forma de um animal aleatório por 1 minuto. Você tem <b>vantagem</b> em testes de Sabedoria (Percepção), mas é incapaz de emitir sons que não sejam de animais, impedindo a conjuração de magias com componentes verbais.</p></div>",
+      "type": 0
+    },
+    {
+      "range": [10, 10],
+      "text": "<div style='border-left: 5px solid #ffd700; padding: 10px; background: rgba(255,215,0,0.1); font-family: sans-serif;'><h3 style='margin-top:0;'>🎰 Jackpot do Caos</h3><p>Role duas vezes nesta tabela. Para cada vez que o mesmo resultado for obtido, ele é intensificado: rolagem de dados recebem +1 dado, alcances aumentam em 10 ft, CDs e outros valores fixos (exceto durações) aumentam em 1.</p></div>",
+      "type": 0
+    }
+  ]
+}
