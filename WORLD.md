@@ -150,3 +150,4 @@ Fetch these URLs with `webfetch` when you need API details for a specific module
 | **Active Auras** | https://github.com/kandashi/Active-Auras |
 | **FXMaster** | https://foundryvtt.com/packages/fxmaster |
 | **Foundry Summons** | https://foundryvtt.com/packages/summoning |
+| **Foundry REST API** | https://foundryrestapi.com/docs/api | The .env has vars necessaries to make requests currectly.
