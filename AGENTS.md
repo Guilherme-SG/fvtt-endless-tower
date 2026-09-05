@@ -4,6 +4,10 @@
 
 FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical tables, and custom effects. No build system, no tests, no linting — scripts are vanilla ES modules loaded directly by FoundryVTT.
 
+## World context
+
+**WORLD.md** documents the full FoundryVTT world: all 50+ installed modules, their APIs, and cross-module integration patterns. Consult it before creating new features to know what's available.
+
 ## Key files
 
 - `module.json` — Module manifest. All scripts in `esmodules` are auto-loaded.
@@ -28,6 +32,8 @@ Scripts **not** in esmodules are manual/inline:
 - `warpgate` — used in `ghostring-summon.js`.
 - `midi-qol` — read in `whisper-sound.js` for concentration damage detection.
 - `fvtt-youtube-player` — optional, used in `play-sounds-hooks.js`.
+
+API quick reference for these modules is in WORLD.md.
 
 ## Conventions
 
