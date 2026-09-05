@@ -42,6 +42,16 @@ API quick reference for these modules is in WORLD.md.
 - **Hooks**: Scripts register FoundryVTT hooks (`combatStart`, `deleteCombat`, `canvasReady`, `createToken`, `ready`, `dnd5e.rollInitiative`, `combatTurn`, `updateCombat`, `preUpdateActor`, `dnd5e.restCompleted`).
 - **Whisper messages**: Ownership check uses `ownership[id] === 3` (OWNER level).
 
+## Commit workflow (HITL)
+
+Before committing, always:
+1. **Stage** the files (`git add`)
+2. **Show** the diff (`git diff --cached`)
+3. **Propose** the commit message
+4. **Ask** the user to confirm before running `git commit`
+
+Never commit without user confirmation.
+
 ## Gotchas
 
 - `whisper-sound.js` references audio at `endless-tower/audios/minecraft-ghast-sounds/` — these files are not in the repo. They may be managed separately or need to be added.
