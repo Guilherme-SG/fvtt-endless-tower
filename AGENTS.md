@@ -57,3 +57,24 @@ Never commit without user confirmation.
 - `whisper-sound.js` references audio at `endless-tower/audios/minecraft-ghast-sounds/` — these files are not in the repo. They may be managed separately or need to be added.
 - `sensorial-deturpation.js` and `solitude-bless.js` reference `actor` and `token` globals (meant to be executed as inline macros with those in scope).
 - No `opencode.json` or CI config exists.
+
+## Foundry REST API (rolling dice, etc.)
+
+The REST API module is installed. Use curl.exe to call it.
+
+**Quirk**: PowerShell's `curl` is an alias for `Invoke-WebRequest` — different syntax.
+Always use `& "C:\Windows\System32\curl.exe"` to invoke the real curl.
+
+**Quirk**: Don't pass JSON inline with `-d`. PowerShell mangles quotes.
+Write JSON to a temp file first (without BOM), then use `-d "@file"`:
+
+```powershell
+$json = '{"formula":"1d20","flavor":"Test"}'
+[System.IO.File]::WriteAllText("$env:TEMP\req.json", $json)
+& "C:\Windows\System32\curl.exe" -s -X POST "https://foundryrestapi.com/roll" `
+  -H "Content-Type: application/json" `
+  -H "x-api-key: $env:FOUNDRY_API_KEY" `
+  -d "@$env:TEMP\req.json"
+```
+
+API key is in `.env` as `FOUNDRY_API_KEY`. Docs at https://foundryrestapi.com/docs/api
