@@ -133,47 +133,20 @@
 
 ---
 
-## API Quick Reference
+## Documentation
 
-### DFreds Convenient Effects
-```js
-const api = game.modules.get("dfreds-convenient-effects").api;
-api.addEffect({ effectName: "Name", uuid: actor.uuid });
-api.removeEffect({ effectName: "Name", uuid: actor.uuid });
-api.hasEffectApplied({ effectName: "Name", uuid: actor.uuid });
-api.toggleEffect({ effectName: "Name", uuids: [actor.uuid] });
-api.findEffect({ effectName: "Name" });
-```
+Fetch these URLs with `webfetch` when you need API details for a specific module.
 
-### Sequencer
-```js
-new Sequence()
-  .effect().file("path/to/file").atLocation(token).scaleToObject(2)
-  .sound().file("path/to/sound").volume(0.7)
-  .wait(500)
-  .thenDo(() => { /* custom code */ })
-  .play();
-```
-
-### Warpgate
-```js
-const ids = await warpgate.spawn("ActorName", {
-  actor: { name: "Custom Name" },
-  token: { x: 100, y: 200 }
-}, {
-  pre: async (location, updates) => { /* before spawn */ },
-  post: async (location, doc, updates) => { /* after spawn */ }
-}, { duplicates: 1, collision: true });
-```
-
-### Tagger
-```js
-const tokens = Tagger.getByTags("myTag");
-const objects = Tagger.getByTag(["tag1", "tag2"]);
-```
-
-### Midi-QoL
-```js
-// Check concentration damage
-if (flags["midi-qol"]?.["concentration-damage"] > 0) { ... }
-```
+| Module | Docs |
+|--------|------|
+| **Sequencer** | https://fantasycomputer.works/FoundryVTT-Sequencer/#/ |
+| **DFreds Convenient Effects** | https://www.dfreds-modules.com/free-modules/convenient-effects |
+| **Warpgate** | https://github.com/trioderegion/warpgate/wiki |
+| **Midi-QoL** | https://gitlab.com/tposney/midi-qol |
+| **DAE** | https://gitlab.com/tposney/dae |
+| **Tagger** | https://github.com/fantasycalendar/FoundryVTT-Tagger |
+| **Item Macro** | https://github.com/Foundry-Workshop/Item-Macro |
+| **Token Magic FX** | https://github.com/Feu-Secret/Tokenmagic |
+| **Active Auras** | https://github.com/kandashi/Active-Auras |
+| **FXMaster** | https://foundryvtt.com/packages/fxmaster |
+| **Foundry Summons** | https://foundryvtt.com/packages/summoning |

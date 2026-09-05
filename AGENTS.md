@@ -6,7 +6,7 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 
 ## World context
 
-**WORLD.md** documents the full FoundryVTT world: all 50+ installed modules, their APIs, and cross-module integration patterns. Consult it before creating new features to know what's available.
+**WORLD.md** documents the full FoundryVTT world: all 50+ installed modules, their APIs, and cross-module integration patterns. Consult it before creating new features to know what's available. WORLD.md includes documentation URLs for key modules — fetch them with `webfetch` when you need API details.
 
 ## Key files
 
@@ -33,7 +33,7 @@ Scripts **not** in esmodules are manual/inline:
 - `midi-qol` — read in `whisper-sound.js` for concentration damage detection.
 - `fvtt-youtube-player` — optional, used in `play-sounds-hooks.js`.
 
-API quick reference for these modules is in WORLD.md.
+API quick reference for these modules is in WORLD.md (with documentation URLs).
 
 ## Conventions
 
