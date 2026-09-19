@@ -1,0 +1,552 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Falha Corpo-a-Corpo",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "yHxQIwtTcdR2EEgy",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">De Vidro</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto ecoa de forma estranha — como vidro rachando. Sua arma treme nas suas mãos antes de se despedaçar em pedaços inúteis.</em></p><p>Se sua arma for mágica, rerole a tabela. Do contrário, ela quebra e fica inutilizável.</p><img src=\"https://media.tenor.com/bVPu4H2y91QAAAAd/mob-psycho-100-mob-psycho.gif\" />",
+      "name": "De Vidro",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "jGjk21FQEl8zKEWl",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Se Acertou</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua mão tropeça no meio do swing. A arma volta para trás com uma rapidez desonrosa — e atinge seu próprio rosto.</em></p><p>Você se acerta com a arma e se causa [[/r 1d6]] pontos de dano do tipo da arma usada.</p><img src=\"https://media.tenor.com/SLSHXsQNUvkAAAAi/make-it-stop-frustrated.gif\" alt=\"self bonk\" />",
+      "name": "Se Acertou",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "TuSsM1433ovy9Z37",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ops!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua empunhadura falha no meio do golpe. A arma voa das suas mãos com um silvo agudo enquanto você assiste horrorizado.</em></p><p>Você joga sua arma longe [[/r 1d6]] espaços à escolha do mestre.</p><img src=\"https://media.tenor.com/0cSovr_7gxQAAAAd/heman-sword-throw.gif\" alt=\"Arremessando a arma sem querer\" />",
+      "name": "Ops!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "wmHH7qQPa1tECAUj",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Movimento Incomum</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu corpo se move antes da sua mente. Você avança demais, o peso da arma puxa você para frente, e seus pés não acompanham.</em></p><p>Você deve passar em um [[/check acr dc=15]], ou ficará caído e seu turno encerra.</p><img src=\"https://media.tenor.com/GehhWwj3_dUAAAAd/fall-down-viralhog.gif\" alt=\"Escorregando desajeitado\" />",
+      "name": "Movimento Incomum",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "9UMc83mCjbz0tojf",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Defesa Aberta</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você completa o golpe mas esquece completamente de voltar à posição de guarda. Seu flanco fica escancarado — e o inimigo não precisa de convite.</em></p><p>Você abre sua defesa e o alvo pode fazer um ataque de oportunidade.</p><img src=\"https://media1.tenor.com/m/tjVTLGAKKpsAAAAd/anime-cautious-hero.gif\" alt=\"Inimigo reagindo rápido\" />",
+      "name": "Defesa Aberta",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "InRryNMevsdUPRhg",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789508256684,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pé no Escorregão</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu impulso carrega você para frente quando o pé de trás escorrega em algo molhado — sangue, óleo, ou apenas suor. Você cambaleia para além do alvo.</em></p><p>Você se move para um espaço adjacente livre na direção do ataque. Se não houver espaço livre, você fica caído no espaço do alvo. Se houver uma criatura hostil nesse espaço, ela pode usar uma reação para realizar um ataque corpo a corpo contra você com vantagem.</p><img src=\"https://media.tenor.com/1FFVJ9GwNfsAAAAC/pekr-football.gif\" />",
+      "name": "Pé no Escorregão",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "vMgZmjXtQHgxSUh1",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lâmina Presa</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua lâmina morde fundo em algo duro — osso, pedra, armadura encantada — e não sai. O som de metal riscando ressoa pela sala.</em></p><p>Sua arma fica presa no alvo ou na superfície. Com uma [[/check ath dc=15]] como ação bônus, você a liberta. Enquanto estiver presa, seus ataques com essa arma têm desvantagem e você não pode realizar ataques de oportunidade.</p><img src=\"https://media.tenor.com/n4_lQ65mFJEAAAAC/to-the-moon-minty.gif\" />",
+      "name": "Lâmina Presa",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "70t7mSBSkyXOjb3f",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sai da Frente!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu braçobalança sem direção e atinge o primeiro ser que estiver por perto — hostil ou não. A confusão do combate faz você confundir aliado com inimigo.</em></p><p>Você derruba uma criatura não hostil adjacente. Se não houver nenhum alvo válido, você mesmo cai no chão.</p><img src=\"https://media.tenor.com/_7HQC5Pde0MAAAAC/bh187-bruce-almighty.gif\" />",
+      "name": "Sai da Frente!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "QmJ6rXxeorI6xrzK",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">A Comida Não Caiu Bem</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Algo na sua barriga revira no pior momento possível. O gosto de bile sobe pela garganta enquanto você cambaleia.</em></p><p>Você fica enjoado por 1 rodada.</p><img src=\"https://media.tenor.com/jw0QFna6uGwAAAAC/cat.gif\" />",
+      "name": "A Comida Não Caiu Bem",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "mAGUguRas8Z7T3k0",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789508693250,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cãibra na Perna</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um músculo da sua coxa trava violentamente no meio do passo. Você cambaleia, a perna recusa a obedecer, e o chão chega mais rápido do que esperava.</em></p><p>Você fica lento por uma rodada ou até receber cura mágica. Além disso, você deve passar em uma [[/save con dc=15]] ou ficará caído.</p><img src=\"https://media.tenor.com/ZxyH-fSYeHQAAAAd/kafka-training.gif\" />",
+      "name": "Cãibra na Perna",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "la6mpNL4Ry2Jq4Je",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789759304662,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ferida se Abre</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O mau uso da sua arma abre um ferimento e convida o sangue a se retirar do seu corpo.</em></p><p>Você perde 1 ponto de vida e fica sangrando.</p><img src=\"https://media1.tenor.com/m/A1yBRepBOlcAAAAC/don-hertzfeldt-bleeding.gif\" />",
+      "name": "Ferida se Abre",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "ldERuAwYmWJpuFbc",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pronto Para Tomar Smite</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua postura after do golpe deixa todas as suas costas expostas. Você praticamente escreve \"me acerte\" nas suas costas.</em></p><p>Por 1 rodada, o próximo ataque que você sofrer será um crítico com qualquer rolagem de ataque maior que 14.</p><img src=\"https://media1.tenor.com/m/M9we8WunIkEAAAAd/winding-up-garen.gif\" />",
+      "name": "Pronto Para Tomar Smite",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "AEJYYFO6yH4AvKtK",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Se Pega No Olho...</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Algo — poeira, areia, um inseto — voa direto no seu olho no momento mais inapropriado. O mundo desaparece em uma cortina de lágrimas.</em></p><p>Algo voa no seu olho e você fica cego por 1 rodada.</p><img src=\"https://media1.tenor.com/m/ErY7uPJ5E2wAAAAd/absolute-blindness-absolutely-blinded.gif\" />",
+      "name": "Se Pega No Olho...",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "ZvIFbAxifU2Ca4nw",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788232121090,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Medo de Morrer</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O medo toma conta de você de repente — instintivo, animal, avassalador. Seu corpo recusa lutar. Suas pernas tremem, sua visão escurece nos cantos.</em></p><p>Se você é imune a amedrontado, rerole a tabela. Do contrário, você fica amedrontado pelo alvo até o fim da cena. No final de cada um dos seus turnos, faça [[/save wis dc=15]]. Em sucesso, a condição encerra.</p><img src=\"https://media1.tenor.com/m/vkDNI_dfy14AAAAd/speed-ishowspeed.gif\" />",
+      "name": "Medo de Morrer",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "vnJJcszbUoXJfFeF",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789515937865,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vingança do Inimigo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu erro deixa você exposto, e o inimigo não perde a oportunidade. Ele avança com uma rapidez que você não esperava.</em></p><p>O alvo pode usar sua reação para realizar uma manobra de Desarmar, Encontrão ou Empurrar contra você com vantagem. Se não tiver reação disponível, ele ganha 1d6 pontos de vida temporários até o fim do combate.</p><img src=\"https://media1.tenor.com/m/fj9KuWQ8OZMAAAAd/anime-grapple.gif\" />",
+      "name": "Vingança do Inimigo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "Z08NACxAMGBe8VwP",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788101461445,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Mão Escorregadia</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Suas mãos ficam traiçoeiras no meio do golpe. A empunhadura escorrega, e por um instante você não sabe se está atacando ou fazendo malabarismo.</em></p><p>Até o final do seu próximo turno, seus ataques com essa arma têm desvantagem. Com uma [[/check dex dc=15]] como ação bônus no início do seu próximo turno, você readapta a empunhadura e remove a penalidade.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
+      "name": "Mão Escorregadia",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "0aNyvSzWeDxPjisp",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788100831945,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vibração nos Ossos</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto reverbera por todo o seu corpo. Seus dentes estalam, sua visão turva, e por um instante você não sabe se acertou o inimigo ou o inimigo acertou você.</em></p><p>Você recebe 1 de dano contundente e seu próximo ataque tem desvantagem.</p><img src=\"https://media1.tenor.com/m/1PYfDXXxsWQAAAAC/buu-punch-yourself.gif\" />",
+      "name": "Vibração nos Ossos",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "gk3KD1kLwehzwKED",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789511676183,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">O Que Fazer?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua mente trava como um motor sem óleo. Os comandos simples — atacar, defender, fugir — se tornam mistérios insondáveis. Você para no meio da ação, bocca aberta, sem saber o próximo passo.</em></p><p>Você fica incapacitado e tem sua posição revelada por uma rodada.</p><img src=\"https://media1.tenor.com/m/wWmjeJgcFr4AAAAd/nervous-anime.gif\" alt=\"Atordoado e confuso\" />",
+      "name": "O Que Fazer?",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "9OfkKI4AZvt3i9I4",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789759957596,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cena de Filme</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O tempo desacelera quando seus olhos se encontram com os do alvo. Nesse instante congelado, você vê algo nele — medo, coragem, humanidade. Você abaixa a guarda por um segundo.</em></p><p>O alvo pode usar sua reação para realizar um ataque corpo a corpo contra você com vantagem.</p><img src=\"https://media1.tenor.com/m/BEko-rtMEhIAAAAC/no.gif\" />",
+      "name": "Cena de Filme",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "6SM2Aid6m7gKBSyJ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789764764659,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Adversários Inflamados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</em></p><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p><div style=\"text-align:center;margin-top:10px\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" style=\"width:100%;border-radius:8px;border:1px solid #000\" /></div>",
+      "name": "Adversários Inflamados",
+      "documentUuid": null
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "13.351",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1700180870907,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "endless-tower",
+      "uuid": "RollTable.i1B5lmehAmYCa8Dx",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

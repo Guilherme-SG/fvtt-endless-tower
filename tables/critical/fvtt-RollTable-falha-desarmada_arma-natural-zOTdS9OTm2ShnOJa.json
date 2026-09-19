@@ -1,0 +1,552 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Falha Desarmada/Arma Natural",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "XphZYMuculkUY1wn",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782511215130,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Nervos Dormentes</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto do erro foi tão desajeitado que enviou uma onda de choque pelo seu corpo, dormentando os nervos do membro usado no ataque.</em></p><p>Você não pode realizar ataques com esta arma natural ou ataques desarmados até o efeito encerrar.</p><ul><li><p>Uma criatura adjacente pode usar uma <strong>Ação</strong> para fazer um [[/check med dc=15]] para massagear o músculo travado ou aplicar um ponto de pressão, liberando o movimento e encerrando a condição em um sucesso.</p></li><li><p>O efeito se encerra instantaneamente se você receber <strong>5 ou mais pontos de cura</strong> de uma única fonte, ou for alvo de um efeito que remova explicitamente a condição paralisado.</p></li><li><p>O efeito se encerra automaticamente ao finalizar um <strong>Descanso Curto ou Longo</strong>.</p></li></ul><img src=\"https://media1.tenor.com/m/Luis0vIOTpEAAAAd/awesomeness-tv-awesomeness-tvgi-fs.gif\" />",
+      "name": "Nervos Dormentes",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "2Dn1XOr17EoMa2d4",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782511196381,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Soca Fofo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você aparentemente acerta o alvo, mas…</em></p><p>Até o final do seu próximo turno, seus ataques armados e desarmados recebem uma penalidade de -1d4 no dano causado.</p><img src=\"https://media1.tenor.com/m/g1IhXP5ZBCkAAAAC/dragon-ball-dbz.gif\" />",
+      "name": "Soca Fofo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "S3fhJwkaLRC1IOuV",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789515936184,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Dedo Travado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu dedo trava em ângulo errado no meio do soco. A dor sobe pelo braço como um raio, e seus companheiros ouvem o estalo.</em></p><p>Você não pode fazer socos, agarrar ou realizar manobras com a mão afetada até receber cura ou completar um descanso curto.</p><img src=\"https://media1.tenor.com/m/fj9KuWQ8OZMAAAAd/anime-grapple.gif\" />",
+      "name": "Dedo Travado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "Tb7wG1hadu1Nf830",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782420218435,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Desacreditado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você perde a confiança em si mesmo e sente que seus aliados também perderam.</em></p><p>Até o final do seu próximo turno, você sofre os seguintes efeitos:</p><ul><li><p>Você não pode receber vantagem em suas jogadas de ataque, testes de habilidade ou salvaguardas, e não pode conceder vantagem a criaturas amigáveis.</p></li><li><p>Você não pode se beneficiar ou fornecer os benefícios de flanqueamento.</p></li><li><p>Qualquer acerto crítico que você realizar é considerado um acerto normal.</p></li></ul><img src=\"https://media1.tenor.com/m/fndaS1mT7zcAAAAd/k-on-tired.gif\" />",
+      "name": "Desacreditado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "8l6zsVmU1kqO8X0l",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782419088676,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lataria Amassada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você bateu forte demais na coisa errada.</em></p><p>Você perde 1 de vida, e recebe uma penalidade de -1 de AC por 1 rodada ou até receber cura mágica.</p><img src=\"https://media1.tenor.com/m/4YIPXSl-LsQAAAAd/chougne-scary.gif\" />",
+      "name": "Lataria Amassada",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "UjvlAmBwfenNcK5u",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782418743053,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Convite para Passar</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Até o início do seu próximo turno, você não pode realizar ataques de oportunidade, e qualquer criatura pode se mover pelo seu espaço.</em></p><img src=\"https://media1.tenor.com/m/JUh8BbwGE24AAAAC/the-door-is-open-you-may-leave.gif\" />",
+      "name": "Convite para Passar",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ibHKobOrVmcBaaFy",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789508270051,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ombro Deslocado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O ombro estala com um som que todos ao redor ouvem. Seu braço dominante cai mole ao lado do corpo como um pano molhado.</em></p><p>Você sofre desvantagem em todas as jogadas de ataque corpo a corpo e testes de Força até receber cura mágica ou terminar um descanso longo.</p><img src=\"https://media.tenor.com/1FFVJ9GwNfsAAAAC/pekr-football.gif\" />",
+      "name": "Ombro Deslocado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "PuY5fUuA4jj1fB9m",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782418314584,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Grito Involuntário</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um guincho agudo escapa dos seus lábios no meio do golpe — involuntário e profundamente indigno. O silêncio que segue é pior que o grito.</em></p><p>Seus aliados até 15 pés que possam ouvir você devem realizar um [[/save cha dc=15]]. Quem falhar não consegue conter o sorriso e sofre desvantagem no próximo teste de Sabedoria (Percepção) até o final do seu próximo turno — estão rí demais para prestar atenção.</p><img src=\"https://media1.tenor.com/m/oWzely539UgAAAAC/fart.gif\" />",
+      "name": "Grito Involuntário",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ey8HwXtVhrzHgJpz",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789759360165,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Esse Sangue É Meu!?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O mau uso do seu corpo abre um ferimento e convida o sangue a se retirar corpo.</em></p><p>Você perde 1 ponto de vida e fica sangrando.</p><img src=\"https://media.tenor.com/QRCU4F-rMcoAAAAi/bleeding-dead.gif\" />",
+      "name": "Esse Sangue É Meu!?",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "lt2CwkdGJoI7Wg1k",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782418050184,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pião da Casa Própria</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu soco passa tão longe do alvo que a força do golpe gira você como um pião de praça central. Você cambaleia, tenta se equilibrar, e termina sentado no chão com a dignidade ferida e os olhos arregalados.</em></p><p>Você fica caído.</p><img src=\"https://media1.tenor.com/m/1PYfDXXxsWQAAAAC/buu-punch-yourself.gif\" />",
+      "name": "Pião da Casa Própria",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "Gd7DyLTO5rFkDxYl",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782417862423,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Córego nas Costelas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma cólica brutal agarra seu torso no meio do combo. Você se dobra ofegante, incapaz de continuar, e todos veem sua guarda se abrir.</em></p><p>Você não pode usar reações até o final do seu próximo turno. A primeira criatura que atacar você antes disso terá vantagem.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
+      "name": "Córego nas Costelas",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "rNCMqXksvuAcPN25",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789508894536,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Você Ativou Minha Carta Armadilha!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Quando foi que ele botou isso aí?</em></p><p>O alvo do seu ataque pode usar uma reação, como se ele tivesse preparado uma ação ao seu ataque.</p><img src=\"https://media.tenor.com/KZbO6VVTHW4AAAAC/tw.gif\" alt=\"Inimigo reagindo rápido\" />",
+      "name": "Você Ativou Minha Carta Armadilha!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "rIhH4kT6xHmekh01",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789509049934,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Bateu a Cabeça</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você bate a cabeça e fica confuso até o fim do seu próximo turno.</em></p><p>Agora e no início do próximo turno, role 1d10 para definir o que você faz:</p><table style=\"width:100%\"><thead><tr><th style=\"width:15%\">d10</th><th style=\"width:85%\">Comportamento</th></tr></thead><tbody><tr><td>1</td><td>A criatura usa todo o seu movimento para se mover em uma direção aleatória. Para determinar a direção, jogue um d8 e atribua uma direção para cada face do dado. A criatura não realiza uma ação neste turno.</td></tr><tr><td>2-6</td><td>A criatura não se move nem realiza ações neste turno.</td></tr><tr><td>7-8</td><td>A criatura usa sua ação para realizar um ataque corpo a corpo contra uma criatura aleatoriamente determinada ao seu alcance. Se não houver nenhuma criatura ao seu alcance, a criatura não faz nada neste turno.</td></tr><tr><td>9-10</td><td>A criatura pode agir e se mover normalmente.</td></tr></tbody></table><img src=\"https://media1.tenor.com/m/dwVkKNY2s1MAAAAd/pokemon-piplup.gif\" />",
+      "name": "Bateu a Cabeça",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "izM0kPZiebT6XwAk",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789758890216,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Impulso de Proteção</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu corpo traí suas intenções — em vez de acertar o inimigo, você instintivamente empurra o aliado mais próximo para fora do caminho, ou se joga na frente dele. Seu ataque é desperdiçado.</em></p><p>Você não pode realizar ações hostis até o final do seu próximo turno. Se o aliado e você estiverem adjacentes, ambos devem realizar um [[/save dex dc=15]] ou ficarão caídos.</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
+      "name": "Impulso de Proteção",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "oohzFpGlabNikrrW",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789757799213,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">PvP em Souls Like</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Se o alvo do ataque tem 0 de deslocamento por qualquer motivo que não seja por estar agarrado, rerole a tabela.</em></p><p>O alvo do ataque pode usar uma reação e realizar um [[/check acr dc=15]]. Ele se move um número de ft igual ao resultado do teste, desviando dos ataques. Este deslocamento não provoca ataque de oportunidade.</p><p>Se o alvo estava agarrado, quem estava o agarrando deve ser bem-sucedido em um [[/check ath]] (CD igual ao teste de Acrobacia do alvo), para manter o agarrão e impedir que ele se mova.</p><img src=\"https://media1.tenor.com/m/IvqVuIJx6mUAAAAd/elden-ring.gif\" />",
+      "name": "PvP em Souls Like",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "JmvzflK8DP7lY7fK",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789758646979,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pé Torcido</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você dá mal jeito na execução do ataque e torce o pé.</em></p><p>Você fica lento por uma rodada ou até receber cura mágica. Além disto, você deve passar em uma [[/save con dc=15]] ou ficará caído.</p><img src=\"https://media1.tenor.com/m/StDzQsd1-cQAAAAd/markiplier-creepy.gif\" />",
+      "name": "Pé Torcido",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "3dyQtzRL2RAYrDAI",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789758696501,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Preso à Superfície</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você fica preso ao ser preso à superfície.</em></p><p>Até o efeito encerrar, você pode usar sua ação para fazer um [[/check ath dc=15]], libertando-se em um sucesso. O efeito também encerra imediatamente se você sair do seu espaço atual.</p><img src=\"https://media1.tenor.com/m/ZliCxFlu6hwAAAAd/kitty-cute-kitty.gif\" />",
+      "name": "Preso à Superfície",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "INSwa8Owkw58x9D6",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789511659249,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Epifania Inoportuna</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>No meio do golpe, uma realização profunda o atinge: violência não é a resposta. Sua mão hesita, e o momento se perde.</em></p><p>Você não pode realizar ações hostis até o final do seu próximo turno. No início do seu próximo turno, pode tentar um [[/save wis dc=15]] para superar a crise de fé e agir normalmente. Se falhar, só pode usar Esquiva ou Recuar.</p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" />",
+      "name": "Epifania Inoportuna",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "9EofukKxUrKyJOee",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782399394244,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ele Está Armado!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Se você é imune a amedrontado, rerole a tabela.</em></p><p>Do contrário, você fica amedrontado pelo alvo até o fim da cena. No final de cada um dos seus turnos, faça [[/save wis dc=15]]. Em sucesso, a condição encerra.</p><img src=\"https://media1.tenor.com/m/dTBB2FfnBVUAAAAC/hot-horror.gif\" />",
+      "name": "Ele Está Armado!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "hjIUJGbLnNwnOVcd",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789764730320,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Adversários Inflamados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</em></p><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p><div style=\"text-align:center;margin-top:10px\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" style=\"width:100%;border-radius:8px;border:1px solid #000\" /></div>",
+      "name": "Adversários Inflamados",
+      "documentUuid": null
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.1.2",
+    "coreVersion": "13.351",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1782398898673,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "endless-tower",
+      "uuid": "RollTable.zOTdS9OTm2ShnOJa",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}
