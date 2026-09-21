@@ -26,7 +26,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Dilacerante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O deslocamento do alvo se torna 0 por 1 rodada.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Dilacerante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre um corte profundo que dificulta os movimentos do alvo.</em></p><p>O deslocamento do alvo é reduzido em <strong>3m</strong> (mínimo 1,5m) até o fim do combate. No final de cada turno do alvo, [[/save dex dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -52,7 +52,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Amplo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Outro alvo no alcance recebe metade do dano causado neste ataque.</p><img src=\"https://media1.tenor.com/m/aYxWSN1Ufy8AAAAd/sword-flash.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Amplo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão amplo que respinga em criaturas próximas.</em></p><p>Outro alvo à sua escolha em até <strong>5 ft</strong> do alvo original recebe <strong>metade do dano</strong> causado neste ataque.</p><img src=\"https://media1.tenor.com/m/aYxWSN1Ufy8AAAAd/sword-flash.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -78,7 +78,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte dos Tendões</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo não pode usar manobras de combate (agarrar, investida, empurrar, manobras de guerreiro) e disparada até receber cura.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte nos Tendões</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta os tendões do alvo, limitando suas opções de combate.</em></p><p>O alvo não pode fazer <strong>investidas</strong> ou <strong>deslocamento adicional</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -104,7 +104,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Abrir o Bucho</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo fica amedrontado por 1 rodada e sangrando.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Abrir o Bucho</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre o abdômen do alvo, causando pânico.</em></p><p>O alvo fica <strong>amedrontado de você</strong> até o início do seu próximo turno. No final de cada turno do alvo, [[/save wis dc=15]] para encerrar.</p><img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -130,7 +130,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sujo de Sangue</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Inimigos em até 9 m de você devem realizar [[/save wis dc=15]]. Quem falha fica amedrontado até fim da cena.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sujo de Sangue</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O sangue do alvo jorra, inspirando medo nos inimigos.</em></p><p>Inimigos em até <strong>9m</strong> de você devem fazer [[/save wis dc=15]]. Quem falha fica <strong>amedrontado de você</strong> até o fim da cena. No final de cada turno das criaturas afetadas, elas podem repetir o salvamento.</p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" />",
       "name": ""
     },
     {
@@ -155,7 +155,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe com Estilo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Suas ações do seu próximo turno têm vantagem.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe com Estilo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão preciso que inspira confiança.</em></p><p>Você tem <strong>vantagem</strong> nas suas ações no próximo turno.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
       "name": ""
     },
     {
@@ -180,7 +180,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Dilacerado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo solta o que estiver segurando e o braço fica inutilizado até receber cura.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Dilacerado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta profunda no braço do alvo, incapacitando-o.</em></p><p>O alvo <strong>solta o item</strong> que estiver segurando e não pode usar o braço afetado até o fim do combate. No final de cada turno do alvo, [[/save dex dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
       "name": ""
     },
     {
@@ -205,7 +205,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Açougueiro!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo recebe dano adicional igual a 2x o modificador de Força do atacante.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vigor Cortante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do corte canaliza vigor para você.</em></p><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong>.</p><img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
       "name": ""
     },
     {
@@ -230,7 +230,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Preso na Lâmina</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Se o alvo for igual ou menor que você fica agarrado por uma rodada ou até se soltar.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lâmina Presa</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina se entranha na carne do alvo, prendendo-o.</em></p><p>O alvo fica <strong>agarrado</strong> até o fim do seu próximo turno. No final de cada turno do alvo, [[/save ath dc=15]] para se soltar.</p><img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
       "name": ""
     },
     {
@@ -255,7 +255,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Larga!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>A arma do alvo cai atrás de você.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Perna</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta a coxa do alvo, derrubando-o.</em></p><p>O alvo fica <strong>caído</strong> e sofre <strong>1d6 de dano cortante</strong> adicional.</p><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
       "name": ""
     },
     {
@@ -280,7 +280,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Limpo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Faça um ataque adicional contra o mesmo alvo.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Limpo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão limpo que abre oportunidade para um golpe seguinte.</em></p><p>Você pode fazer <strong>um ataque adicional</strong> contra o mesmo alvo.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
       "name": ""
     },
     {
@@ -305,7 +305,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Balanço Perfeito</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Você recebe uma ação de movimento adicional nesta rodada.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cortar e Perseguir</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte abre espaço para uma investida relâmpago.</em></p><p>Você pode se mover até o seu deslocamento <strong>sem provocar ataques de oportunidade</strong> depois deste ataque.</p><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
       "name": ""
     },
     {
@@ -330,7 +330,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Perna</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo fica caído e sofre 1d6 de dano de impacto adicional.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Boca</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta os lábios do alvo, impedindo-o de falar.</em></p><p>O alvo não pode falar ou conjurar magias com componente verbal até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
       "name": ""
     },
     {
@@ -355,7 +355,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Boca</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo não pode falar durante 1d6 rodadas.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Parada Instinctiva</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O reflexo de cortar é tão rápido que cria uma barreira defensiva.</em></p><p>Você ganha <strong>+2 na CA</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" />",
       "name": ""
     },
     {
@@ -380,7 +380,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Investida Intimidadora</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo não consegue te atacar até o início do seu próximo turno.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fraqueza Temporária</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte enfraquece os músculos do alvo.</em></p><p>Todo dano que o alvo causar até o fim do combate é <strong>reduzido pela metade</strong>. No final de cada turno do alvo, [[/save con dc=15]] para encerrar.</p><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" />",
       "name": ""
     },
     {
@@ -405,7 +405,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fraqueza Temporária</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Todo dano que o alvo causar até o final da cena é reduzido pela metade.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cortador de Cabelo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão preciso que arranca um pedaço do cabelo do alvo.</em></p><p>O alvo perde parte do seu cabelo/penas/cristas. Ele sofre <strong>desvantagem</strong> em testes de <strong>Carisma</strong> até completar um descanso longo ou usar <em>Greater Restoration</em>.</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
       "name": ""
     },
     {
@@ -430,7 +430,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pele Arrancada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo recebe -1 na CA e -2 nos testes de habilidade de Carisma até receber cura.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pele Arrancada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina arranca uma camada de pele do alvo, deixando-o exposto.</em></p><p>O alvo sofre <strong>-1 na CA</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com cura de 5+ PV ou um descanso longo.</p><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" />",
       "name": ""
     },
     {
@@ -455,7 +455,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cortar e Correr</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>Você pode realizar uma ação de movimento adicional nesta rodada.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Garganta</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina atinge a garganta do alvo com precisão cirúrgica.</em></p><p>O alvo sofre <strong>2d8 de dano cortante</strong> adicional. No início do próximo turno do alvo, ele deve fazer [[/save con dc=15]] ou ficar <strong>incapacitado</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" />",
       "name": ""
     },
     {
@@ -480,7 +480,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sangue pra Todo Lado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo fica amedrontado por todas criaturas feridas que pode ver até o início do seu próximo turno.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sangue pra Todo Lado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O sangue jorra do alvo, manchando tudo ao redor.</em></p><p>O alvo fica <strong>sangrando</strong> e o chão em 1,5m ao redor dele fica coberto de sangue (terreno difícil).</p><img src=\"https://media1.tenor.com/m/LIIwq-bqfFkAAAAd/hajime-no-ippo-anime.gif\" />",
       "name": ""
     },
     {
@@ -505,7 +505,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Garganta</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em></em></p><p>O alvo deve realizar [[/save con dc=10]] (ou CD igual ao dano, o que for maior) ou cai com 0 de HP e sangrando.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Dança da Lâmina</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão preciso que abre caminho para um golpe devastador.</em></p><p>Seu próximo acerto tem os <strong>dados de dano dobrados</strong> até o final do seu próximo turno.</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
       "name": ""
     }
   ],

@@ -12,9 +12,9 @@
         1
       ],
       "_id": "Wzz5LVPO61fHxyU1",
-      "name": "Repercussão Cinética",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A energia magica colapsa de forma explosiva. Você é empurrado 5 ft na direção oposta do alvo e fica &amp;Reference[prone].</p><img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Repercussão Cinética</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia magica colapsa de forma explosiva.</em></p>Você é empurrado 5 ft na direção oposta do alvo e fica &amp;Reference[prone].<img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -38,9 +38,9 @@
         2
       ],
       "_id": "G5ShEOkETYMU5WQ2",
-      "name": "Dissipação Estática",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A energia mágica fica retida em você. Você recebe [[/r 1d6]] de dano do mesmo tipo da magia conjurada.</p><img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Dissipação Estática</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia mágica fica retida em você.</em></p>Você recebe [[/r 1d6]] de dano do mesmo tipo da magia conjurada.<img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -64,9 +64,9 @@
         3
       ],
       "_id": "oPSScyeEzzUK8UEd",
-      "name": "Não Vejo Nada",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A energia mágica dissipa-se num clarão ofuscante visível a um raio de 30 ft. Você fica &amp;Reference[blinded] por uma rodada.<br /></p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" alt=\"Pessoa sem enxergar nada\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Não Vejo Nada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia mágica dissipa-se num clarão ofuscante visível a um raio de 30 ft.</em></p>Você fica &amp;Reference[blinded] por uma rodada.<br /><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" alt=\"Pessoa sem enxergar nada\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -90,9 +90,9 @@
         4
       ],
       "_id": "UJRWap9zYHb2tC3Q",
-      "name": "Army Caindo no Abismo",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Sua magia se comporta de forma inesperada, transformando-se em um fenômeno sonoro de uma garota caindo em um abismo infinito, e sua voz ecoando de forma audível a 100 ft de distância a partir de você, até o fim do seu próximo turno.</p><p>Quando este fenômeno inicia, cada criatura que possa ouvir e que estiver se concentrando, deve realizar um [[/concentration con dc=15]]. Uma criatura que entrar na área pela primeira vez em um turno ou terminar o turno nela também deve realizar a Salvaguarda.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Army Caindo no Abismo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua magia se comporta de forma inesperada, transformando-se em um fenômeno sonoro de uma garota caindo em um abismo infinito, e sua voz ecoando de forma audível a 100 ft de distância a partir de você, até o fim do seu próximo turno.</em></p><p>Quando este fenômeno inicia, cada criatura que possa ouvir e que estiver se concentrando, deve realizar um [[/concentration con dc=15]]. Uma criatura que entrar na área pela primeira vez em um turno ou terminar o turno nela também deve realizar a Salvaguarda.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -116,9 +116,9 @@
         5
       ],
       "_id": "kO2PIr8hFSa9X2l9",
-      "name": "Micro-ruptura Ambiental",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A densidade energética não direcionada deforma o chão ao seu redor. Os espaços ocupados por você e adjacentes tornam-se terreno difícil até o fim do combate.</p><img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Micro-ruptura Ambiental</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A densidade energética não direcionada deforma o chão ao seu redor.</em></p>Os espaços ocupados por você e adjacentes tornam-se terreno difícil até o fim do combate.<img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -142,9 +142,9 @@
         6
       ],
       "_id": "yDLvQpw0QwwpIxnL",
-      "name": "Fenômenos Exóticos",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Sua magia assume formas inesperadas se associando com fenômenos não convencionais. Pelas próximas 24h, suas magias produzem sons de cabra, assumem formas de cheetahs com asas de borboletas, possuem coloração iridescente, e um cheiro de carro novo. Todos esses fenômenos são perceptíveis, em especial para o conjurador, mas sua apresentação varia com a natureza da magia conjurada.</p><p><br /></p><p>Este efeito é removível com um uso de magias como Remove Curse ou Dispel Magic.</p><img src=\"https://media1.tenor.com/m/1C6kspPG1-gAAAAC/good-morning.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fenômenos Exóticos</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua magia assume formas inesperadas se associando com fenômenos não convencionais. Pelas próximas 24h, suas magias produzem sons de cabra, assumem formas de cheetahs com asas de borboletas, possuem coloração iridescente, e um cheiro de carro novo. Todos esses fenômenos são perceptíveis, em especial para o conjurador, mas sua apresentação varia com a natureza da magia conjurada.</em></p><p><br /></p><p>Este efeito é removível com um uso de magias como Remove Curse ou Dispel Magic.</p><img src=\"https://media1.tenor.com/m/1C6kspPG1-gAAAAC/good-morning.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -168,9 +168,9 @@
         7
       ],
       "_id": "EuhhKd1mSEQE9urp",
-      "name": "Estática nas Mãos",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A energia se agita em seu corpo e rejeita a matéria em seus membros. Você larga tudo o que estiver segurando ou carregando, se torna incapaz de interagir com objetos e de conjurar magias com componente material (M), até realizar um rito de descarga energética.<br /><br /><strong>Rito de Descarga Energética.</strong> Com uma &amp;Reference[bonusactioncasting], você realiza uma sequência de gestos envolvendo esfregar as mãos, os pés (ou outros membros equivalentes) em uma superfície, dissipando a energia excedente. Você só pode fazer isso se não tiver se movido neste turno, e após faze-lo, seu deslocamento se torna 0 até o fim deste turno.</p><img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Estática nas Mãos</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia se agita em seu corpo e rejeita a matéria em seus membros.</em></p>Você larga tudo o que estiver segurando ou carregando, se torna incapaz de interagir com objetos e de conjurar magias com componente material (M), até realizar um rito de descarga energética.<br /><br /><strong>Rito de Descarga Energética.</strong> Com uma &amp;Reference[bonusactioncasting], você realiza uma sequência de gestos envolvendo esfregar as mãos, os pés (ou outros membros equivalentes) em uma superfície, dissipando a energia excedente. Você só pode fazer isso se não tiver se movido neste turno, e após faze-lo, seu deslocamento se torna 0 até o fim deste turno.<img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -194,9 +194,9 @@
         8
       ],
       "_id": "nhDhZ2ZqORZELeKI",
-      "name": "Empoderar Inimigo",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Sua magia sai com efeitos fortalecedores e regenerativos. O alvo recupera 1 ponto de vida e o alvo pode realizar uma ação como reação, tendo apenas você como alvo. As demais regras da ação se aplicam normalmente.</p><img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Empoderar Inimigo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua magia sai com efeitos fortalecedores e regenerativos.</em></p>O alvo recupera 1 ponto de vida e o alvo pode realizar uma ação como reação, tendo apenas você como alvo. As demais regras da ação se aplicam normalmente.<img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -220,9 +220,9 @@
         9
       ],
       "_id": "b5rfYRGZhN6Vrjkz",
-      "name": "Bigornaaaaaaaaaaaaaaaaaaaa!!!!!",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Sua magia é lançada de uma forma não convencional e, em vez do efeito normal, ela invoca uma bigorna comicamente gigante estampada com a indicação de 10 toneladas, que cairá aleatoriamente sobre você ou sobre outra criatura que você possa ver dentro do alcance da magia original. O alvo deve fazer um [[/save dex dc=15]] ou sofrerá [[/r 3d10]] de dano de força. A bigorna demora muito para atingir o alvo, mas, inexplicavelmente, o alvo também demora para reagir. Após colidir com uma superfície ou com o alvo, a bigorna desaparece gradativamente.</p><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Bigornaaaaaaaaaaaaaaaaaaaa!!!!!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua magia é lançada de uma forma não convencional e, em vez do efeito normal, ela invoca uma bigorna comicamente gigante estampada com a indicação de 10 toneladas, que cairá aleatoriamente sobre você ou sobre outra criatura que você possa ver dentro do alcance da magia original.</em></p>O alvo deve fazer um [[/save dex dc=15]] ou sofrerá [[/r 3d10]] de dano de força. A bigorna demora muito para atingir o alvo, mas, inexplicavelmente, o alvo também demora para reagir. Após colidir com uma superfície ou com o alvo, a bigorna desaparece gradativamente.<img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -246,9 +246,9 @@
         10
       ],
       "_id": "VQUKVz7rGthpEvf4",
-      "name": "Você Bebeu Detergente?",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Sua boca fica com gosto de detergente de coco e bolhas saem dela constantemente. Por 1 minuto, você é incapaz de falar e, a cada tentativa, mais bolhas saem de sua boca.</p><p>No final de cada um dos seus turnos, você pode realizar uma [[/save con dc=15]] para encerrar o efeito prematuramente. Este efeito também pode ser encerrado por magias como <em>Dispel Magic</em> ou <em>Remove Curse</em>. Pela duração do efeito, você pode usar o <em>Sopro de Bolhas</em> uma vez por turno; quando o fizer, a próxima Salvaguarda para encerrar o efeito é realizada com vantagem.</p><p><strong>Sopro de Bolhas</strong>. Com uma ação, você exala uma baforada de bolhas de sabão de coco em um cone de 15 ft., tornando a área escorregadia e considerada terreno difícil até ser limpa ou dissipada.</p><p>Quando as bolhas surgem, cada objeto e criatura na área fica limpo e com um leve aroma de sabão de coco. Além disso, as criaturas na área devem realizar uma Salvaguarda de Destreza (CD 8 + seu modificador de Constituição + seu bônus de proficiência) ou cairão &amp;Reference[prone]. Uma criatura que entrar na área pela primeira vez em um turno ou terminar o turno nela também deve realizar a Salvaguarda ou cairá &amp;Reference[prone].</p><img src=\"https://media1.tenor.com/m/VsrbqD4tNVcAAAAC/clint-eastwood-bubbles.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Você Bebeu Detergente?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua boca fica com gosto de detergente de coco e bolhas saem dela constantemente. Por 1 minuto, você é incapaz de falar e, a cada tentativa, mais bolhas saem de sua boca.</em></p><p>No final de cada um dos seus turnos, você pode realizar uma [[/save con dc=15]] para encerrar o efeito prematuramente. Este efeito também pode ser encerrado por magias como <em>Dispel Magic</em> ou <em>Remove Curse</em>. Pela duração do efeito, você pode usar o <em>Sopro de Bolhas</em> uma vez por turno; quando o fizer, a próxima Salvaguarda para encerrar o efeito é realizada com vantagem.</p><p><strong>Sopro de Bolhas</strong>. Com uma ação, você exala uma baforada de bolhas de sabão de coco em um cone de 15 ft., tornando a área escorregadia e considerada terreno difícil até ser limpa ou dissipada.</p><p>Quando as bolhas surgem, cada objeto e criatura na área fica limpo e com um leve aroma de sabão de coco. Além disso, as criaturas na área devem realizar uma Salvaguarda de Destreza (CD 8 + seu modificador de Constituição + seu bônus de proficiência) ou cairão &amp;Reference[prone]. Uma criatura que entrar na área pela primeira vez em um turno ou terminar o turno nela também deve realizar a Salvaguarda ou cairá &amp;Reference[prone].</p><img src=\"https://media1.tenor.com/m/VsrbqD4tNVcAAAAC/clint-eastwood-bubbles.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -272,9 +272,9 @@
         11
       ],
       "_id": "WMWfKhefb0vtXlUY",
-      "name": "Fôlego Encurtado",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Seu ataque desajeitado tira todo o seu fôlego.</p><p>Até o final do seu próximo turno, você não pode usar Ações Bônus ou Reações.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fôlego Encurtado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu ataque desajeitado tira todo o seu fôlego.</em></p><p>Até o final do seu próximo turno, você não pode usar Ações Bônus ou Reações.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -298,9 +298,9 @@
         12
       ],
       "_id": "FHQnvUOziWQwD37I",
-      "name": "Vazamento Energético",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Um vazamento nas suas energias te enfraquece. Você fica Lento por 1 rodada ou até receber cura mágica.</p><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vazamento Energético</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um vazamento nas suas energias te enfraquece.</em></p>Você fica Lento por 1 rodada ou até receber cura mágica.<img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -324,9 +324,9 @@
         13
       ],
       "_id": "EKTxguMqaoZEJTsy",
-      "name": "Teletransporte Espontâneo",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Você acidentalmente fez o gesto errado, pronunciou em um tom diferente, ou usou o material errado na conjuração, e agora está onde não era planejado. Você é teletransportado junto com os objetos que estiver vestindo ou carregando para um espaço livre a [[/r 1d6* 5]] ft em uma direção aleatória. Se o espaço de destino estiver ocupado, você sofre 1d4 de dano de força e reaparece no ponto mais próximo.</p><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Teletransporte Espontâneo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você acidentalmente fez o gesto errado, pronunciou em um tom diferente, ou usou o material errado na conjuração, e agora está onde não era planejado.</em></p>Você é teletransportado junto com os objetos que estiver vestindo ou carregando para um espaço livre a [[/r 1d6* 5]] ft em uma direção aleatória. Se o espaço de destino estiver ocupado, você sofre 1d4 de dano de força e reaparece no ponto mais próximo.<img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -350,9 +350,9 @@
         14
       ],
       "_id": "u7GbjFkhcKOHJVxC",
-      "name": "O Que Era Pra Fazer Mesmo?",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Você fica sem saber o que fazer.</p><p>Você fica &amp;Reference[incapacitated] e tem sua posição revelada por uma rodada.<br /></p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" alt=\"Atordoado e confuso\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">O Que Era Pra Fazer Mesmo?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você fica sem saber o que fazer.</em></p><p>Você fica &amp;Reference[incapacitated] e tem sua posição revelada por uma rodada.<br /></p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" alt=\"Atordoado e confuso\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -376,9 +376,9 @@
         15
       ],
       "_id": "DuBmLx9NWDEZU2HR",
-      "name": "Revolta do Conhecimento",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Seu uso displicente do conhecimento é revoltante, a ponto de ele se manifestar em forma física para se vingar.</p><p>No espaço desocupado mais próximo de você, aparece uma criatura do tipo constructo que porta fragmentos dos conhecimentos da sua mente. Ela é hostil a você e age imediatamente no fim do seu turno. Enquanto a criatura estiver viva, você tem desvantagem em testes de habilidade de Inteligência. Ela desaparece quando os pontos de vida dela (ou os seus) chegam a 0, quando você fica &amp;Reference[incapacitated] ou se você, como uma &amp;Reference[bonusaction], resolver um desafio mental (sendo bem-sucedido em um [[/check int dc=15]]).</p><p>Se a criatura estiver agarrada, quem está agarrando pode, com uma &amp;Reference[bonusaction], realizar um [[/check inv dc=15 format=long]] para tentar estudar os conhecimentos do constructo.</p><p>O Mestre possui as estatísticas da criatura.</p><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Revolta do Conhecimento</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu uso displicente do conhecimento é revoltante, a ponto de ele se manifestar em forma física para se vingar.</em></p><p>No espaço desocupado mais próximo de você, aparece uma criatura do tipo constructo que porta fragmentos dos conhecimentos da sua mente. Ela é hostil a você e age imediatamente no fim do seu turno. Enquanto a criatura estiver viva, você tem desvantagem em testes de habilidade de Inteligência. Ela desaparece quando os pontos de vida dela (ou os seus) chegam a 0, quando você fica &amp;Reference[incapacitated] ou se você, como uma &amp;Reference[bonusaction], resolver um desafio mental (sendo bem-sucedido em um [[/check int dc=15]]).</p><p>Se a criatura estiver agarrada, quem está agarrando pode, com uma &amp;Reference[bonusaction], realizar um [[/check inv dc=15 format=long]] para tentar estudar os conhecimentos do constructo.</p><p>O Mestre possui as estatísticas da criatura.</p><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -402,9 +402,9 @@
         16
       ],
       "_id": "gWc1Z3KwbOtSt0QX",
-      "name": "É Tãaaaaaaaaaaaoooooooo Fofooooooooo!",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Se você é imune a &amp;Reference[charmed], rerole a tabela. Do contrário, você fica &amp;Reference[charmed] pelo alvo até o fim da cena. No final de cada um dos seus turnos, faça [[/save wis dc=15]]. Em sucesso, a condição encerra.</p><img src=\"https://media1.tenor.com/m/pjBtpAFSnmgAAAAC/peach-goma-peach-and-goma.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">É Tãaaaaaaaaaaaoooooooo Fofooooooooo!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Se você é imune a &amp;Reference[charmed], rerole a tabela.</em></p>Do contrário, você fica &amp;Reference[charmed] pelo alvo até o fim da cena. No final de cada um dos seus turnos, faça [[/save wis dc=15]]. Em sucesso, a condição encerra.<img src=\"https://media1.tenor.com/m/pjBtpAFSnmgAAAAC/peach-goma-peach-and-goma.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -428,9 +428,9 @@
         17
       ],
       "_id": "djJP92vQBbDNU0v2",
-      "name": "Ghosting",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Seus aliados o abandonaram após um erro tão terrível. Ao menos é o que você pensa.</p><p>Até o fim do seu próximo turno, você se torna incapaz de perceber seus aliados, e não pode se beneficiar ou beneficiá-los com a ação Ajudar ou flanqueamento. Você racionaliza qualquer efeito ou evento provocado por eles como se fosse uma força da natureza, força mística ou divina, mero acaso, ação sua ou de outras criaturas.</p><p>No fim do efeito, você acredita que seus aliados acabaram de voltar.</p><img src=\"https://media1.tenor.com/m/aaxlImv0WLIAAAAd/ghosted-ghosting.gif\" /><p></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ghosting</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seus aliados o abandonaram após um erro tão terrível. Ao menos é o que você pensa.</em></p><p>Até o fim do seu próximo turno, você se torna incapaz de perceber seus aliados, e não pode se beneficiar ou beneficiá-los com a ação Ajudar ou flanqueamento. Você racionaliza qualquer efeito ou evento provocado por eles como se fosse uma força da natureza, força mística ou divina, mero acaso, ação sua ou de outras criaturas.</p><p>No fim do efeito, você acredita que seus aliados acabaram de voltar.</p><p></p><img src=\"https://media1.tenor.com/m/aaxlImv0WLIAAAAd/ghosted-ghosting.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -454,9 +454,9 @@
         18
       ],
       "_id": "hYocNuBXgKl0FiTU",
-      "name": "E Se Eu Acertasse Você...?",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>Você deixa os seus pensamentos intrusivos vencerem.</p><p>Seu ataque acerta uma criatura não hostil mais próximo do alvo.</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">E Se Eu Acertasse Você...?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você deixa os seus pensamentos intrusivos vencerem.</em></p><p>Seu ataque acerta uma criatura não hostil mais próximo do alvo.</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -480,9 +480,9 @@
         19
       ],
       "_id": "yZECJ6irva5dsofL",
-      "name": "Estátua!",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<p>A energia conjurada desarmoniza com a sua liberdade de movimento.</p><p>Você fica &amp;Reference[petrified]por 1 rodada.</p><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Estátua!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia conjurada desarmoniza com a sua liberdade de movimento.</em></p><p>Você fica &amp;Reference[petrified]por 1 rodada.</p><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -506,7 +506,7 @@
         20
       ],
       "_id": "aVkrT3IOtUcfLSed",
-      "name": "Adversários Inflamados",
+      "name": "",
       "img": "icons/svg/d20-black.svg",
       "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Adversários Inflamados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</em></p><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p><div style=\"text-align:center;margin-top:10px\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" style=\"width:100%;border-radius:8px;border:1px solid #000\" /></div>",
       "drawn": false,

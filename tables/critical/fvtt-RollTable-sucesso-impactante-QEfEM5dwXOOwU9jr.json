@@ -26,7 +26,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">No Estômago!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe foi certeiro no estômago.</em></p><p>Alvo fica enjoado por [[1d4]] rodadas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">No Estômago!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe atinge o estômago do alvo com força devastadora.</em></p><p>O alvo fica <strong>enjoado</strong> até o fim do seu próximo turno. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
       "name": ""
     },
     {
@@ -51,7 +51,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Costelas Quebradas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O som de ossos partindo ecoa pelo campo de batalha.</em></p><p>O alvo sofre -2 em jogadas de ataque baseadas em Força até receber cura ou realizar um descanso</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Costelas Quebradas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O som de ossos partindo ecoa pelo campo de batalha.</em></p><p>O alvo sofre <strong>-1 em testes de Força</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/aYxWSN1Ufy8AAAAd/sword-flash.gif\" />",
       "name": ""
     },
     {
@@ -76,7 +76,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pancada na Cabeça</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um golpe pesado atinge a cabeça do alvo.</em></p><p>O alvo fica atordoado por uma rodada</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pancada na Cabeça</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um golpe pesado atinge a cabeça do alvo, turvando sua visão.</em></p><p>O alvo fica <strong>atordoado</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
       "name": ""
     },
     {
@@ -101,7 +101,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Contusão no Braço</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O braço do alvo estala de forma dolorosa.</em></p><p>O alvo fica vulnerável até o fim da cena</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Contusão no Braço</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O braço do alvo estala de forma dolorosa, enfraquecendo-o.</em></p><p>O alvo fica <strong>vulnerável</strong> a dano de impacto até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
       "name": ""
     },
     {
@@ -126,7 +126,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Beijando o Chão</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto joga o alvo no chão.</em></p><p>Alvo fica caído</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Beijando o Chão</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto joga o alvo no chão com força.</em></p><p>O alvo fica <strong>caído</strong> e sofre <strong>1d6 de dano de impacto</strong> adicional.</p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" />",
       "name": ""
     },
     {
@@ -151,7 +151,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ouvindo Sinos</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O zumbido nos ouvidos do alvo é ensurdecedor.</em></p><p>O alvo fica surdo por [[1d4]] horas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ouvindo Sinos</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O zumbido nos ouvidos do alvo é ensurdecedor.</em></p><p>O alvo fica <strong>surdo</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
       "name": ""
     },
     {
@@ -176,7 +176,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Joelho Quebrado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O joelho do alvo cede sob o impacto.</em></p><p>O alvo fica lento até receber cura e perde 1 ponto de Destreza permanentemente</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Joelho Quebrado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O joelho do alvo cede sob o impacto, travando a articulação.</em></p><p>O deslocamento do alvo é reduzido em <strong>3m</strong> (mínimo 1,5m) até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
       "name": ""
     },
     {
@@ -201,7 +201,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Nocaute!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um golpe devastador atinge o alvo.</em></p><p>O alvo deve passar em uma [[/save con dc=15]] ou cai inconsciente por 1d4 rodadas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Técnica Reversa</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe é tão impactante que o alvo só consegue pensar em você.</em></p><p>O alvo fica <strong>obcecado</strong> por você: até o fim do seu próximo turno, ele só pode usar suas ações e reações para atacar <strong>você</strong>. No final de cada turno do alvo, [[/save wis dc=15]] para encerrar.</p><img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
       "name": ""
     },
     {
@@ -226,7 +226,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vendo Estrelas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>As estrelas piscam diante dos olhos do alvo.</em></p><p>O alvo fica ofuscado por 2 rodadas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vendo Estrelas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>As estrelas piscam diante dos olhos do alvo.</em></p><p>O alvo sofre <strong>desvantagem na próxima jogada de ataque</strong>.</p><img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
       "name": ""
     },
     {
@@ -251,7 +251,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Essa Doeu na Alma!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma dor sobrenatural corta a essência do alvo.</em></p><p>O alvo perde um spell slot de [[1d6]]º ciclo. Se for maior do que o ciclo que o alvo pode conjurar, ele perde do maior ciclo que pode conjurar. Se não há spells slots a serem perdidos, role a tabela novamente.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Essa Doeu na Alma!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma dor sobrenatural corta a essência do alvo.</em></p><p>O alvo perde <strong>1 espaço de magia</strong> do seu maior nível disponível. Se não tiver espaços, role a tabela novamente.</p><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
       "name": ""
     },
     {
@@ -276,7 +276,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Esmagado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O osso do alvo se parte com um estalo crú.</em></p><p>Alvo derruba o que tiver na mão e não pode fazer testes e jogadas de ataque baseados em Força até receber cura</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Esmagado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O osso do alvo se parte com um estalo cru.</em></p><p>O alvo <strong>solta o item</strong> que estiver segurando e sofre <strong>-1 em testes e jogadas de ataque com Força</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
       "name": ""
     },
     {
@@ -301,7 +301,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lesão Cerebral</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma pancada terrível atinge a cabeça do alvo.</em></p><p>O alvo perde todas as proficiências, e se torna incapaz de conjurar truques e feitiços, até que descanse por 8 horas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lesão Cerebral</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma pancada terrível atinge a cabeça do alvo, comprometendo suas funções cognitivas.</em></p><p>O alvo sofre <strong>desvantagem</strong> em jogadas de ataque com feitiços e testes de resistência de <strong>Destreza, Inteligência e Sabedoria</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Greater Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
       "name": ""
     },
     {
@@ -326,7 +326,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Falta de Ar</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe esvazia os pulmões do alvo.</em></p><p>O alvo fica sem respirar por [[1d8]] rodadas</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Falta de Ar</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe esvazia os pulmões do alvo.</em></p><p>O alvo precisa fazer [[/save con dc=15]] no <strong>início de cada turno</strong> ou não pode realizar <strong>ação bônus ou reação</strong> até o próximo turno. Dura até o fim do combate. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
       "name": ""
     },
     {
@@ -351,7 +351,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Que Dor!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma dor insuportável domina o corpo do alvo.</em></p><p>O alvo fica fraco até o fim da cena</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Tontura</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto causa uma desorientação profunda no alvo.</em></p><p>O alvo sofre <strong>-1 em testes de habilidade</strong> até o fim do combate. No final de cada turno do alvo, [[/save int dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" />",
       "name": ""
     },
     {
@@ -376,7 +376,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Nariz Destruído</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O nariz do alvo é destroçado pelo impacto.</em></p><p>O alvo perde um ponto de Carisma permanentemente</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe Brutal</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A força do golpe é avassaladora.</em></p><p><strong>Dobre a quantidade de dados de dano</strong> deste ataque.</p><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" />",
       "name": ""
     },
     {
@@ -401,7 +401,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe Brutal</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A força do golpe é avassaladora.</em></p><p>Dobre novamente a quantidade de dados de dano deste ataque</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Quebra!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe atinge uma articulação vital.</em></p><p>Você causa <strong>+1d6 de dano de impacto</strong> adicional e o alvo deve fazer [[/save con dc=15]] ou perde sua <strong>reação</strong>.</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
       "name": ""
     },
     {
@@ -426,7 +426,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Quebra!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O golpe atinge uma articulação vital.</em></p><p>Você acerta a manobra quebrar contra o alvo usando o mesmo dano</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Escudo de Pedra</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do impacto se solidifica em uma barreira de pedra ao redor de você.</em></p><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong> e <strong>resistência</strong> a dano de impacto até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" />",
       "name": ""
     },
     {
@@ -451,7 +451,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Armadura Amassada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto amassa a proteção do alvo.</em></p><p>A penalidade da armadura do alvo aumenta em +2 até que ela seja consertada</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Armadura Amassada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O impacto amassa a proteção do alvo.</em></p><p>A CA do alvo é reduzida em <strong>1</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar.</p><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" />",
       "name": ""
     },
     {
@@ -476,7 +476,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Porrada Motivadora</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O seu golpe inspira um aliado próximo.</em></p><p>Um aliado à sua escolha em até 9 m que viu sua ação tem uma condição removida</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Porrada Motivadora</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O seu golpe inspira um aliado próximo.</em></p><p>Um aliado à sua escolha em até <strong>9m</strong> que viu sua ação tem <strong>uma condição</strong> removida (escolha qual).</p><img src=\"https://media1.tenor.com/m/LIIwq-bqfFkAAAAd/hajime-no-ippo-anime.gif\" />",
       "name": ""
     },
     {
@@ -501,7 +501,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Crânio Esmagado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O crânio do alvo racha sob o impacto.</em></p><p>O alvo deve realizar uma [[/save con dc=15]], se falhar cai com 0 de HP estabilizado</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Crânio Esmagado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O crânio do alvo racha sob o impacto.</em></p><p>O alvo sofre <strong>2d8 de dano de impacto</strong> adicional e fica <strong>atordoado</strong> até o fim do seu próximo turno.</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
       "name": ""
     }
   ],

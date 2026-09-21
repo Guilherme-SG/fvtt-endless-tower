@@ -75,8 +75,8 @@ Each table is a FoundryVTT RollTable JSON (21 entries, ranges 1–20 + a crit/fa
 - `fvtt-RollTable-sucesso-perfurante-*.json` — Critical hits (piercing)
 - `fvtt-RollTable-sucesso-impactante-*.json` — Critical hits (bludgeoning)
 - `fvtt-RollTable-sucesso-cortante-*.json` — Critical hits (slashing)
-- `fvtt-RollTable-sucesso-magico-*.json` — Magic crits (empty, skip for now)
-- `fvtt-RollTable-falha-magico-*.json` — Magic fails (already formatted)
+- `fvtt-RollTable-sucesso-magico-*.json` — Magic crits (arcane spell attacks)
+- `fvtt-RollTable-falha-magico-*.json` — Magic fails
 - `fvtt-RollTable-falha-desarmada_arma-natural-*.json` — Natural weapon fails
 - `fvtt-RollTable-falha-corpo-a-corpo-*.json` — Melee fails
 - `fvtt-RollTable-falha-a-distancia-*.json` — Ranged fails

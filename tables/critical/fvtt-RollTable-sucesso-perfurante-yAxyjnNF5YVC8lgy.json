@@ -26,7 +26,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">No Olho!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Alvo fica cego até receber cura ou descanso.</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">No Olho!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma punhalada exata atinge o olho do alvo, fazendo sangrar intensamente.</em></p><p>O alvo fica <strong>cego</strong> até o fim do seu próximo turno. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
       "name": ""
     },
     {
@@ -51,7 +51,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fragmentos Alojados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo só consegue recuperar HP magicamente até realizar um descanso.</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fragmentos Alojados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Fragmentos da própria arma se alojam na carne do alvo, interferindo na regeneração natural.</em></p><p>O alvo não recupera PV por meios não-mágicos até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Uma criatura pode usar uma <strong>ação</strong> para fazer um teste de <strong>Medicação DC 15</strong> e remover os fragmentos (pode ser o próprio alvo ou um aliado). Também pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/aYxWSN1Ufy8AAAAd/sword-flash.gif\" />",
       "name": ""
     },
     {
@@ -76,7 +76,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Preso no Lugar</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo fica agarrado até ser bem sucedido em um</em></p><p>[[/check ath dc=15]]</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Rigidez Muscular</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração causa uma contração muscular involuntária no alvo.</em></p><p>O alvo não pode usar <strong>reações</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
       "name": ""
     },
     {
@@ -101,7 +101,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perna Perfurada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo fica lento até receber cura</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perna Perfurada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta a coxa do alvo, dificultando seus movimentos.</em></p><p>O deslocamento do alvo é reduzido pela metade até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
       "name": ""
     },
     {
@@ -126,7 +126,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Profunda</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo recebe -2 em testes e jogadas de ataque com Destreza até receber cura ou descanso</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Profunda</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração atinge músculos profundos, enfraquecendo os movimentos do alvo.</em></p><p>O alvo sofre <strong>-1 em jogadas de ataque e testes de Destreza</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" />",
       "name": ""
     },
     {
@@ -151,7 +151,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Intimidadora</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo não pode fazer uma ação padrão no seu próximo turno</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Intimidadora</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A exatidão do golpe demonstra domínio total, fazendo o alvo hesitar.</em></p><p>O alvo não pode fazer uma <strong>ação padrão</strong> no próximo turno. Você ganha <strong>vantagem</strong> na sua próxima jogada de ataque contra este alvo.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
       "name": ""
     },
     {
@@ -176,7 +176,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração na Costela</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo fica fraco até o fim da cena</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Costela Fraturada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A costela do alvo se parte com um estalo, causando dor intensa a cada movimento.</em></p><p>O alvo sofre <strong>-1 em testes de Força e Constituição</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
       "name": ""
     },
     {
@@ -201,7 +201,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Cruel</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo fica sangrando</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Cruel</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre um corte profundo que não para de sangrar.</em></p><p>O alvo fica <strong>sangrando</strong>.</p><img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
       "name": ""
     },
     {
@@ -226,7 +226,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Calculada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Este ataque ignora qualquer resistência do alvo</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ferida Aberta</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração deixa uma ferida aberta que torna o alvo mais suscetível a novos ataques perfurantes.</em></p><p>O alvo fica <strong>vulnerável</strong> a dano perfurante e sofre <strong>1 de dano perfurante</strong> adicional sempre que for atingido por dano perfurante. Dura até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
       "name": ""
     },
     {
@@ -251,7 +251,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Dor Insuportável</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo não consegue usar habilidades raciais e de classe por</em></p><p>[[1d4]] rodadas.</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fura e Prepara</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração expõe uma vulnerabilidade que você pode explorar.</em></p><p>O seu próximo ataque contra este alvo tem <strong>margem de ameaça expandida em 2</strong> (crita em 18+).</p><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
       "name": ""
     },
     {
@@ -276,7 +276,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Calcanhar de Aquiles</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O movimento do alvo é reduzido a 1,5m até receber cura</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Calcanhar de Aquiles</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um golpe preciso no tendão de Aquiles compromete a mobilidade do alvo.</em></p><p>O deslocamento do alvo é reduzido em <strong>3m</strong> (mínimo 1,5m) até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
       "name": ""
     },
     {
@@ -301,7 +301,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Mão Perfurada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo solta o item que estiver segurando</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Mão Perfurada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina perfura a mão do alvo, fazendo-o soltar o que estiver segurando.</em></p><p>O alvo <strong>solta o item</strong> que estiver segurando (escolha do conjurador se houver mais de um).</p><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
       "name": ""
     },
     {
@@ -326,7 +326,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pulmão Perfurado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo não pode correr (disparada) ou fazer investidas até receber cura</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pulmão Perfurado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração no pulmão rouba o fôlego do alvo.</em></p><p>O alvo não pode usar <strong>disparada</strong> ou <strong>investidas</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
       "name": ""
     },
     {
@@ -351,7 +351,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ombro Perfurado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você perde 4 de CA até o fim da cena</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ombro Perfurado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração no ombro debilita a defesa do alvo, abrindo oportunidades.</em></p><p>O alvo sofre <strong>-1 na CA</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" />",
       "name": ""
     },
     {
@@ -376,7 +376,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Febre Alucinante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo fica confuso até receber cura</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Febre Alucinante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do golpe contamina o sangue do alvo, causando alucinações.</em></p><p>O alvo fica <strong>confuso</strong> até o fim do combate. No final de cada turno do alvo, [[/save wis dc=15]] para encerrar. Pode ser encerrado com <em>Remove Curse</em> ou <em>Greater Restoration</em>.</p><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" />",
       "name": ""
     },
     {
@@ -401,7 +401,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fura e Prepara</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O seu próximo ataque contra este alvo atinge o sucesso crítico no valor 17.</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Estocada nas Costas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A perfuração encontra um ponto vital nas costas do alvo.</em></p><p>O alvo sofre <strong>dano extra igual ao modificador de ataque</strong> (Força ou Destreza, conforme a arma usada, mínimo 1).</p><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" />",
       "name": ""
     },
     {
@@ -426,7 +426,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ferimento Muito Profundo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo tem seus HPs máximos reduzidos em -2 permanentemente</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Marca de Sangue</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um fragmento da arma fica alojado no alvo, deixando um rastro de sangue por onde passa.</em></p><p>Você sempre sabe a <strong>posição do alvo</strong>. O alvo pode usar uma <strong>ação</strong> e um teste de <strong>Percepção DC 15</strong> para localizar o fragmento e resolver o problema.</p><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" />",
       "name": ""
     },
     {
@@ -451,7 +451,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vertigem</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo recebe uma penalidade de -4 em jogadas de ataque até receber cura</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Perfuração Musical</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A ferida faz um som estranho quando o alvo se move, como um assobio irritante.</em></p><p>Sempre que o alvo se mover, um som de assobio é produzido. O alvo sofre <strong>desvantagem</strong> em testes de <strong>Furtividade</strong> até o fim do combate. O alvo pode usar uma <strong>ação</strong> para fazer um teste de <strong>Medicação DC 15</strong> e estancar o assobio.</p><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" />",
       "name": ""
     },
     {
@@ -476,7 +476,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Estocada nas Costas</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo sofre dano igual a metade do valor da CA dele</em></p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Dor Insuportável</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A dor é tão intensa que o alvo congela por um instante, criando uma abertura.</em></p><p>Você pode fazer <strong>um ataque adicional</strong> contra este alvo como parte desta ação.</p><img src=\"https://media1.tenor.com/m/LIIwq-bqfFkAAAAd/hajime-no-ippo-anime.gif\" />",
       "name": ""
     },
     {
@@ -501,7 +501,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Crânio Perfurado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo deve realizar um teste de resistência de Constituição (CD 10 ou igual ao dano, o que for maior), se falhar</em></p><p>[[/save con dc=15]] cai com 0 de HP estabilizado</p>",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Frenzy</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A exatidão do golpe inspira uma fúria coletiva nos aliados.</em></p><p>Você e aliados em <strong>9m</strong> ganham <strong>2d4+2 pontos de vida temporários</strong>.</p><img src=\"https://j.gifs.com/XQMp7l.gif\" />",
       "name": ""
     }
   ],
