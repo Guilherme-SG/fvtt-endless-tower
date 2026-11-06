@@ -352,7 +352,7 @@
       "_id": "u7GbjFkhcKOHJVxC",
       "name": "",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">O Que Era Pra Fazer Mesmo?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você fica sem saber o que fazer.</em></p><p>Você fica &amp;Reference[incapacitated] e tem sua posição revelada por uma rodada.<br /></p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" alt=\"Atordoado e confuso\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">O Que Era Pra Fazer Mesmo?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você fica sem saber o que fazer.</em></p><p>Você fica &amp;Reference[incapacitated] e tem sua posição revelada até o início do seu próximo turno.<br /></p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" alt=\"Atordoado e confuso\" />",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -363,7 +363,7 @@
         "systemId": "dnd5e",
         "systemVersion": "5.2.5",
         "createdTime": 1788028471043,
-        "modifiedTime": 1789511646934,
+        "modifiedTime": 1789945536130,
         "lastModifiedBy": "Xlx5XgXv68kjaoEi"
       },
       "documentUuid": null
@@ -542,7 +542,7 @@
     "systemId": "dnd5e",
     "systemVersion": "5.2.5",
     "createdTime": 1788028453460,
-    "modifiedTime": 1788028506022,
+    "modifiedTime": 1789945406363,
     "lastModifiedBy": "Xlx5XgXv68kjaoEi"
   },
   "formula": "1d20",

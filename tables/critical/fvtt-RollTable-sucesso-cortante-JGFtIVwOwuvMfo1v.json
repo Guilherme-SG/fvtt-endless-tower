@@ -20,13 +20,13 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": 1788234894874,
+        "modifiedTime": 1790202993309,
         "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Dilacerante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre um corte profundo que dificulta os movimentos do alvo.</em></p><p>O deslocamento do alvo é reduzido em <strong>3m</strong> (mínimo 1,5m) até o fim do combate. No final de cada turno do alvo, [[/save dex dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Dilacerante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre um corte profundo que dificulta os movimentos do alvo.</em></p><p>O deslocamento do alvo é reduzido em 10ft (mantendo mínimo 5ft) até o fim do combate. No final de cada turno do alvo, ele pode realizar um [[/save con dc=15]] para encerrar a condição. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -72,13 +72,13 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": 1788235477875,
+        "modifiedTime": 1790203503889,
         "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte nos Tendões</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta os tendões do alvo, limitando suas opções de combate.</em></p><p>O alvo não pode fazer <strong>investidas</strong> ou <strong>deslocamento adicional</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/Bekr8qcIS8sAAAAd/ouch-backfire.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte nos Tendões</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta os tendões do alvo, limitando suas opções de combate.</em></p><p>O alvo não pode fazer <strong>investidas</strong> ou <strong>deslocamento adicional</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/8kPbzVk3VF8AAAAd/frail-achilles.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -98,13 +98,13 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": 1788235477240,
+        "modifiedTime": 1790204759772,
         "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Abrir o Bucho</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre o abdômen do alvo, causando pânico.</em></p><p>O alvo fica <strong>amedrontado de você</strong> até o início do seu próximo turno. No final de cada turno do alvo, [[/save wis dc=15]] para encerrar.</p><img src=\"https://media1.tenor.com/m/fwoJNI_CpjQAAAAC/skeleton-shocked.gif\" />",
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Abrir o Bucho</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina abre o abdômen do alvo, causando pânico.</em></p><p>O alvo fica <strong>&amp;Reference[frightened] por você</strong> até o fim do combate e sangrando. No fim de cada um dos turnos do alvo, ele pode realizar um [[/save wis dc=15]] para encerrar a condição &amp;Reference[frightened]. Se o sangramento causado por este efeito for encerrado, a condição &amp;Reference[frightened] por causa deste efeito também se encerra.</p><img src=\"https://media1.tenor.com/m/mBdB1HtR_oAAAAAd/kony2012-psychicpebbles.gif\" />",
       "name": "",
       "documentUuid": null
     },
@@ -124,14 +124,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790204766273,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sujo de Sangue</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O sangue do alvo jorra, inspirando medo nos inimigos.</em></p><p>Inimigos em até <strong>9m</strong> de você devem fazer [[/save wis dc=15]]. Quem falha fica <strong>amedrontado de você</strong> até o fim da cena. No final de cada turno das criaturas afetadas, elas podem repetir o salvamento.</p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sujo de Sangue</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O sangue do alvo jorra, inspirando medo nos inimigos.</em></p><p>Inimigos em até 30<strong>ft</strong> de você devem fazer [[/save wis dc=15]]. Quem falha fica <strong>&amp;Reference[frightened] por você</strong> até o fim do combate. Além disso, quem falha por 5 ou mais, recua 5ft para cada 5 pontos de diferença. No final de cada turno das criaturas afetadas, elas podem repetir o teste para encerrar a condição.</p><img src=\"https://media1.tenor.com/m/ChFXIbaBugYAAAAC/stone-cold-steve-austin-bloody.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -149,14 +150,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790214933031,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe com Estilo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão preciso que inspira confiança.</em></p><p>Você tem <strong>vantagem</strong> nas suas ações no próximo turno.</p><img src=\"https://media1.tenor.com/m/Q5rw_1t5MYwAAAAd/fall-kirby.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe com Estilo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão preciso que inspira confiança.</em></p><p>Você tem <strong>vantagem</strong> nas suas ações e reação até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/IYEOmk-q9BIAAAAd/mifune-naruto.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -174,14 +176,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790208959754,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Dilacerado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta profunda no braço do alvo, incapacitando-o.</em></p><p>O alvo <strong>solta o item</strong> que estiver segurando e não pode usar o braço afetado até o fim do combate. No final de cada turno do alvo, [[/save dex dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em> ou cura de 5+ PV.</p><img src=\"https://media1.tenor.com/m/79wtgPm53XgAAAAC/crackedscreen-cracked.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Braço Dilacerado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta profundamente no braço do alvo, incapacitando-o.</em></p><p>O alvo <strong>solta o item</strong> que estiver segurando e não pode usar o braço afetado até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Essa condição também pode ser encerrada ao receber cura de 5+ pontos de vida de uma única fonte.</p><img src=\"https://media1.tenor.com/m/BTEi4nK9dMMAAAAd/big-daddy-head-nod.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -199,14 +202,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790209135334,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vigor Cortante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do corte canaliza vigor para você.</em></p><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong>.</p><img src=\"https://media1.tenor.com/m/2S-jKDY-2UoAAAAC/oh-no.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Revigorante</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte purifica o ar imediatamente a sua volta e canaliza vigor para você.</em></p><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong>.</p><img src=\"https://media1.tenor.com/m/WieOeCMdmSEAAAAC/demon-slayer-kimetsu-no-yaiba.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -224,14 +228,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790213842358,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lâmina Presa</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina se entranha na carne do alvo, prendendo-o.</em></p><p>O alvo fica <strong>agarrado</strong> até o fim do seu próximo turno. No final de cada turno do alvo, [[/save ath dc=15]] para se soltar.</p><img src=\"https://media1.tenor.com/m/GJR3WzxdXuUAAAAC/piccolo-special-beam-cannon.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Lâmina Presa</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina se entranha na carne do alvo, prendendo-o.</em></p><p>O alvo fica <strong>&amp;Reference[grappled]</strong> por você. Enquanto o alvo estiver agarrado desta forma, seus ataques contra ele usando esta arma têm vantagem.</p><p><strong data-path-to-node=\"7,1\" data-index-in-node=\"0\">Remoção e Complicação.</strong> O agarrão termina se você atacar outra criatura com esta arma, soltá-la, ou se o alvo escapar do agarrão. Qualquer ação que remova a arma à força (como o alvo escapar ou a arma ser arrancada) aciona a Complicação.</p><p><strong>Complicação.</strong> A remoção abrupta rasga a carne do alvo, causando [[/damage 1d4+1 type=slashing average]]. No final do próximo turno de quem provocou este efeito, se o agarrão não foi desfeito, ele se desfaz e a arma se solta naturalmente sem causar esse dano.</p><img src=\"https://media1.tenor.com/m/wcI4HRz1DfYAAAAd/axe-throw-throwing-an-axe.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -249,14 +254,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790392529707,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Perna</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta a coxa do alvo, derrubando-o.</em></p><p>O alvo fica <strong>caído</strong> e sofre <strong>1d6 de dano cortante</strong> adicional.</p><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Onda de Choque</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina rasga o ar com uma precisão tão irreal que a inércia se recusa a parar, formando uma distorção contínua do que flui a partir do impacto.</em></p><p>Imediatamente após o acerto, a força do golpe cria uma linha de energia cortante de 20 ft de comprimento por 5 ft de largura, que origina de você e se estende na direção da criatura que você atacou. Cada criatura nessa área deve realizar uma <strong>[[/save dex dc=15]]</strong>. Em uma falha, a criatura sofre <strong>[[/damage 2d4 type=slashing average]]</strong>, ou metade desse dano em um sucesso.</p><img src=\"https://media1.tenor.com/m/HxTcbINqNvEAAAAd/xeis-bleach-brave-souls.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -274,14 +280,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790214967181,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Limpo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão limpo que abre oportunidade para um golpe seguinte.</em></p><p>Você pode fazer <strong>um ataque adicional</strong> contra o mesmo alvo.</p><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte Limpo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte é tão limpo que abre oportunidade para um golpe seguinte.</em></p><p>Você pode fazer <strong>um ataque adicional</strong> contra o mesmo alvo.</p><img src=\"https://media1.tenor.com/m/39faFqZzr2UAAAAd/trunks.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -299,14 +306,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790392934993,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cortar e Perseguir</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte abre espaço para uma investida relâmpago.</em></p><p>Você pode se mover até o seu deslocamento <strong>sem provocar ataques de oportunidade</strong> depois deste ataque.</p><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cortar e Perseguir</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O corte abre espaço para uma investida relâmpago.</em></p><p>Seu movimento não provoca <strong>ataques de oportunidade</strong>, e você ganha um bônus de 10 ft de deslocamento, até o final do turno.</p><img src=\"https://media1.tenor.com/m/c6L-sQVKUkYAAAAd/monty-python-and-the-holy-grail-stab.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -324,14 +332,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790431477158,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
       "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corte na Boca</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A lâmina corta os lábios do alvo, impedindo-o de falar.</em></p><p>O alvo não pode falar ou conjurar magias com componente verbal até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" />",
-      "name": ""
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -349,14 +358,15 @@
         "systemId": null,
         "systemVersion": null,
         "createdTime": null,
-        "modifiedTime": null,
-        "lastModifiedBy": null,
+        "modifiedTime": 1790393054357,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
         "compendiumSource": null,
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Parada Instinctiva</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O reflexo de cortar é tão rápido que cria uma barreira defensiva.</em></p><p>Você ganha <strong>+2 na CA</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" />",
-      "name": ""
+      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Parada Instinctiva</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O reflexo de cortar é tão rápido que cria uma barreira defensiva.</em></p><p>Você ganha <strong>+2 na CA</strong> até o fim do seu próximo turno.</p><img src=\"https://media1.tenor.com/m/hIbF_k8oG3UAAAAd/granblue-fantasy-anime.gif\" />",
+      "name": "",
+      "documentUuid": null
     },
     {
       "type": "text",
@@ -518,7 +528,7 @@
     "systemVersion": "2.3.1",
     "coreVersion": "13.351",
     "createdTime": 1681434818871,
-    "modifiedTime": 1708732420555,
+    "modifiedTime": 1790202212813,
     "lastModifiedBy": "Xlx5XgXv68kjaoEi",
     "compendiumSource": null,
     "duplicateSource": null,
