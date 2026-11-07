@@ -2,7 +2,7 @@
 
 ## What this is
 
-FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical tables, and custom effects. No build system, no tests, no linting — scripts are vanilla ES modules loaded directly by FoundryVTT.
+FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical tables, and custom effects. Built with TypeScript and Vite.
 
 ## World context
 
@@ -10,20 +10,19 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 
 ## Key files
 
-- `module.json` — Module manifest. All scripts in `esmodules` are auto-loaded.
-- `scripts/*.js` — ES modules loaded by FoundryVTT.
+- `module.json` — Module manifest. Loads `dist/endless-tower.js`.
+- `src/` — TypeScript source files (`src/main.ts`, `src/features/*`).
+- `dist/endless-tower.js` — Compiled bundle loaded by FoundryVTT.
 - `tables/` — Rollable tables (critical hits/fails, "mare de improbabilidade").
 - `fx/ragnarok-online-effects/` — VFX webm/gif files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 
-## Script loading
+## Build and script workflow
 
-Only scripts listed in `module.json` `esmodules` are auto-loaded by FoundryVTT:
-- `abracado-pelo-destino-bless.js`, `bless-remember.js`, `cemetery-bless.js`, `play-sounds-hooks.js`, `ragnarok-animations.js`, `sensorial-deturpation.js`, `prepare-spells-reminder.js`, `whisper-sound.js`
+- `npm run dev` — Watch mode with Vite for development (`vite build --watch`).
+- `npm run build` — Production build with Vite (`vite build`).
 
-Scripts **not** in esmodules are manual/inline:
-- `ghostring-summon.js` — macro script (uses warpgate)
-- `solitude-bless.js` — inline check (no Hooks registration)
+The module exposes its public API at `game.modules.get('endless-tower').api`.
 
 ## Runtime dependencies
 

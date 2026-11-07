@@ -23,14 +23,7 @@
     ]
   },
   "esmodules": [
-    "scripts/abracado-pelo-destino-bless.js",
-    "scripts/bless-remember.js",
-    "scripts/sensorial-deturpation.js",
-    "scripts/prepare-spells-reminder.js",
-    "scripts/cemetery-bless.js",
-    "scripts/play-sounds-hooks.js",
-    "scripts/ragnarok-animations.js",
-    "scripts/whisper-sound.js"
+    "dist/endless-tower.js"
   ],
   "styles": [],
   "languages": []
