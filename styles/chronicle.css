@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle (Pause & Scene Transitions)
+   Unified, state-aware atmosphere: Lower-third runic pause & Celestial Gate loading.
+   ========================================================================== */
+
+:root {
+  --et-ivory: #fff8e6;
+  --et-gold: #f3e2b0;
+  --et-gold-deep: #d9b865;
+  --et-gold-glow: rgba(243, 226, 176, 0.45);
+  --et-glass-dark: rgba(14, 12, 10, 0.72);
+  --et-glass-border: rgba(243, 226, 176, 0.28);
+  --et-font-cinematic: "Signika", "Modesto Condensed", "Palatino", "Georgia", serif;
+}
+
+/* ==========================================================================
+   1. Foundry Native & Third-Party Pause Overrides
+   Completely suppress default Foundry #pause element and Monk's cyan border.
+   ========================================================================== */
+#pause {
+  display: none !important;
+}
+
+body.mld-paused:after {
+  display: none !important;
+}
+
+/* ==========================================================================
+   2. In-Game Pause (Soft Vignette + Lower-Third Bar)
+   ========================================================================== */
+#et-pause-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: calc(75px + 2.5vh);
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+#et-pause-overlay.et-active {
+  opacity: 1;
+}
+
+#et-pause-overlay:not(.et-active) {
+  display: none !important;
+}
+
+/* Subtle border vignette — zero canvas blur so maps and tokens remain 100% crisp and readable */
+.et-pause-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(10, 8, 6, 0.38) 100%);
+  z-index: 1;
+}
+
+/* Lower-Third Pause Bar */
+.et-pause-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: min(840px, 88vw);
+  padding: 0.85rem 1.8rem;
+  background: rgba(14, 12, 10, 0.88);
+  border: 1px solid var(--et-glass-border);
+  border-radius: 9999px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 24px rgba(217, 184, 101, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: translateY(12px);
+  transition: transform 0.45s cubic-bezier(0.15, 0.85, 0.35, 1.2);
+  pointer-events: auto;
+}
+
+#et-pause-overlay.et-active .et-pause-bar {
+  transform: translateY(0);
+}
+
+/* Minimalist Runic Glyph */
+.et-pause-glyph {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--et-gold);
+  font-size: 1.15rem;
+  user-select: none;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px var(--et-gold-glow));
+}
+
+.et-pause-glyph .et-rune-bars {
+  font-family: var(--et-font-cinematic);
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: et-pulse-slow 3.2s ease-in-out infinite alternate;
+}
+
+.et-pause-glyph .et-rune-sparkle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Quote Layout in Lower-Third */
+.et-pause-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+  transition: opacity 0.35s ease;
+}
+
+.et-pause-content.et-fade {
+  opacity: 0;
+}
+
+.et-quote-text {
+  color: var(--et-ivory);
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.et-quote-body {
+  font-style: italic;
+}
+
+/* Aspas tipográficas serifadas clássicas não deformadas por faux-italic */
+.et-quote-mark {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: normal !important;
+  font-weight: 700;
+  color: var(--et-gold);
+  font-size: 1.25em;
+  line-height: 0;
+  vertical-align: -0.06em;
+  margin: 0 0.12em;
+  user-select: none;
+  display: inline-block;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 4px var(--et-gold-glow));
+}
+
+.et-quote-author {
+  color: var(--et-gold-deep);
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(0.78rem, 1.1vw, 0.88rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  opacity: 0.9;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   3. Scene Transition Screen (Full Splash Art + Particle Deck + Gate Revelation)
+   ========================================================================== */
+#et-transition-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99990;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0c0a08;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.5s;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#et-transition-screen.et-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Splash Art Image with slow Ken Burns Drift - Full coverage with zero edge gaps */
+.et-transition-bg {
+  position: absolute;
+  top: -12%;
+  left: -12%;
+  width: 124%;
+  height: 124%;
+  min-width: 124%;
+  min-height: 124%;
+  object-fit: cover;
+  pointer-events: none;
+  transform-origin: center center;
+  animation: et-splash-kenburns 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Radial Dark Vignette & God Rays on Loading */
+.et-transition-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.15) 0%, rgba(5, 4, 3, 0.78) 75%, rgba(0, 0, 0, 0.94) 100%);
+  mix-blend-mode: normal;
+}
+
+.et-transition-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 30%,
+    rgba(255, 235, 165, 0.18) 0%,
+    rgba(255, 215, 115, 0.08) 45%,
+    transparent 75%
+  );
+  animation: et-ray-breath 5s ease-in-out infinite alternate;
+}
+
+/* Floating Golden Particles Canvas */
+#et-transition-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+/* Transition Center Quote Card */
+.et-transition-card {
+  position: relative;
+  z-index: 3;
+  max-width: min(760px, 86vw);
+  padding: 2.2rem 3rem;
+  background: rgba(18, 15, 12, 0.62);
+  border: 1px solid var(--et-glass-border);
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.75), 0 0 32px rgba(217, 184, 101, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.et-transition-card .et-quote-text {
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+.et-transition-card .et-quote-author {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  margin-top: 1rem;
+  letter-spacing: 0.12em;
+}
+
+/* Click to Skip / Continue Prompt */
+.et-transition-hint {
+  position: absolute;
+  bottom: 4vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--et-gold);
+  font-family: var(--et-font-cinematic);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  z-index: 3;
+  pointer-events: none;
+  animation: et-pulse-slow 2.4s ease-in-out infinite alternate;
+}
+
+/* ==========================================================================
+   4. Celestial Gate Revelation Effect
+   Radial iris expand + warm golden dissolve outward revealing the canvas
+   ========================================================================== */
+#et-transition-screen.et-gate-reveal {
+  animation: et-gate-dissolve 0.85s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+#et-transition-screen.et-gate-reveal .et-transition-card {
+  transform: scale(0.94) translateY(8px);
+  opacity: 0;
+  transition: transform 0.45s ease-in, opacity 0.45s ease-in;
+}
+
+@keyframes et-gate-dissolve {
+  0% {
+    opacity: 1;
+    clip-path: circle(150% at 50% 50%);
+    filter: brightness(1);
+  }
+  40% {
+    filter: brightness(1.25);
+  }
+  100% {
+    opacity: 0;
+    clip-path: circle(0% at 50% 50%);
+    filter: brightness(1);
+    visibility: hidden;
+  }
+}
+
+/* Fallback for browsers with clip-path quirks */
+@supports not (clip-path: circle(100% at 50% 50%)) {
+  @keyframes et-gate-dissolve {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.05);
+      visibility: hidden;
+    }
+  }
+}
+
+/* Keyframe Animations */
+@keyframes et-splash-kenburns {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.10) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.14) translate(1.2%, -0.8%);
+  }
+}
+
+@keyframes et-pulse-slow {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes et-ray-breath {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}

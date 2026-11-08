@@ -18,6 +18,10 @@ import {
   createLandingScene,
   toggleLandingEffects,
 } from "./features/landing-scene";
+import {
+  registerCelestialChronicleFeature,
+  CelestialChronicle,
+} from "./features/celestial-chronicle";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -32,6 +36,7 @@ Hooks.once("init", () => {
   registerRagnarokAnimations();
   registerWhisperSound();
   registerLandingSceneFeature();
+  registerCelestialChronicleFeature();
 });
 
 Hooks.once("ready", () => {
@@ -47,6 +52,7 @@ Hooks.once("ready", () => {
       ensureJump: ensureJumpItemOnActor,
       createLandingScene,
       toggleLandingEffects,
+      chronicle: CelestialChronicle.getInstance(),
     };
   }
 });

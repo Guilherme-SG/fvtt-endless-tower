@@ -16,7 +16,9 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `tables/` — Rollable tables (critical hits/fails, "mare de improbabilidade").
 - `login/` — Custom Ragnarok-themed login screen (`login.css`, `login.js`) and layout patch script (`apply-login-patch.ps1`).
 - `styles/landing.css` — Cinematic Clean UI styles for the in-game Landing Page scene.
+- `styles/chronicle.css` — Styles for Celestial Chronicle (Pause mode & Scene Transitions).
 - `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
+- `docs/CELESTIAL_CHRONICLE.md` — Guide and reference for the Celestial Chronicle system.
 - `fx/ragnarok-online-effects/` — VFX webm/gif files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 

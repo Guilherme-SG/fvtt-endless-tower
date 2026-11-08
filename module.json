@@ -26,7 +26,8 @@
     "dist/endless-tower.js"
   ],
   "styles": [
-    "styles/landing.css"
+    "styles/landing.css",
+    "styles/chronicle.css"
   ],
   "languages": []
 }
