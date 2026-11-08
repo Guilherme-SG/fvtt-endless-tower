@@ -1,0 +1,237 @@
+import { MODULE_ID, MODULE_TITLE } from "../constants";
+
+export const LANDING_SCENE_NAME = "Landing Page";
+export const LANDING_IMAGE_SRC = "endless-tower/landscape/endless-tower-login-screen.webp";
+export const SETTING_LANDING_EFFECTS = "landingEffects";
+
+let particleCleanup: (() => void) | null = null;
+
+/**
+ * Cria ou garante a existência da cena de Landing Page do Endless Tower.
+ */
+export async function createLandingScene(activate = false): Promise<any> {
+  const scenes = (game as any).scenes;
+  let scene = scenes.find(
+    (s: any) =>
+      s.getFlag(MODULE_ID, "isLandingScene") ||
+      s.name === LANDING_SCENE_NAME ||
+      s.name === "Panteão dos Deuses"
+  );
+
+  if (!scene) {
+    console.log(`${MODULE_TITLE} | Criando cena de Landing Page: ${LANDING_SCENE_NAME}`);
+    scene = await (Scene as any).create({
+      name: LANDING_SCENE_NAME,
+      background: {
+        src: LANDING_IMAGE_SRC,
+      },
+      width: 1672,
+      height: 941,
+      padding: 0,
+      backgroundColor: "#000000",
+      grid: {
+        type: (CONST as any).GRID_TYPES?.GRIDLESS ?? 0,
+      },
+      tokenVision: false,
+      fog: {
+        exploration: false,
+      },
+      environment: {
+        darknessLevel: 0,
+        globalLight: {
+          enabled: true,
+        },
+      },
+      flags: {
+        [MODULE_ID]: {
+          isLandingScene: true,
+        },
+      },
+    });
+
+    (ui as any).notifications?.info(
+      `Endless Tower | Cena "${LANDING_SCENE_NAME}" criada com sucesso!`
+    );
+  }
+
+  if (activate && scene) {
+    await scene.activate();
+  }
+
+  return scene;
+}
+
+/**
+ * Inicia o sistema de partículas douradas flutuantes no canvas.
+ */
+function startParticles(): void {
+  if (document.getElementById("et-landing-particles")) return;
+
+  const canvasEl = document.createElement("canvas");
+  canvasEl.id = "et-landing-particles";
+  document.body.appendChild(canvasEl);
+
+  const ctx = canvasEl.getContext("2d");
+  if (!ctx) return;
+
+  let animId: number | null = null;
+  let w = (canvasEl.width = window.innerWidth);
+  let h = (canvasEl.height = window.innerHeight);
+
+  const onResize = () => {
+    w = canvasEl.width = window.innerWidth;
+    h = canvasEl.height = window.innerHeight;
+  };
+  window.addEventListener("resize", onResize);
+
+  const PARTICLE_COUNT = 45;
+  const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    r: 1.2 + Math.random() * 2.2,
+    baseAlpha: 0.25 + Math.random() * 0.55,
+    alpha: 0,
+    vy: 0.25 + Math.random() * 0.45,
+    sway: Math.random() * Math.PI * 2,
+    swaySpeed: 0.015 + Math.random() * 0.02,
+    swayAmp: 0.35 + Math.random() * 0.55,
+  }));
+
+  const render = () => {
+    ctx.clearRect(0, 0, w, h);
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.y -= p.vy;
+      p.sway += p.swaySpeed;
+      p.x += Math.sin(p.sway) * p.swayAmp;
+
+      const lifeRatio = p.y / h;
+      p.alpha = Math.sin(Math.max(0, Math.min(1, lifeRatio)) * Math.PI) * p.baseAlpha;
+
+      if (p.y < -15) {
+        p.y = h + 15;
+        p.x = Math.random() * w;
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 238, 175, ${p.alpha})`;
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = "rgba(255, 215, 120, 0.75)";
+      ctx.fill();
+    }
+    animId = requestAnimationFrame(render);
+  };
+
+  render();
+
+  particleCleanup = () => {
+    if (animId) cancelAnimationFrame(animId);
+    window.removeEventListener("resize", onResize);
+    canvasEl.remove();
+    particleCleanup = null;
+  };
+}
+
+/**
+ * Para e remove o sistema de partículas.
+ */
+function stopParticles(): void {
+  if (particleCleanup) {
+    particleCleanup();
+  }
+}
+
+/**
+ * Sincroniza o estado visual da Landing Page de acordo com a cena ativa e a opção configurada.
+ */
+export function syncLandingEffects(scene: any): void {
+  const isLanding =
+    Boolean(scene?.getFlag(MODULE_ID, "isLandingScene")) ||
+    scene?.name === LANDING_SCENE_NAME ||
+    scene?.name === "Panteão dos Deuses";
+
+  const effectsEnabled =
+    (game as any).settings?.get?.(MODULE_ID, SETTING_LANDING_EFFECTS) ?? true;
+
+  document.body.classList.toggle("et-landing-active", isLanding);
+  document.body.classList.toggle("et-drift-active", isLanding && effectsEnabled);
+
+  if (isLanding && effectsEnabled) {
+    startParticles();
+  } else {
+    stopParticles();
+  }
+}
+
+/**
+ * Alterna rapidamente os efeitos visuais da Landing Page (para testes e reversão).
+ */
+export async function toggleLandingEffects(enable?: boolean): Promise<boolean> {
+  const settings = (game as any).settings;
+  const current = settings.get(MODULE_ID, SETTING_LANDING_EFFECTS);
+  const next = enable !== undefined ? enable : !current;
+  await settings.set(MODULE_ID, SETTING_LANDING_EFFECTS, next);
+  syncLandingEffects((canvas as any)?.scene);
+  return next;
+}
+
+/**
+ * Registra a configuração e os hooks da Landing Scene (Clean UI, Câmera e Partículas).
+ */
+export function registerLandingSceneFeature(): void {
+  // Registra opção nas Configurações de Módulo do Foundry
+  (game as any).settings?.register?.(MODULE_ID, SETTING_LANDING_EFFECTS, {
+    name: "Efeitos Visuais na Landing Page",
+    hint: "Ativa câmera viva suave e partículas douradas flutuantes na cena Landing Page.",
+    scope: "client",
+    config: true,
+    type: Boolean,
+    default: true,
+    onChange: () => {
+      syncLandingEffects((canvas as any)?.scene);
+    },
+  });
+
+  Hooks.once("ready", async () => {
+    if ((game as any).user?.isGM) {
+      const scenes = (game as any).scenes;
+      const exists = scenes.some(
+        (s: any) =>
+          s.getFlag(MODULE_ID, "isLandingScene") ||
+          s.name === LANDING_SCENE_NAME ||
+          s.name === "Panteão dos Deuses"
+      );
+      if (!exists) {
+        await createLandingScene(false);
+      }
+    }
+  });
+
+  Hooks.on("canvasReady", (canvas: any) => {
+    const scene = canvas?.scene;
+    syncLandingEffects(scene);
+
+    const isLanding =
+      Boolean(scene?.getFlag(MODULE_ID, "isLandingScene")) ||
+      scene?.name === LANDING_SCENE_NAME ||
+      scene?.name === "Panteão dos Deuses";
+
+    if (isLanding && canvas) {
+      const w = scene.width ?? 1672;
+      const h = scene.height ?? 941;
+      const paddingFactor = 0.96;
+      const scale = Math.min(
+        (window.innerWidth / w) * paddingFactor,
+        (window.innerHeight / h) * paddingFactor
+      );
+      canvas.pan({ x: w / 2, y: h / 2, scale: Math.max(0.1, scale) });
+    }
+  });
+
+  Hooks.on("canvasTearDown", () => {
+    stopParticles();
+    document.body.classList.remove("et-landing-active", "et-drift-active");
+  });
+}

@@ -13,6 +13,11 @@ import {
   syncJumpOnAllActors,
   ensureJumpItemOnActor,
 } from "./features/jump";
+import {
+  registerLandingSceneFeature,
+  createLandingScene,
+  toggleLandingEffects,
+} from "./features/landing-scene";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -26,6 +31,7 @@ Hooks.once("init", () => {
   registerPrepareSpellsReminder();
   registerRagnarokAnimations();
   registerWhisperSound();
+  registerLandingSceneFeature();
 });
 
 Hooks.once("ready", () => {
@@ -39,6 +45,8 @@ Hooks.once("ready", () => {
       jump: executeJump,
       syncJump: syncJumpOnAllActors,
       ensureJump: ensureJumpItemOnActor,
+      createLandingScene,
+      toggleLandingEffects,
     };
   }
 });

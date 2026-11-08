@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Endless Tower: Landing Page (Clean UI / Cinematic Mode)
+   Fades out in-game HUD clutter when viewing the pantheon landing scene.
+   Hovering over any element smoothly restores full opacity and usability.
+   ========================================================================== */
+
+body.et-landing-active #hotbar {
+  opacity: 0.12;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.et-landing-active #hotbar:hover,
+body.et-landing-active #hotbar:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.et-landing-active #players {
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+}
+
+body.et-landing-active #players:hover,
+body.et-landing-active #players:focus-within {
+  opacity: 1;
+}
+
+body.et-landing-active #controls {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+body.et-landing-active #controls:hover,
+body.et-landing-active #controls:focus-within {
+  opacity: 1;
+}
+
+body.et-landing-active #navigation {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+body.et-landing-active #navigation:hover,
+body.et-landing-active #navigation:focus-within {
+  opacity: 1;
+}
+
+/* --- Floating Golden Particles Overlay --- */
+#et-landing-particles {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 15;
+  mix-blend-mode: screen;
+}
+
+/* --- Gentle Camera Drift on Board --- */
+body.et-landing-active.et-drift-active #board {
+  animation: et-board-drift 24s ease-in-out infinite alternate;
+  transform-origin: 50% 40%;
+  will-change: transform;
+}
+
+@keyframes et-board-drift {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.035) translate(-0.8%, -0.6%);
+  }
+  100% {
+    transform: scale(1.055) translate(0.6%, -0.3%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.et-landing-active.et-drift-active #board {
+    animation: none;
+  }
+}

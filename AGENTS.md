@@ -15,6 +15,8 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `dist/endless-tower.js` — Compiled bundle loaded by FoundryVTT.
 - `tables/` — Rollable tables (critical hits/fails, "mare de improbabilidade").
 - `login/` — Custom Ragnarok-themed login screen (`login.css`, `login.js`) and layout patch script (`apply-login-patch.ps1`).
+- `styles/landing.css` — Cinematic Clean UI styles for the in-game Landing Page scene.
+- `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
 - `fx/ragnarok-online-effects/` — VFX webm/gif files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 
@@ -107,6 +109,11 @@ The custom login screen (`login/login.css`, `login/login.js`) runs on the `/join
   2. Radial god-ray illumination pulses (`mix-blend-mode: screen`).
   3. Lightweight real-time HTML5 Canvas particle system (~50 floating golden motes/sparkles).
   This achieves razor-sharp 4K AAA splash art fidelity with zero distortion and negligible CPU/GPU footprint.
+
+### In-Game Landing Scene ("Landing Page")
+- **Scene automation**: `src/features/landing-scene.ts` automatically creates and configures the scene `"Landing Page"` (1672x941 px, Gridless, global light enabled, padding 0) on GM login.
+- **Cinematic Clean UI**: `styles/landing.css` reduces opacity of HUD elements (`#hotbar`, `#players`, `#controls`, `#navigation`) to 12%-20% while viewing the landing scene (`body.et-landing-active`), smoothly restoring 100% opacity on hover.
+- **Living Canvas & Reversibility**: Floating golden particle canvas and subtle board drift (`body.et-drift-active #board`) are controlled by client setting `landingEffects` (configured under Module Settings), with runtime toggle via `game.modules.get('endless-tower').api.toggleLandingEffects()`. Complete user guide in `docs/LANDING_PAGE.md`.
 
 ## Gotchas
 

@@ -25,6 +25,8 @@
   "esmodules": [
     "dist/endless-tower.js"
   ],
-  "styles": [],
+  "styles": [
+    "styles/landing.css"
+  ],
   "languages": []
 }
