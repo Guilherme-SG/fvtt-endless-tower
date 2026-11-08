@@ -1,0 +1,633 @@
+/* ==========================================================================
+   Endless Tower: login screen ("Click to enter" splash + pill form + Living Art bg)
+   Applies only when html.et-world or body.et-world is present.
+   Zero-flash start: pure black background from frame 0 with smooth waking up.
+   ========================================================================== */
+
+/* --- Immediate pure black background on html and body for zero flash + no scrollbars --- */
+html.et-world,
+html.et-world body.join,
+body.join.et-world {
+  background-color: #000000 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  scrollbar-width: none !important;
+}
+
+html.et-world::-webkit-scrollbar,
+body.join.et-world::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* --- Hide default UI immediately before splash is touched --- */
+html.et-world.et-gate body.join #join-game,
+body.join.et-world.et-gate #join-game,
+html.et-world body.join:not(.et-entered) #join-game-form,
+body.join.et-world:not(.et-entered) #join-game-form {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide static background in favor of the animated WebM background */
+html.et-world body.join #main-background,
+body.join.et-world #main-background {
+  display: none !important;
+}
+
+/* --- WebM Background Video & Living Art Background --- */
+#et-bg-video,
+#et-living-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000000;
+  animation: et-wake 3.2s cubic-bezier(0.3, 0.1, 0.2, 1) both;
+}
+
+#et-bg-video {
+  object-fit: cover;
+}
+
+#et-living-bg {
+  overflow: hidden;
+}
+
+#et-living-img {
+  position: absolute;
+  top: -8%;
+  left: -8%;
+  width: 116%;
+  height: 116%;
+  min-width: 116%;
+  min-height: 116%;
+  object-fit: cover;
+  pointer-events: none;
+  transform-origin: 50% 35%;
+  animation: et-kenburns 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+#et-living-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    ellipse 65% 55% at 50% 24%,
+    rgba(255, 235, 165, 0.24) 0%,
+    rgba(255, 215, 115, 0.10) 42%,
+    transparent 72%
+  );
+  animation: et-ray-breath 5.5s ease-in-out infinite alternate;
+}
+
+#et-living-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* --- Endless Tower Scoped Rules --- */
+html.et-world body.join,
+body.join.et-world {
+  --et-ivory: #fff8e6;
+  --et-gold: #f3e2b0;
+  --et-gold-deep: #d9b865;
+  --et-ink: #3a2c10;
+  --et-glass: rgba(34, 30, 26, 0.38);
+  --et-glass-line: rgba(255, 244, 214, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+
+  /* --- Title --- */
+  #main-header {
+    position: fixed;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    flex: none;
+    background: none;
+    pointer-events: none;
+  }
+
+  #main-header h1 {
+    color: var(--et-ivory);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-shadow: 0 0 24px rgba(255, 236, 180, 0.65), 0 2px 10px rgba(0, 0, 0, 0.55);
+    animation: et-fade-in 2s ease 1.6s both;
+  }
+
+  /* --- Hide default info boxes --- */
+  #join-game-details,
+  #join-game-world,
+  #watermark {
+    display: none !important;
+  }
+
+  /* --- Container: viewport-centered, only the login form in the middle --- */
+  #join-game {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-items: center;
+    width: auto;
+    max-width: none;
+    gap: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  #join-game-form {
+    width: min(340px, 86vw);
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    transition: opacity 0.7s ease;
+    overflow: visible !important;
+  }
+
+  #join-game-form .form-group,
+  #join-game-form .form-fields {
+    overflow: visible !important;
+    position: relative;
+  }
+
+  #join-game-form h2 {
+    display: none !important;
+  }
+
+  #join-game-form label.icon {
+    color: var(--et-ivory);
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6));
+  }
+
+  #join-game-form select,
+  #join-game-form input[type="password"],
+  #join-game-form input[type="text"] {
+    height: 46px;
+    padding: 0 1.2rem;
+    line-height: normal;
+    border-radius: 999px;
+    border: 1px solid var(--et-glass-line);
+    background: var(--et-glass);
+    color: #fff;
+    font-size: 1rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #join-game-form select[name="userid"].et-hidden-native {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* --- Custom Frosted Glass Dropdown --- */
+  .et-dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  .et-dropdown-trigger {
+    width: 100%;
+    height: 46px;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--et-glass-line);
+    background: var(--et-glass);
+    color: #fff;
+    font-size: 1rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .et-dropdown-trigger:hover {
+    border-color: var(--et-gold);
+  }
+
+  .et-dropdown.is-open .et-dropdown-trigger,
+  .et-dropdown-trigger:focus {
+    outline: none;
+    border-color: var(--et-gold);
+    box-shadow: 0 0 0 3px rgba(243, 226, 176, 0.25), 0 4px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .et-dropdown-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff8e6;
+    font-weight: 500;
+  }
+
+  .et-chevron {
+    font-size: 0.85rem;
+    color: var(--et-gold);
+    transition: transform 0.25s ease;
+    flex: none;
+  }
+
+  .et-dropdown.is-open .et-chevron {
+    transform: rotate(180deg);
+  }
+
+  .et-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 6px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 244, 214, 0.45);
+    background: rgba(24, 20, 18, 0.78);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(255, 226, 150, 0.2);
+    display: none;
+  }
+
+  .et-dropdown.is-open .et-dropdown-menu {
+    display: block;
+    animation: et-dropdown-pop 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes et-dropdown-pop {
+    from {
+      opacity: 0;
+      transform: translateY(-6px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .et-dropdown-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+  .et-dropdown-menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .et-dropdown-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 244, 214, 0.35);
+    border-radius: 999px;
+  }
+  .et-dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 244, 214, 0.65);
+  }
+
+  .et-dropdown-item {
+    padding: 9px 14px;
+    border-radius: 10px;
+    color: #fff8e6;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 2px 0;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    user-select: none;
+  }
+
+  .et-dropdown-item:hover {
+    background: rgba(255, 235, 175, 0.18);
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 235, 175, 0.85);
+    transform: translateX(2px);
+  }
+
+  .et-dropdown-item.is-selected {
+    background: linear-gradient(90deg, rgba(217, 184, 101, 0.35) 0%, rgba(251, 239, 198, 0.12) 100%);
+    color: #f3e2b0;
+    font-weight: 700;
+    border-left: 3px solid #d9b865;
+  }
+
+  .et-item-check {
+    font-size: 0.8rem;
+    color: #f3e2b0;
+    filter: drop-shadow(0 0 4px rgba(243, 226, 176, 0.8));
+  }
+
+  .et-dropdown-item.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .et-item-badge {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+  }
+
+  #join-game-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  #join-game-form select:focus,
+  #join-game-form input:focus {
+    outline: none;
+    border-color: var(--et-gold);
+    box-shadow: 0 0 0 3px rgba(243, 226, 176, 0.25), 0 4px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  #join-game-form select option {
+    background: #f6f0e2;
+    color: #2a2218;
+  }
+
+  #join-game-form button[name="join"] {
+    height: 48px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: linear-gradient(180deg, #fbefc6 0%, var(--et-gold-deep) 100%);
+    color: var(--et-ink);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    box-shadow: 0 0 22px rgba(255, 226, 150, 0.55), 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: filter 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  #join-game-form button[name="join"]:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 0 30px rgba(255, 226, 150, 0.8), 0 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+  }
+
+  #join-game-form button[name="join"]:active {
+    transform: translateY(1px);
+  }
+
+  /* --- Admin "Return to Setup": discreet, bottom-left; field appears on hover --- */
+  #join-game-setup {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 55;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: max-content;
+    max-width: 260px;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    opacity: 0.3;
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
+  }
+
+  #join-game-setup:hover,
+  #join-game-setup:focus-within {
+    opacity: 1;
+  }
+
+  #join-game-setup h2,
+  #join-game-setup p,
+  #join-game-setup .form-group {
+    display: none;
+  }
+
+  #join-game-setup:hover .form-group,
+  #join-game-setup:focus-within .form-group {
+    display: flex;
+  }
+
+  #join-game-setup:hover p,
+  #join-game-setup:focus-within p {
+    display: block;
+    margin: 0;
+    color: var(--et-ivory);
+    font-size: 0.75rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  #join-game-setup input[type="password"] {
+    height: 34px;
+    padding: 0 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--et-glass-line);
+    background: var(--et-glass);
+    color: #fff;
+    backdrop-filter: blur(10px);
+  }
+
+  #join-game-setup button {
+    height: 34px;
+    padding: 0 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--et-glass-line);
+    background: var(--et-glass);
+    color: #fff;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* --- Form reveals smoothly when splash entered --- */
+html.et-world body.join.et-entered #join-game-form,
+body.join.et-world.et-entered #join-game-form {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* --- Splash Gate Overlay & Touch Text --- */
+.et-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+}
+
+.et-gate-overlay.et-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.et-touch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2.5rem;
+  border-radius: 999px;
+  background: rgba(18, 16, 22, 0.62);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 244, 214, 0.45);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 20px rgba(255, 226, 150, 0.2);
+  color: #fff8e6;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(255, 244, 214, 0.9),
+    0 0 24px rgba(255, 226, 150, 0.7),
+    0 2px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  animation:
+    et-fade-in 1.8s ease 2.8s both,
+    et-pulse 2.4s ease-in-out 4.6s infinite;
+}
+
+.et-gate-overlay:hover .et-touch {
+  background: rgba(22, 19, 28, 0.78);
+  border-color: rgba(255, 244, 214, 0.75);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 226, 150, 0.45);
+  transform: scale(1.04);
+}
+
+/* --- Floating Audio Dock (Bottom-Right) --- */
+.et-bgm {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 244, 214, 0.5);
+  background: rgba(34, 30, 26, 0.38);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  animation: et-fade-in 0.8s ease both;
+}
+
+.et-bgm-btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff8e6;
+  cursor: pointer;
+}
+
+.et-bgm-btn:hover {
+  color: #f3e2b0;
+}
+
+.et-bgm input[type="range"] {
+  width: 96px;
+  accent-color: #f3e2b0;
+  cursor: pointer;
+}
+
+/* --- Animations --- */
+@keyframes et-wake {
+  from { opacity: 0; filter: blur(28px) brightness(0.2); }
+  to   { opacity: 1; filter: blur(0) brightness(1); }
+}
+
+@keyframes et-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes et-pulse {
+  0%, 100% {
+    border-color: rgba(255, 244, 214, 0.45);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 226, 150, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 244, 214, 0.75);
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.55), 0 0 32px rgba(255, 226, 150, 0.45);
+  }
+}
+
+@keyframes et-kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.045) translate(-1%, -1.2%);
+  }
+  100% {
+    transform: scale(1.07) translate(0.8%, -0.6%);
+  }
+}
+
+@keyframes et-ray-breath {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #et-bg-video,
+  #et-living-bg,
+  #et-living-img,
+  #et-living-rays,
+  html.et-world body.join #main-header h1,
+  body.join.et-world #main-header h1,
+  .et-touch {
+    animation: none;
+  }
+}
