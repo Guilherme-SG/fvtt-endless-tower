@@ -39,7 +39,7 @@ Acesse `Configurações do Jogo -> Configurações de Módulos -> Endless Tower`
 | **Duração Mínima da Transição** | Cliente | `3s` | Tempo mínimo para leitura da citação (1 a 8s). |
 | **Intervalo de Rotação de Citações** | Cliente | `45s` | Tempo entre trocas de citações durante pausas longas (15 a 180s). |
 | **RollTable Personalizada de Citações** | Mundo | `none` | Seleciona uma tabela rolável do Foundry para usar como frases da mesa. |
-| **Pasta de Imagens de Splash** | Mundo | `modules/endless-tower/assets/screen-transition-splash-art` | Pasta com artes de transição sorteadas aleatoriamente. |
+| **Pasta de Imagens de Splash** | Mundo | `modules/endless-tower/assets/screen-transition` | Pasta com artes de transição sorteadas aleatoriamente (.webp/.png). |
 | **Presente do Mestre: Ativar Mensagem Secreta** | Mundo | `true` | Ativa a chance de exibir uma frase secreta com recompensa. |
 | **Presente do Mestre: Probabilidade (%)** | Mundo | `0.5%` | Chance matemática de sorteio da mensagem secreta (ex: 0.5% = 1 em 200). |
 | **Presente do Mestre: Texto da Mensagem** | Mundo | Frase padrão | Texto da recompensa e código secreto resgatável. |

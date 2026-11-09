@@ -151,11 +151,11 @@ export class CelestialChronicle {
 
     s.register(MODULE_ID, "chronicleSplashFolder", {
       name: "Pasta de Imagens de Splash (Opcional)",
-      hint: "Caminho da pasta com ilustrações para transição (ex: 'modules/endless-tower/assets/screen-transition-splash-art').",
+      hint: "Caminho da pasta com ilustrações para transição (ex: 'modules/endless-tower/assets/screen-transition').",
       scope: "world",
       config: true,
       type: String,
-      default: "modules/endless-tower/assets/screen-transition-splash-art",
+      default: "modules/endless-tower/assets/screen-transition",
     });
 
     // Configurações do Easter Egg: Mensagem Secreta com Presente do Mestre
