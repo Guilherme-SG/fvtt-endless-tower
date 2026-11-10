@@ -1,5 +1,8 @@
 import { MODULE_ID, MODULE_TITLE } from "./constants";
-import { registerAbracadoPeloDestino } from "./features/abracado-pelo-destino";
+import {
+  registerAbracadoPeloDestino,
+  AbracadoDestinoManager,
+} from "./features/abracado-pelo-destino";
 import { registerBlessRemember } from "./features/bless-remember";
 import { registerCemeteryBless } from "./features/cemetery-bless";
 import { registerPlaySoundsHooks } from "./features/play-sounds";
@@ -63,6 +66,7 @@ Hooks.once("ready", () => {
       toggleLandingEffects,
       chronicle: CelestialChronicle.getInstance(),
       criticalEncounter: CriticalEncounterManager.getInstance(),
+      abracadoDestino: AbracadoDestinoManager.getInstance(),
       checkSolitude,
       ensureIsolationEffect,
     };

@@ -28,7 +28,8 @@
   "styles": [
     "styles/landing.css",
     "styles/chronicle.css",
-    "styles/critical-encounter.css"
+    "styles/critical-encounter.css",
+    "styles/abracado-destino.css"
   ],
   "languages": []
 }
