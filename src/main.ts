@@ -5,7 +5,6 @@ import { registerCemeteryBless } from "./features/cemetery-bless";
 import { registerPlaySoundsHooks } from "./features/play-sounds";
 import { registerPrepareSpellsReminder } from "./features/prepare-spells-reminder";
 import { registerRagnarokAnimations } from "./features/ragnarok-animations";
-import { registerWhisperSound } from "./features/whisper-sound";
 import { runSensorialDeturpation } from "./features/sensorial-deturpation";
 import {
   registerJumpFeature,
@@ -26,6 +25,11 @@ import {
   registerCriticalEncounter,
   CriticalEncounterManager,
 } from "./features/critical-encounter";
+import {
+  registerSolitudeFeature,
+  checkSolitude,
+  ensureIsolationEffect,
+} from "./features/solitude";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -38,10 +42,10 @@ Hooks.once("init", () => {
   registerPlaySoundsHooks();
   registerPrepareSpellsReminder();
   registerRagnarokAnimations();
-  registerWhisperSound();
   registerLandingSceneFeature();
   registerCelestialChronicleFeature();
   registerCriticalEncounter();
+  registerSolitudeFeature();
 });
 
 Hooks.once("ready", () => {
@@ -59,6 +63,8 @@ Hooks.once("ready", () => {
       toggleLandingEffects,
       chronicle: CelestialChronicle.getInstance(),
       criticalEncounter: CriticalEncounterManager.getInstance(),
+      checkSolitude,
+      ensureIsolationEffect,
     };
   }
 });

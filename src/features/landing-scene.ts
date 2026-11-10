@@ -1,10 +1,12 @@
 import { MODULE_ID, MODULE_TITLE } from "../constants";
+import { ParticleController, startParticleCanvas } from "./particle-canvas";
 
-export const LANDING_SCENE_NAME = "Landing Page";
-export const LANDING_IMAGE_SRC = "endless-tower/landscape/endless-tower-login-screen.webp";
-export const SETTING_LANDING_EFFECTS = "landingEffects";
+const LANDING_SCENE_NAME = "Landing Page";
+const LANDING_IMAGE_SRC = "endless-tower/landscape/endless-tower-login-screen.webp";
+const SETTING_LANDING_EFFECTS = "landingEffects";
 
-let particleCleanup: (() => void) | null = null;
+let particleController: ParticleController | null = null;
+let particleCanvasEl: HTMLCanvasElement | null = null;
 
 /**
  * Cria ou garante a existência da cena de Landing Page do Endless Tower.
@@ -70,83 +72,29 @@ function startParticles(): void {
   const canvasEl = document.createElement("canvas");
   canvasEl.id = "et-landing-particles";
   document.body.appendChild(canvasEl);
+  particleCanvasEl = canvasEl;
 
-  const ctx = canvasEl.getContext("2d");
-  if (!ctx) return;
-
-  let animId: number | null = null;
-  let w = (canvasEl.width = window.innerWidth);
-  let h = (canvasEl.height = window.innerHeight);
-
-  const onResize = () => {
-    w = canvasEl.width = window.innerWidth;
-    h = canvasEl.height = window.innerHeight;
-  };
-  window.addEventListener("resize", onResize);
-
-  const PARTICLE_COUNT = 45;
-  const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
-    x: Math.random() * w,
-    y: Math.random() * h,
-    r: 1.2 + Math.random() * 2.2,
-    baseAlpha: 0.25 + Math.random() * 0.55,
-    alpha: 0,
-    vy: 0.25 + Math.random() * 0.45,
-    sway: Math.random() * Math.PI * 2,
-    swaySpeed: 0.015 + Math.random() * 0.02,
-    swayAmp: 0.35 + Math.random() * 0.55,
-  }));
-
-  const render = () => {
-    ctx.clearRect(0, 0, w, h);
-
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      p.y -= p.vy;
-      p.sway += p.swaySpeed;
-      p.x += Math.sin(p.sway) * p.swayAmp;
-
-      const lifeRatio = p.y / h;
-      p.alpha = Math.sin(Math.max(0, Math.min(1, lifeRatio)) * Math.PI) * p.baseAlpha;
-
-      if (p.y < -15) {
-        p.y = h + 15;
-        p.x = Math.random() * w;
-      }
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 238, 175, ${p.alpha})`;
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = "rgba(255, 215, 120, 0.75)";
-      ctx.fill();
-    }
-    animId = requestAnimationFrame(render);
-  };
-
-  render();
-
-  particleCleanup = () => {
-    if (animId) cancelAnimationFrame(animId);
-    window.removeEventListener("resize", onResize);
-    canvasEl.remove();
-    particleCleanup = null;
-  };
+  particleController = startParticleCanvas(canvasEl, 45);
 }
 
 /**
  * Para e remove o sistema de partículas.
  */
 function stopParticles(): void {
-  if (particleCleanup) {
-    particleCleanup();
+  if (particleController) {
+    particleController.stop();
+    particleController = null;
+  }
+  if (particleCanvasEl) {
+    particleCanvasEl.remove();
+    particleCanvasEl = null;
   }
 }
 
 /**
  * Sincroniza o estado visual da Landing Page de acordo com a cena ativa e a opção configurada.
  */
-export function syncLandingEffects(scene: any): void {
+function syncLandingEffects(scene: any): void {
   const isLanding =
     Boolean(scene?.getFlag(MODULE_ID, "isLandingScene")) ||
     scene?.name === LANDING_SCENE_NAME ||

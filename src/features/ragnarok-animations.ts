@@ -2,7 +2,7 @@ declare const Sequencer: any;
 
 export function registerRagnarokAnimations(): void {
   Hooks.once("sequencer.ready", () => {
-    const PATH = "/modules/endless-tower/fx/ragnarok-online-effects";
+    const PATH = "modules/endless-tower/assets/fx/ragnarok-online-effects";
     const database = {
       conditions: {
         cursed: `${PATH}/conditions/cursed.webm`,

@@ -3,9 +3,9 @@ import { MODULE_ID, MODULE_TITLE } from "../constants";
 declare const Sequencer: any;
 declare const Sequence: any;
 
-export const JUMP_ITEM_FLAG = "isJumpFeature";
-export const JUMP_ITEM_NAME = "Jump";
-export const JUMP_ICON = "icons/skills/movement/figure-running-gray.webp";
+const JUMP_ITEM_FLAG = "isJumpFeature";
+const JUMP_ITEM_NAME = "Jump";
+const JUMP_ICON = "icons/skills/movement/figure-running-gray.webp";
 
 interface JumpConfig {
   vfx: {
@@ -41,7 +41,7 @@ const DEFAULT_CONFIG: JumpConfig = {
   },
   sfx: {
     jump:
-      "assets\sounds\High-Jump-Skill-Sound-Effect-Taekwondo-Ragnarok-Online_005_48k.m4a",
+      "modules/endless-tower/assets/sounds/High-Jump-Skill-Sound-Effect-Taekwondo-Ragnarok-Online_005_48k.m4a",
     heavyLanding:
       "modules/dnd5e-animations/assets/sounds/Weapons/Melee_Bludgeoning/bludgeoning-swing-impact-blunt-1.mp3",
   },

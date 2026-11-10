@@ -20,7 +20,7 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `styles/critical-encounter.css` — Styles for Julgamento da Torre (Souls-like boss banner, encounter badge, critical cards).
 - `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
 - `docs/CELESTIAL_CHRONICLE.md` — Guide and reference for the Celestial Chronicle system.
-- `fx/ragnarok-online-effects/` — VFX webm/gif files registered via Sequencer.
+- `assets/fx/ragnarok-online-effects/` — VFX webm files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 
 ## Build and script workflow
@@ -32,11 +32,10 @@ The module exposes its public API at `game.modules.get('endless-tower').api`.
 
 ## Runtime dependencies
 
-- `dfreds-convenient-effects` — required. Used in `cemetery-bless.js`, `sensorial-deturpation.js`, `abracado-pelo-destino-bless.js`, `solitude-bless.js` via `game.dfreds.effectInterface`.
-- `sequencer` — used in `ragnarok-animations.js` and `whisper-sound.js`.
-- `warpgate` — used in `ghostring-summon.js`.
-- `midi-qol` — read in `whisper-sound.js` for concentration damage detection.
-- `fvtt-youtube-player` — optional, used in `play-sounds-hooks.js`.
+- `dfreds-convenient-effects` — required. Used in `cemetery-bless.ts`, `sensorial-deturpation.ts`, `abracado-pelo-destino.ts` via `game.dfreds.effectInterface`.
+- `sequencer` — used in `ragnarok-animations.ts` and `jump.ts`.
+- `midi-qol` — used in `critical-encounter.ts` and `solitude.ts` for distance and attack triggers.
+- `fvtt-youtube-player` — optional, used in `play-sounds.ts`.
 
 API quick reference for these modules is in WORLD.md (with documentation URLs).
 
@@ -147,8 +146,7 @@ All future in-game UI banners, overlays, boss announcements, and cinematic alert
 ## Gotchas
 
 - After any Foundry core software update, the setup layout (`setup.hbs`) is restored to vanilla by the installer; `login/apply-login-patch.ps1` must be re-run (as Administrator) with the Foundry server stopped.
-- `whisper-sound.js` references audio at `endless-tower/audios/minecraft-ghast-sounds/` — these files are not in the repo. They may be managed separately or need to be added.
-- `sensorial-deturpation.js` and `solitude-bless.js` reference `actor` and `token` globals (meant to be executed as inline macros with those in scope).
+- `sensorial-deturpation.ts` and `solitude.ts` provide programmatic APIs via `game.modules.get('endless-tower').api`.
 - No `opencode.json` or CI config exists.
 
 ## Foundry REST API (rolling dice, etc.)
