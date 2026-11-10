@@ -17,6 +17,7 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `login/` — Custom Ragnarok-themed login screen (`login.css`, `login.js`) and layout patch script (`apply-login-patch.ps1`).
 - `styles/landing.css` — Cinematic Clean UI styles for the in-game Landing Page scene.
 - `styles/chronicle.css` — Styles for Celestial Chronicle (Pause mode & Scene Transitions).
+- `styles/critical-encounter.css` — Styles for Julgamento da Torre (Souls-like boss banner, encounter badge, critical cards).
 - `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
 - `docs/CELESTIAL_CHRONICLE.md` — Guide and reference for the Celestial Chronicle system.
 - `fx/ragnarok-online-effects/` — VFX webm/gif files registered via Sequencer.
@@ -116,6 +117,32 @@ The custom login screen (`login/login.css`, `login/login.js`) runs on the `/join
 - **Scene automation**: `src/features/landing-scene.ts` automatically creates and configures the scene `"Landing Page"` (1672x941 px, Gridless, global light enabled, padding 0) on GM login.
 - **Cinematic Clean UI**: `styles/landing.css` reduces opacity of HUD elements (`#hotbar`, `#players`, `#controls`, `#navigation`) to 12%-20% while viewing the landing scene (`body.et-landing-active`), smoothly restoring 100% opacity on hover.
 - **Living Canvas & Reversibility**: Floating golden particle canvas and subtle board drift (`body.et-drift-active #board`) are controlled by client setting `landingEffects` (configured under Module Settings), with runtime toggle via `game.modules.get('endless-tower').api.toggleLandingEffects()`. Complete user guide in `docs/LANDING_PAGE.md`.
+
+## Cinematic UI & Design System Pattern (Default for all UI/Banners)
+
+All future in-game UI banners, overlays, boss announcements, and cinematic alerts MUST follow this design system pattern as default:
+
+### 1. Edge-to-Edge Ribbon (Never Floating Dialog Boxes)
+- **Full-width cinematic ribbon**: Never use small, floating, rounded pop-up cards (`border-radius: 14px`) in the center of the screen for epic announcements — they look like generic dialog boxes.
+- **Edge-to-edge layout**: Always span horizontally across the screen (`width: 100vw; max-width: 100vw; padding: 2.2rem 2rem; border-radius: 0;`).
+- **Horizontal fade gradient**:
+  `background: linear-gradient(90deg, transparent 0%, rgba(12, 10, 8, 0.72) 12%, rgba(16, 12, 11, 0.9) 50%, rgba(12, 10, 8, 0.72) 88%, transparent 100%);`
+- **Tapered borders**: Top and bottom borders only (`1px solid rgba(217, 184, 101, 0.4)`), zero left/right borders.
+- **Glassmorphism**: `backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);` so map tokens remain visible through the dark glass.
+
+### 2. Single-Line Cinematic Typography
+- **No title wrapping**: Always enforce `white-space: nowrap;` on main cinematic titles. Never allow multi-line stacking (e.g. "JULGAMENTO DA" / "TORRE").
+- **Font stack**: `font-family: var(--et-font-cinematic);` (`"Signika", "Modesto Condensed", "Palatino", "Georgia", serif`).
+- **Color tokens**:
+  - Main Title: `--et-ivory` (`#fff8e6`), `font-weight: 700`, `letter-spacing: 0.16em`, uppercase, with `text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 24px rgba(217,184,101,0.35)`.
+  - Subtitle: `--et-gold` (`#f3e2b0`), italic, `letter-spacing: 0.08em`, opacity `0.92`.
+  - Crest & Runes: Golden glow (`--et-gold`, `--et-gold-deep`) flanked by rune sparkles (`<span class="et-rune-sparkle">✦</span>`).
+  - Divider: 1px tapered razor line fading to transparent at the ends:
+    `background: linear-gradient(90deg, transparent, rgba(217,184,101,0.6), rgba(192,57,43,0.8), rgba(217,184,101,0.6), transparent);`
+
+### 3. Screen Vignette & Non-Intrusive HUD
+- **Periphery vignette**: Darken edges with `radial-gradient(ellipse 85% 75% at 50% 50%, rgba(0,0,0,0.15) 30%, rgba(55,8,8,0.45) 80%, rgba(15,2,2,0.85) 100%)`. Never blur or block the center canvas.
+- **No redundant UI toasts**: Avoid generic Foundry toast notifications (`ui.notifications.info`) during cinematic banner sequences. Let the banner, audio, and persistent tracker badges carry the presentation without cluttering the HUD or Combat Carousel.
 
 ## Gotchas
 

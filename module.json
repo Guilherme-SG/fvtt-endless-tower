@@ -27,7 +27,8 @@
   ],
   "styles": [
     "styles/landing.css",
-    "styles/chronicle.css"
+    "styles/chronicle.css",
+    "styles/critical-encounter.css"
   ],
   "languages": []
 }

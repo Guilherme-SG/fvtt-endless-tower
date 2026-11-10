@@ -22,6 +22,10 @@ import {
   registerCelestialChronicleFeature,
   CelestialChronicle,
 } from "./features/celestial-chronicle";
+import {
+  registerCriticalEncounter,
+  CriticalEncounterManager,
+} from "./features/critical-encounter";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -37,6 +41,7 @@ Hooks.once("init", () => {
   registerWhisperSound();
   registerLandingSceneFeature();
   registerCelestialChronicleFeature();
+  registerCriticalEncounter();
 });
 
 Hooks.once("ready", () => {
@@ -53,6 +58,7 @@ Hooks.once("ready", () => {
       createLandingScene,
       toggleLandingEffects,
       chronicle: CelestialChronicle.getInstance(),
+      criticalEncounter: CriticalEncounterManager.getInstance(),
     };
   }
 });
