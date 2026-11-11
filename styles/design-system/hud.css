@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — HUD & Navigation
+   Top scene nav, left controls toolbar, macro hotbar, players capsule & sidebar.
+   ========================================================================== */
+
+/* --- 1. Top Scene Navigation (#navigation) --- */
+body.et-celestial-active #navigation,
+#navigation {
+  margin: 10px 0 0 10px !important;
+}
+
+body.et-celestial-active #navigation #nav-toggle,
+#navigation #nav-toggle {
+  background: var(--et-obsidian-88) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  color: var(--et-gold) !important;
+  border-radius: var(--et-radius-sm) !important;
+  box-shadow: var(--et-shadow-md) !important;
+  backdrop-filter: var(--et-blur-sm) !important;
+  -webkit-backdrop-filter: var(--et-blur-sm) !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #navigation #nav-toggle:hover,
+#navigation #nav-toggle:hover {
+  color: var(--et-gold-bright) !important;
+  border-color: var(--et-gold) !important;
+  box-shadow: 0 0 14px var(--et-gold-glow) !important;
+}
+
+body.et-celestial-active #navigation #scene-list .scene,
+#navigation #scene-list .scene {
+  background: var(--et-obsidian-78) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-pill) !important;
+  margin: 0 4px !important;
+  padding: 4px 14px !important;
+  color: var(--et-ivory-dim) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-size: 0.88rem !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  box-shadow: var(--et-shadow-sm) !important;
+  backdrop-filter: var(--et-blur-sm) !important;
+  -webkit-backdrop-filter: var(--et-blur-sm) !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #navigation #scene-list .scene:hover,
+#navigation #scene-list .scene:hover {
+  background: rgba(26, 20, 14, 0.95) !important;
+  border-color: var(--et-gold) !important;
+  color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 12px var(--et-gold-glow-subtle) !important;
+}
+
+body.et-celestial-active #navigation #scene-list .scene.view,
+body.et-celestial-active #navigation #scene-list .scene.active,
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.active {
+  background: linear-gradient(135deg, rgba(30, 24, 16, 0.95), rgba(45, 36, 22, 0.95)) !important;
+  border-color: var(--et-gold-bright) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 16px var(--et-gold-glow), inset 0 0 8px rgba(243, 226, 176, 0.25) !important;
+}
+
+/* --- 2. Left Scene Controls Toolbar (#controls) --- */
+body.et-celestial-active #controls,
+#controls {
+  margin-left: 10px !important;
+}
+
+body.et-celestial-active #controls .scene-control,
+body.et-celestial-active #controls .control-tool,
+#controls .scene-control,
+#controls .control-tool {
+  background: var(--et-obsidian-88) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-sm) !important;
+  color: var(--et-ivory-dim) !important;
+  box-shadow: var(--et-shadow-sm) !important;
+  backdrop-filter: var(--et-blur-sm) !important;
+  -webkit-backdrop-filter: var(--et-blur-sm) !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #controls .scene-control:hover,
+body.et-celestial-active #controls .control-tool:hover,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+  border-color: var(--et-gold) !important;
+  color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 14px var(--et-gold-glow) !important;
+  transform: scale(1.08) !important;
+}
+
+body.et-celestial-active #controls .scene-control.active,
+body.et-celestial-active #controls .control-tool.active,
+#controls .scene-control.active,
+#controls .control-tool.active {
+  background: linear-gradient(135deg, rgba(35, 28, 18, 0.95), rgba(50, 40, 24, 0.95)) !important;
+  border-color: var(--et-gold-bright) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 18px var(--et-gold-glow), inset 0 0 8px rgba(243, 226, 176, 0.35) !important;
+}
+
+body.et-celestial-active #controls .sub-controls,
+#controls .sub-controls {
+  background: var(--et-obsidian-95) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-sm) !important;
+  box-shadow: var(--et-shadow-md) !important;
+  backdrop-filter: var(--et-blur-md) !important;
+  -webkit-backdrop-filter: var(--et-blur-md) !important;
+  padding: 4px !important;
+}
+
+/* --- 3. Bottom Macro Hotbar (#hotbar) --- */
+body.et-celestial-active #hotbar,
+#hotbar {
+  margin-bottom: 8px !important;
+}
+
+body.et-celestial-active #hotbar #action-bar,
+#hotbar #action-bar {
+  background: var(--et-obsidian-88) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-md) !important;
+  box-shadow: var(--et-shadow-lg) !important;
+  backdrop-filter: var(--et-blur-md) !important;
+  -webkit-backdrop-filter: var(--et-blur-md) !important;
+  padding: 4px !important;
+}
+
+body.et-celestial-active #hotbar .macro,
+#hotbar .macro {
+  background: var(--et-obsidian-well) !important;
+  border: 1px solid var(--et-glass-border-subtle) !important;
+  border-radius: var(--et-radius-sm) !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #hotbar .macro:hover,
+#hotbar .macro:hover {
+  border-color: var(--et-gold) !important;
+  box-shadow: 0 0 12px var(--et-gold-glow) !important;
+}
+
+body.et-celestial-active #hotbar .macro.active,
+#hotbar .macro.active {
+  border-color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 16px var(--et-gold-glow) !important;
+}
+
+body.et-celestial-active #hotbar .macro .macro-key,
+#hotbar .macro .macro-key {
+  color: var(--et-gold) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+body.et-celestial-active #hotbar #hotbar-directory-controls,
+#hotbar #hotbar-directory-controls {
+  background: var(--et-obsidian-well) !important;
+  border: 1px solid var(--et-glass-border-subtle) !important;
+  border-radius: var(--et-radius-sm) !important;
+  color: var(--et-gold) !important;
+}
+
+body.et-celestial-active #hotbar #hotbar-page-controls a,
+#hotbar #hotbar-page-controls a {
+  color: var(--et-gold) !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #hotbar #hotbar-page-controls a:hover,
+#hotbar #hotbar-page-controls a:hover {
+  color: var(--et-gold-bright) !important;
+  filter: drop-shadow(0 0 6px var(--et-gold-glow)) !important;
+}
+
+/* --- 4. Bottom-Left Players Capsule (#players) --- */
+body.et-celestial-active #players,
+#players {
+  background: var(--et-obsidian-88) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-md) !important;
+  box-shadow: var(--et-shadow-md) !important;
+  backdrop-filter: var(--et-blur-sm) !important;
+  -webkit-backdrop-filter: var(--et-blur-sm) !important;
+  padding: 8px 12px !important;
+  margin-left: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+body.et-celestial-active #players h3,
+#players h3 {
+  font-family: var(--et-font-cinematic) !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--et-gold) !important;
+  border-bottom: 1px solid var(--et-glass-border-subtle) !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 6px !important;
+}
+
+body.et-celestial-active #players .player,
+#players .player {
+  color: var(--et-ivory) !important;
+  font-family: var(--et-font-body) !important;
+  font-size: 0.88rem !important;
+  padding: 2px 0 !important;
+}
+
+body.et-celestial-active #players .player .player-name,
+#players .player .player-name {
+  color: var(--et-ivory) !important;
+  font-weight: 500 !important;
+}
+
+body.et-celestial-active #players .player.self .player-name,
+#players .player.self .player-name {
+  color: var(--et-gold-bright) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 8px var(--et-gold-glow-subtle) !important;
+}
+
+/* --- 5. Right Sidebar & Tabs (#sidebar) --- */
+body.et-celestial-active #sidebar,
+#sidebar {
+  background: var(--et-obsidian-95) !important;
+  border-left: 1px solid var(--et-glass-border) !important;
+  box-shadow: var(--et-shadow-lg) !important;
+  backdrop-filter: var(--et-blur-md) !important;
+  -webkit-backdrop-filter: var(--et-blur-md) !important;
+}
+
+body.et-celestial-active #sidebar-tabs,
+#sidebar-tabs {
+  background: var(--et-gradient-header) !important;
+  border-bottom: 1px solid var(--et-glass-border) !important;
+  padding: 4px 0 !important;
+}
+
+body.et-celestial-active #sidebar-tabs a.item,
+#sidebar-tabs a.item {
+  color: var(--et-ivory-dim) !important;
+  font-size: 1.05rem !important;
+  transition: all var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #sidebar-tabs a.item:hover,
+#sidebar-tabs a.item:hover {
+  color: var(--et-gold) !important;
+  filter: drop-shadow(0 0 8px var(--et-gold-glow)) !important;
+  transform: scale(1.12) !important;
+}
+
+body.et-celestial-active #sidebar-tabs a.item.active,
+#sidebar-tabs a.item.active {
+  color: var(--et-gold-bright) !important;
+  border-bottom: 2px solid var(--et-gold) !important;
+  filter: drop-shadow(0 0 12px var(--et-gold-glow)) !important;
+}
+
+body.et-celestial-active #sidebar .sidebar-tab,
+#sidebar .sidebar-tab {
+  background: transparent !important;
+  color: var(--et-ivory) !important;
+}
+
+body.et-celestial-active #sidebar .directory-list .directory-item,
+#sidebar .directory-list .directory-item {
+  background: transparent !important;
+  border-bottom: 1px solid var(--et-glass-border-subtle) !important;
+  color: var(--et-ivory) !important;
+  transition: background var(--et-transition-fast) !important;
+}
+
+body.et-celestial-active #sidebar .directory-list .directory-item:hover,
+#sidebar .directory-list .directory-item:hover {
+  background: rgba(243, 226, 176, 0.08) !important;
+  color: var(--et-gold-bright) !important;
+}
+
+body.et-celestial-active #sidebar .directory-list .directory-item h4,
+#sidebar .directory-list .directory-item h4 {
+  font-family: var(--et-font-cinematic) !important;
+  color: var(--et-ivory) !important;
+  letter-spacing: 0.04em !important;
+}
+
+body.et-celestial-active #sidebar .directory-footer,
+#sidebar .directory-footer {
+  background: var(--et-obsidian-card) !important;
+  border-top: 1px solid var(--et-glass-border) !important;
+  padding: 6px !important;
+}

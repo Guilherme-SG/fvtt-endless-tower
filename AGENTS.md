@@ -18,8 +18,10 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `styles/landing.css` — Cinematic Clean UI styles for the in-game Landing Page scene.
 - `styles/chronicle.css` — Styles for Celestial Chronicle (Pause mode & Scene Transitions).
 - `styles/critical-encounter.css` — Styles for Julgamento da Torre (Souls-like boss banner, encounter badge, critical cards).
+- `styles/design-system.css` — Master bundle of the Celestial Chronicle Design System (tokens, typography, buttons, forms, windows, chat, hud, banners, cards, effects).
 - `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
 - `docs/CELESTIAL_CHRONICLE.md` — Guide and reference for the Celestial Chronicle system.
+- `docs/DESIGN_SYSTEM.md` — Comprehensive specification and API reference for the Celestial Chronicle Design System.
 - `assets/fx/ragnarok-online-effects/` — VFX webm files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 
@@ -28,7 +30,11 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `npm run dev` — Watch mode with Vite for development (`vite build --watch`).
 - `npm run build` — Production build with Vite (`vite build`).
 
-The module exposes its public API at `game.modules.get('endless-tower').api`.
+The module exposes its public API at `game.modules.get('endless-tower').api`:
+- `api.ui` — UI helpers (`showBanner(opts)`, `playSound(type, vol)`, `startParticles()`, `stopParticles()`).
+- `api.banner` — `BannerService.getInstance()` (cinematic edge-to-edge ribbons with socket sync).
+- `api.sound` — `DesignSystemSound.getInstance()` (UI audio dispatcher with volume control).
+- `api.designSystem` — `DesignSystem.getInstance()` (master design system controller).
 
 ## Runtime dependencies
 

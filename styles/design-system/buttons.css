@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Buttons
+   Gilded gold primary actions, frosted glass secondary options and icon buttons.
+   ========================================================================== */
+
+/* --- Universal Button Normalization for Foundry and Endless Tower --- */
+body.et-celestial-active button,
+body.et-celestial-active .et-btn,
+body.et-celestial-active .dialog-button,
+button,
+.et-btn,
+.dialog-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  font-family: var(--et-font-cinematic);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--et-ivory);
+  background: var(--et-obsidian-78);
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-sm);
+  box-shadow: var(--et-shadow-sm);
+  backdrop-filter: var(--et-blur-sm);
+  -webkit-backdrop-filter: var(--et-blur-sm);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  outline: none;
+  transition: all var(--et-transition-fast);
+  overflow: hidden;
+}
+
+button:hover,
+.et-btn:hover,
+.dialog-button:hover {
+  background: rgba(26, 21, 16, 0.92);
+  border-color: var(--et-gold);
+  color: var(--et-gold-bright);
+  box-shadow: 0 0 14px var(--et-gold-glow-subtle);
+  transform: translateY(-1px);
+}
+
+button:active,
+.et-btn:active,
+.dialog-button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 0 6px var(--et-gold-glow-subtle);
+}
+
+button:focus-visible,
+.et-btn:focus-visible,
+.dialog-button:focus-visible {
+  border-color: var(--et-gold-bright);
+  box-shadow: 0 0 16px var(--et-gold-glow);
+}
+
+button:disabled,
+.et-btn:disabled,
+.dialog-button:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  filter: grayscale(0.6) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* --- Variant: Primary Gilded Gold --- */
+.et-btn-primary,
+button.default,
+button.bright,
+.dialog-button.default,
+.dialog-button.yes {
+  background: var(--et-gradient-gold-btn) !important;
+  color: #1a140a !important;
+  border: 1px solid #ffeab3 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 14px rgba(217, 184, 101, 0.45), 0 0 4px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.et-btn-primary:hover,
+button.default:hover,
+button.bright:hover,
+.dialog-button.default:hover,
+.dialog-button.yes:hover {
+  background: var(--et-gradient-gold-btn-hover) !important;
+  color: #0d0a05 !important;
+  border-color: #fff8e6 !important;
+  box-shadow: 0 0 22px rgba(255, 234, 179, 0.85), 0 4px 16px rgba(0, 0, 0, 0.7) !important;
+  transform: translateY(-2px);
+}
+
+.et-btn-primary:active,
+button.default:active,
+button.bright:active,
+.dialog-button.default:active,
+.dialog-button.yes:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 10px rgba(217, 184, 101, 0.6) !important;
+}
+
+/* Subtle Shimmer Effect on Primary Buttons */
+.et-btn-primary::after,
+button.default::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-25deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.et-btn-primary:hover::after,
+button.default:hover::after {
+  animation: et-btn-shimmer 1s ease-in-out;
+}
+
+@keyframes et-btn-shimmer {
+  0% { left: -100%; }
+  100% { left: 160%; }
+}
+
+/* --- Variant: Secondary Obsidian Frosted --- */
+.et-btn-secondary,
+.dialog-button.no {
+  background: var(--et-obsidian-78) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  color: var(--et-ivory) !important;
+}
+
+.et-btn-secondary:hover,
+.dialog-button.no:hover {
+  background: rgba(24, 20, 16, 0.95) !important;
+  border-color: var(--et-gold) !important;
+  color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 16px var(--et-gold-glow-subtle) !important;
+}
+
+/* --- Variant: Danger Crimson --- */
+.et-btn-danger,
+button.danger,
+.dialog-button.danger {
+  background: var(--et-crimson-glass) !important;
+  border: 1px solid var(--et-crimson-border) !important;
+  color: #ffcccc !important;
+  box-shadow: 0 2px 10px rgba(158, 27, 27, 0.35) !important;
+}
+
+.et-btn-danger:hover,
+button.danger:hover,
+.dialog-button.danger:hover {
+  background: rgba(70, 12, 12, 0.95) !important;
+  border-color: #ff5555 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px var(--et-crimson-glow) !important;
+  transform: translateY(-1px);
+}
+
+/* --- Variant: Azure Arcane --- */
+.et-btn-azure {
+  background: var(--et-azure-glass) !important;
+  border: 1px solid var(--et-azure-border) !important;
+  color: #d8eeff !important;
+  box-shadow: 0 2px 10px rgba(123, 181, 230, 0.3) !important;
+}
+
+.et-btn-azure:hover {
+  background: rgba(18, 36, 60, 0.95) !important;
+  border-color: #a3cff5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px var(--et-azure-glow) !important;
+  transform: translateY(-1px);
+}
+
+/* --- Variant: Emerald Vitality --- */
+.et-btn-emerald {
+  background: var(--et-emerald-glass) !important;
+  border: 1px solid var(--et-emerald-border) !important;
+  color: #d6f7e4 !important;
+  box-shadow: 0 2px 10px rgba(91, 200, 142, 0.3) !important;
+}
+
+.et-btn-emerald:hover {
+  background: rgba(15, 50, 30, 0.95) !important;
+  border-color: #82e0ad !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px var(--et-emerald-glow) !important;
+  transform: translateY(-1px);
+}
+
+/* --- Variant: Icon Button (Toolbar, Hotbar, Small Controls) --- */
+.et-btn-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+  border-radius: var(--et-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--et-gold);
+  background: var(--et-obsidian-78);
+  border: 1px solid var(--et-glass-border);
+  font-size: 1rem;
+}
+
+.et-btn-icon:hover {
+  color: var(--et-gold-bright);
+  border-color: var(--et-gold);
+  box-shadow: 0 0 12px var(--et-gold-glow);
+  transform: scale(1.08);
+}
+
+.et-btn-icon.active {
+  background: rgba(243, 226, 176, 0.18);
+  border-color: var(--et-gold-bright);
+  color: #ffffff;
+  box-shadow: 0 0 16px var(--et-gold-glow);
+}
+
+/* --- Pill Shape Modifier --- */
+.et-btn-pill {
+  border-radius: var(--et-radius-pill) !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* --- Button Groups --- */
+.et-btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border-radius: var(--et-radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--et-glass-border);
+}
+
+.et-btn-group button,
+.et-btn-group .et-btn {
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--et-glass-border);
+}
+
+.et-btn-group button:last-child,
+.et-btn-group .et-btn:last-child {
+  border-right: none;
+}

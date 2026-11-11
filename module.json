@@ -26,6 +26,7 @@
     "dist/endless-tower.js"
   ],
   "styles": [
+    "styles/design-system.css",
     "styles/landing.css",
     "styles/chronicle.css",
     "styles/critical-encounter.css",
