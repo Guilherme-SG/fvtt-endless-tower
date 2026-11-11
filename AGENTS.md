@@ -56,6 +56,18 @@ Before committing, always:
 
 Never commit without user confirmation.
 
+## Foundry VTT MCP Safety Policy (HITL for High-Risk Actions)
+
+Even when operating in autonomous or Turbo mode, the assistant MUST follow Human-In-The-Loop (HITL) approval before executing any modifying, destructive, or high-risk Foundry operations:
+- **Auto-approved (Read & Non-destructive)**:
+  - Reading and queries (`get-character`, `get-character-entity`, `list-characters`, `get-current-scene`, `list-scenes`, `get-world-info`, `search-compendium`, `get-token-details`, etc.)
+  - Posting chat dialogues, speech bubbles, or requesting player roll buttons (`create-chat-message`, `request-player-rolls`)
+- **Strict Prior Approval Required (Stop and Ask the User First)**:
+  - Deleting tokens, actors, items, journals, or scenes (e.g. `delete-tokens`, deletion actions in `manage-actors`)
+  - Modifying existing actor sheets, abilities, HP, features, items, or ownership (e.g. `update-token`, `manage-actors` edit, `manage-effects`, `remove-actor-ownership`, `replace-journal-page`)
+  - Bulk movements or scene modifications
+Before executing any of these tools, the assistant MUST halt its turn, detail the intended target(s) and specific modifications, and await the user's explicit approval in chat.
+
 ## Critical hit/fail tables (`tables/critical/`)
 
 Each table is a FoundryVTT RollTable JSON (21 entries, ranges 1–20 + a crit/fail 21). All entry descriptions use a **consistent HTML format**:
@@ -116,6 +128,23 @@ The custom login screen (`login/login.css`, `login/login.js`) runs on the `/join
 - **Scene automation**: `src/features/landing-scene.ts` automatically creates and configures the scene `"Landing Page"` (1672x941 px, Gridless, global light enabled, padding 0) on GM login.
 - **Cinematic Clean UI**: `styles/landing.css` reduces opacity of HUD elements (`#hotbar`, `#players`, `#controls`, `#navigation`) to 12%-20% while viewing the landing scene (`body.et-landing-active`), smoothly restoring 100% opacity on hover.
 - **Living Canvas & Reversibility**: Floating golden particle canvas and subtle board drift (`body.et-drift-active #board`) are controlled by client setting `landingEffects` (configured under Module Settings), with runtime toggle via `game.modules.get('endless-tower').api.toggleLandingEffects()`. Complete user guide in `docs/LANDING_PAGE.md`.
+
+### Visual Experimentation & Reversibility Invariant
+- **Three-tier reversibility**: Any dynamic canvas experiment (particles, camera drift, screen shaders, ambient loops) MUST be implemented with instant, zero-code reversibility:
+  1. **UI Checkbox**: Register a client setting in `init` (`game.settings.register(MODULE_ID, settingKey, { config: true, type: Boolean, default: true, onChange: ... })`) under Module Settings so the user can toggle it off with a single click.
+  2. **API Helper**: Expose an idempotent toggle method on `game.modules.get('endless-tower').api.toggle<Feature>()`.
+  3. **Strict Teardown**: Listen to `canvasTearDown` to cancel `requestAnimationFrame` loops, remove injected DOM/Canvas nodes, and strip body classes, preventing memory leaks and cross-scene leakage.
+
+### Progressive HUD & Clean UI Pattern
+- **Hover-restoration over hard removal**: For immersive scenes (Landing Pages, narrative interludes, cutscenes), do not remove HUD elements (`#hotbar`, `#players`, `#controls`, `#navigation`) with `display: none`. Instead, dim them to low opacity (`0.1`–`0.2`) and smoothly restore to `1.0` on `:hover` or `:focus-within`. This maintains cinematic immersion while preventing GM/players from feeling trapped.
+
+### Feature Documentation Standard (`docs/<FEATURE>.md`)
+- Every new user-facing scene, HUD system, or customization MUST include a companion reference guide in `docs/<FEATURE>.md` (e.g., `docs/LANDING_PAGE.md`, `docs/CELESTIAL_CHRONICLE.md`, `docs/DESIGN_SYSTEM.md`).
+- The guide must document:
+  1. What the feature does.
+  2. Recommended scene/asset configurations.
+  3. UI setting location and macro/console commands for toggling.
+  4. Key source files involved.
 
 ## Cinematic UI & Design System Pattern (Default for all UI/Banners)
 
