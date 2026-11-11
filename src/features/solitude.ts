@@ -124,20 +124,26 @@ export async function ensureIsolationEffect(actor: any): Promise<any> {
  * Retorna o token que representa o ator na cena atual. O efeito pertence ao ator, então
  * apenas um token pode decidir seu estado. Se o token movido pertencer a este ator, ele tem prioridade total.
  */
-function getActorTokenDocument(actor: any, movedDoc?: any): any {
+function getActorTokenDocument(actor: any, movedDoc?: any, preferredTokenId?: string): any {
   if (movedDoc && (movedDoc.actorId === actor.id || movedDoc.actor === actor)) {
     return movedDoc;
   }
+  if (preferredTokenId) {
+    const preferred = canvas.scene?.tokens?.get(preferredTokenId);
+    if (preferred && (preferred.actor === actor || preferred.actorId === actor.id)) {
+      return preferred;
+    }
+  }
   if (actor.token) return actor.token;
 
-  const tokens: any[] = actor.getActiveTokens(false, true);
+  const tokens: any[] = actor.getActiveTokens ? actor.getActiveTokens(false, true) : [];
   const combatTokenId = game.combat?.combatants.find((c: any) => c.actor === actor)?.tokenId;
   const inCombat = tokens.find((token) => token.id === combatTokenId);
   const selected = tokens.find((token) => token.object?.controlled);
-  return inCombat ?? selected ?? tokens[0] ?? null;
+  return selected ?? inCombat ?? tokens[0] ?? null;
 }
 
-/** Obtém as coordenadas efetivas de um token, aplicando o delta de 'changes' caso seja o token recém-movido. */
+/** Obtém as coordenadas efetivas de um token, aplicando o delta de 'changes' caso seja o token recém-movido ou redimensionado. */
 function getTokenBounds(
   token: any,
   movedDoc?: any,
@@ -210,6 +216,7 @@ export async function checkSolitude(actor: any, movedDoc?: any, changes?: any): 
 }
 
 async function checkAllSolitudeBearers(movedDoc?: any, changes?: any): Promise<void> {
+  if (!canvas.scene?.tokens) return;
   const bearers = new Set(
     canvas.scene.tokens.map((token: any) => token.actor).filter((actor: any) => actor && getSolitudeItem(actor))
   );
@@ -219,22 +226,110 @@ async function checkAllSolitudeBearers(movedDoc?: any, changes?: any): Promise<v
 }
 
 /**
+ * Extrai o ator de qualquer configuração ou chamada de hook de rolagem (dnd5e 5.x, 3.x, ou Midi-QOL).
+ */
+function extractActorFromRoll(arg0: any, arg1?: any): any {
+  if (!arg0) return null;
+  if (arg0.subject?.actor) return arg0.subject.actor;
+  if (arg0.subject?.documentName === "Actor") return arg0.subject;
+  if (arg0.actor) return arg0.actor;
+  if (arg0.documentName === "Actor") return arg0;
+  if (arg0.workflow?.actor) return arg0.workflow.actor;
+  if (arg0.item?.actor) return arg0.item.actor;
+  if (arg1?.subject?.actor) return arg1.subject.actor;
+  if (arg1?.actor) return arg1.actor;
+  if (arg1?.documentName === "Actor") return arg1;
+  return null;
+}
+
+/**
+ * Sincroniza o estado de isolamento do ator imediatamente antes de uma rolagem (ataque, save, concentração).
+ * Atualiza o efeito e os bônus síncronamente em memória antes da montagem dos termos da rolagem,
+ * e persiste a alteração no banco de dados em segundo plano.
+ */
+function syncSolitudeForRoll(config: any, dialog?: any, message?: any): void {
+  const actor = extractActorFromRoll(config, dialog);
+  if (!actor || !getSolitudeItem(actor)) return;
+
+  const speakerTokenId = message?.data?.speaker?.token ?? dialog?.options?.speaker?.token;
+  const token = getActorTokenDocument(actor, undefined, speakerTokenId);
+  if (!token) return;
+
+  const isolated = isIsolated(token);
+  const shouldBeDisabled = !isolated;
+
+  const effect = getIsolationEffect(actor);
+  if (effect && effect.disabled !== shouldBeDisabled) {
+    // 1. Atualiza imediatamente em memória para que o getAttackData e formulas leiam o novo valor
+    effect.disabled = shouldBeDisabled;
+    if (typeof actor.prepareData === "function") {
+      actor.prepareData();
+    }
+    // 2. Dispara a persistência no banco de dados em segundo plano
+    effect.update({ disabled: shouldBeDisabled }).catch((err: any) => {
+      console.error(`${MODULE_TITLE} | Erro ao sincronizar Foco Solitário:`, err);
+    });
+  } else if (!effect && isolated) {
+    ensureIsolationEffect(actor).catch(console.error);
+  }
+
+  // 3. Atualiza dados de rolagens já pré-construídas (como salvaguardas/concentração)
+  if (Array.isArray(config?.rolls)) {
+    for (const roll of config.rolls) {
+      if (!roll?.data) continue;
+      if ("dexSaveBonus" in roll.data) {
+        roll.data.dexSaveBonus = actor.system?.abilities?.dex?.bonuses?.save ?? 0;
+      }
+      if ("saveBonus" in roll.data) {
+        roll.data.saveBonus = actor.system?.bonuses?.abilities?.save ?? 0;
+      }
+    }
+  }
+}
+
+/**
  * Registra os hooks do Foco Solitário:
- * - Sob demanda, antes de rolagens do portador (ataque, salvaguarda, concentração, teste de d20).
- * - Na movimentação de qualquer token, aplicando as novas coordenadas em tempo real.
+ * - Sob demanda, sincroniza antes de qualquer rolagem (ataque, salvaguarda, concentração, teste de d20).
+ * - Na movimentação ou redimensionamento de qualquer token, aplicando as novas coordenadas/tamanho em tempo real.
+ * - Na criação ou exclusão de tokens na cena.
+ * - Na alteração de HP/condições de atores (ex: aliados caindo inconscientes).
  * - No fim do combate, desativando o efeito.
  */
 export function registerSolitudeFeature(): void {
   console.log(`${MODULE_TITLE} | Registrando bênção Solitude (Foco Solitário)`);
 
-  Hooks.on("dnd5e.preRollAttack", (item: any) => checkSolitude(item.actor));
-  Hooks.on("dnd5e.preRollSavingThrow", (actor: any) => checkSolitude(actor));
-  Hooks.on("dnd5e.preRollConcentration", (actor: any) => checkSolitude(actor));
-  Hooks.on("dnd5e.preRollD20Test", (config: any) => checkSolitude(config?.subject));
+  // Hooks de pré-rolagem no dnd5e 5.x / 3.x / Midi-QOL
+  Hooks.on("dnd5e.preRollAttack", (config: any, dialog: any, message: any) =>
+    syncSolitudeForRoll(config, dialog, message)
+  );
+  Hooks.on("dnd5e.preRollSavingThrow", (config: any, dialog: any, message: any) =>
+    syncSolitudeForRoll(config, dialog, message)
+  );
+  Hooks.on("dnd5e.preRollConcentration", (config: any, dialog: any, message: any) =>
+    syncSolitudeForRoll(config, dialog, message)
+  );
+  Hooks.on("dnd5e.preRollD20Test", (config: any, dialog: any, message: any) =>
+    syncSolitudeForRoll(config, dialog, message)
+  );
+  Hooks.on("midi-qol.preAttackRoll", (workflow: any) => {
+    if (workflow?.actor) syncSolitudeForRoll({ subject: { actor: workflow.actor } });
+  });
 
+  // Movimentação ou redimensionamento de tokens
   Hooks.on("updateToken", (tokenDoc: any, changes: any) => {
-    const moved = "x" in changes || "y" in changes;
-    if (moved) checkAllSolitudeBearers(tokenDoc, changes);
+    const boundsChanged = "x" in changes || "y" in changes || "width" in changes || "height" in changes;
+    if (boundsChanged) checkAllSolitudeBearers(tokenDoc, changes);
+  });
+
+  // Criação ou remoção de tokens
+  Hooks.on("createToken", () => checkAllSolitudeBearers());
+  Hooks.on("deleteToken", () => checkAllSolitudeBearers());
+
+  // Mudança de status / HP (ex: aliado caindo inconsciente ou morrendo)
+  Hooks.on("updateActor", (actor: any, changes: any) => {
+    const hpChanged = Boolean(changes.system?.attributes?.hp);
+    const statusesChanged = "statuses" in changes;
+    if (hpChanged || statusesChanged) checkAllSolitudeBearers();
   });
 
   Hooks.on("deleteCombat", async (combat: any) => {
