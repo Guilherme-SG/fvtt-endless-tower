@@ -34,7 +34,7 @@ The module exposes its public API at `game.modules.get('endless-tower').api`.
 
 - `dfreds-convenient-effects` — required. Used in `cemetery-bless.ts`, `sensorial-deturpation.ts`, `abracado-pelo-destino.ts` via `game.dfreds.effectInterface`.
 - `sequencer` — used in `ragnarok-animations.ts` and `jump.ts`.
-- `midi-qol` — used in `critical-encounter.ts` and `solitude.ts` for distance and attack triggers.
+- `midi-qol` — used in `critical-encounter.ts` for distance and attack triggers.
 - `fvtt-youtube-player` — optional, used in `play-sounds.ts`.
 
 API quick reference for these modules is in WORLD.md (with documentation URLs).
