@@ -1,7 +1,6 @@
 import { MODULE_ID, MODULE_TITLE } from "../../constants";
 
 export type UISoundType =
-  | "click"
   | "windowOpen"
   | "windowClose"
   | "tabSwitch"
@@ -20,11 +19,6 @@ export interface SoundProfile {
 }
 
 const SOUND_LIBRARY: Record<UISoundType, SoundProfile> = {
-  click: {
-    src: "endless-tower/audios/ui/ragnarok-login.mp3",
-    fallback: "sounds/lock.wav",
-    defaultVolume: 0.35,
-  },
   windowOpen: {
     src: "endless-tower/audios/skills/begin_cast.wav",
     fallback: "sounds/doors/magic/wall-open.ogg",
@@ -77,7 +71,6 @@ export class DesignSystemSound {
   private static instance: DesignSystemSound | null = null;
   private audioCache = new Map<string, HTMLAudioElement>();
   private lastWindowOpenTime = 0;
-  private lastClickTime = 0;
 
   private constructor() {}
 
@@ -90,7 +83,6 @@ export class DesignSystemSound {
 
   public init(): void {
     this.registerSettings();
-    this.attachDOMListeners();
     this.attachFoundryHooks();
     console.log(`${MODULE_TITLE} | Sistema de Áudio UI do Design System pronto.`);
   }
@@ -101,7 +93,7 @@ export class DesignSystemSound {
 
     s.register(MODULE_ID, "dsEnableUISounds", {
       name: "Sons de Interface (Design System)",
-      hint: "Ativa efeitos sonoros rúnicos/cinemáticos em cliques de botões, janelas e abas.",
+      hint: "Ativa efeitos sonoros rúnicos/cinemáticos em janelas e rolagens.",
       scope: "client",
       config: true,
       type: Boolean,
@@ -128,9 +120,6 @@ export class DesignSystemSound {
     });
   }
 
-  /**
-   * Verifica se os sons de UI estão habilitados.
-   */
   public isEnabled(): boolean {
     try {
       return (game as any).settings?.get?.(MODULE_ID, "dsEnableUISounds") ?? true;
@@ -139,9 +128,6 @@ export class DesignSystemSound {
     }
   }
 
-  /**
-   * Retorna o volume global configurado para sons de UI.
-   */
   public getMasterVolume(): number {
     try {
       const vol = (game as any).settings?.get?.(MODULE_ID, "dsUISoundVolume");
@@ -151,9 +137,6 @@ export class DesignSystemSound {
     }
   }
 
-  /**
-   * Executa a reprodução de um efeito sonoro do Design System.
-   */
   public play(type: UISoundType, volumeMultiplier = 1.0): void {
     if (!this.isEnabled()) return;
 
@@ -167,7 +150,6 @@ export class DesignSystemSound {
   }
 
   private playAudioFile(src: string, volume: number, fallbackSrc?: string): void {
-    // 1. Tentar tocar via Audio nativo do navegador
     try {
       let audio = this.audioCache.get(src);
       if (!audio) {
@@ -178,11 +160,10 @@ export class DesignSystemSound {
       audio.volume = volume;
       const playPromise = audio.play();
       if (playPromise) {
-        playPromise.catch((err) => {
+        playPromise.catch(() => {
           if (fallbackSrc) {
             this.playFallbackAudio(fallbackSrc, volume);
           } else {
-            // Tentar Foundry AudioHelper como último recurso
             this.playFoundryAudioHelper(src, volume);
           }
         });
@@ -217,64 +198,13 @@ export class DesignSystemSound {
       if (audioHelper && typeof audioHelper.play === "function") {
         audioHelper.play({ src, volume, loop: false }, false);
       }
-    } catch {
-      // Ignora silenciosamente se o áudio não puder ser tocado
-    }
-  }
-
-  /**
-   * Delegação de eventos no DOM global para botões e abas.
-   */
-  private attachDOMListeners(): void {
-    document.addEventListener("click", (event) => {
-      if (!this.isEnabled()) return;
-
-      const target = event.target as HTMLElement | null;
-      if (!target) return;
-
-      const now = performance.now();
-
-      // Detecta botões ou links interativos
-      const btn = target.closest("button, .et-btn, .dialog-button, .chat-control-icon, a.button");
-      if (btn) {
-        // Debounce de 70ms para evitar cliques simultâneos
-        if (now - this.lastClickTime > 70) {
-          this.lastClickTime = now;
-          this.play("click");
-        }
-        return;
-      }
-
-      // Detecta alternância de abas
-      const tab = target.closest(".item[data-tab], #sidebar-tabs a, .sheet-tabs .item");
-      if (tab) {
-        if (now - this.lastClickTime > 70) {
-          this.lastClickTime = now;
-          this.play("tabSwitch");
-        }
-      }
-    }, true);
+    } catch {}
   }
 
   /**
    * Conecta aos Hooks nativos do Foundry para janelas e rolagens de chat.
    */
   private attachFoundryHooks(): void {
-    Hooks.on("renderApplication", (_app: any, _html: any) => {
-      if (!this.isEnabled()) return;
-      const now = performance.now();
-      // Throttling de 200ms para janelas que renderizam múltiplas instâncias
-      if (now - this.lastWindowOpenTime > 200) {
-        this.lastWindowOpenTime = now;
-        this.play("windowOpen", 0.8);
-      }
-    });
-
-    Hooks.on("closeApplication", (_app: any) => {
-      if (!this.isEnabled()) return;
-      this.play("windowClose", 0.7);
-    });
-
     Hooks.on("createChatMessage", (message: any) => {
       let rollSoundsEnabled = true;
       try {
@@ -287,7 +217,6 @@ export class DesignSystemSound {
       const isRoll = message.isRoll || (message.rolls && message.rolls.length > 0);
       if (!isRoll) return;
 
-      // Verifica se houve acerto crítico ou falha crítica nas rolagens
       const rolls = message.rolls || [];
       let hasCrit = false;
       let hasFumble = false;

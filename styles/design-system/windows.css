@@ -1,15 +1,12 @@
 /* ==========================================================================
    Endless Tower: Celestial Chronicle Design System — Windows & Popups
-   Obsidian frosted glass frames, burnished gold headers, context menus & tooltips.
+   Scoped to .et-window, .et-dialog, #context-menu & #tooltip.
+   Explicitly leaves all character/actor sheets (.sheet) and native Foundry settings intact.
    ========================================================================== */
 
-/* --- Universal Window Frame (Foundry .window-app & ApplicationV2) --- */
-body.et-celestial-active .window-app,
-body.et-celestial-active .application,
-body.et-celestial-active .dialog,
-.window-app,
-.application,
-.dialog {
+/* --- Explicit Endless Tower Windows & Dialogs (.et-window, .et-dialog) --- */
+.et-window,
+.et-dialog {
   background: var(--et-obsidian-95) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-md) !important;
@@ -21,13 +18,8 @@ body.et-celestial-active .dialog,
   overflow: hidden !important;
 }
 
-/* --- Window Title Header --- */
-body.et-celestial-active .window-app .window-header,
-body.et-celestial-active .application .window-header,
-body.et-celestial-active .dialog .window-header,
-.window-app .window-header,
-.application .window-header,
-.dialog .window-header {
+.et-window .window-header,
+.et-dialog .window-header {
   background: var(--et-gradient-header) !important;
   border-bottom: 1px solid var(--et-glass-border) !important;
   padding: 8px 14px !important;
@@ -37,12 +29,8 @@ body.et-celestial-active .dialog .window-header,
   user-select: none !important;
 }
 
-body.et-celestial-active .window-app .window-header .window-title,
-body.et-celestial-active .application .window-header .window-title,
-body.et-celestial-active .dialog .window-header .window-title,
-.window-app .window-header .window-title,
-.application .window-header .window-title,
-.dialog .window-header .window-title {
+.et-window .window-header .window-title,
+.et-dialog .window-header .window-title {
   font-family: var(--et-font-cinematic) !important;
   font-size: 1.05rem !important;
   font-weight: 700 !important;
@@ -56,59 +44,15 @@ body.et-celestial-active .dialog .window-header .window-title,
   text-overflow: ellipsis !important;
 }
 
-/* Header Action Controls (Close, Minimize, Configure) */
-body.et-celestial-active .window-app .window-header a,
-body.et-celestial-active .application .window-header a,
-body.et-celestial-active .dialog .window-header a,
-body.et-celestial-active .window-app .window-header button,
-body.et-celestial-active .application .window-header button,
-.window-app .window-header a,
-.application .window-header a,
-.dialog .window-header a,
-.window-app .window-header button,
-.application .window-header button {
-  color: var(--et-gold) !important;
-  opacity: 0.8 !important;
-  font-size: 0.95rem !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
-  transition: all var(--et-transition-fast) !important;
-  cursor: pointer !important;
-  border: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  padding: 2px 5px !important;
-}
-
-body.et-celestial-active .window-app .window-header a:hover,
-body.et-celestial-active .application .window-header a:hover,
-body.et-celestial-active .dialog .window-header a:hover,
-.window-app .window-header a:hover,
-.application .window-header a:hover,
-.dialog .window-header a:hover {
-  opacity: 1 !important;
-  color: var(--et-gold-bright) !important;
-  filter: drop-shadow(0 0 8px var(--et-gold-glow)) !important;
-  transform: scale(1.15) !important;
-}
-
-body.et-celestial-active .window-app .window-header a.close:hover,
-body.et-celestial-active .application .window-header a.close:hover,
-body.et-celestial-active .dialog .window-header a.close:hover,
-.window-app .window-header a.close:hover,
-.application .window-header a.close:hover,
-.dialog .window-header a.close:hover {
+.et-window .window-header a.close:hover,
+.et-dialog .window-header a.close:hover {
   color: #ff6666 !important;
   filter: drop-shadow(0 0 10px rgba(255, 60, 60, 0.85)) !important;
   transform: rotate(90deg) scale(1.15) !important;
 }
 
-/* --- Window Content Container --- */
-body.et-celestial-active .window-app .window-content,
-body.et-celestial-active .application .window-content,
-body.et-celestial-active .dialog .window-content,
-.window-app .window-content,
-.application .window-content,
-.dialog .window-content {
+.et-window .window-content,
+.et-dialog .window-content {
   background: transparent !important;
   color: var(--et-ivory) !important;
   padding: 1rem 1.25rem !important;
@@ -117,57 +61,7 @@ body.et-celestial-active .dialog .window-content,
   line-height: 1.5 !important;
 }
 
-body.et-celestial-active .window-content p,
-body.et-celestial-active .window-content span,
-body.et-celestial-active .window-content div:not(.dice-total) {
-  color: inherit;
-}
-
-body.et-celestial-active .window-content h1,
-body.et-celestial-active .window-content h2,
-body.et-celestial-active .window-content h3,
-body.et-celestial-active .window-content h4 {
-  font-family: var(--et-font-cinematic);
-  color: var(--et-gold);
-}
-
-body.et-celestial-active .window-content a {
-  color: var(--et-gold);
-  text-decoration: none;
-  transition: all var(--et-transition-fast);
-}
-
-body.et-celestial-active .window-content a:hover {
-  color: var(--et-gold-bright);
-  text-shadow: 0 0 8px var(--et-gold-glow);
-}
-
-body.et-celestial-active .window-content hr {
-  border: none !important;
-  height: 1px !important;
-  background: var(--et-gradient-razor-divider) !important;
-  margin: 12px 0 !important;
-}
-
-/* --- Dialog Windows & Confirmations --- */
-body.et-celestial-active .dialog .dialog-content,
-.dialog .dialog-content {
-  margin-bottom: 1.2rem !important;
-  color: var(--et-ivory) !important;
-  font-size: 1rem !important;
-}
-
-body.et-celestial-active .dialog .dialog-buttons,
-.dialog .dialog-buttons {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 0.8rem !important;
-  padding-top: 0.8rem !important;
-  border-top: 1px solid var(--et-glass-border-subtle) !important;
-}
-
-/* --- Context Menus --- */
+/* --- Context Menus (#context-menu) --- */
 #context-menu {
   background: var(--et-obsidian-95) !important;
   border: 1px solid var(--et-glass-border) !important;
@@ -222,48 +116,4 @@ body.et-celestial-active .dialog .dialog-buttons,
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8), 0 0 10px var(--et-gold-glow-subtle) !important;
   pointer-events: none !important;
   z-index: var(--et-z-tooltip) !important;
-}
-
-/* --- Sheets & Tabs (Item, Actor & Journal Sheets) --- */
-body.et-celestial-active .sheet nav.sheet-tabs,
-body.et-celestial-active .sheet .tabs,
-.sheet nav.sheet-tabs,
-.sheet .tabs {
-  border-bottom: 1px solid var(--et-glass-border) !important;
-  margin-bottom: 0.8rem !important;
-  display: flex !important;
-  gap: 0.4rem !important;
-}
-
-body.et-celestial-active .sheet nav.sheet-tabs .item,
-body.et-celestial-active .sheet .tabs .item,
-.sheet nav.sheet-tabs .item,
-.sheet .tabs .item {
-  color: var(--et-ivory-dim) !important;
-  font-family: var(--et-font-cinematic) !important;
-  font-size: 0.92rem !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-  padding: 6px 14px !important;
-  border-bottom: 2px solid transparent !important;
-  transition: all var(--et-transition-fast) !important;
-  cursor: pointer !important;
-}
-
-body.et-celestial-active .sheet nav.sheet-tabs .item:hover,
-body.et-celestial-active .sheet .tabs .item:hover,
-.sheet nav.sheet-tabs .item:hover,
-.sheet .tabs .item:hover {
-  color: var(--et-gold) !important;
-  text-shadow: 0 0 10px var(--et-gold-glow) !important;
-}
-
-body.et-celestial-active .sheet nav.sheet-tabs .item.active,
-body.et-celestial-active .sheet .tabs .item.active,
-.sheet nav.sheet-tabs .item.active,
-.sheet .tabs .item.active {
-  color: var(--et-ivory) !important;
-  border-bottom-color: var(--et-gold) !important;
-  font-weight: 700 !important;
-  text-shadow: 0 0 12px var(--et-gold-glow) !important;
 }

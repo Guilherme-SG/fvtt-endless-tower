@@ -72,26 +72,15 @@ export class ChatEnhancer {
       }
     }
 
-    // 2. Detecção e Estilização de Sussurro Privado
+    // 2. Detecção e Estilização de Sussurro Privado (Banner no topo da mensagem, sem quebrar o flexrow do header)
     if (message.whisper && message.whisper.length > 0) {
       el.classList.add("et-chat-whisper");
-      if (!el.querySelector(".et-whisper-seal-badge")) {
+      if (!el.querySelector(".et-whisper-banner")) {
         const whisperSeal = document.createElement("div");
-        whisperSeal.className = "et-whisper-seal-badge";
-        whisperSeal.style.cssText =
-          "font-family: var(--et-font-cinematic); font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--et-azure-light); margin-bottom: 4px; display: flex; align-items: center; gap: 4px;";
-        whisperSeal.innerHTML = `<i class="fas fa-eye-slash" style="font-size: 0.75rem;"></i> ᛟ Comunicação Sigilosa`;
-        const header = el.querySelector(".message-header");
-        if (header) {
-          header.insertBefore(whisperSeal, header.firstChild);
-        }
+        whisperSeal.className = "et-whisper-banner";
+        whisperSeal.innerHTML = `<i class="fas fa-eye-slash"></i> ᛟ Comunicação Sigilosa`;
+        el.insertBefore(whisperSeal, el.firstChild);
       }
     }
-
-    // 3. Estilização de Botões de Cartões D&D 5e e Midi-QoL
-    const cardButtons = el.querySelectorAll(".card-buttons button, .card-footer button");
-    cardButtons.forEach((btn) => {
-      btn.classList.add("et-btn", "et-btn-secondary");
-    });
   }
 }
