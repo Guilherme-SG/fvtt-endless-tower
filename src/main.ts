@@ -32,6 +32,8 @@ import {
   registerSolitudeFeature,
   checkSolitude,
   ensureIsolationEffect,
+  isIsolated,
+  getDistanceInFeet,
 } from "./features/solitude";
 
 Hooks.once("init", () => {
@@ -69,6 +71,8 @@ Hooks.once("ready", () => {
       abracadoDestino: AbracadoDestinoManager.getInstance(),
       checkSolitude,
       ensureIsolationEffect,
+      isIsolated,
+      getDistanceInFeet,
     };
   }
 });

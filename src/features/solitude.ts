@@ -1,6 +1,6 @@
 ﻿/**
  * Bênção Solitude: o efeito "Foco Solitário" fica ativo enquanto nenhum aliado consciente
- * estiver a menos de 2 quadrados de vão livre do portador.
+ * estiver a até 10 ft do portador (distância em pés medida entre os pontos mais próximos dos tokens).
  */
 
 import { MODULE_ID, MODULE_TITLE } from "../constants";
@@ -8,8 +8,8 @@ import { MODULE_ID, MODULE_TITLE } from "../constants";
 const ISOLATION_EFFECT_NAME = "Foco Solitário";
 const LEGACY_EFFECT_NAME = "Protocolo de Isolamento";
 const ISOLATION_ICON = "icons/environment/wilderness/arch-stone.webp";
-/** Quadrados vazios exigidos entre o portador e qualquer aliado consciente. */
-const MIN_FREE_SQUARES = 2;
+/** Distância máxima em pés para considerar que um aliado viola o isolamento (a até 10 ft). */
+const ISOLATION_DISTANCE_FEET = 10;
 const INCAPACITATED_STATUSES = ["dead", "unconscious"];
 
 /**
@@ -158,18 +158,104 @@ function getTokenBounds(
   };
 }
 
-/** Quadrados vazios entre as bordas mais próximas de dois tokens (0 = adjacentes). */
-export function getFreeSquaresBetween(
-  posA: { x: number; y: number; width: number; height: number },
-  posB: { x: number; y: number; width: number; height: number }
-): number {
-  const size = canvas.grid.size;
-  const gapOnAxis = (startA: number, sizeA: number, startB: number, sizeB: number): number =>
-    Math.max(startA - (startB + sizeB), startB - (startA + sizeA), 0);
+/**
+ * Retorna as coordenadas de centro de cada célula da grade ocupada pelo token.
+ */
+function getTokenGridCenters(bounds: { x: number; y: number; width: number; height: number }): Array<{ x: number; y: number }> {
+  const size = canvas.grid?.size || 100;
+  const centers: Array<{ x: number; y: number }> = [];
 
-  const gapX = gapOnAxis(posA.x, posA.width * size, posB.x, posB.width * size);
-  const gapY = gapOnAxis(posA.y, posA.height * size, posB.y, posB.height * size);
-  return Math.round(Math.max(gapX, gapY) / size);
+  const cols = Math.max(1, Math.floor(bounds.width || 1));
+  const rows = Math.max(1, Math.floor(bounds.height || 1));
+
+  if (bounds.width < 1 || bounds.height < 1) {
+    centers.push({
+      x: bounds.x + (bounds.width * size) / 2,
+      y: bounds.y + (bounds.height * size) / 2,
+    });
+    return centers;
+  }
+
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
+      centers.push({
+        x: bounds.x + (x + 0.5) * size,
+        y: bounds.y + (y + 0.5) * size,
+      });
+    }
+  }
+
+  return centers;
+}
+
+/**
+ * Calcula a menor distância em pés entre quaisquer espaços/cantos ocupados por dois tokens.
+ * Respeita a regra diagonal do sistema/cena e utiliza MidiQOL.computeDistance quando disponível.
+ */
+export function getDistanceInFeet(
+  boundsA: { x: number; y: number; width: number; height: number },
+  boundsB: { x: number; y: number; width: number; height: number },
+  tokenA?: any,
+  tokenB?: any
+): number {
+  if (!canvas?.grid) return Infinity;
+
+  // Se ambos os tokens forem reais e suas coordenadas coincidirem com os bounds,
+  // e o MidiQOL estiver disponível, usa o cálculo do MidiQOL diretamente
+  const midi = (globalThis as any).MidiQOL;
+  const isBoundsExactA =
+    tokenA &&
+    tokenA.x === boundsA.x &&
+    tokenA.y === boundsA.y &&
+    (tokenA.width ?? 1) === boundsA.width &&
+    (tokenA.height ?? 1) === boundsA.height;
+  const isBoundsExactB =
+    tokenB &&
+    tokenB.x === boundsB.x &&
+    tokenB.y === boundsB.y &&
+    (tokenB.width ?? 1) === boundsB.width &&
+    (tokenB.height ?? 1) === boundsB.height;
+
+  if (isBoundsExactA && isBoundsExactB && typeof midi?.computeDistance === "function") {
+    try {
+      const d = midi.computeDistance(tokenA.object ?? tokenA, tokenB.object ?? tokenB, {
+        wallsBlock: false,
+        includeCover: false,
+      });
+      if (typeof d === "number" && d >= 0) return d;
+    } catch {
+      // Fallback para cálculo nativo da grade
+    }
+  }
+
+  const centersA = getTokenGridCenters(boundsA);
+  const centersB = getTokenGridCenters(boundsB);
+  const size = canvas.grid.size || 100;
+  const gridDistance = canvas.grid.distance || 5;
+
+  let minDistance = Infinity;
+
+  for (const cA of centersA) {
+    for (const cB of centersB) {
+      let dist: number;
+      if (canvas.grid.measurePath) {
+        dist = canvas.grid.measurePath([cA, cB]).distance;
+      } else if (canvas.grid.measureDistance) {
+        dist = canvas.grid.measureDistance(cA, cB);
+      } else {
+        const dx = Math.abs(cA.x - cB.x) / size;
+        const dy = Math.abs(cA.y - cB.y) / size;
+        dist = Math.max(dx, dy) * gridDistance;
+      }
+
+      if (dist < minDistance) {
+        minDistance = dist;
+        if (minDistance <= gridDistance) return minDistance;
+      }
+    }
+  }
+
+  return minDistance;
 }
 
 function isConscious(actor: any): boolean {
@@ -185,17 +271,18 @@ function areAllies(tokenA: any, tokenB: any): boolean {
   return sameDisposition || Boolean(bothPlayerOwned);
 }
 
-/** O portador está isolado quando nenhum aliado consciente está a menos de MIN_FREE_SQUARES de vão. */
+/** O portador está isolado quando nenhum aliado consciente está a até ISOLATION_DISTANCE_FEET (10 ft). */
 export function isIsolated(token: any, movedDoc?: any, changes?: any): boolean {
-  const tokenPos = getTokenBounds(token, movedDoc, changes);
+  if (!canvas.scene?.tokens) return true;
+  const tokenBounds = getTokenBounds(token, movedDoc, changes);
 
   return !canvas.scene.tokens.some((other: any) => {
     if (!other.actor || other.actor === token.actor) return false;
     if (!areAllies(token, other) || !isConscious(other.actor)) return false;
 
-    const otherPos = getTokenBounds(other, movedDoc, changes);
-    const gap = getFreeSquaresBetween(tokenPos, otherPos);
-    return gap < MIN_FREE_SQUARES;
+    const otherBounds = getTokenBounds(other, movedDoc, changes);
+    const dist = getDistanceInFeet(tokenBounds, otherBounds, token, other);
+    return dist <= ISOLATION_DISTANCE_FEET + 0.1;
   });
 }
 
