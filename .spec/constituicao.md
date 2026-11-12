@@ -1,0 +1,83 @@
+# Constituição — Endless Tower v1.1.0
+
+<!--
+  Princípios inegociáveis do projeto Endless Tower (FoundryVTT v13).
+  P-xxx = princípio (código de rastreio, como US/AC/T).
+  Níveis: [DEVE] obrigatório · [RECOMENDADO] forte · [PODE] permitido/explícito.
+  Todo [DEVE] precisa de verificação executável — senão o audit acusa
+  "princípio sem verificação" (PRINCIPIO_SEM_VERIFICACAO). Formatos:
+    - verificação(gate): satisfeita pelo próprio audit (só p/ princípios "meta")
+    - verificação(teste): @principle:P-xxx
+    - verificação(proibido): `regex` em `glob`
+    - verificação(obrigatório): `regex` em `glob`
+-->
+
+## P-001 [DEVE] Todo requisito tem prova executável
+
+Nenhuma feature é declarada pronta sem o audit em modo CI sair limpo (exit 0).
+Toda lógica de regras deve ser acompanhada de testes unitários automatizados vinculados aos critérios de aceitação.
+
+- verificação(gate): intrínseca ao audit
+
+## P-002 [RECOMENDADO] Segredos nunca em código
+
+Chaves de API, senhas e credenciais vêm de variáveis de ambiente (`.env`), nunca hard-coded.
+
+- verificação(proibido): `(api[_-]?key|senha|password)\s*[:=]\s*['"][^'"]{8,}` em `src/**/*.ts`
+
+## P-003 [DEVE] Desacoplamento entre lógica de regras e hooks do Foundry
+
+Lógica matemática de regras, cálculos de combate, probabilidades, baralhos de frases e mecânicas de bênçãos DEVEM ser implementados como funções puras em módulos isolados, livres de referências globais (`game`, `canvas`, `Hooks`, `ui`). Arquivos em `src/features/*` atuam unicamente como adaptadores conectando os eventos do Foundry à lógica pura.
+
+- verificação(teste): @principle:P-003
+
+## P-004 [DEVE] Reversibilidade visual em três níveis
+
+Qualquer efeito visual dinâmico (partículas em canvas, drift de câmera, ribbons, shaders ou filtros) DEVE fornecer três níveis estritos de reversibilidade imediata:
+1. Configuração gráfica booleana em *Module Settings* (`game.settings.register`).
+2. Método público de alternância idempotente na API do módulo (`api.toggle<Feature>()`).
+3. Limpeza total de listeners, cancelamento de loops de animação (`cancelAnimationFrame`) e remoção de nós do DOM no hook `canvasTearDown` ou desativação.
+
+- verificação(teste): @principle:P-004
+
+## P-005 [DEVE] Padrão cinemático Edge-to-Edge Ribbon para anúncios
+
+Avisos de combate épicos, chefes e alertas cinemáticos DEVEM usar o layout Edge-to-Edge Ribbon (largura `100vw`, fade gradiente horizontal nas extremidades, backdrop de vidro fosco com blur e títulos em linha única com `white-space: nowrap`). É terminantemente proibido o uso de caixas de diálogo ou modais flutuantes centralizados (`dialog boxes`) para anúncios cinemáticos.
+
+- verificação(teste): @principle:P-005
+
+## P-006 [DEVE] Estrutura padronizada e equilíbrio de tabelas críticas
+
+Tabelas de acertos e falhas críticas (`tables/critical/`) DEVEM seguir a formatação HTML com cabeçalho `<h3>` centralizado para o título do golpe, bloco escuro com borda lateral para flavor text e parágrafo de mecânica utilizando notação de rolagem interativa do Foundry (`[[/save ...]]` ou `[[/check ...]]`).
+As Classes de Dificuldade (DCs) DEVEM ser padronizadas:
+- CD fixa **15** para testes de resistência ou perícias em acertos críticos.
+- CD fixa **10** para testes de Constituição de recuperação em falhas críticas.
+*(Nota: As colorações e temas visuais específicos poderão evoluir de acordo com a maturação do Design System).*
+
+- verificação(teste): @principle:P-006
+
+## P-007 [DEVE] Protocolo de segurança HITL para ferramentas do Foundry MCP
+
+Ações modificadoras ou destrutivas no Foundry VTT (deleção ou alteração de tokens, atores, fichas, atributos, itens, periódicos ou cenas) NUNCA devem ser executadas de forma autônoma. O assistente DEVE obrigatoriamente pausar sua execução, detalhar as entidades afetadas e os campos a alterar, e aguardar confirmação explícita do usuário no chat.
+
+- verificação(gate): intrínseca ao audit
+
+## P-008 [DEVE] Fluxo de confirmação estrita para Git (HITL para commits)
+
+Nenhum commit pode ser realizado de forma autônoma. Todo processo de gravação de versão DEVE obrigatoriamente seguir as 4 etapas com aprovação humana:
+1. `git add` dos arquivos pertinentes.
+2. Exibição do diff preparado (`git diff --cached`).
+3. Proposta clara da mensagem de commit em português.
+4. Aguardar aprovação explícita do usuário antes de rodar `git commit`.
+
+- verificação(gate): intrínseca ao audit
+
+## P-009 [DEVE] Otimização de mídia: WebP obrigatório para artes estáticas
+
+Artes de fundo, paisagens, splash screens e banners de alta resolução DEVEM ser convertidos para o formato WebP (`.webp`) com compressão otimizada (`cwebp -q 90`). É proibido comitar arquivos pesados em PNG ou JPEG sem conversão para artes estáticas.
+
+- verificação(proibido): `assets/screen-transition/.*\.(png|jpg|jpeg)` em `assets/screen-transition/*`
+
+## P-010 [RECOMENDADO] Progressive HUD sobre remoção estrita
+
+Em cenas imersivas e cutscenes, interfaces e HUDs essenciais (`#hotbar`, `#players`, `#controls`, `#navigation`) devem adotar opacidade atenuada (10% a 20%) com restauração suave para 100% sob hover (`:hover` ou `:focus-within`), evitando `display: none` rígido para não desorientar jogadores e Mestre.

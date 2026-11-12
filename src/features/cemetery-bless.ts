@@ -1,4 +1,5 @@
 import { MODULE_TITLE } from "../constants";
+import { isUndeadCreature } from "../rules/undead";
 
 export function registerCemeteryBless(): void {
   console.warn(`${MODULE_TITLE} | Cemetery Bless`);
@@ -12,12 +13,9 @@ export function registerCemeteryBless(): void {
 
     if (!tokenDocument.parent?.name?.includes(SCENE_TAG)) return;
 
-    const typeValue = actor.system?.details?.type?.value?.toLowerCase() || "";
-    const raceValue = actor.system?.details?.race?.toString().toLowerCase() || "";
-    const isUndead =
-      typeValue === "undead" ||
-      raceValue.includes("undead") ||
-      raceValue.includes("morto-vivo");
+    const typeValue = actor.system?.details?.type?.value;
+    const raceValue = actor.system?.details?.race?.toString();
+    const isUndead = isUndeadCreature(typeValue, raceValue);
 
     const dfreds = (game as any).dfreds;
     if (isUndead && dfreds?.effectInterface) {
@@ -53,6 +51,6 @@ export function registerCemeteryBless(): void {
 
   Hooks.on("createToken", async (tokenDocument: any, _options: any, userId: string) => {
     if (game.user?.id !== userId) return;
-    setTimeout(() => applyUndeadBlessingAuto(tokenDocument), 200);
+    await applyUndeadBlessingAuto(tokenDocument);
   });
 }

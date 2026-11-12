@@ -1,73 +1,37 @@
-const fullCasters = ["cleric", "druid", "wizard"];
-const halfCasters = ["artificer", "paladin", "ranger"];
-const prepCasters = [
-  "artificer",
-  "cleric",
-  "druid",
-  "paladin",
-  "ranger",
-  "wizard",
-  "witch",
-];
-
-function isFullCaster(className: string): boolean {
-  return fullCasters.some((c) => className.includes(c));
-}
-
-function isHalfCaster(className: string): boolean {
-  return halfCasters.some((c) => className.includes(c));
-}
-
-function preparesSpells(actor: any): boolean {
-  const classes = Object.keys(actor.classes || {});
-  return prepCasters.some((c) => classes.includes(c));
-}
+import {
+  hasPreparingClasses,
+  getCasterMultiplier,
+  calculateMaxPreparedSpells,
+  ClassSpellcastingInfo,
+} from "../rules/spellcasting";
 
 export function registerPrepareSpellsReminder(): void {
   Hooks.on("dnd5e.restCompleted", async (actor: any, result: any) => {
-    if (result?.longRest && preparesSpells(actor) && actor.hasPlayerOwner) {
-      function getCastingAbility(className: string) {
-        return actor.classes[className]?.system.spellcasting?.ability;
-      }
+    const classNames = Object.keys(actor.classes || {});
+    if (result?.longRest && hasPreparingClasses(classNames) && actor.hasPlayerOwner) {
+      const spellcastingInfos: ClassSpellcastingInfo[] = [];
 
-      function getClassLvl(className: string) {
-        return actor.classes[className]?.system.levels || 0;
-      }
-
-      function getCasterMod(className: string) {
-        if (isFullCaster(className)) return 1;
-        if (isHalfCaster(className)) return 0.5;
-        return 0;
-      }
-
-      function getPreparedSpells(targetActor: any) {
-        return targetActor.items.filter(
-          (i: any) =>
-            i.type === "spell" &&
-            i.system?.preparation?.prepared &&
-            i.system?.preparation?.mode === "prepared"
-        );
-      }
-
-      function getMaxPrepared(targetActor: any) {
-        const classes = Object.keys(targetActor.classes || {}).filter((c) =>
-          prepCasters.includes(c)
-        );
-        let maxPrepNum = 0;
-
-        for (const instance of classes) {
-          const castingAbility = getCastingAbility(instance);
-          const modifier = targetActor.system?.abilities?.[castingAbility]?.mod || 0;
-          const classLvl = getClassLvl(instance);
-          const casterMod = getCasterMod(instance);
-
-          maxPrepNum += modifier + Math.floor(casterMod * classLvl);
+      for (const className of classNames) {
+        if (getCasterMultiplier(className) > 0) {
+          const castingAbility = actor.classes[className]?.system.spellcasting?.ability;
+          const modifier = actor.system?.abilities?.[castingAbility]?.mod || 0;
+          const level = actor.classes[className]?.system.levels || 0;
+          spellcastingInfos.push({
+            name: className,
+            level,
+            abilityModifier: modifier,
+          });
         }
-        return maxPrepNum;
       }
 
-      const numPrepared = getPreparedSpells(actor).length;
-      const numMaxPrepared = getMaxPrepared(actor);
+      const numPrepared = (actor.items || []).filter(
+        (i: any) =>
+          i.type === "spell" &&
+          i.system?.preparation?.prepared &&
+          i.system?.preparation?.mode === "prepared"
+      ).length;
+
+      const numMaxPrepared = calculateMaxPreparedSpells(spellcastingInfos);
 
       const content = `
       <form>
