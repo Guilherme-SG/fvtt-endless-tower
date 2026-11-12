@@ -193,6 +193,36 @@ All future in-game UI banners, overlays, boss announcements, and cinematic alert
 - **Periphery vignette**: Darken edges with `radial-gradient(ellipse 85% 75% at 50% 50%, rgba(0,0,0,0.15) 30%, rgba(55,8,8,0.45) 80%, rgba(15,2,2,0.85) 100%)`. Never blur or block the center canvas.
 - **No redundant UI toasts**: Avoid generic Foundry toast notifications (`ui.notifications.info`) during cinematic banner sequences. Let the banner, audio, and persistent tracker badges carry the presentation without cluttering the HUD or Combat Carousel.
 
+## Midi-QoL & Combat Automation Invariants
+
+- **Attack Outcome Hooks (`AttackRollComplete` vs `RollComplete`)**:
+  - `midi-qol.RollComplete` only fires after full workflow completion (including damage roll). In misses or fumbles, damage is skipped and `RollComplete` is not called or deferred.
+  - To intercept attack roll outcomes (critical hit, fumble, hit/miss detection), ALWAYS listen to **`midi-qol.AttackRollComplete`** (or both with workflow ID deduplication).
+- **Critical & Fumble Evaluation**:
+  - Never evaluate raw die results alone (`d20 === 20` or `d20 === 1`).
+  - Always consult Midi-QoL's internal trackers and getters:
+    - Critical: `Boolean(workflow.isCritical || workflow.attackRoll?.isCritical || workflow.attackRollModifierTracker?.isCritical)`
+    - Fumble: `Boolean(workflow.isFumble || workflow.attackRoll?.isFumble || workflow.attackRollModifierTracker?.isFumble || workflow.attackRollModifierTracker?.fumble?.isActive)`
+  - This guarantees automatic support for expanded crit margins (19-20), automatic crits on paralyzed/unconscious targets, custom fumble thresholds, and critical negations (Adamantine Armor).
+
+## Carousel Combat Tracker (`combat-tracker-dock`) Integration
+
+- **Module Identity**: The carousel module is named `combat-tracker-dock` (ID: `combat-tracker-dock`, class `CombatDock`).
+- **DOM Injection & Lifecycle**:
+  - Root element: `#combat-dock` or `.combat-dock`.
+  - GM button container: `.combat-dock .buttons-container.right`.
+  - The dock dynamically re-renders on turn changes and updates without standard ApplicationV2 lifecycle hooks. Synchronize custom elements across:
+    1. Hook `renderCombatDock`
+    2. Hook `updateCombat`
+    3. Lightweight `MutationObserver` on `document.body` watching for `#combat-dock`.
+
+## Multi-Campaign & Multi-Scene Isolation Invariant
+
+In Foundry worlds hosting multiple campaigns or simultaneous split encounters:
+- **Zero Global State**: Never store encounter flags in global settings (`game.settings`) or client-side variables. Always persist state directly on the specific `Combat` document instance (`combat.setFlag(MODULE_ID, key, value)`).
+- **Token-Bound Combat Resolution**: When handling attack rolls or actor events, resolve the active combat via `token.combatant?.combat` (never `game.combat`, which only reflects the GM's currently viewed sidebar combat).
+- **Targeted Broadcasts**: Filter cinematic banners, screen overlays, and audio so they trigger only if the user is currently viewing the scene (`game.user.viewedScene === combat.scene?.id`) or controls a participant combatant.
+
 ## Gotchas
 
 - After any Foundry core software update, the setup layout (`setup.hbs`) is restored to vanilla by the installer; `login/apply-login-patch.ps1` must be re-run (as Administrator) with the Foundry server stopped.
