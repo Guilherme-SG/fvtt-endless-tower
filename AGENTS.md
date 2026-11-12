@@ -146,6 +146,27 @@ The custom login screen (`login/login.css`, `login/login.js`) runs on the `/join
   3. UI setting location and macro/console commands for toggling.
   4. Key source files involved.
 
+## Scene Transitions & Loading Architecture (DOM vs. PixiJS Canvas)
+
+- **Never use PixiJS `#board` for transitions/cutscenes**: During scene changes (`canvasInit` -> teardown -> `canvasReady`), Foundry completely destroys and reconstructs the PixiJS display list. Any display object inside `#board` will freeze or flicker during texture upload.
+- **DOM overlay pattern**: Always inject a fixed HTML/CSS container into `document.body` (`position: fixed; inset: 0; z-index: 99990;`). Ambient particle effects must run on an isolated HTML5 `<canvas>` (2D context) decoupled from Foundry's WebGL canvas.
+- **Lifecycle hooks**: Trigger transition on `canvasInit`, compute elapsed reading time on `canvasReady`, and dissolve with radial CSS `clip-path` (Celestial Gate reveal).
+
+## Typography & Font Hinting Invariants (Foundry v13 / Chromium)
+
+- **Faux-italic quote collapse**: Foundry's `Signika` font has no native italic `.woff2`. Applying `font-style: italic` causes Chromium's faux-italic skew matrix to collapse closing double quote `”` (U+201D) into a single stroke `'`.
+- **Isolated serif quote marks**: Always isolate quotation marks into `<span class="et-quote-mark">` styled with `font-family: "Georgia", serif; font-style: normal !important; color: var(--et-gold);` while keeping the quote body in italic.
+
+## Random Decks & Probabilistic Easter Eggs
+
+- **No dummy/blank entries**: Never dilute random roll decks with empty strings `""` to artificially create rarity.
+- **Two-tier drawing**: Test rare Easter eggs via an independent probability check (`Math.random() * 100 < chance`) before drawing from the deck. Keep regular quotes 100% fair and non-repeating via Fisher-Yates shuffle.
+- **Configurable world settings**: Always expose secret messages and trigger chances in module world settings so the GM can rotate secret redeem codes without code changes.
+
+## WebP Asset Standard
+
+- **Mandatory WebP conversion**: All splash arts, landscapes, and fullscreen backgrounds must be converted with `cwebp -q 90` to `.webp`. Never commit raw high-resolution PNGs (~85% size reduction with zero visible artifacting).
+
 ## Cinematic UI & Design System Pattern (Default for all UI/Banners)
 
 All future in-game UI banners, overlays, boss announcements, and cinematic alerts MUST follow this design system pattern as default:
