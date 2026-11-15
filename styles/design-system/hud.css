@@ -105,6 +105,13 @@ body.et-celestial-active #hotbar .macro .macro-key {
 
 /* --- 4. Bottom-Left Players Capsule (#players) --- */
 body.et-celestial-active #players {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.et-celestial-active #players #players-active,
+body.et-celestial-active #players #players-inactive {
   background: var(--et-obsidian-88) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-md) !important;

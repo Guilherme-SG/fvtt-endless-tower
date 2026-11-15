@@ -30,20 +30,39 @@ body.et-celestial-active .chat-message .message-header {
   padding-bottom: 6px !important;
   margin-bottom: 8px !important;
   color: var(--et-ivory-dim) !important;
+  background: transparent !important;
 }
 
-body.et-celestial-active .chat-message .message-header .message-sender {
+body.et-celestial-active .chat-message .message-header .message-sender,
+body.et-celestial-active .chat-message .message-header .message-sender * {
   font-family: var(--et-font-cinematic) !important;
   font-size: 0.98rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.06em !important;
   color: var(--et-gold) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+body.et-celestial-active .chat-message .message-header .message-sender small,
+body.et-celestial-active .chat-message .message-header .message-sender .author-name,
+body.et-celestial-active .chat-message .message-header .message-sender .user-role {
+  font-family: var(--et-font-cinematic) !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  color: var(--et-ivory-dim) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  opacity: 0.85;
 }
 
 body.et-celestial-active .chat-message .message-header .message-metadata {
   font-size: 0.75rem !important;
   color: var(--et-ivory-muted) !important;
+  background: transparent !important;
 }
 
 body.et-celestial-active .chat-message .message-header a.message-delete {
@@ -63,8 +82,11 @@ body.et-celestial-active .chat-message.whisper {
   box-shadow: 0 4px 22px rgba(0, 0, 0, 0.8), 0 0 14px var(--et-azure-glow) !important;
 }
 
-body.et-celestial-active .chat-message.whisper .message-header .message-sender {
+body.et-celestial-active .chat-message.whisper .message-header .message-sender,
+body.et-celestial-active .chat-message.whisper .message-header .message-sender * {
   color: var(--et-azure-light) !important;
+  background: transparent !important;
+  background-color: transparent !important;
   text-shadow: 0 0 8px var(--et-azure-glow) !important;
 }
 

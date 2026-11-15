@@ -99,12 +99,17 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
      */
     it("@spec:AC-007 garante cartões de chat Midi-QoL com fundo escuro e texto legível marfim", () => {
       const chatCss = read("styles/design-system/chat.css");
+      const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
 
       expect(chatCss).toMatch(/\.dnd5e\.chat-card/);
       expect(chatCss).toMatch(/\.card-content/);
       expect(chatCss).toMatch(/\.description/);
       expect(chatCss).toMatch(/var\(--et-ivory\)/);
       expect(chatCss).toMatch(/var\(--et-obsidian/);
+
+      // Garante que a cor do jogador não polui o nome do remetente (sem fundo colorido sem contraste)
+      expect(chatCss).toMatch(/\.message-sender.*background:\s*transparent\s*!important/s);
+      expect(chatEnhancerTs).toMatch(/sender\.style\.removeProperty\(["']background-color["']\)/);
     });
 
     /**

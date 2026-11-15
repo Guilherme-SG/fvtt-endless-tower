@@ -30,6 +30,15 @@ export class ChatEnhancer {
     const el: HTMLElement = html instanceof HTMLElement ? html : html[0] ?? html;
     if (!el) return;
 
+    // 0. Remove estilos inline de cor de jogador aplicados ao remetente (evita fundo/texto sem contraste)
+    const sender = el.querySelector(".message-sender") as HTMLElement | null;
+    if (sender) {
+      sender.style.removeProperty("background-color");
+      sender.style.removeProperty("background");
+      sender.style.removeProperty("color");
+      sender.style.removeProperty("text-shadow");
+    }
+
     // 1. Detecção de Rolagem Crítica / Falha
     const rolls = message.rolls || [];
     let isCritical = false;
