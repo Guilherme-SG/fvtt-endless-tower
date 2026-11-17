@@ -59,11 +59,11 @@ Como Mestre da mesa, quero que os estilos do Endless Tower não alterem as ficha
 
 Como jogador e Mestre, quero que os cartões de rolagem, dano e sussurros no painel de chat tenham leitura clara e contraste adequado, para que as mensagens sejam legíveis em combate.
 
-#### AC-007 — Legibilidade de texto marfim, header compacto, hierarquia de negrito/links, filtro do dado e preservação de `.cm-msg`
+#### AC-007 — Legibilidade de texto marfim, cards do Monk's Token Bar, hierarquia de negrito/links, filtro do dado, preservação de `.cm-msg` e alternância Monk's/Epic Rolls
 
-- **Dado** um cartão de item, bênção, rolagem ou tooltip (`.dnd5e.chat-card`, `.midi-qol-item-card`, `#tooltip`, `.locked-tooltip`) ou card do `simraki-character-monitor` (`.cm-msg`) renderizado na interface
-- **Quando** o Design System Celestial estiver ativo
-- **Então** mensagens `.cm-msg` do `simraki-character-monitor` devem ser ignoradas integralmente no `ChatEnhancer` e excluídas de todos os seletores `.chat-message:not(.cm-msg)` em `chat.css` preservando 100% seu visual original; nos demais cards, o cabeçalho do remetente deve seguir o layout compacto estilo vanilla sem fundo de cor de jogador (`.title` e `.subtitle` diferenciados), os links `.reference-link` / `.content-link` devem ser discretos e proporcionais ao texto (`font-size: 0.9em`, `padding: 0px 3px`), o dado SVG de `.roll-link` / `a.inline-roll` deve receber `--dnd5e-roll-icon-filter` em tonalidade clara dourada-marfim, textos em negrito devem destacar-se em `--et-gold` e nenhum título ou botão deve sofrer truncamento ou corte lateral horizontal.
+- **Dado** um cartão do chat D&D 5e, Midi-QoL, Monk's Token Bar (`.monks-tokenbar.chat-card`), tooltip (`#tooltip`, `.locked-tooltip`) ou `simraki-character-monitor` (`.cm-msg`), além da configuração de salvaguardas do Midi-QoL
+- **Quando** o Design System Celestial estiver ativo ou o sistema de salvaguardas for alternado entre `mtb` e `rer` (via Julgamento da Torre, botão no Combat Tracker/Dock ou API)
+- **Então** mensagens `.cm-msg` do `simraki-character-monitor` devem permanecer intactas sem interferência de `chat.css` ou `ChatEnhancer`; cards `.monks-tokenbar.chat-card` devem aplicar a paleta Celestial (cabeçalhos em dourado `--et-gold`, subcabeçalho em vidro obsidiana e botões `.footer-button` estilizados); o alternador `buildUpdatedMidiSaveSettings` deve atualizar sempre `playerRollSaves` entre `mtb` e `rer` preservando `rollNPCSaves` e `rollNPCLinkedSaves` quando estiverem em `auto`; nos demais cards, o cabeçalho do remetente deve seguir o layout compacto estilo vanilla sem fundo de cor de jogador, os links `.reference-link` / `.content-link` devem ser discretos (`font-size: 0.9em`, `padding: 0px 3px`), o dado SVG de `.roll-link` deve receber `--dnd5e-roll-icon-filter` claro, textos em negrito devem destacar-se em `--et-gold` e nenhum título ou botão deve sofrer truncamento ou corte lateral horizontal.
 
 #### AC-008 — Selo de visibilidade não-pública com ícones nativos sem corromper o cabeçalho flexrow
 

@@ -5,6 +5,30 @@ declare const Sequence: any;
 
 const SOCKET_ACTION_BANNER = "CRITICAL_ENCOUNTER_BANNER";
 
+export type MidiRollSystem = "mtb" | "rer";
+
+/**
+ * Gera uma cópia atualizada das configurações de salvaguarda do Midi-QoL.
+ * Alterna sempre `playerRollSaves`; altera `rollNPCSaves` e `rollNPCLinkedSaves`
+ * apenas quando já utilizam Monk's Token Bar (`mtb`) ou Ripper's Epic Rolls (`rer`).
+ */
+export function buildUpdatedMidiSaveSettings(
+  currentConfig: Record<string, any>,
+  targetMode: MidiRollSystem
+): Record<string, any> {
+  const updated = { ...(currentConfig ?? {}) };
+  updated.playerRollSaves = targetMode;
+
+  if (updated.rollNPCSaves === "mtb" || updated.rollNPCSaves === "rer") {
+    updated.rollNPCSaves = targetMode;
+  }
+  if (updated.rollNPCLinkedSaves === "mtb" || updated.rollNPCLinkedSaves === "rer") {
+    updated.rollNPCLinkedSaves = targetMode;
+  }
+
+  return updated;
+}
+
 /**
  * Remove acentuação e caracteres especiais para comparação flexível de nomes de tabelas.
  */
@@ -307,11 +331,104 @@ export class CriticalEncounterManager {
   }
 
   /**
-   * Injeta o botão e badge de status no Combat Tracker padrão.
+   * Retorna o sistema de rolagem de salvaguardas configurado no Midi-QoL ("mtb" ou "rer").
+   */
+  public getRollSystem(): MidiRollSystem {
+    try {
+      const config = (game.settings as any)?.get("midi-qol", "ConfigSettings");
+      return config?.playerRollSaves === "rer" ? "rer" : "mtb";
+    } catch {
+      return "mtb";
+    }
+  }
+
+  /**
+   * Alterna explicitamente as configurações do Midi-QoL entre Monk's Token Bar ("mtb") e Ripper's Epic Rolls ("rer").
+   */
+  public async setRollSystem(targetMode: MidiRollSystem, notify = true): Promise<MidiRollSystem> {
+    if (!game.user?.isGM) return this.getRollSystem();
+
+    const midiModule = (game.modules as any)?.get("midi-qol");
+    if (!midiModule?.active) {
+      if (notify) {
+        (ui as any)?.notifications?.warn(`${MODULE_TITLE} | Midi-QoL não está ativo.`);
+      }
+      return this.getRollSystem();
+    }
+
+    const currentConfig = (game.settings as any)?.get("midi-qol", "ConfigSettings") ?? {};
+    const updated = buildUpdatedMidiSaveSettings(currentConfig, targetMode);
+    await (game.settings as any).set("midi-qol", "ConfigSettings", updated);
+
+    this.syncCombatDock();
+    (ui as any)?.combat?.render?.();
+
+    if (notify) {
+      const label = targetMode === "rer" ? "Ripper's Epic Rolls" : "Monk's Token Bar";
+      (ui as any)?.notifications?.info(`${MODULE_TITLE} | Sistema de salvaguardas alternado para: ${label}.`);
+    }
+
+    return targetMode;
+  }
+
+  /**
+   * Alterna entre Monk's Token Bar e Ripper's Epic Rolls com um clique.
+   */
+  public async toggleRollSystem(): Promise<MidiRollSystem> {
+    const next: MidiRollSystem = this.getRollSystem() === "rer" ? "mtb" : "rer";
+    return await this.setRollSystem(next, true);
+  }
+
+  private upsertRollSystemButton(container: Element, buttonClass: string, baseClasses: string, tooltipAttr: string): void {
+    const rollMode = this.getRollSystem();
+    const isRer = rollMode === "rer";
+    const expectedClass = `${baseClasses} ${buttonClass}${isRer ? " active" : ""}`;
+    const expectedTooltip = isRer
+      ? "Sistema de Salvaguardas: Ripper's Epic Rolls (Clique para Monk's Token Bar)"
+      : "Sistema de Salvaguardas: Monk's Token Bar (Clique para Ripper's Epic Rolls)";
+
+    let btn = container.querySelector(`.${buttonClass}`) as HTMLButtonElement | null;
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = expectedClass;
+      btn.setAttribute(tooltipAttr, expectedTooltip);
+      if (tooltipAttr !== "data-tooltip") btn.setAttribute("data-tooltip", expectedTooltip);
+      btn.addEventListener("click", async (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        await this.toggleRollSystem();
+      });
+      container.prepend(btn);
+      return;
+    }
+
+    if (btn.className !== expectedClass) btn.className = expectedClass;
+    if (btn.getAttribute(tooltipAttr) !== expectedTooltip) btn.setAttribute(tooltipAttr, expectedTooltip);
+    if (btn.getAttribute("data-tooltip") !== expectedTooltip) btn.setAttribute("data-tooltip", expectedTooltip);
+  }
+
+  /**
+   * Injeta os botões e badge de status no Combat Tracker padrão.
    */
   private handleCombatTrackerRender(app: any, html: any): void {
     const root: HTMLElement = html instanceof HTMLElement ? html : html?.[0];
     if (!root) return;
+
+    const headerControls =
+      root.querySelector("nav.encounters") ||
+      root.querySelector(".encounter-controls") ||
+      root.querySelector("header.combat-tracker-header") ||
+      root.querySelector(".combat-tracker-header");
+
+    if (game.user?.isGM && headerControls) {
+      this.upsertRollSystemButton(
+        headerControls,
+        "et-roll-system-toggle-btn",
+        "inline-control icon fa-solid fa-dice-d20",
+        "title"
+      );
+    }
 
     const combat = app.viewed ?? (game.combats as any)?.viewed ?? game.combat;
     if (!combat) return;
@@ -319,24 +436,19 @@ export class CriticalEncounterManager {
     const isCritical = Boolean(combat.getFlag(MODULE_ID, "criticalEncounter"));
     const title = (game.settings as any)?.get(MODULE_ID, "criticalTitle") || "JULGAMENTO DA TORRE";
 
-    // Insere o botão de alternância no cabeçalho se o usuário for GM
-    if (game.user?.isGM) {
-      const headerControls =
-        root.querySelector("nav.encounters") ||
-        root.querySelector(".encounter-controls") ||
-        root.querySelector("header.combat-tracker-header") ||
-        root.querySelector(".combat-tracker-header");
+    // Insere o botão de alternância do Julgamento da Torre no cabeçalho se o usuário for GM
+    if (game.user?.isGM && headerControls) {
+      const expectedClass = `inline-control icon fa-solid fa-skull et-critical-toggle-btn${isCritical ? " active" : ""}`;
+      const expectedTitle = isCritical
+        ? `${title}: ATIVO (Clique para desativar)`
+        : `Ativar ${title} (Encontro Crítico)`;
 
-      if (headerControls && !headerControls.querySelector(".et-critical-toggle-btn")) {
+      const existingBtn = headerControls.querySelector(".et-critical-toggle-btn") as HTMLButtonElement | null;
+      if (!existingBtn) {
         const toggleBtn = document.createElement("button");
         toggleBtn.type = "button";
-        toggleBtn.className = `inline-control icon fa-solid fa-skull et-critical-toggle-btn ${isCritical ? "active" : ""}`;
-        toggleBtn.setAttribute(
-          "title",
-          isCritical
-            ? `${title}: ATIVO (Clique para desativar)`
-            : `Ativar ${title} (Encontro Crítico)`
-        );
+        toggleBtn.className = expectedClass;
+        toggleBtn.setAttribute("title", expectedTitle);
 
         toggleBtn.addEventListener("click", async (ev) => {
           ev.preventDefault();
@@ -344,20 +456,10 @@ export class CriticalEncounterManager {
           await this.toggleCriticalEncounter(combat);
         });
 
-        // Adiciona ao início dos controles de encontro
         headerControls.prepend(toggleBtn);
-      } else if (headerControls) {
-        // Atualiza estado se já existia
-        const existingBtn = headerControls.querySelector(".et-critical-toggle-btn");
-        if (existingBtn) {
-          existingBtn.className = `inline-control icon fa-solid fa-skull et-critical-toggle-btn ${isCritical ? "active" : ""}`;
-          existingBtn.setAttribute(
-            "title",
-            isCritical
-              ? `${title}: ATIVO (Clique para desativar)`
-              : `Ativar ${title} (Encontro Crítico)`
-          );
-        }
+      } else {
+        if (existingBtn.className !== expectedClass) existingBtn.className = expectedClass;
+        if (existingBtn.getAttribute("title") !== expectedTitle) existingBtn.setAttribute("title", expectedTitle);
       }
     }
 
@@ -378,7 +480,7 @@ export class CriticalEncounterManager {
   }
 
   /**
-   * Sincroniza indicador visual e botão de gatilho no Carousel Combat Tracker (combat-tracker-dock).
+   * Sincroniza indicadores visuais e botões de gatilho no Carousel Combat Tracker (combat-tracker-dock).
    */
   public syncCombatDock(combatInstance?: any): void {
     const dockEl = document.querySelector("#combat-dock, .combat-dock") as HTMLElement;
@@ -390,18 +492,27 @@ export class CriticalEncounterManager {
     const isCritical = Boolean(combat.getFlag(MODULE_ID, "criticalEncounter"));
     const title = (game.settings as any)?.get(MODULE_ID, "criticalTitle") || "JULGAMENTO DA TORRE";
 
-    // 1. Injeta/atualiza botão nos botões da direita do carousel (apenas GM)
+    // 1. Injeta/atualiza botões nos botões da direita do carousel (apenas GM)
     const rightButtons = dockEl.querySelector(".buttons-container.right");
     if (rightButtons && game.user?.isGM) {
-      let dockBtn = rightButtons.querySelector(".et-dock-toggle-btn") as HTMLButtonElement;
+      this.upsertRollSystemButton(
+        rightButtons,
+        "et-dock-roll-system-btn",
+        "icon ui-control fas fa-dice-d20",
+        "data-tooltip"
+      );
+
+      const expectedClass = `icon ui-control fas fa-skull et-dock-toggle-btn${isCritical ? " active" : ""}`;
+      const expectedTooltip = isCritical
+        ? `${title}: ATIVO (Clique para desativar)`
+        : `Ativar ${title} (Encontro Crítico)`;
+
+      let dockBtn = rightButtons.querySelector(".et-dock-toggle-btn") as HTMLButtonElement | null;
       if (!dockBtn) {
         dockBtn = document.createElement("button");
         dockBtn.type = "button";
-        dockBtn.className = `icon ui-control fas fa-skull et-dock-toggle-btn ${isCritical ? "active" : ""}`;
-        dockBtn.setAttribute(
-          "data-tooltip",
-          isCritical ? `${title}: ATIVO (Clique para desativar)` : `Ativar ${title} (Encontro Crítico)`
-        );
+        dockBtn.className = expectedClass;
+        dockBtn.setAttribute("data-tooltip", expectedTooltip);
 
         dockBtn.addEventListener("click", async (ev) => {
           ev.preventDefault();
@@ -409,14 +520,12 @@ export class CriticalEncounterManager {
           await this.toggleCriticalEncounter(combat);
         });
 
-        // Adiciona ao topo dos botões da direita
         rightButtons.prepend(dockBtn);
       } else {
-        dockBtn.className = `icon ui-control fas fa-skull et-dock-toggle-btn ${isCritical ? "active" : ""}`;
-        dockBtn.setAttribute(
-          "data-tooltip",
-          isCritical ? `${title}: ATIVO (Clique para desativar)` : `Ativar ${title} (Encontro Crítico)`
-        );
+        if (dockBtn.className !== expectedClass) dockBtn.className = expectedClass;
+        if (dockBtn.getAttribute("data-tooltip") !== expectedTooltip) {
+          dockBtn.setAttribute("data-tooltip", expectedTooltip);
+        }
       }
     }
 
@@ -435,7 +544,7 @@ export class CriticalEncounterManager {
   }
 
   /**
-   * Alterna o estado do modo Julgamento da Torre no combate atual.
+   * Alterna o estado do modo Julgamento da Torre no combate atual e ajusta o sistema de salvaguardas do Midi-QoL.
    */
   public async toggleCriticalEncounter(combat: any): Promise<boolean> {
     if (!combat || !game.user?.isGM) return false;
@@ -444,6 +553,7 @@ export class CriticalEncounterManager {
     const newState = !currentState;
 
     await combat.setFlag(MODULE_ID, "criticalEncounter", newState);
+    await this.setRollSystem(newState ? "rer" : "mtb", false);
 
     const title = (game.settings as any)?.get(MODULE_ID, "criticalTitle") || "JULGAMENTO DA TORRE";
 
@@ -717,10 +827,20 @@ export class CriticalEncounterManager {
   }
 
   /**
-   * Limpa recursos quando um combate é deletado.
+   * Limpa recursos quando um combate é deletado e restaura o Monk's Token Bar caso não haja outro Julgamento ativo.
    */
-  private cleanupCombat(combatId: string): void {
+  private async cleanupCombat(combatId: string): Promise<void> {
     console.log(`${MODULE_TITLE} | Combate ${combatId} finalizado. Estado de Julgamento da Torre limpo.`);
+    if (!game.user?.isGM) return;
+
+    const combats = (game.combats as any)?.contents ?? [];
+    const hasRemainingCritical = combats.some(
+      (c: any) => c.id !== combatId && Boolean(c.getFlag?.(MODULE_ID, "criticalEncounter"))
+    );
+
+    if (!hasRemainingCritical) {
+      await this.setRollSystem("mtb", false);
+    }
   }
 }
 

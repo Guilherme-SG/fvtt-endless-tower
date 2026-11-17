@@ -27,6 +27,7 @@ import {
 import {
   registerCriticalEncounter,
   CriticalEncounterManager,
+  type MidiRollSystem,
 } from "./features/critical-encounter";
 import {
   registerSolitudeFeature,
@@ -81,6 +82,10 @@ Hooks.once("ready", () => {
       toggleLandingEffects,
       chronicle: CelestialChronicle.getInstance(),
       criticalEncounter: CriticalEncounterManager.getInstance(),
+      getRollSystem: () => CriticalEncounterManager.getInstance().getRollSystem(),
+      setRollSystem: (mode: MidiRollSystem, notify = true) =>
+        CriticalEncounterManager.getInstance().setRollSystem(mode, notify),
+      toggleRollSystem: () => CriticalEncounterManager.getInstance().toggleRollSystem(),
       abracadoDestino: AbracadoDestinoManager.getInstance(),
       checkSolitude,
       ensureIsolationEffect,

@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { ChatEnhancer, isAttackRollCriticalOrFumble } from "../src/features/design-system/chat-enhancer";
+import { buildUpdatedMidiSaveSettings } from "../src/features/critical-encounter";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
   const rootDir = path.resolve(__dirname, "..");
@@ -175,6 +176,56 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       // Garante que a cor do jogador não polui o nome do remetente (sem fundo colorido sem contraste)
       expect(chatCss).toMatch(/\.message-sender.*background:\s*transparent\s*!important/s);
       expect(chatEnhancerTs).toMatch(/sender\.style\.removeProperty\(["']background-color["']\)/);
+
+      // Estilização Celestial Chronicle para cards do Monk's Token Bar
+      expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.card-header h3/);
+      expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.sheet \.items-list \.items-header/);
+      expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.card-footer button\.footer-button/);
+
+      // Alternância Monk's Token Bar (mtb) <-> Ripper's Epic Rolls (rer) no Midi-QoL
+      const criticalEncounterTs = read("src/features/critical-encounter.ts");
+      const mainTs = read("src/main.ts");
+      expect(criticalEncounterTs).toMatch(/toggleRollSystem/);
+      expect(criticalEncounterTs).toMatch(/et-roll-system-toggle-btn/);
+      expect(criticalEncounterTs).toMatch(/et-dock-roll-system-btn/);
+      expect(mainTs).toMatch(/setRollSystem/);
+      expect(mainTs).toMatch(/toggleRollSystem/);
+
+      // 1) Alterna Jogadores de mtb -> rer preservando NPCs em "auto"
+      expect(
+        buildUpdatedMidiSaveSettings(
+          { playerRollSaves: "mtb", rollNPCSaves: "auto", rollNPCLinkedSaves: "auto", other: 123 },
+          "rer"
+        )
+      ).toEqual({
+        playerRollSaves: "rer",
+        rollNPCSaves: "auto",
+        rollNPCLinkedSaves: "auto",
+        other: 123,
+      });
+
+      // 2) Quando NPCs também usam mtb/rer, alternam junto com os jogadores
+      expect(
+        buildUpdatedMidiSaveSettings(
+          { playerRollSaves: "mtb", rollNPCSaves: "mtb", rollNPCLinkedSaves: "mtb" },
+          "rer"
+        )
+      ).toEqual({
+        playerRollSaves: "rer",
+        rollNPCSaves: "rer",
+        rollNPCLinkedSaves: "rer",
+      });
+
+      expect(
+        buildUpdatedMidiSaveSettings(
+          { playerRollSaves: "rer", rollNPCSaves: "rer", rollNPCLinkedSaves: "auto" },
+          "mtb"
+        )
+      ).toEqual({
+        playerRollSaves: "mtb",
+        rollNPCSaves: "mtb",
+        rollNPCLinkedSaves: "auto",
+      });
     });
 
     /**
