@@ -11,12 +11,12 @@
   ],
   "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
   "review": {
-    "summary": "Revisao semantica atualizada apos alinhamento do layout vanilla (header compacto sem cor de jogador, botoes 1:3:1 e alinhamento topo/base das caixas de rolagem lado a lado), icones nativos de visibilidade no chat sem runa, filtro claro para o dado d20 SVG em roll-link e compactacao de reference-link.",
+    "summary": "Revisao semantica atualizada apos isolamento integral dos cards do modulo simraki-character-monitor (.cm-msg), excluindo-os de chat.css (.chat-message:not(.cm-msg)) e do ChatEnhancer.",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "6b9b2d706c7adabc16d89efe80100dbebdd17a4477c8f1f1a86a15d99dbbaf9b",
-    "ownFingerprint": "6b9b2d706c7adabc16d89efe80100dbebdd17a4477c8f1f1a86a15d99dbbaf9b",
-    "reviewedAt": "2026-11-17T18:36:44.776Z",
+    "fingerprint": "041d315faff66b4622b01288281532d56124998cbe16fd6987f3d86c8c2ca2a7",
+    "ownFingerprint": "041d315faff66b4622b01288281532d56124998cbe16fd6987f3d86c8c2ca2a7",
+    "reviewedAt": "2026-11-17T19:08:16.049Z",
     "documents": [
       ".spec/features/endless-tower-design-system/prd.md",
       ".spec/features/endless-tower-design-system/adr.md",

@@ -122,8 +122,19 @@ export class ChatEnhancer {
    * Aplica melhorias visuais e runas ao elemento HTML de cada mensagem de chat renderizada.
    */
   private enhanceChatMessage(message: any, html: any): void {
-    const el: HTMLElement = html instanceof HTMLElement ? html : html[0] ?? html;
+    const el: HTMLElement =
+      typeof HTMLElement !== "undefined" && html instanceof HTMLElement ? html : html?.[0] ?? html;
     if (!el) return;
+
+    // Preserva integralmente os cards do módulo simraki-character-monitor
+    if (
+      message?.flags?.["simraki-character-monitor"] ||
+      el.classList?.contains("cm-msg") ||
+      el.querySelector?.(".cm-line, .cm-spoiler")
+    ) {
+      el.classList?.add("cm-msg");
+      return;
+    }
 
     // 0. Remove estilos inline de cor de jogador aplicados ao remetente (evita fundo/texto sem contraste)
     const sender = el.querySelector(".message-sender") as HTMLElement | null;

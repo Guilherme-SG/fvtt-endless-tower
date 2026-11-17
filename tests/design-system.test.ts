@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { isAttackRollCriticalOrFumble } from "../src/features/design-system/chat-enhancer";
+import { ChatEnhancer, isAttackRollCriticalOrFumble } from "../src/features/design-system/chat-enhancer";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
   const rootDir = path.resolve(__dirname, "..");
@@ -81,30 +81,65 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
     /**
      * @spec:AC-006
-     * Botões com escopo estrito .et-btn e compatibilidade com Token Action HUD e YouTube Player.
+     * Botões com escopo estrito .et-btn e compatibilidade com Token Action HUD, YouTube Player e simraki-character-monitor.
      */
-    it("@spec:AC-006 botões usam .et-btn e protegem o Token Action HUD de sobreposição", () => {
+    it("@spec:AC-006 botões usam .et-btn e protegem módulos de terceiros (.cm-msg e Token Action HUD)", () => {
       const buttonsCss = read("styles/design-system/buttons.css");
       const hudCss = read("styles/design-system/hud.css");
+      const chatCss = read("styles/design-system/chat.css");
 
       expect(buttonsCss).toMatch(/\.et-btn/);
       expect(buttonsCss).not.toMatch(/^button\s*\{/m);
       expect(hudCss).toMatch(/#token-action-hud/);
+      expect(chatCss).toMatch(/\.chat-message:not\(\.cm-msg\)/);
     });
   });
 
   describe("US-003 — Chat e Cartões de Combate", () => {
     /**
      * @spec:AC-007
-     * Legibilidade de texto marfim, negrito dourado, links/ícones, sem truncamento e sem overflow lateral.
+     * Legibilidade de texto marfim, negrito dourado, links/ícones, sem truncamento, overflow e preservação de .cm-msg.
      */
-    it("@spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow", () => {
+    it("@spec:AC-007 garante contraste marfim/dourado, links compactos, contenção de overflow e isolamento de simraki-character-monitor", () => {
       const chatCss = read("styles/design-system/chat.css");
       const windowsCss = read("styles/design-system/windows.css");
       const cardsCss = read("styles/design-system/cards.css");
       const abracadoCss = read("styles/abracado-destino.css");
       const abracadoTs = read("src/features/abracado-pelo-destino.ts");
       const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
+
+      // Preservação integral de simraki-character-monitor (.cm-msg):
+      // 1) Nenhum seletor .chat-message em chat.css pode omitir :not(.cm-msg)
+      const unguardedChatLines = chatCss
+        .split("\n")
+        .filter((line) => line.includes(".chat-message") && !line.includes(":not(.cm-msg)"));
+      expect(unguardedChatLines).toEqual([]);
+      expect(chatEnhancerTs).toMatch(/simraki-character-monitor/);
+      expect(chatEnhancerTs).toMatch(/cm-msg/);
+
+      // 2) ChatEnhancer retorna antecipadamente sem injetar banner de sussurro em mensagens do simraki-character-monitor
+      const addedClasses: string[] = [];
+      let insertedBeforeCalled = false;
+      const fakeEl = {
+        classList: {
+          add: (cls: string) => addedClasses.push(cls),
+          contains: () => false,
+        },
+        querySelector: () => null,
+        insertBefore: () => {
+          insertedBeforeCalled = true;
+        },
+      } as unknown as HTMLElement;
+
+      (ChatEnhancer.getInstance() as any).enhanceChatMessage(
+        {
+          flags: { "simraki-character-monitor": { cls: "cm-item-plus" } },
+          whisper: ["gmId"],
+        },
+        fakeEl
+      );
+      expect(addedClasses).toEqual(["cm-msg"]);
+      expect(insertedBeforeCalled).toBe(false);
 
       expect(chatCss).toMatch(/\.dnd5e\.chat-card/);
       expect(chatCss).toMatch(/\.card-content/);

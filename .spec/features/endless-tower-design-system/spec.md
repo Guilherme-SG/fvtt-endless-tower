@@ -49,21 +49,21 @@ Como Mestre da mesa, quero que os estilos do Endless Tower não alterem as ficha
 - **Quando** for renderizado na interface
 - **Então** deve utilizar classes dedicadas `.et-input` ou `.et-select`, e nenhum seletor global `input[type="text"]` ou `select` desprotegido deve existir nas folhas de estilo.
 
-#### AC-006 — Botões com escopo estrito .et-btn e compatibilidade com Token Action HUD e YouTube Player
+#### AC-006 — Botões com escopo estrito .et-btn e compatibilidade com Token Action HUD, YouTube Player e simraki-character-monitor
 
-- **Dado** a presença de módulos de interface como Token Action HUD (`#token-action-hud`) e YouTube Player (`#youtube-player`)
-- **Quando** o HUD é exibido na tela
-- **Então** botões de terceiros não devem receber padding ou fontes forçadas, a seta de recolhimento do menu não deve sobrepor botões, e o seletor de botão do módulo deve aplicar-se estritamente a `.et-btn`.
+- **Dado** a presença de módulos de interface como Token Action HUD (`#token-action-hud`), YouTube Player (`#youtube-player`) e Character Monitor (`simraki-character-monitor` / `.cm-msg`)
+- **Quando** o HUD ou chat são exibidos na tela
+- **Então** botões e cards de terceiros protegidos não devem receber estilos forçados do Design System, a seta de recolhimento do menu não deve sobrepor botões, e o seletor de botão do módulo deve aplicar-se estritamente a `.et-btn`.
 
 ### US-003 — Chat e Cartões de Combate
 
 Como jogador e Mestre, quero que os cartões de rolagem, dano e sussurros no painel de chat tenham leitura clara e contraste adequado, para que as mensagens sejam legíveis em combate.
 
-#### AC-007 — Legibilidade de texto marfim, header compacto, hierarquia de negrito/links e filtro do dado no chat e tooltips
+#### AC-007 — Legibilidade de texto marfim, header compacto, hierarquia de negrito/links, filtro do dado e preservação de `.cm-msg`
 
-- **Dado** um cartão de item, bênção, rolagem ou tooltip (`.dnd5e.chat-card`, `.midi-qol-item-card`, `#tooltip`, `.locked-tooltip`) renderizado na interface
+- **Dado** um cartão de item, bênção, rolagem ou tooltip (`.dnd5e.chat-card`, `.midi-qol-item-card`, `#tooltip`, `.locked-tooltip`) ou card do `simraki-character-monitor` (`.cm-msg`) renderizado na interface
 - **Quando** o Design System Celestial estiver ativo
-- **Então** o cabeçalho do remetente deve seguir o layout compacto estilo vanilla sem fundo de cor de jogador (`.title` e `.subtitle` diferenciados), os links `.reference-link` / `.content-link` devem ser discretos e proporcionais ao texto (`font-size: 0.9em`, `padding: 0px 3px`), o dado SVG de `.roll-link` / `a.inline-roll` deve receber `--dnd5e-roll-icon-filter` em tonalidade clara dourada-marfim, textos em negrito devem destacar-se em `--et-gold` e nenhum título ou botão deve sofrer truncamento ou corte lateral horizontal.
+- **Então** mensagens `.cm-msg` do `simraki-character-monitor` devem ser ignoradas integralmente no `ChatEnhancer` e excluídas de todos os seletores `.chat-message:not(.cm-msg)` em `chat.css` preservando 100% seu visual original; nos demais cards, o cabeçalho do remetente deve seguir o layout compacto estilo vanilla sem fundo de cor de jogador (`.title` e `.subtitle` diferenciados), os links `.reference-link` / `.content-link` devem ser discretos e proporcionais ao texto (`font-size: 0.9em`, `padding: 0px 3px`), o dado SVG de `.roll-link` / `a.inline-roll` deve receber `--dnd5e-roll-icon-filter` em tonalidade clara dourada-marfim, textos em negrito devem destacar-se em `--et-gold` e nenhum título ou botão deve sofrer truncamento ou corte lateral horizontal.
 
 #### AC-008 — Selo de visibilidade não-pública com ícones nativos sem corromper o cabeçalho flexrow
 

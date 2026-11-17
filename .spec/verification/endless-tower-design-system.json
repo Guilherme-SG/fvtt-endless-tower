@@ -1,7 +1,7 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-17T18:36:46.701Z",
-  "gitRev": "0a0fe3c",
+  "timestamp": "2026-11-17T19:08:17.885Z",
+  "gitRev": "0022439",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
@@ -34,12 +34,12 @@
     },
     "AC-006": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-006 botões usam .et-btn e protegem o Token Action HUD de sobreposição @spec:AC-006 botões usam .et-btn e protegem o Token Action HUD de sobreposição",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-006 botões usam .et-btn e protegem módulos de terceiros (.cm-msg e Token Action HUD) @spec:AC-006 botões usam .et-btn e protegem módulos de terceiros (.cm-msg e Token Action HUD)",
       "method": "vitest-json"
     },
     "AC-007": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow @spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-007 garante contraste marfim/dourado, links compactos, contenção de overflow e isolamento de simraki-character-monitor @spec:AC-007 garante contraste marfim/dourado, links compactos, contenção de overflow e isolamento de simraki-character-monitor",
       "method": "vitest-json"
     },
     "AC-008": {
