@@ -59,23 +59,23 @@ Como Mestre da mesa, quero que os estilos do Endless Tower não alterem as ficha
 
 Como jogador e Mestre, quero que os cartões de rolagem, dano e sussurros no painel de chat tenham leitura clara e contraste adequado, para que as mensagens sejam legíveis em combate.
 
-#### AC-007 — Legibilidade de texto marfim sobre cartões escuros Midi-QoL e D&D 5e
+#### AC-007 — Legibilidade de texto marfim, header compacto, hierarquia de negrito/links e filtro do dado no chat e tooltips
 
-- **Dado** um cartão de item, rolagem de ataque ou dano do Midi-QoL / D&D 5e renderizado no chat
-- **Quando** o chat enhancer do Endless Tower estiver ativo
-- **Então** o contêiner interno do cartão (`.dnd5e.chat-card`, `.card-content`, `.description`) deve receber fundo escuro em vidro obsidiana e tipografia em marfim (`--et-ivory`), eliminando texto branco sobre fundo pergaminho claro.
+- **Dado** um cartão de item, bênção, rolagem ou tooltip (`.dnd5e.chat-card`, `.midi-qol-item-card`, `#tooltip`, `.locked-tooltip`) renderizado na interface
+- **Quando** o Design System Celestial estiver ativo
+- **Então** o cabeçalho do remetente deve seguir o layout compacto estilo vanilla sem fundo de cor de jogador (`.title` e `.subtitle` diferenciados), os links `.reference-link` / `.content-link` devem ser discretos e proporcionais ao texto (`font-size: 0.9em`, `padding: 0px 3px`), o dado SVG de `.roll-link` / `a.inline-roll` deve receber `--dnd5e-roll-icon-filter` em tonalidade clara dourada-marfim, textos em negrito devem destacar-se em `--et-gold` e nenhum título ou botão deve sofrer truncamento ou corte lateral horizontal.
 
-#### AC-008 — Selo de comunicação sigilosa posicionado sem corromper o cabeçalho flexrow
+#### AC-008 — Selo de visibilidade não-pública com ícones nativos sem corromper o cabeçalho flexrow
 
-- **Dado** uma mensagem de chat classificada como sussurro (`whisper`)
+- **Dado** uma mensagem de chat não-pública (`whisper` ou `blind`)
 - **Quando** o selo de comunicação sigilosa (`.et-whisper-banner`) for injetado na mensagem
-- **Então** ele deve ser inserido como nó irmão anterior a `.message-header.flexrow`, preservando o alinhamento flex nativo e a exibição de destinatários e horário.
+- **Então** ele deve ser inserido como nó irmão anterior a `.message-header.flexrow` exibindo o ícone correspondente à visibilidade do Foundry (`fa-eye-slash` para cega, `fa-user` para si mesmo, `fa-user-secret` para privada/GM), sem símbolo rúnico `ᛟ`, preservando o alinhamento flex nativo e os metadados.
 
-#### AC-009 — Enriquecimento visual para acertos e falhas críticas
+#### AC-009 — Crítico/falha restrito a rolagens de ataque e alinhamento lado a lado estilo vanilla no Midi-QoL
 
-- **Dado** uma rolagem de ataque processada pelo Midi-QoL resultando em acerto crítico ou falha crítica (fumble)
-- **Quando** o cartão de mensagem é exibido no chat
-- **Então** o cartão deve receber a classe `.et-critical-hit` (borda dourada radiante) ou `.et-critical-fumble` (borda carmesim pulsante).
+- **Dado** uma mensagem de chat contendo botões/rolagens de combate (ataque `d20` e/ou dano `1d6`, `1d8`, etc., ou vantagem com dado descartado)
+- **Quando** o `ChatEnhancer` e o layout `.chat-message` processam o cartão
+- **Então** a detecção e o destaque visual de crítico/falha (`.et-chat-critical` / `.et-attack-critical` e `.et-chat-fumble` / `.et-attack-fumble`) devem aplicar-se **exclusivamente** a rolagens de ataque em dados `d20` ativos, os botões de ataque e dano devem respeitar o alinhamento `1:3:1` (`flex: 1 1 0` / `flex: 3 1 0`), as colunas lado a lado devem esticar com `align-items: stretch !important` alinhando as caixas `.dice-total` pela base (`margin-top: auto !important`) e posicionando o selo de crítico/falha centralizado abaixo das colunas.
 
 ### US-004 — Banners Cinemáticos Souls-like (P-005)
 

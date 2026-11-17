@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { isAttackRollCriticalOrFumble } from "../src/features/design-system/chat-enhancer";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
   const rootDir = path.resolve(__dirname, "..");
@@ -95,10 +96,14 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
   describe("US-003 — Chat e Cartões de Combate", () => {
     /**
      * @spec:AC-007
-     * Legibilidade de texto marfim sobre cartões escuros Midi-QoL e D&D 5e.
+     * Legibilidade de texto marfim, negrito dourado, links/ícones, sem truncamento e sem overflow lateral.
      */
-    it("@spec:AC-007 garante cartões de chat Midi-QoL com fundo escuro e texto legível marfim", () => {
+    it("@spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow", () => {
       const chatCss = read("styles/design-system/chat.css");
+      const windowsCss = read("styles/design-system/windows.css");
+      const cardsCss = read("styles/design-system/cards.css");
+      const abracadoCss = read("styles/abracado-destino.css");
+      const abracadoTs = read("src/features/abracado-pelo-destino.ts");
       const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
 
       expect(chatCss).toMatch(/\.dnd5e\.chat-card/);
@@ -107,6 +112,31 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(chatCss).toMatch(/var\(--et-ivory\)/);
       expect(chatCss).toMatch(/var\(--et-obsidian/);
 
+      // Hierarquia de negrito dourado, links/ícones compactos e filtro do d20 SVG em chat e tooltips
+      expect(chatCss).toMatch(/\.card-content strong/);
+      expect(chatCss).toMatch(/color:\s*var\(--et-gold\)\s*!important/);
+      expect(chatCss).toMatch(/--icon-fill:\s*var\(--et-gold-bright\)\s*!important/);
+      expect(chatCss).toMatch(/--dnd5e-roll-icon-filter:/);
+      expect(chatCss).toMatch(/\.roll-link-group/);
+      expect(chatCss).toMatch(/\.reference-link/);
+      expect(chatCss).toMatch(/font-size:\s*0\.9em\s*!important/);
+      expect(chatCss).toMatch(/padding:\s*0px\s*3px\s*!important/);
+      expect(chatCss).toMatch(/\.roll\.discarded/);
+      expect(chatCss).toMatch(/\.message-metadata/);
+
+      expect(windowsCss).toMatch(/\.locked-tooltip/);
+      expect(windowsCss).toMatch(/\.dnd5e2-tooltip/);
+      expect(windowsCss).toMatch(/--icon-fill:\s*var\(--et-gold-bright\)\s*!important/);
+      expect(windowsCss).toMatch(/--dnd5e-roll-icon-filter:/);
+
+      // Header compacto estilo vanilla e remoção do truncamento em cabeçalhos de chat
+      expect(chatCss).toMatch(/box-sizing:\s*border-box\s*!important/);
+      expect(chatCss).toMatch(/overflow-wrap:\s*anywhere\s*!important/);
+      expect(chatCss).toMatch(/\.message-sender \.subtitle[\s\S]*?font-size:\s*0\.68rem\s*!important/);
+      expect(cardsCss).toMatch(/\.chat-message \.et-card-title[\s\S]*?white-space:\s*normal/);
+      expect(abracadoCss).toMatch(/\.et-abracado-chat-card \.et-card-title[\s\S]*?white-space:\s*normal\s*!important/);
+      expect(abracadoTs).not.toMatch(/outcomeBadge/);
+
       // Garante que a cor do jogador não polui o nome do remetente (sem fundo colorido sem contraste)
       expect(chatCss).toMatch(/\.message-sender.*background:\s*transparent\s*!important/s);
       expect(chatEnhancerTs).toMatch(/sender\.style\.removeProperty\(["']background-color["']\)/);
@@ -114,27 +144,112 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
     /**
      * @spec:AC-008
-     * Selo de comunicação sigilosa posicionado sem corromper o cabeçalho flexrow.
+     * Selo de visibilidade não-pública com ícones nativos sem corromper o cabeçalho flexrow.
      */
-    it("@spec:AC-008 posiciona selo de sussurro antes do cabeçalho flexrow sem quebrar layout", () => {
+    it("@spec:AC-008 posiciona selo de visibilidade com ícones nativos sem runa antes do cabeçalho flexrow", () => {
       const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
 
       expect(chatEnhancerTs).toMatch(/et-whisper-banner/);
+      expect(chatEnhancerTs).toMatch(/fa-eye-slash/);
+      expect(chatEnhancerTs).toMatch(/fa-user-secret/);
+      expect(chatEnhancerTs).toMatch(/fa-user/);
+      expect(chatEnhancerTs).not.toMatch(/ᛟ/);
       expect(chatEnhancerTs).not.toMatch(/header\.firstChild/);
     });
 
     /**
      * @spec:AC-009
-     * Enriquecimento visual para acertos e falhas críticas.
+     * Crítico/falha restrito a rolagens de ataque d20 e alinhamento lado a lado no Midi-QoL.
      */
-    it("@spec:AC-009 aplica classes visuais distintas para acerto crítico e falha crítica", () => {
+    it("@spec:AC-009 restringe crítico e falha a rolagens de ataque e preserva alinhamento das colunas", () => {
       const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
       const chatCss = read("styles/design-system/chat.css");
 
       expect(chatEnhancerTs).toMatch(/et-chat-critical/);
       expect(chatEnhancerTs).toMatch(/et-chat-fumble/);
+      expect(chatEnhancerTs).toMatch(/et-attack-critical/);
+      expect(chatEnhancerTs).toMatch(/et-attack-fumble/);
       expect(chatCss).toMatch(/\.et-chat-critical/);
       expect(chatCss).toMatch(/\.et-chat-fumble/);
+      expect(chatCss).toMatch(/\.midi-qol-damage-roll \.dice-total/);
+      expect(chatCss).toMatch(/align-items:\s*stretch\s*!important/);
+      expect(chatCss).toMatch(/margin-top:\s*auto\s*!important/);
+      expect(chatCss).toMatch(/flex:\s*3\s+1\s+0\s*!important/);
+      expect(chatCss).toMatch(/flex:\s*1\s+1\s+0\s*!important/);
+
+      // 1. Dado de dano 1d6 tirando 1 NUNCA deve ser considerado falha crítica
+      expect(
+        isAttackRollCriticalOrFumble({
+          rolls: [{ options: { type: "damage" }, terms: [{ faces: 6, results: [{ result: 1, active: true }] }] }],
+        })
+      ).toEqual({ isCritical: false, isFumble: false });
+
+      expect(
+        isAttackRollCriticalOrFumble({
+          rolls: [{ terms: [{ faces: 6, results: [{ result: 1, active: true }] }] }],
+        })
+      ).toEqual({ isCritical: false, isFumble: false });
+
+      // 2. Teste de resistência / perícia com 20 ou 1 NUNCA dispara crítico/falha de ataque
+      expect(
+        isAttackRollCriticalOrFumble({
+          flags: { dnd5e: { roll: { type: "save" } } },
+          rolls: [{ terms: [{ faces: 20, results: [{ result: 20, active: true }] }] }],
+        })
+      ).toEqual({ isCritical: false, isFumble: false });
+
+      // 3. Rolagem de ataque d20 com 20 -> Sucesso Crítico; com 1 -> Falha Crítica
+      expect(
+        isAttackRollCriticalOrFumble({
+          flags: { dnd5e: { roll: { type: "attack" } } },
+          rolls: [{ terms: [{ faces: 20, results: [{ result: 20, active: true }] }] }],
+        })
+      ).toEqual({ isCritical: true, isFumble: false });
+
+      expect(
+        isAttackRollCriticalOrFumble({
+          rolls: [{ terms: [{ faces: 20, results: [{ result: 1, active: true }] }] }],
+        })
+      ).toEqual({ isCritical: false, isFumble: true });
+
+      // 4. Vantagem onde dado descartado tirou 1 e dado ativo tirou 18 -> NÃO é falha crítica
+      expect(
+        isAttackRollCriticalOrFumble({
+          rolls: [
+            {
+              terms: [
+                {
+                  faces: 20,
+                  results: [
+                    { result: 1, active: false, discarded: true },
+                    { result: 18, active: true },
+                  ],
+                },
+              ],
+            },
+          ],
+        })
+      ).toEqual({ isCritical: false, isFumble: false });
+
+      // 5. Card Midi-QoL combinado (ataque 1d20 = 16 e dano 1d6 = 1) -> NÃO é falha crítica
+      const fakeMidiEl = {
+        querySelector: (sel: string) =>
+          sel === ".midi-qol-attack-roll"
+            ? { querySelector: () => ({ classList: { contains: () => false } }) }
+            : null,
+      } as unknown as HTMLElement;
+
+      expect(
+        isAttackRollCriticalOrFumble(
+          {
+            rolls: [
+              { terms: [{ faces: 20, results: [{ result: 16, active: true }] }] },
+              { terms: [{ faces: 6, results: [{ result: 1, active: true }] }] },
+            ],
+          },
+          fakeMidiEl
+        )
+      ).toEqual({ isCritical: false, isFumble: false });
     });
   });
 

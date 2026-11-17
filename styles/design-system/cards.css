@@ -73,6 +73,13 @@
   text-overflow: ellipsis;
 }
 
+.chat-message .et-card-title {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.25;
+}
+
 .et-card-subtitle {
   font-family: var(--et-font-cinematic);
   font-size: 0.82rem;

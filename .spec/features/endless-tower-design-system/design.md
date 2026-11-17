@@ -61,8 +61,8 @@ flowchart TD
    ```
 3. **Escopo Estrito de Componentes (`forms.css`, `windows.css`, `buttons.css`)**:
    Nenhuma regra aplica-se a `button`, `input` ou `.window-app` sem o prefixo `.et-`. Fichas de personagem permanecem intocadas.
-4. **Chat Enhancer (`chat-enhancer.ts`, `chat.css`)**:
-   Intervém via hook `renderChatMessageHTML` (Foundry v13) para envelopar cartões Midi-QoL com classes de contraste e adicionar selos de sussurro externamente ao cabeçalho.
+4. **Chat Enhancer (`chat-enhancer.ts`, `chat.css`, `windows.css`)**:
+   Intervém via hook `renderChatMessage` para remover estilos inline sem contraste no remetente, restringir a detecção de crítico/falha (`isAttackRollCriticalOrFumble`) exclusivamente a rolagens de ataque `d20` ativas (preservando caixas de dano no estilo padrão), alinhar colunas lado a lado do Midi-QoL posicionando o selo abaixo delas em largura total, aplicar hierarquia de cores (marfim para corpo, `--et-gold` para `strong`/`b`, `--et-gold-bright` e `--icon-fill` para links/rolagens inline em chat e tooltips), conter overflow lateral e garantir contraste em timestamps e dados descartados.
 5. **BannerService (`banner-service.ts`, `banners.css`)**:
    Singleton com fila FIFO assíncrona. Monta ribbons edge-to-edge com backdrop blur de 12px e largura 100vw, garantindo ausência de quebra de texto via `white-space: nowrap`.
 6. **Despachante Sonoro (`sound-effects.ts`)**:

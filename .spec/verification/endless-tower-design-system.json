@@ -1,7 +1,7 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-14T19:03:44.398Z",
-  "gitRev": "ef3b750",
+  "timestamp": "2026-11-17T18:36:46.701Z",
+  "gitRev": "0a0fe3c",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
@@ -39,17 +39,17 @@
     },
     "AC-007": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-007 garante cartões de chat Midi-QoL com fundo escuro e texto legível marfim @spec:AC-007 garante cartões de chat Midi-QoL com fundo escuro e texto legível marfim",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow @spec:AC-007 garante contraste marfim/dourado, ícones em links, sem truncamento e contenção de overflow",
       "method": "vitest-json"
     },
     "AC-008": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-008 posiciona selo de sussurro antes do cabeçalho flexrow sem quebrar layout @spec:AC-008 posiciona selo de sussurro antes do cabeçalho flexrow sem quebrar layout",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-008 posiciona selo de visibilidade com ícones nativos sem runa antes do cabeçalho flexrow @spec:AC-008 posiciona selo de visibilidade com ícones nativos sem runa antes do cabeçalho flexrow",
       "method": "vitest-json"
     },
     "AC-009": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-009 aplica classes visuais distintas para acerto crítico e falha crítica @spec:AC-009 aplica classes visuais distintas para acerto crítico e falha crítica",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-009 restringe crítico e falha a rolagens de ataque e preserva alinhamento das colunas @spec:AC-009 restringe crítico e falha a rolagens de ataque e preserva alinhamento das colunas",
       "method": "vitest-json"
     },
     "AC-010": {

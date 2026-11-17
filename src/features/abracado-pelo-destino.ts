@@ -340,10 +340,6 @@ export class AbracadoDestinoManager {
    * Gera o card público estilizado no chat com lore de Calax.
    */
   private async createChatMessage(actor: any, hasLuck: boolean, faceName: string): Promise<void> {
-    const outcomeBadge = hasLuck
-      ? `<span class="et-card-badge luck">🪙 Moeda de Calax: ${faceName} • Sorte</span>`
-      : `<span class="et-card-badge empty">🪙 Moeda de Calax: ${faceName} • Neutro</span>`;
-
     const outcomeTitle = hasLuck ? "O Destino Abraça" : "O Acaso é Indiferente";
     const outcomeIcon = hasLuck ? "🍀" : "✦";
 
@@ -358,7 +354,6 @@ export class AbracadoDestinoManager {
             <span>${outcomeIcon}</span>
             <span>Bênção de Calax: ${outcomeTitle}</span>
           </div>
-          ${outcomeBadge}
         </div>
         <div class="et-card-lore">
           <em>"Calax não escolhe favoritos, ele apenas distribui as cartas. No início de cada conflito, a moeda é lançada ao vento..."</em>

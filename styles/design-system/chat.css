@@ -17,52 +17,88 @@ body.et-celestial-active .chat-message {
   margin: 6px 2px 10px 2px !important;
   padding: 10px 12px !important;
   position: relative !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
   transition: all var(--et-transition-fast) !important;
+  --dnd5e-roll-icon-filter: invert(0.92) sepia(0.35) saturate(1.5) hue-rotate(5deg) brightness(1.08) !important;
+}
+
+body.et-celestial-active .chat-message .message-content {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
 }
 
 body.et-celestial-active .chat-message:hover {
   border-color: rgba(243, 226, 176, 0.45) !important;
 }
 
-/* --- Message Header --- */
+/* --- Message Header (Compacto estilo Vanilla sem fundo de cor de jogador) --- */
 body.et-celestial-active .chat-message .message-header {
   border-bottom: 1px solid var(--et-glass-border-subtle) !important;
-  padding-bottom: 6px !important;
-  margin-bottom: 8px !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 6px !important;
   color: var(--et-ivory-dim) !important;
   background: transparent !important;
 }
 
+body.et-celestial-active .chat-message .message-header .message-sender {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+body.et-celestial-active .chat-message .message-header .message-sender .name-stacked {
+  gap: 1px !important;
+  line-height: 1.15 !important;
+  min-height: unset !important;
+}
+
 body.et-celestial-active .chat-message .message-header .message-sender,
 body.et-celestial-active .chat-message .message-header .message-sender * {
-  font-family: var(--et-font-cinematic) !important;
-  font-size: 0.98rem !important;
+  font-family: var(--et-font-body) !important;
+  font-size: 0.85rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.01em !important;
   color: var(--et-gold) !important;
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
+body.et-celestial-active .chat-message .message-header .message-sender .title {
+  font-family: var(--et-font-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  color: var(--et-gold) !important;
+}
+
+body.et-celestial-active .chat-message .message-header .message-sender .subtitle,
 body.et-celestial-active .chat-message .message-header .message-sender small,
 body.et-celestial-active .chat-message .message-header .message-sender .author-name,
 body.et-celestial-active .chat-message .message-header .message-sender .user-role {
-  font-family: var(--et-font-cinematic) !important;
-  font-size: 0.78rem !important;
+  font-family: var(--et-font-body) !important;
+  font-size: 0.68rem !important;
   font-weight: 400 !important;
+  letter-spacing: 0 !important;
   color: var(--et-ivory-dim) !important;
   background: transparent !important;
   background-color: transparent !important;
-  opacity: 0.85;
+  opacity: 0.85 !important;
 }
 
-body.et-celestial-active .chat-message .message-header .message-metadata {
-  font-size: 0.75rem !important;
-  color: var(--et-ivory-muted) !important;
+body.et-celestial-active .chat-message .message-header .message-metadata,
+body.et-celestial-active .chat-message .message-header .message-metadata *,
+body.et-celestial-active .chat-message .message-header time {
+  font-size: 0.72rem !important;
+  color: var(--et-ivory-dim) !important;
   background: transparent !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 6px rgba(0, 0, 0, 0.9) !important;
 }
 
 body.et-celestial-active .chat-message .message-header a.message-delete {
@@ -75,7 +111,7 @@ body.et-celestial-active .chat-message .message-header a.message-delete:hover {
   filter: drop-shadow(0 0 6px rgba(255, 60, 60, 0.8)) !important;
 }
 
-/* --- Whisper Message Styling (ᛟ Arcane Seals) --- */
+/* --- Non-Public / Whisper Message Styling --- */
 body.et-celestial-active .chat-message.whisper {
   background: linear-gradient(135deg, rgba(14, 20, 34, 0.94) 0%, rgba(9, 13, 22, 0.96) 100%) !important;
   border: 1px solid var(--et-azure-border) !important;
@@ -83,11 +119,23 @@ body.et-celestial-active .chat-message.whisper {
 }
 
 body.et-celestial-active .chat-message.whisper .message-header .message-sender,
-body.et-celestial-active .chat-message.whisper .message-header .message-sender * {
+body.et-celestial-active .chat-message.whisper .message-header .message-sender *,
+body.et-celestial-active .chat-message.whisper .message-header .message-sender .title {
   color: var(--et-azure-light) !important;
   background: transparent !important;
   background-color: transparent !important;
   text-shadow: 0 0 8px var(--et-azure-glow) !important;
+}
+
+body.et-celestial-active .chat-message.whisper .message-header .message-sender .subtitle,
+body.et-celestial-active .chat-message.whisper .message-header .message-sender small,
+body.et-celestial-active .chat-message.whisper .message-header .message-sender .author-name,
+body.et-celestial-active .chat-message.whisper .message-header .message-sender .user-role {
+  font-size: 0.68rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  color: var(--et-ivory-dim) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
 /* Clean whisper banner positioned neatly at the top */
@@ -105,7 +153,7 @@ body.et-celestial-active .chat-message.whisper .message-header .message-sender *
 }
 
 /* --- High-Contrast Dark Obsidian Cards for D&D 5e & Midi-QoL --- */
-/* Resolves white-text-on-white-background issue completely */
+/* Resolves white-text-on-white-background issue completely & prevents horizontal overflow */
 body.et-celestial-active .chat-message .dnd5e.chat-card,
 body.et-celestial-active .chat-message .midi-qol-item-card,
 body.et-celestial-active .chat-message .card-content,
@@ -113,16 +161,40 @@ body.et-celestial-active .chat-message .description {
   background: rgba(14, 12, 10, 0.95) !important;
   color: var(--et-ivory) !important;
   border-radius: var(--et-radius-sm) !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
 }
 
 body.et-celestial-active .chat-message .card-content p,
-body.et-celestial-active .chat-message .card-content span,
+body.et-celestial-active .chat-message .card-content span:not([class*="et-"]),
+body.et-celestial-active .chat-message .card-content li,
 body.et-celestial-active .chat-message .description p,
-body.et-celestial-active .chat-message .description span,
+body.et-celestial-active .chat-message .description span:not([class*="et-"]),
+body.et-celestial-active .chat-message .description li,
 body.et-celestial-active .chat-message .message-content p,
-body.et-celestial-active .chat-message .message-content span {
+body.et-celestial-active .chat-message .message-content li,
+body.et-celestial-active .chat-message .message-content span:not([class*="et-"]):not(.dice-total) {
   color: var(--et-ivory) !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Preserva cor semântica do título de Bênção de Calax */
+body.et-celestial-active .chat-message .et-abracado-chat-card .et-card-title span {
+  color: inherit !important;
+}
+
+/* Negrito em Dourado Claro (substitui texto preto sem contraste) */
+body.et-celestial-active .chat-message .card-content strong,
+body.et-celestial-active .chat-message .card-content b,
+body.et-celestial-active .chat-message .description strong,
+body.et-celestial-active .chat-message .description b,
+body.et-celestial-active .chat-message .message-content strong,
+body.et-celestial-active .chat-message .message-content b {
+  color: var(--et-gold) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
 body.et-celestial-active .chat-message .dnd5e.chat-card .card-header,
@@ -130,6 +202,8 @@ body.et-celestial-active .chat-message .midi-qol-item-card .card-header {
   border-bottom: 1px solid var(--et-glass-border-subtle) !important;
   padding-bottom: 6px !important;
   margin-bottom: 6px !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 body.et-celestial-active .chat-message .dnd5e.chat-card .card-header h3,
@@ -149,7 +223,29 @@ body.et-celestial-active .chat-message .midi-qol-item-card .card-header img {
   border: 1px solid var(--et-gold-deep) !important;
 }
 
-/* Chat Card Action Buttons */
+/* Chat Card Action Buttons — Alinhamento 1:3:1 estilo Vanilla e contenção lateral */
+body.et-celestial-active .chat-message .card-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body.et-celestial-active .chat-message .card-buttons .flexrow,
+body.et-celestial-active .chat-message .midi-qol-item-card .card-buttons > div {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 4px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
 body.et-celestial-active .chat-message .card-buttons button,
 body.et-celestial-active .chat-message .midi-qol-item-card .card-buttons button {
   background: var(--et-obsidian-well) !important;
@@ -160,9 +256,38 @@ body.et-celestial-active .chat-message .midi-qol-item-card .card-buttons button 
   font-weight: 600 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
-  padding: 4px 8px !important;
+  padding: 4px 6px !important;
   border-radius: var(--et-radius-sm) !important;
   transition: all var(--et-transition-fast) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+body.et-celestial-active .chat-message .card-buttons .midi-qol-attack-buttons.flexrow > button:nth-child(1),
+body.et-celestial-active .chat-message .card-buttons .midi-qol-attack-buttons.flexrow > button:nth-child(3),
+body.et-celestial-active .chat-message .card-buttons .midi-qol-damage-buttons.flexrow > button:nth-child(1),
+body.et-celestial-active .chat-message .card-buttons .midi-qol-damage-buttons.flexrow > button:nth-child(3),
+body.et-celestial-active .chat-message .card-buttons .flexrow:has(> button:nth-child(3)) > button:nth-child(1),
+body.et-celestial-active .chat-message .card-buttons .flexrow:has(> button:nth-child(3)) > button:nth-child(3) {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  padding: 4px 2px !important;
+}
+
+body.et-celestial-active .chat-message .card-buttons .midi-qol-attack-buttons.flexrow > button:nth-child(2),
+body.et-celestial-active .chat-message .card-buttons .midi-qol-damage-buttons.flexrow > button:nth-child(2),
+body.et-celestial-active .chat-message .card-buttons .flexrow:has(> button:nth-child(3)) > button:nth-child(2) {
+  flex: 3 1 0 !important;
+  min-width: 0 !important;
+}
+
+body.et-celestial-active .chat-message .card-buttons .flexrow > button:only-child {
+  flex: 1 1 100% !important;
+  width: 100% !important;
 }
 
 body.et-celestial-active .chat-message .card-buttons button:hover,
@@ -173,6 +298,65 @@ body.et-celestial-active .chat-message .midi-qol-item-card .card-buttons button:
   box-shadow: 0 0 10px var(--et-gold-glow-subtle) !important;
 }
 
+/* --- Side-by-Side Midi-QoL Columns & Roll Containers --- */
+body.et-celestial-active .chat-message .midi-qol-flex-container,
+body.et-celestial-active .chat-message .midi-results > .flexrow,
+body.et-celestial-active .chat-message :has(> .midi-qol-attack-roll):has(> .midi-qol-damage-roll) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  gap: 6px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+body.et-celestial-active .chat-message .midi-qol-flex-container > .midi-qol-attack-roll,
+body.et-celestial-active .chat-message .midi-qol-flex-container > .midi-qol-damage-roll,
+body.et-celestial-active .chat-message .midi-results > .flexrow > .midi-qol-attack-roll,
+body.et-celestial-active .chat-message .midi-results > .flexrow > .midi-qol-damage-roll,
+body.et-celestial-active .chat-message :has(> .midi-qol-attack-roll):has(> .midi-qol-damage-roll) > .midi-qol-attack-roll,
+body.et-celestial-active .chat-message :has(> .midi-qol-attack-roll):has(> .midi-qol-damage-roll) > .midi-qol-damage-roll {
+  flex: 1 1 calc(50% - 3px) !important;
+  min-width: 0 !important;
+  max-width: calc(50% - 3px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+body.et-celestial-active .chat-message .midi-qol-attack-roll .dice-roll,
+body.et-celestial-active .chat-message .midi-qol-damage-roll .dice-roll,
+body.et-celestial-active .chat-message .midi-qol-attack-roll .dice-result,
+body.et-celestial-active .chat-message .midi-qol-damage-roll .dice-result {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+}
+
+body.et-celestial-active .chat-message .dice-roll,
+body.et-celestial-active .chat-message .dice-tooltip {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.et-celestial-active .chat-message .midi-qol-attack-roll > div,
+body.et-celestial-active .chat-message .midi-qol-damage-roll > div,
+body.et-celestial-active .chat-message .dice-roll > div,
+body.et-celestial-active .chat-message .midi-qol-advantage-label,
+body.et-celestial-active .chat-message .midi-qol-nobuttons {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
 /* --- Dice Rolls Container --- */
 body.et-celestial-active .chat-message .dice-roll .dice-formula {
   background: rgba(10, 8, 6, 0.65) !important;
@@ -180,10 +364,18 @@ body.et-celestial-active .chat-message .dice-roll .dice-formula {
   border-radius: var(--et-radius-xs) !important;
   color: var(--et-gold) !important;
   font-family: var(--et-font-mono) !important;
-  font-size: 0.85rem !important;
+  font-size: 0.8rem !important;
   padding: 3px 6px !important;
   margin-bottom: 5px !important;
   text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  height: 24px !important;
+  line-height: 16px !important;
+  display: block !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 body.et-celestial-active .chat-message .dice-roll .dice-total {
@@ -198,47 +390,144 @@ body.et-celestial-active .chat-message .dice-roll .dice-total {
   padding: 5px 10px !important;
   text-align: center !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 12px var(--et-gold-glow) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: auto !important;
 }
 
-/* --- Critical Success in Chat Roll --- */
-body.et-celestial-active .chat-message .dice-total.critical,
-body.et-celestial-active .chat-message.et-chat-critical .dice-total {
+/* --- Contraste dos dados individuais no Dice Tooltip (ativos e descartados) --- */
+body.et-celestial-active .chat-message .dice-tooltip .dice-rolls .roll {
+  color: var(--et-ivory) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95) !important;
+}
+
+body.et-celestial-active .chat-message .dice-tooltip .dice-rolls .roll.discarded,
+body.et-celestial-active .chat-message .dice-tooltip .dice-rolls .roll.rerolled {
+  color: var(--et-ivory-dim) !important;
+  opacity: 0.65 !important;
+  filter: none !important;
+}
+
+/* --- Critical Success in Chat Roll (Restrito ao Ataque) --- */
+body.et-celestial-active .chat-message .midi-qol-attack-roll .dice-total.critical,
+body.et-celestial-active .chat-message .dice-total.et-attack-critical,
+body.et-celestial-active .chat-message.et-chat-critical:not(:has(.midi-qol-damage-roll)) .dice-total {
   background: linear-gradient(135deg, rgba(35, 20, 5, 0.95), rgba(70, 15, 15, 0.95)) !important;
   border: 2px solid var(--et-gold-bright) !important;
   color: var(--et-ivory) !important;
   box-shadow: 0 0 20px rgba(255, 234, 179, 0.85), inset 0 0 10px rgba(217, 184, 101, 0.5) !important;
 }
 
-/* --- Critical Fumble / Failure in Chat Roll --- */
-body.et-celestial-active .chat-message .dice-total.fumble,
-body.et-celestial-active .chat-message.et-chat-fumble .dice-total {
+/* --- Critical Fumble / Failure in Chat Roll (Restrito ao Ataque) --- */
+body.et-celestial-active .chat-message .midi-qol-attack-roll .dice-total.fumble,
+body.et-celestial-active .chat-message .dice-total.et-attack-fumble,
+body.et-celestial-active .chat-message.et-chat-fumble:not(:has(.midi-qol-damage-roll)) .dice-total {
   background: linear-gradient(135deg, rgba(40, 6, 6, 0.95), rgba(18, 4, 4, 0.95)) !important;
   border: 2px solid var(--et-crimson-light) !important;
   color: #ffb3b3 !important;
   box-shadow: 0 0 18px var(--et-crimson-glow), inset 0 0 10px rgba(158, 27, 27, 0.6) !important;
 }
 
-/* --- Document / Compendium Links inside Chat --- */
-body.et-celestial-active .chat-message a.content-link,
-body.et-celestial-active .chat-message a.inline-roll {
-  background: rgba(243, 226, 176, 0.12) !important;
+/* Preserva a caixa de DAMAGE no estilo padrão mesmo durante crítico/falha de ataque */
+body.et-celestial-active .chat-message .midi-qol-damage-roll .dice-total,
+body.et-celestial-active .chat-message .midi-qol-damage-roll .dice-total.critical,
+body.et-celestial-active .chat-message .midi-qol-damage-roll .dice-total.fumble {
+  background: var(--et-obsidian-well) !important;
   border: 1px solid var(--et-gold-deep) !important;
+  color: var(--et-ivory) !important;
+  box-shadow: none !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 12px var(--et-gold-glow) !important;
+}
+
+/* --- Document / Compendium / Reference / Inline Roll Links inside Chat --- */
+body.et-celestial-active .chat-message a.content-link,
+body.et-celestial-active .chat-message a.inline-roll,
+body.et-celestial-active .chat-message a.roll-link,
+body.et-celestial-active .chat-message .roll-link-group,
+body.et-celestial-active .chat-message a.reference-link,
+body.et-celestial-active .chat-message .reference-link,
+body.et-celestial-active .chat-message [data-reference-tooltip] {
+  background: rgba(243, 226, 176, 0.08) !important;
+  border: 1px solid rgba(217, 184, 101, 0.32) !important;
   color: var(--et-gold-bright) !important;
-  border-radius: var(--et-radius-xs) !important;
-  padding: 2px 6px !important;
+  border-radius: 2px !important;
+  padding: 0px 3px !important;
+  margin: 0 1px !important;
   text-decoration: none !important;
-  font-family: var(--et-font-cinematic) !important;
-  font-size: 0.85rem !important;
+  font-family: inherit !important;
+  font-size: 0.9em !important;
+  line-height: 1.15 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 4px !important;
+  gap: 2px !important;
+  vertical-align: baseline !important;
+}
+
+body.et-celestial-active .chat-message .roll-link-group a,
+body.et-celestial-active .chat-message .reference-link a,
+body.et-celestial-active .chat-message a.content-link [data-reference-tooltip] {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+}
+
+body.et-celestial-active .chat-message a.content-link *,
+body.et-celestial-active .chat-message a.inline-roll *,
+body.et-celestial-active .chat-message a.roll-link *,
+body.et-celestial-active .chat-message .roll-link-group *,
+body.et-celestial-active .chat-message a.reference-link *,
+body.et-celestial-active .chat-message .reference-link *,
+body.et-celestial-active .chat-message [data-reference-tooltip] * {
+  color: var(--et-gold-bright) !important;
+  --icon-fill: var(--et-gold-bright) !important;
+  fill: var(--et-gold-bright) !important;
+}
+
+body.et-celestial-active .chat-message a.content-link i,
+body.et-celestial-active .chat-message a.inline-roll i,
+body.et-celestial-active .chat-message a.roll-link i,
+body.et-celestial-active .chat-message .roll-link-group i,
+body.et-celestial-active .chat-message a.reference-link i,
+body.et-celestial-active .chat-message .reference-link i,
+body.et-celestial-active .chat-message [data-reference-tooltip] i,
+body.et-celestial-active .chat-message a.content-link dnd5e-icon,
+body.et-celestial-active .chat-message a.inline-roll dnd5e-icon,
+body.et-celestial-active .chat-message a.roll-link dnd5e-icon,
+body.et-celestial-active .chat-message .roll-link-group dnd5e-icon,
+body.et-celestial-active .chat-message a.reference-link dnd5e-icon,
+body.et-celestial-active .chat-message .reference-link dnd5e-icon,
+body.et-celestial-active .chat-message [data-reference-tooltip] dnd5e-icon,
+body.et-celestial-active .chat-message a.content-link svg,
+body.et-celestial-active .chat-message a.inline-roll svg,
+body.et-celestial-active .chat-message a.roll-link svg,
+body.et-celestial-active .chat-message .roll-link-group svg,
+body.et-celestial-active .chat-message a.reference-link svg,
+body.et-celestial-active .chat-message .reference-link svg,
+body.et-celestial-active .chat-message [data-reference-tooltip] svg {
+  font-size: 0.85em !important;
+  margin-right: 1px !important;
+}
+
+body.et-celestial-active .chat-message .roll-link i.fa-dice-d20,
+body.et-celestial-active .chat-message a.inline-roll i.fa-dice-d20,
+body.et-celestial-active .chat-message .roll-link-group i.fa-dice-d20 {
+  filter: invert(0.92) sepia(0.35) saturate(1.5) hue-rotate(5deg) brightness(1.08) !important;
+  opacity: 0.95 !important;
 }
 
 body.et-celestial-active .chat-message a.content-link:hover,
-body.et-celestial-active .chat-message a.inline-roll:hover {
-  background: rgba(243, 226, 176, 0.25) !important;
+body.et-celestial-active .chat-message a.inline-roll:hover,
+body.et-celestial-active .chat-message a.roll-link:hover,
+body.et-celestial-active .chat-message .roll-link-group:hover,
+body.et-celestial-active .chat-message a.reference-link:hover,
+body.et-celestial-active .chat-message .reference-link:hover,
+body.et-celestial-active .chat-message [data-reference-tooltip]:hover {
+  background: rgba(243, 226, 176, 0.2) !important;
   border-color: var(--et-gold-bright) !important;
-  box-shadow: 0 0 10px var(--et-gold-glow) !important;
+  box-shadow: 0 0 8px var(--et-gold-glow) !important;
 }
 
 /* --- Chat Input Dock --- */
