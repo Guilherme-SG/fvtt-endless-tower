@@ -35,6 +35,13 @@ import {
   isIsolated,
   getDistanceInFeet,
 } from "./features/solitude";
+import {
+  registerCombatManeuvers,
+  syncManeuversOnAllActors,
+  ensureManeuverItemsOnActor,
+  toggleManeuverEffects,
+  executeManeuverWorkflow,
+} from "./features/combat-maneuvers";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -51,6 +58,7 @@ Hooks.once("init", () => {
   registerCelestialChronicleFeature();
   registerCriticalEncounter();
   registerSolitudeFeature();
+  registerCombatManeuvers();
 });
 
 Hooks.once("ready", () => {
@@ -73,6 +81,10 @@ Hooks.once("ready", () => {
       ensureIsolationEffect,
       isIsolated,
       getDistanceInFeet,
+      syncManeuvers: syncManeuversOnAllActors,
+      ensureManeuvers: ensureManeuverItemsOnActor,
+      toggleManeuverEffects,
+      executeManeuver: executeManeuverWorkflow,
     };
   }
 });

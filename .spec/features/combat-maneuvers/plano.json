@@ -1,0 +1,183 @@
+{
+  "version": 2,
+  "engine": ".agents/skills/onp-spec-driven/scripts/onp-spec.mjs",
+  "config": {
+    "maxParalelas": 3,
+    "model": null,
+    "esforco": "medium",
+    "permissionMode": "acceptEdits",
+    "allowedTools": null,
+    "sandbox": "workspace-write",
+    "quotaCommand": null,
+    "modelsCommand": null,
+    "notifications": {
+      "enabled": false,
+      "command": null
+    },
+    "quota": {
+      "thresholdPercent": 5,
+      "pollIntervalMs": 60000
+    }
+  },
+  "testCommand": "npx vitest run",
+  "runId": "implement_combat_maneuvers_automation-combat-maneuvers-mwijfgwz-f7e5192f",
+  "feature": "combat-maneuvers",
+  "agent": "antigravity",
+  "modo": "paralelo",
+  "paralelizar": null,
+  "modeloForcado": null,
+  "esforcoForcado": null,
+  "geradoEm": "2026-11-16 00:41",
+  "createdAt": "2026-11-16T00:41:10.500Z",
+  "branchTrabalho": "spec/combat-maneuvers",
+  "baseDir": ".spec/features/combat-maneuvers",
+  "artifactDir": ".spec/features/combat-maneuvers",
+  "specDir": ".spec",
+  "repoName": "implement_combat_maneuvers_automation",
+  "logsDir": "../onp-worktrees/implement_combat_maneuvers_automation-combat-maneuvers-logs",
+  "ondas": [
+    [
+      "faixa-1",
+      "faixa-2",
+      "faixa-3"
+    ]
+  ],
+  "faixas": [
+    {
+      "id": "faixa-1",
+      "branch": "spec/combat-maneuvers-faixa-1-ed5b4e856670",
+      "worktree": "../onp-worktrees/implement_combat_maneuvers_automation-combat-maneuvers-faixa-1-ed5b4e856670",
+      "tarefas": [
+        {
+          "id": "T-001",
+          "titulo": "Implementar motor de regras puras de manobras (alcance, tamanhos, desempates e vetores)",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/rules/maneuvers.ts"
+          ],
+          "refs": [
+            "US-002",
+            "AC-002",
+            "AC-003",
+            "AC-006",
+            "AC-008"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-001 — \"Implementar motor de regras puras de manobras (alcance, tamanhos, desempates e vetores)\"\n  critérios/refs: AC-002 (Bloqueio de alvos fora do alcance corpo a corpo), AC-003 (Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido), AC-006 (Disputa via Epic Rolls 5e e vitória do defensor no empate), AC-008 (Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés)\n  arquivos permitidos (e seus testes): src/rules/maneuvers.ts\n  mensagem de commit: \"T-001 combat-maneuvers: Implementar motor de regras puras de manobras (alcance, tamanhos, desempates e vetores)\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        }
+      ]
+    },
+    {
+      "id": "faixa-2",
+      "branch": "spec/combat-maneuvers-faixa-2-ed5b4e856670",
+      "worktree": "../onp-worktrees/implement_combat_maneuvers_automation-combat-maneuvers-faixa-2-ed5b4e856670",
+      "tarefas": [
+        {
+          "id": "T-002",
+          "titulo": "Implementar suíte de testes unitários em Vitest para regras de manobras",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "tests/maneuvers.test.ts"
+          ],
+          "refs": [
+            "AC-002",
+            "AC-003",
+            "AC-006",
+            "AC-008"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-002 — \"Implementar suíte de testes unitários em Vitest para regras de manobras\"\n  critérios/refs: AC-002 (Bloqueio de alvos fora do alcance corpo a corpo), AC-003 (Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido), AC-006 (Disputa via Epic Rolls 5e e vitória do defensor no empate), AC-008 (Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés)\n  arquivos permitidos (e seus testes): tests/maneuvers.test.ts\n  mensagem de commit: \"T-002 combat-maneuvers: Implementar suíte de testes unitários em Vitest para regras de manobras\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        }
+      ]
+    },
+    {
+      "id": "faixa-3",
+      "branch": "spec/combat-maneuvers-faixa-3-ed5b4e856670",
+      "worktree": "../onp-worktrees/implement_combat_maneuvers_automation-combat-maneuvers-faixa-3-ed5b4e856670",
+      "tarefas": [
+        {
+          "id": "T-003",
+          "titulo": "Criar definições dos itens de manobra e sincronização automática em atores",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/combat-maneuvers.ts"
+          ],
+          "refs": [
+            "US-001",
+            "AC-001"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-003 — \"Criar definições dos itens de manobra e sincronização automática em atores\"\n  critérios/refs: AC-001 (Itens de manobra criados e sincronizados em todos os atores)\n  arquivos permitidos (e seus testes): src/features/combat-maneuvers.ts\n  mensagem de commit: \"T-003 combat-maneuvers: Criar definições dos itens de manobra e sincronização automática em atores\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        },
+        {
+          "id": "T-004",
+          "titulo": "Implementar interceptação de uso de item, validação de alvo e seleção ágil de visibilidade",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/combat-maneuvers.ts"
+          ],
+          "refs": [
+            "US-002",
+            "AC-002",
+            "AC-003",
+            "US-003",
+            "AC-004"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-004 — \"Implementar interceptação de uso de item, validação de alvo e seleção ágil de visibilidade\"\n  critérios/refs: AC-002 (Bloqueio de alvos fora do alcance corpo a corpo), AC-003 (Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido), AC-004 (Seletor de visibilidade pré-configurado com o modo do chat)\n  arquivos permitidos (e seus testes): src/features/combat-maneuvers.ts\n  mensagem de commit: \"T-004 combat-maneuvers: Implementar interceptação de uso de item, validação de alvo e seleção ágil de visibilidade\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        },
+        {
+          "id": "T-005",
+          "titulo": "Implementar comunicação socket para prompt interativo de defesa com timeout",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/combat-maneuvers.ts"
+          ],
+          "refs": [
+            "US-003",
+            "AC-005"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-005 — \"Implementar comunicação socket para prompt interativo de defesa com timeout\"\n  critérios/refs: AC-005 (Prompt interativo de defesa para o dono do alvo)\n  arquivos permitidos (e seus testes): src/features/combat-maneuvers.ts\n  mensagem de commit: \"T-005 combat-maneuvers: Implementar comunicação socket para prompt interativo de defesa com timeout\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        },
+        {
+          "id": "T-006",
+          "titulo": "Integrar com Epic Rolls 5e e implementar resolução de efeitos, empurrão vetorial e aviso de desarmar",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/combat-maneuvers.ts"
+          ],
+          "refs": [
+            "US-004",
+            "AC-006",
+            "US-005",
+            "AC-007",
+            "AC-008",
+            "AC-009"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-006 — \"Integrar com Epic Rolls 5e e implementar resolução de efeitos, empurrão vetorial e aviso de desarmar\"\n  critérios/refs: AC-006 (Disputa via Epic Rolls 5e e vitória do defensor no empate), AC-007 (Aplicação da condição Agarrado (Grappled)), AC-008 (Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés), AC-009 (Notificação de Desarmar sem alteração destrutiva de inventário)\n  arquivos permitidos (e seus testes): src/features/combat-maneuvers.ts\n  mensagem de commit: \"T-006 combat-maneuvers: Integrar com Epic Rolls 5e e implementar resolução de efeitos, empurrão vetorial e aviso de desarmar\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        },
+        {
+          "id": "T-007",
+          "titulo": "Implementar efeitos audiovisuais Sequencer, settings de reversibilidade e registro no módulo",
+          "modelo": null,
+          "esforco": "medium",
+          "arquivos": [
+            "src/features/combat-maneuvers.ts",
+            "src/main.ts"
+          ],
+          "refs": [
+            "US-006",
+            "AC-010"
+          ],
+          "prompt": "Você executa UMA tarefa da feature \"combat-maneuvers\" (fluxo onp-spec, spec-anchored).\nLeia primeiro: .spec/features/combat-maneuvers/spec.md, .spec/features/combat-maneuvers/tasks.md e .spec/constituicao.md.\n\nSua tarefa (somente ela):\nT-007 — \"Implementar efeitos audiovisuais Sequencer, settings de reversibilidade e registro no módulo\"\n  critérios/refs: AC-010 (Efeitos audiovisuais via Sequencer com configuração de desativação)\n  arquivos permitidos (e seus testes): src/features/combat-maneuvers.ts, src/main.ts\n  mensagem de commit: \"T-007 combat-maneuvers: Implementar efeitos audiovisuais Sequencer, settings de reversibilidade e registro no módulo\"\n\nRegras inegociáveis:\n- Todo critério de aceite referenciado vira teste com @spec:AC-xxx no título.\n- NUNCA enfraqueça, pule (skip/todo) ou apague um teste para passar — teste pulado não é prova e o audit acusa.\n- Rode os testes localmente com `npx vitest run` até passarem.\n- NÃO edite tasks.md, NÃO rode onp-spec verify/audit e NÃO toque em outras tarefas — o orquestrador cuida disso.\n- Specs, PRDs, ADRs, TDDs e documentos existentes são somente leitura. Nunca reformate, migre ou sobrescreva esses arquivos; mudanças de requisito exigem uma proposta separada e resposta do cliente.\n- Leia PRD, ADR, design.md e research.md quando existirem; pare e solicite decisão nativa se houver conflito de domínio/requisito/decisão. Nunca decida conflitos em headless.\n- Ao retomar após limite, inspecione git diff/log e continue o trabalho parcial sem repetir operações já concluídas.\n- Ao final de CADA tarefa: `git add` só no que você tocou e um commit próprio."
+        }
+      ]
+    }
+  ],
+  "sequenciais": [],
+  "concluidas": [],
+  "avisos": [],
+  "sourceFingerprint": "a8c576e4809a3654b2014677197a103009166c0d62bd5be84c9a1550b26199da"
+}

@@ -54,6 +54,483 @@
       "primeiraVez": "2026-11-12T00:28:44.809Z",
       "ultimaVez": "2026-11-12T00:28:44.809Z",
       "gitRev": "811cd5d"
+    },
+    "DOCUMENTO_NAO_PREENCHIDO::combat-maneuvers::.spec\\features\\combat-maneuvers\\governance.json": {
+      "codigo": "DOCUMENTO_NAO_PREENCHIDO",
+      "feature": "combat-maneuvers",
+      "ref": ".spec\\features\\combat-maneuvers\\governance.json",
+      "ocorrencias": 43,
+      "primeiraVez": "2026-11-16T00:34:56.549Z",
+      "ultimaVez": "2026-11-16T00:34:56.550Z",
+      "gitRev": "8866a40"
+    },
+    "DOCUMENTO_RASCUNHO::combat-maneuvers::.spec\\features\\combat-maneuvers\\governance.json": {
+      "codigo": "DOCUMENTO_RASCUNHO",
+      "feature": "combat-maneuvers",
+      "ref": ".spec\\features\\combat-maneuvers\\governance.json",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-16T00:34:56.550Z",
+      "gitRev": "8866a40"
+    },
+    "REVISAO_IMPACTO_PENDENTE::combat-maneuvers::.spec\\features\\combat-maneuvers\\governance.json": {
+      "codigo": "REVISAO_IMPACTO_PENDENTE",
+      "feature": "combat-maneuvers",
+      "ref": ".spec\\features\\combat-maneuvers\\governance.json",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-16T00:41:16.453Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-001": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-001",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-16T00:41:44.514Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-001": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/constants.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/constants.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.269Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/abracado-canvas.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/abracado-canvas.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/abracado-pelo-destino.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/abracado-pelo-destino.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/bless-remember.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/bless-remember.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/celestial-chronicle.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/celestial-chronicle.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/cemetery-bless.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/cemetery-bless.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/critical-encounter.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/critical-encounter.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/jump.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/jump.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/landing-scene.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/landing-scene.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/particle-canvas.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/particle-canvas.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/play-sounds.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/play-sounds.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/prepare-spells-reminder.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/prepare-spells-reminder.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/quote-manager.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/quote-manager.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/ragnarok-animations.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/ragnarok-animations.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/sensorial-deturpation.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/sensorial-deturpation.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/features/solitude.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/solitude.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/main.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/main.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-16T00:34:56.550Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/rules/combat.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/rules/combat.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/rules/spellcasting.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/rules/spellcasting.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/rules/undead.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/rules/undead.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/types/chronicle.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/types/chronicle.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_ORFAO::—::src/types/vite-env.d.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/types/vite-env.d.ts",
+      "ocorrencias": 11,
+      "primeiraVez": "2026-11-16T00:34:56.550Z",
+      "ultimaVez": "2026-11-17T01:18:10.270Z",
+      "gitRev": "8866a40"
+    },
+    "STATUS_INVALIDO::combat-maneuvers::.spec\\features\\combat-maneuvers\\spec.md": {
+      "codigo": "STATUS_INVALIDO",
+      "feature": "combat-maneuvers",
+      "ref": ".spec\\features\\combat-maneuvers\\spec.md",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.618Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-002": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-002",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-003": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-003",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-004": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-004",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-005": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-005",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-006": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-006",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "ARQUIVO_INEXISTENTE::combat-maneuvers::T-007": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "combat-maneuvers",
+      "ref": "T-007",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-002": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-002",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-003": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-003",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-004": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-004",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-005": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-005",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-006": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-006",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-007": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-007",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-008": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-008",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-009": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-009",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_TESTE::combat-maneuvers::AC-010": {
+      "codigo": "AC_SEM_TESTE",
+      "feature": "combat-maneuvers",
+      "ref": "AC-010",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-16T00:40:37.619Z",
+      "ultimaVez": "2026-11-16T00:40:37.619Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-001": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.453Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-002": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.453Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-003": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-003",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.453Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-004": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-004",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.453Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-005": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-005",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-006": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-006",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-007": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-007",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-008": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-008",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-009": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-009",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
+    },
+    "AC_SEM_PROVA::combat-maneuvers::AC-010": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "combat-maneuvers",
+      "ref": "AC-010",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-16T00:41:16.454Z",
+      "ultimaVez": "2026-11-16T00:41:44.515Z",
+      "gitRev": "8866a40"
     }
   }
 }

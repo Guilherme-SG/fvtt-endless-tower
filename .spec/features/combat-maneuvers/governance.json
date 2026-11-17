@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "large": true,
+  "documentationContract": "onp-docs-v1",
+  "domains": [],
+  "clientRequest": "Lets implement a generic feature to do disarm/shove/grapple automation. The 3 actions are manovers that all creatures can do and are based on Athletics vs Athletics or Acrobatics. The workflow must be: - Attacker select a target - Attacker uses the feature - Owner of attacker and attacked get prompt to roll check (The attacked chooses what they'll roll, Allows all kind of visibility, Can use other modules already provided)",
+  "review": {
+    "summary": "Revisão semântica final de impacto das manobras de combate (combat-maneuvers). Feature completamente implementada e provada com 10/10 critérios de aceite e princípios P-001, P-003, P-004 e P-007.",
+    "reviewer": "antigravity",
+    "conflicts": [],
+    "fingerprint": "d6036dafe95ab40ff74d96ba6d9f409e95a70e9d9b6cd8619848fb079ccd0585",
+    "ownFingerprint": "d6036dafe95ab40ff74d96ba6d9f409e95a70e9d9b6cd8619848fb079ccd0585",
+    "reviewedAt": "2026-11-16T01:13:04.959Z",
+    "documents": [
+      ".spec/features/combat-maneuvers/prd.md",
+      ".spec/features/combat-maneuvers/adr.md",
+      ".spec/features/combat-maneuvers/design.md",
+      ".spec/features/combat-maneuvers/spec.md",
+      ".spec/features/combat-maneuvers/tasks.md",
+      ".spec/features/combat-maneuvers/research.md",
+      ".spec/constituicao.md",
+      "onpspec.config.json"
+    ]
+  },
+  "decisions": []
+}

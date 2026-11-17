@@ -1,0 +1,79 @@
+{
+  "feature": "combat-maneuvers",
+  "timestamp": "2026-11-17T01:17:54.740Z",
+  "gitRev": "8866a40",
+  "command": "npx vitest run --reporter=tap",
+  "reporter": "tap",
+  "exitCode": 0,
+  "testsParsed": 61,
+  "results": {
+    "AC-001": {
+      "status": "pass",
+      "testName": "AC-001: Itens de manobra criados e sincronizados em todos os atores @spec:AC-001 # time=5.32ms",
+      "method": "tap"
+    },
+    "AC-002": {
+      "status": "pass",
+      "testName": "AC-002: Bloqueio de alvos fora do alcance corpo a corpo @spec:AC-002 # time=0.53ms",
+      "method": "tap"
+    },
+    "AC-003": {
+      "status": "pass",
+      "testName": "AC-003: Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido @spec:AC-003 # time=0.31ms",
+      "method": "tap"
+    },
+    "AC-004": {
+      "status": "pass",
+      "testName": "AC-004: Seletor de visibilidade pré-configurado com o modo do chat @spec:AC-004 # time=0.91ms",
+      "method": "tap"
+    },
+    "AC-005": {
+      "status": "pass",
+      "testName": "AC-005: Prompt interativo de defesa para o dono do alvo @spec:AC-005 # time=0.27ms",
+      "method": "tap"
+    },
+    "AC-006": {
+      "status": "pass",
+      "testName": "AC-006: Disputa via Epic Rolls 5e e vitória do defensor no empate @spec:AC-006 # time=0.27ms",
+      "method": "tap"
+    },
+    "AC-007": {
+      "status": "pass",
+      "testName": "AC-007: Aplicação da condição Agarrado (Grappled) @spec:AC-007 # time=0.25ms",
+      "method": "tap"
+    },
+    "AC-008": {
+      "status": "pass",
+      "testName": "AC-008: Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés @spec:AC-008 # time=0.30ms",
+      "method": "tap"
+    },
+    "AC-009": {
+      "status": "pass",
+      "testName": "AC-009: Notificação de Desarmar sem alteração destrutiva de inventário @spec:AC-009 # time=0.28ms",
+      "method": "tap"
+    },
+    "AC-010": {
+      "status": "pass",
+      "testName": "AC-010: Efeitos audiovisuais via Sequencer com configuração de desativação @spec:AC-010 # time=0.38ms",
+      "method": "tap"
+    }
+  },
+  "principles": {
+    "P-003": {
+      "status": "pass",
+      "testName": "@principle:P-003 Desacoplamento de lógica pura garantido # time=4.92ms"
+    },
+    "P-004": {
+      "status": "pass",
+      "testName": "@principle:P-004 Reversibilidade visual possui método de parada e cleanup # time=0.80ms"
+    },
+    "P-005": {
+      "status": "pass",
+      "testName": "@principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon # time=1.30ms"
+    },
+    "P-006": {
+      "status": "pass",
+      "testName": "@principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas # time=16.19ms"
+    }
+  }
+}
