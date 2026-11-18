@@ -1,8 +1,8 @@
 /**
- * Endless Tower: tela de login.
- * Carregado em toda página de layout "setup" do Foundry, mas só age na página /join
- * de um mundo cuja descrição contém <div class="et-login-marker"></div> ou título Endless Tower.
- * Outros mundos e as demais telas não são afetados.
+ * Endless Tower: pre-game login screen.
+ * Loaded on every Foundry "setup" layout page, but only activates on /join
+ * for a world containing <div class="et-login-marker"></div> or title "Endless Tower".
+ * Other worlds and setup screens remain untouched.
  */
 (() => {
   "use strict";
@@ -10,7 +10,7 @@
   const WORLD_TITLE = "Endless Tower";
   const isTargetWorld = document.title.trim() === WORLD_TITLE;
 
-  // Ativação ultra-rápida no root para evitar qualquer flash
+  // Immediate root gate activation to prevent FOUC
   if (isTargetWorld) {
     document.documentElement.classList.add("et-world", "et-gate");
     if (document.body) {
@@ -30,7 +30,7 @@
   const KEY = "endless-tower.login";
   const MARKER = ".et-login-marker";
 
-  /* ---------- Preferências do jogador (por navegador) ---------- */
+  /* ---------- Browser Player Preferences ---------- */
   const prefs = {
     get volume() {
       const v = parseFloat(localStorage.getItem(`${KEY}.volume`));
@@ -41,7 +41,7 @@
     set muted(v) { localStorage.setItem(`${KEY}.muted`, v ? "1" : "0"); }
   };
 
-  /* ---------- Áudio ---------- */
+  /* ---------- Audio ---------- */
   const bgm = new Audio(BGM_URL);
   bgm.loop = true;
 
@@ -57,7 +57,7 @@
     sfx.play().catch(() => {});
   };
 
-  /* ---------- Helpers de DOM ---------- */
+  /* ---------- DOM Helpers ---------- */
   const el = (tag, className, text) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -65,7 +65,7 @@
     return node;
   };
 
-  /* ---------- Living Art: Fundo Animado com Ken Burns e Partículas ---------- */
+  /* ---------- Living Art: Animated Background with Ken Burns & Particles ---------- */
   const mountLivingBackground = () => {
     if (document.getElementById("et-living-bg")) return () => {};
     const wrap = el("div");
@@ -85,7 +85,7 @@
     wrap.append(img, rays, canvas);
     document.body.prepend(wrap);
 
-    // Partículas flutuantes douradas celestiais
+    // Floating celestial golden motes
     const ctx = canvas.getContext("2d");
     let animId = null;
     let w = (canvas.width = window.innerWidth);
@@ -119,7 +119,7 @@
         p.sway += p.swaySpeed;
         p.x += Math.sin(p.sway) * p.swayAmp;
 
-        // Fade in suave na parte inferior, fade out suave perto do topo
+        // Smooth fade-in near bottom, fade-out near top
         const lifeRatio = p.y / h;
         p.alpha = Math.sin(Math.max(0, Math.min(1, lifeRatio)) * Math.PI) * p.baseAlpha;
 
@@ -147,7 +147,7 @@
     };
   };
 
-  /* ---------- Controle de volume (pílula no canto) ---------- */
+  /* ---------- Volume Control (corner pill) ---------- */
   const buildVolumePill = () => {
     if (document.querySelector(".et-bgm")) return;
     const pill = el("div", "et-bgm");
@@ -278,13 +278,13 @@
 
     trigger.addEventListener("click", toggleDropdown);
 
-    // Fechar ao clicar fora
+    // Close when clicking outside
     const onClickOutside = (e) => {
       if (!container.contains(e.target)) closeDropdown();
     };
     document.addEventListener("click", onClickOutside);
 
-    // Fechar ao pressionar Escape
+    // Close on Escape key
     const onKeyDown = (e) => {
       if (e.key === "Escape" && container.classList.contains("is-open")) {
         closeDropdown();
@@ -293,10 +293,10 @@
     };
     document.addEventListener("keydown", onKeyDown);
 
-    // Sincronizar se o select mudar externamente
+    // Sync if native select changes externally
     select.addEventListener("change", updateLabel);
 
-    // Observer para caso as opções mudem (ex: jogadores conectando/desconectando)
+    // Observe option updates (e.g., players connecting/disconnecting)
     const optObserver = new MutationObserver(() => {
       if (container.classList.contains("is-open")) buildItems();
       else updateLabel();
@@ -346,13 +346,13 @@
     overlay.addEventListener("pointerdown", enter);
     document.addEventListener("keydown", onKey);
 
-    // Som de clique ao entrar na sessão (botão ou Enter no formulário)
+    // Play click sound when joining session (button or Enter in form)
     const onSubmit = (event) => {
       if (event.target.querySelector?.('button[name="join"]')) playClick();
     };
     document.addEventListener("submit", onSubmit, true);
 
-    // Desfaz tudo se o mundo não for o Endless Tower
+    // Tear down everything if world is not Endless Tower
     return () => {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("submit", onSubmit, true);
@@ -365,7 +365,7 @@
     };
   };
 
-  /* ---------- Ativação ---------- */
+  /* ---------- Activation ---------- */
   let teardown = null;
   if (isTargetWorld) teardown = startSplash();
 

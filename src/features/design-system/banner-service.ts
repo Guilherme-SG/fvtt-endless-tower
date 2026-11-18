@@ -1,5 +1,11 @@
 import { MODULE_ID, MODULE_TITLE } from "../../constants";
-import { DesignSystemSound, UISoundType } from "./sound-effects";
+import {
+  BANNER_CUSTOM_SOUND_SCALE,
+  BANNER_TRANSITION_DELAY_MS,
+  DEFAULT_BANNER_DURATION_MS,
+  SOCKET_ACTION_BANNER,
+} from "./config";
+import { DesignSystemSound, type UISoundType } from "./sound-effects";
 
 export type BannerType = "encounter" | "victory" | "celestial" | "arcane" | "curse";
 
@@ -14,8 +20,9 @@ export interface BannerOptions {
   broadcast?: boolean;
 }
 
-const SOCKET_ACTION_BANNER = "DS_UNIVERSAL_BANNER";
-
+/**
+ * Queues and displays fullscreen edge-to-edge cinematic ribbon banners with optional socket broadcast.
+ */
 export class BannerService {
   private static instance: BannerService | null = null;
   private overlayEl: HTMLElement | null = null;
@@ -38,7 +45,7 @@ export class BannerService {
   public init(): void {
     this.injectOverlayDOM();
     this.registerSocketListener();
-    console.log(`${MODULE_TITLE} | Serviço de Banners Cinemáticos inicializado.`);
+    console.log(`${MODULE_TITLE} | Cinematic BannerService initialized.`);
   }
 
   private injectOverlayDOM(): void {
@@ -88,8 +95,7 @@ export class BannerService {
   }
 
   /**
-   * Exibe um banner cinemático edge-to-edge.
-   * Se o usuário for GM e broadcast=true, replica para todos os jogadores via socket.
+   * Displays an edge-to-edge cinematic banner, optionally broadcasting to all clients when called by a GM.
    */
   public show(options: BannerOptions): void {
     if (options.broadcast && (game.user as any)?.isGM) {
@@ -128,9 +134,8 @@ export class BannerService {
     if (!this.overlayEl) return;
 
     const bannerType: BannerType = opts.type ?? "celestial";
-    const duration = opts.duration ?? 3800;
+    const duration = opts.duration ?? DEFAULT_BANNER_DURATION_MS;
 
-    // Remove classes anteriores de tipo
     this.overlayEl.classList.remove(
       "et-type-encounter",
       "et-type-victory",
@@ -140,7 +145,6 @@ export class BannerService {
     );
     this.overlayEl.classList.add(`et-type-${bannerType}`);
 
-    // Configura conteúdo de texto e ícones
     if (this.titleEl) {
       this.titleEl.textContent = opts.title.trim().toUpperCase();
     }
@@ -162,10 +166,7 @@ export class BannerService {
       }
     }
 
-    // Toca efeito sonoro correspondente
     this.playBannerSound(opts.sound, bannerType);
-
-    // Ativa visibilidade do banner
     this.overlayEl.classList.add("et-active");
 
     if (this.hideTimer) {
@@ -176,15 +177,14 @@ export class BannerService {
     this.hideTimer = window.setTimeout(() => {
       this.overlayEl?.classList.remove("et-active");
 
-      // Aguarda término da transição de opacidade antes de disparar o próximo banner
       window.setTimeout(() => {
         try {
           opts.onComplete?.();
         } catch (err) {
-          console.error(`${MODULE_TITLE} | Erro no callback onComplete do banner:`, err);
+          console.error(`${MODULE_TITLE} | Error in banner onComplete callback:`, err);
         }
         this.processNext();
-      }, 500);
+      }, BANNER_TRANSITION_DELAY_MS);
     }, duration);
   }
 
@@ -210,10 +210,12 @@ export class BannerService {
     if (typeof customSound === "string" && customSound.trim().length > 0) {
       try {
         const audio = new Audio(customSound);
-        audio.volume = DesignSystemSound.getInstance().getMasterVolume() * 0.85;
+        audio.volume = DesignSystemSound.getInstance().getMasterVolume() * BANNER_CUSTOM_SOUND_SCALE;
         audio.play().catch(() => {});
         return;
-      } catch {}
+      } catch {
+        // Ignore custom audio errors
+      }
     }
 
     const soundManager = DesignSystemSound.getInstance();

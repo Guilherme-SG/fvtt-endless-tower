@@ -7,7 +7,7 @@
 ## T-001 — Estrutura de Tokens CSS, Catálogo W3C DTCG e Blindagem FontAwesome [concluida]
 
 - Refs: US-001, AC-001, AC-002, AC-003
-- Arquivos: styles/design-system/tokens.css, styles/design-system/buttons.css, src/features/design-system/agentic-tokens.ts
+- Arquivos: styles/design-system/tokens.css, styles/design-system/buttons.css, src/features/design-system/agentic-tokens.ts, src/features/design-system/config.ts, src/features/design-system/rules.ts
 - Notas: Estabelecer paleta canônica, catálogo estruturado W3C DTCG com auditoria matemática WCAG 2.1 (`P-011`) e regra incondicional de proteção de fontes para classes FontAwesome.
 
 ## T-002 — Escopo Estrito de Botões, Formulários, Janelas e Fichas Opt-In [concluida]
@@ -31,13 +31,13 @@
 ## T-005 — Pausa Celestial, Transições e Reversibilidade [concluida]
 
 - Refs: US-005, AC-013, AC-014, AC-015
-- Arquivos: styles/chronicle.css, src/features/celestial-chronicle.ts
+- Arquivos: styles/chronicle.css, src/features/celestial-chronicle/config.ts, src/features/celestial-chronicle/rules.ts, src/features/celestial-chronicle/adapter.ts, src/features/celestial-chronicle/index.ts
 - Notas: Conter largura da barra de pausa com `fit-content` e garantir desacoplamento de cena e reversibilidade P-004.
 
 ## T-006 — Despachante Sonoro e Inicializador do Sistema [concluida]
 
 - Refs: US-006, AC-016, AC-017, AC-018
-- Arquivos: src/features/design-system/sound-effects.ts, src/features/design-system/design-system.ts
+- Arquivos: src/features/design-system/sound-effects.ts, src/features/design-system/design-system.ts, src/features/design-system/adapter.ts, src/features/design-system/index.ts
 - Notas: Remover som de clique de botão e eventos globais intrusivos; manter rolagens de dados e stingers.
 
 ## T-007 — Suíte de Testes Automatizados Vitest [concluida]

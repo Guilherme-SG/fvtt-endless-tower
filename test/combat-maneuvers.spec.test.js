@@ -6,7 +6,7 @@ import {
   calculatePushVector,
   getDisarmModifiers,
   getSizeRank,
-} from '../src/rules/maneuvers';
+} from '../src/features/combat-maneuvers/rules';
 import {
   MANEUVER_DEFINITIONS,
   ensureManeuverItemsOnActor,

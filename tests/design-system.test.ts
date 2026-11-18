@@ -225,7 +225,9 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       const windowsCss = read("styles/design-system/windows.css");
       const cardsCss = read("styles/design-system/cards.css");
       const abracadoCss = read("styles/abracado-destino.css");
-      const abracadoTs = read("src/features/abracado-pelo-destino.ts");
+      const abracadoTs =
+        read("src/features/abracado-pelo-destino/rules.ts") +
+        read("src/features/abracado-pelo-destino/adapter.ts");
       const chatEnhancerTs = read("src/features/design-system/chat-enhancer.ts");
 
       // Preservação integral de simraki-character-monitor (.cm-msg):
@@ -304,7 +306,7 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.card-footer button\.footer-button/);
 
       // Alternância Monk's Token Bar (mtb) <-> Ripper's Epic Rolls (rer) no Midi-QoL
-      const criticalEncounterTs = read("src/features/critical-encounter.ts");
+      const criticalEncounterTs = read("src/features/critical-encounter/adapter.ts");
       const mainTs = read("src/main.ts");
       expect(criticalEncounterTs).toMatch(/toggleRollSystem/);
       expect(criticalEncounterTs).toMatch(/et-roll-system-toggle-btn/);
@@ -516,7 +518,7 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
      * Transição de cena em DOM overlay desacoplada do PixiJS.
      */
     it("@spec:AC-014 transições de cena utilizam contêiner fixo no body desacoplado do PixiJS #board", () => {
-      const chronicleTs = read("src/features/celestial-chronicle.ts");
+      const chronicleTs = read("src/features/celestial-chronicle/adapter.ts");
 
       expect(chronicleTs).toMatch(/document\.body\.appendChild/);
       expect(chronicleTs).not.toMatch(/canvas\.stage\.addChild/);
@@ -527,7 +529,7 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
      * Reversibilidade P-004 em três níveis para efeitos visuais dinâmicos.
      */
     it("@spec:AC-015 efeitos dinâmicos suportam toggle e limpeza no canvasTearDown", () => {
-      const chronicleTs = read("src/features/celestial-chronicle.ts");
+      const chronicleTs = read("src/features/celestial-chronicle/adapter.ts");
 
       expect(chronicleTs).toMatch(/stopQuoteCycling/);
       expect(chronicleTs).toMatch(/remove\(\)/);

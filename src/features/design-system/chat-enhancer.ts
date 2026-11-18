@@ -1,100 +1,13 @@
-import { MODULE_ID, MODULE_TITLE } from "../../constants";
+import { MODULE_TITLE } from "../../constants";
+import { UI_TEXT } from "./config";
+import { isAttackRollCriticalOrFumble, type AttackRollOutcome } from "./rules";
 
-export interface AttackRollOutcome {
-  isCritical: boolean;
-  isFumble: boolean;
-}
-
-const NON_ATTACK_ROLL_TYPES = new Set([
-  "damage",
-  "healing",
-  "save",
-  "skill",
-  "tool",
-  "ability",
-  "initiative",
-  "death",
-  "hitDie",
-]);
-
-function inspectD20RollTerms(roll: any): AttackRollOutcome {
-  let isCritical = false;
-  let isFumble = false;
-
-  if (!roll || roll.options?.type === "damage") {
-    return { isCritical, isFumble };
-  }
-
-  for (const term of roll.terms || []) {
-    if (term?.faces !== 20 || !Array.isArray(term.results)) continue;
-
-    for (const res of term.results) {
-      if (res.active === false || res.discarded || res.rerolled) continue;
-      if (res.critical || res.result === 20) isCritical = true;
-      if (res.fumble || res.result === 1) isFumble = true;
-    }
-  }
-
-  return { isCritical, isFumble };
-}
+export { isAttackRollCriticalOrFumble, type AttackRollOutcome };
 
 /**
- * Avalia se uma mensagem de chat possui acerto ou falha crítica exclusivamente em rolagem de ATAQUE.
- * Nunca dispara para dados de dano (ex: 1d6 com resultado 1), testes de resistência, perícias ou dados descartados.
+ * Enhances Foundry chat messages with critical attack badges, private whisper seals,
+ * and contrast fixes while preserving third-party modules like simraki-character-monitor.
  */
-export function isAttackRollCriticalOrFumble(message: any, el?: HTMLElement | null): AttackRollOutcome {
-  const midiAttackEl = el?.querySelector?.(".midi-qol-attack-roll") as HTMLElement | null;
-  const midiFlags = message?.flags?.["midi-qol"];
-
-  // 1. Caso Card Midi-QoL com seção explícita de ataque
-  if (midiAttackEl) {
-    const attackTotalEl = midiAttackEl.querySelector(".dice-total");
-    let isCritical =
-      attackTotalEl?.classList?.contains("critical") ||
-      attackTotalEl?.classList?.contains("high") ||
-      midiFlags?.isCritical === true;
-    let isFumble =
-      attackTotalEl?.classList?.contains("fumble") ||
-      attackTotalEl?.classList?.contains("low") ||
-      midiFlags?.isFumble === true;
-
-    if (!isCritical && !isFumble && Array.isArray(message?.rolls) && message.rolls.length > 0) {
-      const firstRollOutcome = inspectD20RollTerms(message.rolls[0]);
-      isCritical = firstRollOutcome.isCritical;
-      isFumble = firstRollOutcome.isFumble;
-    }
-
-    return { isCritical: Boolean(isCritical), isFumble: Boolean(isFumble) };
-  }
-
-  // 2. Caso Card exclusivo de dano do Midi-QoL (sem ataque)
-  if (el?.querySelector?.(".midi-qol-damage-roll")) {
-    return { isCritical: false, isFumble: false };
-  }
-
-  // 3. Verifica tipo de rolagem do D&D 5e (bloqueia dano, cura, saves, skills, iniciativa, etc.)
-  const rollType = message?.flags?.dnd5e?.roll?.type ?? message?.flags?.dnd5e?.activity?.type;
-  if (typeof rollType === "string" && rollType !== "attack") {
-    if (NON_ATTACK_ROLL_TYPES.has(rollType) || rollType.length > 0) {
-      return { isCritical: false, isFumble: false };
-    }
-  }
-
-  // 4. Inspeciona apenas rolagens de d20 não marcadas como dano
-  let isCritical = Boolean(midiFlags?.isCritical === true);
-  let isFumble = Boolean(midiFlags?.isFumble === true);
-
-  if (!isCritical && !isFumble) {
-    for (const roll of message?.rolls || []) {
-      const outcome = inspectD20RollTerms(roll);
-      if (outcome.isCritical) isCritical = true;
-      if (outcome.isFumble) isFumble = true;
-    }
-  }
-
-  return { isCritical, isFumble };
-}
-
 export class ChatEnhancer {
   private static instance: ChatEnhancer | null = null;
 
@@ -109,7 +22,7 @@ export class ChatEnhancer {
 
   public init(): void {
     this.registerHooks();
-    console.log(`${MODULE_TITLE} | Chat Enhancer do Design System inicializado.`);
+    console.log(`${MODULE_TITLE} | Design System ChatEnhancer initialized.`);
   }
 
   private registerHooks(): void {
@@ -119,14 +32,14 @@ export class ChatEnhancer {
   }
 
   /**
-   * Aplica melhorias visuais e runas ao elemento HTML de cada mensagem de chat renderizada.
+   * Applies visual enhancements and rune badges to each rendered chat message element.
    */
   private enhanceChatMessage(message: any, html: any): void {
     const el: HTMLElement =
       typeof HTMLElement !== "undefined" && html instanceof HTMLElement ? html : html?.[0] ?? html;
     if (!el) return;
 
-    // Preserva integralmente os cards do módulo simraki-character-monitor
+    // Preserve simraki-character-monitor cards untouched
     if (
       message?.flags?.["simraki-character-monitor"] ||
       el.classList?.contains("cm-msg") ||
@@ -136,7 +49,7 @@ export class ChatEnhancer {
       return;
     }
 
-    // 0. Remove estilos inline de cor de jogador aplicados ao remetente (evita fundo/texto sem contraste)
+    // Remove inline player color overrides on sender name to prevent low-contrast backgrounds
     const sender = el.querySelector(".message-sender") as HTMLElement | null;
     if (sender) {
       sender.style.removeProperty("background-color");
@@ -145,7 +58,7 @@ export class ChatEnhancer {
       sender.style.removeProperty("text-shadow");
     }
 
-    // 1. Detecção de Rolagem Crítica / Falha (restrita exclusivamente à rolagem de ataque)
+    // Detect critical hit or fumble strictly on attack rolls
     const { isCritical, isFumble } = isAttackRollCriticalOrFumble(message, el);
 
     const midiAttackEl = el.querySelector(".midi-qol-attack-roll") as HTMLElement | null;
@@ -166,8 +79,8 @@ export class ChatEnhancer {
         badge.style.cssText =
           "margin: 8px auto 4px auto; display: flex; justify-content: center; width: fit-content; max-width: 100%; flex-basis: 100%;";
         badge.innerHTML = isCritical
-          ? `<span class="et-rune-sparkle">✦</span> SUCESSO CRÍTICO <span class="et-rune-sparkle">✦</span>`
-          : `<span class="et-rune-sparkle">✧</span> FALHA CRÍTICA <span class="et-rune-sparkle">✧</span>`;
+          ? `<span class="et-rune-sparkle">✦</span> ${UI_TEXT.chatCriticalBadge} <span class="et-rune-sparkle">✦</span>`
+          : `<span class="et-rune-sparkle">✧</span> ${UI_TEXT.chatFumbleBadge} <span class="et-rune-sparkle">✧</span>`;
 
         const rowParent = midiAttackEl?.parentElement;
         const isRowContainer =
@@ -184,7 +97,7 @@ export class ChatEnhancer {
       }
     }
 
-    // 2. Detecção e Estilização de Mensagem Não-Pública (Banner no topo sem quebrar o flexrow do header)
+    // Insert non-public visibility seal before header without breaking flexrow
     if ((message.whisper && message.whisper.length > 0) || message.blind) {
       el.classList.add("et-chat-whisper");
       if (!el.querySelector(".et-whisper-banner")) {
@@ -195,7 +108,7 @@ export class ChatEnhancer {
 
         const whisperSeal = document.createElement("div");
         whisperSeal.className = "et-whisper-banner";
-        whisperSeal.innerHTML = `<i class="fas ${visibilityIcon}"></i> Comunicação Sigilosa`;
+        whisperSeal.innerHTML = `<i class="fas ${visibilityIcon}"></i> ${UI_TEXT.chatWhisperBadge}`;
         el.insertBefore(whisperSeal, el.firstChild);
       }
     }

@@ -6,32 +6,31 @@ import {
   getDisarmModifiers,
   calculatePushVector,
   type CreatureInfo,
-} from '../src/rules/maneuvers';
+} from '../src/features/combat-maneuvers/rules';
 
 // ---------------------------------------------------------------------------
-// Prova de P-003: src/rules/maneuvers.ts não deve referenciar Foundry globals
+// Proof for P-003: rules.ts must not reference Foundry globals
 // ---------------------------------------------------------------------------
-describe('P-003 — Desacoplamento do Foundry', () => {
-  it('maneuvers.ts não contém referências a game, canvas, Hooks ou ui', async () => {
+describe('P-003 — Foundry decoupling', () => {
+  it('combat-maneuvers/rules.ts contains no references to game, canvas, Hooks, ui, or ChatMessage', async () => {
     const fs = await import('node:fs/promises');
-    const rawSrc = await fs.readFile(new URL('../src/rules/maneuvers.ts', import.meta.url), 'utf-8');
+    const rawSrc = await fs.readFile(new URL('../src/features/combat-maneuvers/rules.ts', import.meta.url), 'utf-8');
 
-    // Remove linhas de comentários antes de checar — evita falso-positivo em texto de doc.
     const codeOnly = rawSrc
       .split('\n')
       .filter(line => !/^\s*(\/\/|\/\*|\*)/.test(line))
       .join('\n');
 
-    // Padrões proibidos como identificadores funcionais (não em strings literais de doc)
     const forbidden: Array<[RegExp, string]> = [
-      [/\bgame\s*[.[(]/, 'game (acesso a propriedade/método)'],
-      [/\bcanvas\s*[.[(]/, 'canvas (acesso a propriedade/método)'],
-      [/\bHooks\s*[.[(]/, 'Hooks (acesso a propriedade/método)'],
-      [/\bui\s*[.[(]/, 'ui (acesso a propriedade/método)'],
+      [/\bgame\s*[.[(]/, 'game (property/method access)'],
+      [/\bcanvas\s*[.[(]/, 'canvas (property/method access)'],
+      [/\bHooks\s*[.[(]/, 'Hooks (property/method access)'],
+      [/\bui\s*[.[(]/, 'ui (property/method access)'],
+      [/\bChatMessage\s*[.[(]/, 'ChatMessage (property/method access)'],
     ];
 
     for (const [pattern, label] of forbidden) {
-      expect(codeOnly, `Encontrado padrão proibido: ${label}`).not.toMatch(pattern);
+      expect(codeOnly, `Forbidden pattern found: ${label}`).not.toMatch(pattern);
     }
   });
 });

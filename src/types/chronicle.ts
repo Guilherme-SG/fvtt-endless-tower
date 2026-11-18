@@ -1,5 +1,5 @@
 /**
- * Interfaces e tipos para o sistema Celestial Chronicle (Pause & Scene Transitions).
+ * Interfaces and types for the Celestial Chronicle system (Pause & Scene Transitions).
  */
 
 export interface Quote {

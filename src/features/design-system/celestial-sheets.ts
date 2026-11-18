@@ -1,48 +1,19 @@
 import { MODULE_ID, MODULE_TITLE } from "../../constants";
+import {
+  ENDLESS_TOWER_SHEET_CLASS,
+  ENDLESS_TOWER_SHEET_LABEL,
+} from "./config";
+import { createEndlessTowerSheetClasses, type SheetRegistryResult } from "./rules";
 
-export const ENDLESS_TOWER_SHEET_LABEL = "Endless Tower Sheet";
-export const ENDLESS_TOWER_SHEET_CLASS = "et-sheet";
-
-export interface SheetRegistryResult {
-  CharacterSheetClass: any;
-  NPCSheetClass: any;
-}
-
-/**
- * Cria subclasses puras de CharacterActorSheet e NPCActorSheet com a classe `.et-sheet`,
- * mantendo 100% do layout e funcionalidades nativas do D&D 5e.
- */
-export function createEndlessTowerSheetClasses(dnd5eActorApps: {
-  CharacterActorSheet?: any;
-  NPCActorSheet?: any;
-}): SheetRegistryResult | null {
-  const BaseCharacterSheet = dnd5eActorApps?.CharacterActorSheet;
-  const BaseNPCSheet = dnd5eActorApps?.NPCActorSheet;
-
-  if (!BaseCharacterSheet || !BaseNPCSheet) {
-    return null;
-  }
-
-  class EndlessTowerCharacterSheet extends BaseCharacterSheet {
-    static DEFAULT_OPTIONS = {
-      classes: [ENDLESS_TOWER_SHEET_CLASS],
-    };
-  }
-
-  class EndlessTowerNPCSheet extends BaseNPCSheet {
-    static DEFAULT_OPTIONS = {
-      classes: [ENDLESS_TOWER_SHEET_CLASS],
-    };
-  }
-
-  return {
-    CharacterSheetClass: EndlessTowerCharacterSheet,
-    NPCSheetClass: EndlessTowerNPCSheet,
-  };
-}
+export {
+  ENDLESS_TOWER_SHEET_CLASS,
+  ENDLESS_TOWER_SHEET_LABEL,
+  createEndlessTowerSheetClasses,
+  type SheetRegistryResult,
+};
 
 /**
- * Registra as fichas "Endless Tower Sheet" (Player e NPC) sem sobrescrever o padrão do sistema.
+ * Registers the opt-in "Endless Tower Sheet" variants (Character and NPC) without overriding system defaults.
  */
 export function registerEndlessTowerSheets(): boolean {
   const dnd5eActors = (globalThis as any).dnd5e?.applications?.actor;
@@ -71,6 +42,8 @@ export function registerEndlessTowerSheets(): boolean {
     label: ENDLESS_TOWER_SHEET_LABEL,
   });
 
-  console.log(`${MODULE_TITLE} | Fichas "Endless Tower Sheet" (Character e NPC) registradas.`);
+  console.log(
+    `${MODULE_TITLE} | Registered "${ENDLESS_TOWER_SHEET_LABEL}" sheets (Character and NPC).`
+  );
   return true;
 }

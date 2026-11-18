@@ -1,76 +1,24 @@
 import { MODULE_ID, MODULE_TITLE } from "../../constants";
+import {
+  CRIT_SOUND_DELAY_MS,
+  DEFAULT_UI_SOUND_VOLUME,
+  DICE_ROLL_VOLUME_SCALE,
+  SOUND_LIBRARY,
+  UI_TEXT,
+  type SoundProfile,
+  type UISoundType,
+} from "./config";
 
-export type UISoundType =
-  | "windowOpen"
-  | "windowClose"
-  | "tabSwitch"
-  | "diceRoll"
-  | "criticalSuccess"
-  | "criticalFail"
-  | "bannerEncounter"
-  | "bannerVictory"
-  | "bannerCelestial"
-  | "bannerArcane";
+export { type SoundProfile, type UISoundType };
 
-export interface SoundProfile {
-  src: string;
-  fallback?: string;
-  defaultVolume: number;
-}
-
-const SOUND_LIBRARY: Record<UISoundType, SoundProfile> = {
-  windowOpen: {
-    src: "endless-tower/audios/skills/begin_cast.wav",
-    fallback: "sounds/doors/magic/wall-open.ogg",
-    defaultVolume: 0.3,
-  },
-  windowClose: {
-    src: "endless-tower/audios/skills/hide_sound.wav",
-    fallback: "sounds/doors/sliding/close-wood.ogg",
-    defaultVolume: 0.25,
-  },
-  tabSwitch: {
-    src: "sounds/lock.wav",
-    fallback: "endless-tower/audios/ui/ragnarok-login.mp3",
-    defaultVolume: 0.25,
-  },
-  diceRoll: {
-    src: "sounds/dice.wav",
-    defaultVolume: 0.5,
-  },
-  criticalSuccess: {
-    src: "endless-tower/audios/critical-sounds/pharmacy_success.wav",
-    fallback: "endless-tower/audios/critical-sounds/stage-win.wav",
-    defaultVolume: 0.75,
-  },
-  criticalFail: {
-    src: "endless-tower/audios/critical-sounds/pharmacy_fail.wav",
-    fallback: "endless-tower/audios/critical-sounds/eh_eh_eeeeeh.wav",
-    defaultVolume: 0.75,
-  },
-  bannerEncounter: {
-    src: "sounds/combat/epic-start-horn.ogg",
-    defaultVolume: 0.85,
-  },
-  bannerVictory: {
-    src: "endless-tower/audios/critical-sounds/stage-win.wav",
-    defaultVolume: 0.8,
-  },
-  bannerCelestial: {
-    src: "endless-tower/audios/skills/sanctuary-sound.wav",
-    fallback: "endless-tower/audios/skills/Aspersio.wav",
-    defaultVolume: 0.75,
-  },
-  bannerArcane: {
-    src: "endless-tower/audios/skills/begin_cast.wav",
-    defaultVolume: 0.75,
-  },
-};
-
+/**
+ * Decoupled UI audio dispatcher for Design System stingers and roll sounds.
+ * Supported profiles include diceRoll, criticalSuccess, criticalFail, bannerEncounter,
+ * bannerVictory, bannerCelestial, bannerArcane, windowOpen, windowClose, and tabSwitch.
+ */
 export class DesignSystemSound {
   private static instance: DesignSystemSound | null = null;
   private audioCache = new Map<string, HTMLAudioElement>();
-  private lastWindowOpenTime = 0;
 
   private constructor() {}
 
@@ -84,7 +32,7 @@ export class DesignSystemSound {
   public init(): void {
     this.registerSettings();
     this.attachFoundryHooks();
-    console.log(`${MODULE_TITLE} | Sistema de Áudio UI do Design System pronto.`);
+    console.log(`${MODULE_TITLE} | Design System UI Audio dispatcher ready.`);
   }
 
   private registerSettings(): void {
@@ -92,8 +40,8 @@ export class DesignSystemSound {
     if (!s) return;
 
     s.register(MODULE_ID, "dsEnableUISounds", {
-      name: "Sons de Interface (Design System)",
-      hint: "Ativa efeitos sonoros rúnicos/cinemáticos em janelas e rolagens.",
+      name: UI_TEXT.settingSoundsName,
+      hint: UI_TEXT.settingSoundsHint,
       scope: "client",
       config: true,
       type: Boolean,
@@ -101,18 +49,18 @@ export class DesignSystemSound {
     });
 
     s.register(MODULE_ID, "dsUISoundVolume", {
-      name: "Volume dos Sons de Interface",
-      hint: "Ajusta o volume padrão dos efeitos sonoros da interface (0% a 100%).",
+      name: UI_TEXT.settingSoundVolumeName,
+      hint: UI_TEXT.settingSoundVolumeHint,
       scope: "client",
       config: true,
       type: Number,
       range: { min: 0, max: 1, step: 0.05 },
-      default: 0.35,
+      default: DEFAULT_UI_SOUND_VOLUME,
     });
 
     s.register(MODULE_ID, "dsEnableChatRollSounds", {
-      name: "Sons em Rolagens de Dados e Críticos",
-      hint: "Toca fanfarras e efeitos de dados ao rolar no chat.",
+      name: UI_TEXT.settingChatRollSoundsName,
+      hint: UI_TEXT.settingChatRollSoundsHint,
       scope: "client",
       config: true,
       type: Boolean,
@@ -131,9 +79,9 @@ export class DesignSystemSound {
   public getMasterVolume(): number {
     try {
       const vol = (game as any).settings?.get?.(MODULE_ID, "dsUISoundVolume");
-      return typeof vol === "number" ? Math.max(0, Math.min(1, vol)) : 0.35;
+      return typeof vol === "number" ? Math.max(0, Math.min(1, vol)) : DEFAULT_UI_SOUND_VOLUME;
     } catch {
-      return 0.35;
+      return DEFAULT_UI_SOUND_VOLUME;
     }
   }
 
@@ -143,7 +91,10 @@ export class DesignSystemSound {
     const profile = SOUND_LIBRARY[type];
     if (!profile) return;
 
-    const finalVolume = Math.min(1, Math.max(0, profile.defaultVolume * this.getMasterVolume() * volumeMultiplier));
+    const finalVolume = Math.min(
+      1,
+      Math.max(0, profile.defaultVolume * this.getMasterVolume() * volumeMultiplier)
+    );
     if (finalVolume <= 0) return;
 
     this.playAudioFile(profile.src, finalVolume, profile.fallback);
@@ -198,17 +149,17 @@ export class DesignSystemSound {
       if (audioHelper && typeof audioHelper.play === "function") {
         audioHelper.play({ src, volume, loop: false }, false);
       }
-    } catch {}
+    } catch {
+      // Ignore AudioHelper playback failures
+    }
   }
 
-  /**
-   * Conecta aos Hooks nativos do Foundry para janelas e rolagens de chat.
-   */
   private attachFoundryHooks(): void {
     Hooks.on("createChatMessage", (message: any) => {
       let rollSoundsEnabled = true;
       try {
-        rollSoundsEnabled = (game as any).settings?.get?.(MODULE_ID, "dsEnableChatRollSounds") ?? true;
+        rollSoundsEnabled =
+          (game as any).settings?.get?.(MODULE_ID, "dsEnableChatRollSounds") ?? true;
       } catch {
         rollSoundsEnabled = true;
       }
@@ -233,11 +184,11 @@ export class DesignSystemSound {
       }
 
       if (hasCrit) {
-        setTimeout(() => this.play("criticalSuccess", 1.0), 300);
+        setTimeout(() => this.play("criticalSuccess", 1.0), CRIT_SOUND_DELAY_MS);
       } else if (hasFumble) {
-        setTimeout(() => this.play("criticalFail", 1.0), 300);
+        setTimeout(() => this.play("criticalFail", 1.0), CRIT_SOUND_DELAY_MS);
       } else {
-        this.play("diceRoll", 0.7);
+        this.play("diceRoll", DICE_ROLL_VOLUME_SCALE);
       }
     });
   }

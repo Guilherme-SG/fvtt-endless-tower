@@ -86,10 +86,10 @@
       "codigo": "REVISAO_IMPACTO_PENDENTE",
       "feature": "endless-tower-design-system",
       "ref": ".spec\\features\\endless-tower-design-system\\governance.json",
-      "ocorrencias": 8,
+      "ocorrencias": 9,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-18T18:18:53.773Z",
-      "gitRev": "0b00071"
+      "ultimaVez": "2026-11-18T18:48:05.597Z",
+      "gitRev": "f2a2961"
     },
     "ARQUIVO_INEXISTENTE::endless-tower-design-system::T-001": {
       "codigo": "ARQUIVO_INEXISTENTE",
@@ -545,10 +545,10 @@
       "codigo": "REVISAO_IMPACTO_PENDENTE",
       "feature": "combat-maneuvers",
       "ref": ".spec\\features\\combat-maneuvers\\governance.json",
-      "ocorrencias": 4,
+      "ocorrencias": 5,
       "primeiraVez": "2026-11-18T18:09:30.675Z",
-      "ultimaVez": "2026-11-18T18:18:53.770Z",
-      "gitRev": "0b00071"
+      "ultimaVez": "2026-11-18T18:48:05.549Z",
+      "gitRev": "f2a2961"
     },
     "ID_DUPLICADO::endless-tower-design-system::US-001": {
       "codigo": "ID_DUPLICADO",

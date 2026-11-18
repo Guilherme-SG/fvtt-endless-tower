@@ -1,6 +1,6 @@
 /**
- * Registry Canônico de Tokens (W3C DTCG) & Contratos Agênticos do Design System.
- * Módulo puro sem dependências globais do Foundry VTT (compatível com P-003 e P-011).
+ * Canonical W3C DTCG Token Registry & Agentic Contracts for the Design System.
+ * Pure module with zero global runtime dependencies (compatible with P-003 and P-011).
  */
 
 export type TokenRole =
@@ -18,25 +18,25 @@ export type TokenRole =
   | "semantic-accent";
 
 export interface AgenticTokenDefinition {
-  /** Tipo segundo especificação W3C Design Tokens Community Group (DTCG). */
+  /** Token type per W3C Design Tokens Community Group (DTCG) specification. */
   $type: "color" | "border" | "fontFamily";
-  /** Valor canônico exato declarado no arquivo CSS de origem. */
+  /** Exact canonical value declared in the source CSS file. */
   $value: string;
-  /** Intenção de uso e regras semânticas para agentes de código. */
+  /** Semantic intent and usage guidance for coding agents. */
   $description: string;
-  /** Nome da CSS Custom Property correspondente. */
+  /** Corresponding CSS Custom Property name. */
   cssVar: string;
-  /** Arquivo CSS fonte da verdade para verificação de sincronia 1:1. */
+  /** Source-of-truth CSS file for 1:1 synchronization verification. */
   sourceFile: "styles/design-system/tokens.css" | "styles/design-system/sheets.css";
-  /** Papel arquitetural na regra 60-30-10 e hierarquia visual. */
+  /** Architectural role in the 60-30-10 rule and visual hierarchy. */
   role: TokenRole;
-  /** Cor de superfície pareada em hex para auditoria matemática de contraste WCAG 2.1. */
+  /** Paired surface hex color used for WCAG 2.1 contrast calculation. */
   pairedSurface?: string;
-  /** Contraste mínimo exigido (4.5 AA texto normal, 7.0 AAA, 3.0 SC 1.4.11 controles). */
+  /** Minimum required contrast (4.5 AA normal text, 7.0 AAA, 3.0 SC 1.4.11 controls). */
   wcagMinContrast?: number;
-  /** Teto máximo anti-halaçao para evitar efeito modo alto-contraste em sessões longas. */
+  /** Maximum anti-halation ceiling to prevent eye strain during long sessions. */
   wcagMaxContrast?: number;
-  /** Opacidade máxima permitida (ex: <= 0.16 para bordas hairline na regra 60-30-10). */
+  /** Maximum allowed opacity (e.g., <= 0.16 for hairline borders under 60-30-10). */
   maxAlpha?: number;
 }
 
@@ -100,10 +100,12 @@ function parseHexColor(hex: string): RgbColor | null {
 }
 
 /**
- * Extrai o canal alpha de um valor CSS (#hex, rgb(...) ou rgba(...) ou border shorthand).
+ * Extracts the alpha channel from a CSS value (#hex, rgb(...), rgba(...), or border shorthand).
  */
 export function extractAlphaFromCssValue(cssValue: string): number {
-  const rgbaMatch = cssValue.match(/rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([0-9]*\.?[0-9]+)\s*\)/i);
+  const rgbaMatch = cssValue.match(
+    /rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([0-9]*\.?[0-9]+)\s*\)/i
+  );
   if (rgbaMatch) {
     return parseFloat(rgbaMatch[1]);
   }
@@ -111,7 +113,7 @@ export function extractAlphaFromCssValue(cssValue: string): number {
 }
 
 /**
- * Converte #hex, rgb(...) ou rgba(...) em RGB compósito sobre `backdropHex` quando transparente.
+ * Converts #hex, rgb(...), or rgba(...) into RGB composited over `backdropHex` when translucent.
  */
 export function parseColorToRgb(colorStr: string, backdropHex = "#141210"): RgbColor | null {
   const trimmed = colorStr.trim();
@@ -127,7 +129,8 @@ export function parseColorToRgb(colorStr: string, backdropHex = "#141210"): RgbC
     const fgR = clampByte(parseInt(rgbaMatch[1], 10));
     const fgG = clampByte(parseInt(rgbaMatch[2], 10));
     const fgB = clampByte(parseInt(rgbaMatch[3], 10));
-    const alpha = rgbaMatch[4] !== undefined ? Math.max(0, Math.min(1, parseFloat(rgbaMatch[4]))) : 1;
+    const alpha =
+      rgbaMatch[4] !== undefined ? Math.max(0, Math.min(1, parseFloat(rgbaMatch[4]))) : 1;
 
     if (alpha >= 1) {
       return { r: fgR, g: fgG, b: fgB, alpha: 1 };
@@ -149,7 +152,7 @@ function linearizeChannel(channel255: number): number {
 }
 
 /**
- * Luminância relativa oficial segundo W3C WCAG 2.1.
+ * Computes official relative luminance per W3C WCAG 2.1.
  */
 export function getRelativeLuminance(rgb: { r: number; g: number; b: number }): number {
   const R = linearizeChannel(rgb.r);
@@ -159,13 +162,13 @@ export function getRelativeLuminance(rgb: { r: number; g: number; b: number }): 
 }
 
 /**
- * Razão de contraste WCAG 2.1 entre cor de primeiro plano e superfície sólida de fundo, arredondada em 2 casas.
+ * Computes WCAG 2.1 contrast ratio between a foreground color and a solid background hex color, rounded to 2 decimals.
  */
 export function getContrastRatio(foreground: string, backgroundHex: string): number {
   const fg = parseColorToRgb(foreground, backgroundHex);
   const bg = parseColorToRgb(backgroundHex, backgroundHex);
   if (!fg || !bg) {
-    throw new Error(`Cor inválida para cálculo WCAG: fg="${foreground}", bg="${backgroundHex}"`);
+    throw new Error(`Invalid color for WCAG calculation: fg="${foreground}", bg="${backgroundHex}"`);
   }
   const l1 = getRelativeLuminance(fg);
   const l2 = getRelativeLuminance(bg);
@@ -176,14 +179,15 @@ export function getContrastRatio(foreground: string, backgroundHex: string): num
 }
 
 /**
- * Catálogo Canônico W3C DTCG de Design Tokens do Endless Tower.
+ * Canonical W3C DTCG Design Token catalog for Endless Tower.
  */
 export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
-  // --- Tokens Globais de Marca e Chat/Banners (`tokens.css`) ---
+  // --- Global Brand, Chat & Banner Tokens (`tokens.css`) ---
   "global.text.ivory": {
     $type: "color",
     $value: "#fff8e6",
-    $description: "Marfim luminoso para títulos épicos em banners e conteúdo de chat sobre vidro obsidiana.",
+    $description:
+      "Luminous ivory for epic banner titles and chat text over obsidian glass.",
     cssVar: "--et-ivory",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-primary",
@@ -193,7 +197,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.text.ivoryDim": {
     $type: "color",
     $value: "rgba(255, 248, 230, 0.78)",
-    $description: "Marfim atenuado para corpo de texto e citações secundárias em mensagens.",
+    $description: "Dimmed ivory for body copy and secondary quotes in messages.",
     cssVar: "--et-ivory-dim",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-secondary",
@@ -203,7 +207,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.text.ivoryMuted": {
     $type: "color",
     $value: "rgba(255, 248, 230, 0.62)",
-    $description: "Marfim secundário calibrado para atender W3C WCAG 2.1 AA em metadados e rodapés.",
+    $description:
+      "Secondary ivory calibrated to meet W3C WCAG 2.1 AA on metadata and footers.",
     cssVar: "--et-ivory-muted",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-muted",
@@ -213,7 +218,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.accent.gold": {
     $type: "color",
     $value: "#f3e2b0",
-    $description: "Ouro celestial para negritos, subtítulos e destaques de hierarquia em chat e modais.",
+    $description:
+      "Celestial gold for bold emphasis, subtitles, and hierarchy highlights in chat and modals.",
     cssVar: "--et-gold",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-accent",
@@ -223,7 +229,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.accent.goldDeep": {
     $type: "color",
     $value: "#d9b865",
-    $description: "Ouro queimado para subtítulos, ícones de destaque e filetes focais.",
+    $description: "Burnished gold for subtitles, highlight icons, and focal hairlines.",
     cssVar: "--et-gold-deep",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-accent",
@@ -233,7 +239,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.accent.goldSatinTop": {
     $type: "color",
     $value: "#fbefc6",
-    $description: "Luz superior do gradiente dourado acetinado da tela de login.",
+    $description: "Top highlight of the satin gold gradient from the login screen.",
     cssVar: "--et-gold-satin-top",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-accent",
@@ -243,7 +249,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.text.ink": {
     $type: "color",
     $value: "#3a2c10",
-    $description: "Tinta imperial escura para texto sobre botões de ouro acetinado da tela de login (WCAG AAA >= 7.0:1 sobre #d9b865).",
+    $description:
+      "Dark imperial ink for text over satin gold login buttons (WCAG AAA >= 7.0:1 over #d9b865).",
     cssVar: "--et-ink",
     sourceFile: "styles/design-system/tokens.css",
     role: "text-primary",
@@ -254,7 +261,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.semantic.azure": {
     $type: "color",
     $value: "#7bb5e6",
-    $description: "Azul arcano para sussurros privados e notificações arcanas sobre vidro escuro.",
+    $description: "Arcane azure for private whispers and arcane notifications over dark glass.",
     cssVar: "--et-azure",
     sourceFile: "styles/design-system/tokens.css",
     role: "semantic-accent",
@@ -264,7 +271,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.semantic.emerald": {
     $type: "color",
     $value: "#5bc88e",
-    $description: "Verde esmeralda para sucesso crítico, cura e bênçãos favoráveis.",
+    $description: "Emerald green for critical success, healing, and favorable blessings.",
     cssVar: "--et-emerald",
     sourceFile: "styles/design-system/tokens.css",
     role: "semantic-accent",
@@ -274,7 +281,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "global.semantic.amber": {
     $type: "color",
     $value: "#e6a73a",
-    $description: "Âmbar para concentração, iniciativa e avisos táticos.",
+    $description: "Amber for concentration, initiative, and tactical warnings.",
     cssVar: "--et-amber",
     sourceFile: "styles/design-system/tokens.css",
     role: "semantic-accent",
@@ -282,11 +289,11 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
     wcagMinContrast: 4.5,
   },
 
-  // --- Tokens das Fichas Endless Tower Sheet (`sheets.css`, Regra 60-30-10 Warm Obsidian) ---
+  // --- Endless Tower Sheet Tokens (`sheets.css`, 60-30-10 Warm Obsidian Rule) ---
   "sheet.surface.base": {
     $type: "color",
     $value: "#12100e",
-    $description: "Superfície recuada base da ficha (Warm Obsidian, evita #000000).",
+    $description: "Base recessed surface for actor sheets (Warm Obsidian, avoids #000000).",
     cssVar: "--dnd5e-background-alt-1",
     sourceFile: "styles/design-system/sheets.css",
     role: "surface-base",
@@ -294,7 +301,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.surface.card": {
     $type: "color",
     $value: "#1d1a16",
-    $description: "Camada elevada para cartões de Perícias, Salvaguardas e caixas de conteúdo.",
+    $description: "Elevated layer for Skills, Saving Throws, and content cards.",
     cssVar: "--dnd5e-background-card",
     sourceFile: "styles/design-system/sheets.css",
     role: "surface-card",
@@ -302,7 +309,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.surface.raised": {
     $type: "color",
     $value: "#26221d",
-    $description: "Camada interativa elevada para estado ativo e foco.",
+    $description: "Interactive raised layer for active and focus states.",
     cssVar: "--dnd5e-color-blue-gray-4",
     sourceFile: "styles/design-system/sheets.css",
     role: "surface-raised",
@@ -310,7 +317,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.surface.headerPrimary": {
     $type: "color",
     $value: "#4a1b22",
-    $description: "Carmesim profundo para cabeçalhos de listas (Ações, Inventário, Magias).",
+    $description: "Deep crimson for list headers (Actions, Inventory, Spells).",
     cssVar: "--dnd5e-card-header-1",
     sourceFile: "styles/design-system/sheets.css",
     role: "surface-header",
@@ -318,7 +325,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.text.primary": {
     $type: "color",
     $value: "#e6dfd3",
-    $description: "Osso quente para valores principais e títulos de itens (WCAG AAA, anti-halaçao <= 15:1).",
+    $description:
+      "Warm bone for primary values and item titles (WCAG AAA, anti-halation <= 15:1).",
     cssVar: "--color-text-primary",
     sourceFile: "styles/design-system/sheets.css",
     role: "text-primary",
@@ -329,7 +337,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.text.secondary": {
     $type: "color",
     $value: "#aca496",
-    $description: "Cinza quente médio para descrições, subtipos e passivas (WCAG AAA / AA+).",
+    $description: "Medium warm gray for descriptions, subtypes, and passives (WCAG AAA / AA+).",
     cssVar: "--color-text-secondary",
     sourceFile: "styles/design-system/sheets.css",
     role: "text-secondary",
@@ -340,7 +348,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.text.tertiaryMuted": {
     $type: "color",
     $value: "#989083",
-    $description: "Muted cinza-pedra calibrado para rótulos e metadados com contraste AA >= 4.5:1.",
+    $description: "Stone muted gray calibrated for labels and metadata with AA >= 4.5:1 contrast.",
     cssVar: "--color-text-tertiary",
     sourceFile: "styles/design-system/sheets.css",
     role: "text-muted",
@@ -351,7 +359,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.accent.agedGold": {
     $type: "color",
     $value: "#b89b63",
-    $description: "Ouro envelhecido fosco para acentos focais (10% da composição), títulos e proficiência.",
+    $description:
+      "Matte aged gold reserved for focal accents (10% of composition), headings, and proficiency.",
     cssVar: "--dnd5e-color-gold",
     sourceFile: "styles/design-system/sheets.css",
     role: "text-accent",
@@ -362,7 +371,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.control.itemControl": {
     $type: "color",
     $value: "rgba(230, 223, 211, 0.52)",
-    $description: "Ícones e controles de lista em repouso (WCAG 2.1 SC 1.4.11 >= 3.0:1).",
+    $description: "Resting list item control icons (WCAG 2.1 SC 1.4.11 >= 3.0:1).",
     cssVar: "--item-control-color",
     sourceFile: "styles/design-system/sheets.css",
     role: "control-icon",
@@ -372,7 +381,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.control.filterControl": {
     $type: "color",
     $value: "rgba(230, 223, 211, 0.52)",
-    $description: "Controles de filtro na barra de busca das fichas (WCAG 2.1 SC 1.4.11 >= 3.0:1).",
+    $description: "Search bar filter control icons on actor sheets (WCAG 2.1 SC 1.4.11 >= 3.0:1).",
     cssVar: "--filter-control-color",
     sourceFile: "styles/design-system/sheets.css",
     role: "control-icon",
@@ -382,7 +391,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.border.dark": {
     $type: "border",
     $value: "1px solid rgba(230, 223, 211, 0.08)",
-    $description: "Borda estrutural hairline de baixa opacidade (anti-wireframe <= 0.16).",
+    $description: "Low-opacity structural hairline border (anti-wireframe <= 0.16).",
     cssVar: "--dnd5e-border-dark",
     sourceFile: "styles/design-system/sheets.css",
     role: "border-hairline",
@@ -391,7 +400,8 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.border.filigree": {
     $type: "color",
     $value: "rgba(230, 223, 211, 0.11)",
-    $description: "Contorno sutil dos blocos filigree-box sem bordas douradas chamativas (anti-wireframe <= 0.16).",
+    $description:
+      "Subtle contour on filigree-box blocks without loud gold borders (anti-wireframe <= 0.16).",
     cssVar: "--filigree-border-color",
     sourceFile: "styles/design-system/sheets.css",
     role: "border-hairline",
@@ -400,7 +410,7 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
   "sheet.border.pill": {
     $type: "border",
     $value: "1px solid rgba(230, 223, 211, 0.09)",
-    $description: "Contorno discreto de pílulas de sentidos/proficiências (anti-wireframe <= 0.16).",
+    $description: "Subtle contour for senses/proficiency pills (anti-wireframe <= 0.16).",
     cssVar: "--pill-border",
     sourceFile: "styles/design-system/sheets.css",
     role: "border-hairline",
@@ -409,61 +419,64 @@ export const AGENTIC_DESIGN_TOKENS: Record<string, AgenticTokenDefinition> = {
 };
 
 /**
- * Contratos Canônicos de Componentes ("1 componente por função").
- * Agentes de código devem consultar estes contratos antes de criar ou alterar UI.
+ * Canonical Component Contracts ("one component per job").
+ * Coding agents must consult these contracts before creating or modifying UI components.
  */
 export const COMPONENT_CONTRACTS: Record<string, ComponentContract> = {
   "chat-feature-card": {
     id: "chat-feature-card",
-    job: "Renderizar conteúdo customizado de feature/bênção dentro de uma .chat-message sem criar card aninhado redundante.",
+    job: "Render custom feature/blessing content inside a .chat-message without creating a redundant nested box.",
     selectors: [".et-abracado-chat-card"],
     requiredRules: ["background: transparent", "border: none", "padding: 0.5rem 0.75rem"],
     forbiddenPatterns: ["box-shadow: 0 4px", "border: 1px solid"],
     maxNestedContainers: 1,
     description:
-      "A .chat-message já é o container principal no chat. Conteúdos internos usam fundo transparente, divisória hairline e no máximo 1 callout interno (.et-card-roll-result).",
+      "The .chat-message is already the primary chat container. Inner cards use a transparent background, hairline dividers, and at most 1 inner callout (.et-card-roll-result).",
   },
   "cinematic-banner": {
     id: "cinematic-banner",
-    job: "Exibir anúncios épicos de chefe, julgamento ou bênção em tela cheia.",
+    job: "Display fullscreen boss, judgment, or blessing announcements.",
     selectors: [".et-abracado-banner-box", ".et-boss-banner", ".et-banner"],
     requiredRules: ["width: 100vw", "white-space: nowrap", "backdrop-filter: blur"],
     forbiddenPatterns: ["border-left: 1px", "border-right: 1px"],
     maxNestedContainers: 1,
-    description: "Sempre edge-to-edge ribbon 100vw sem bordas laterais ou modais centralizados (P-005).",
+    description:
+      "Always an edge-to-edge 100vw ribbon without side borders or centered dialog modals (P-005).",
   },
   "modal-window": {
     id: "modal-window",
-    job: "Renderizar janelas e diálogos proprietários da Torre.",
+    job: "Render Endless Tower owned dialogs and windows.",
     selectors: [".et-window", ".et-dialog"],
     requiredRules: ["background: var(--et-obsidian-95)", "backdrop-filter: var(--et-blur-md)"],
     forbiddenPatterns: ["^.window-app\\s*\\{", "^.sheet\\s*\\{"],
     maxNestedContainers: 2,
-    description: "Escopo estrito às classes .et-window e .et-dialog; proibido estilizar janelas ou fichas globais.",
+    description:
+      "Strictly scoped to .et-window and .et-dialog; styling global windows or sheets is forbidden.",
   },
   "actor-sheet-theme": {
     id: "actor-sheet-theme",
-    job: "Fornecer variantes visuais opt-in 'Endless Tower Sheet' (Character e NPC) idênticas em layout ao D&D 5e.",
+    job: "Provide opt-in 'Endless Tower Sheet' (Character and NPC) visual variants layout-identical to D&D 5e.",
     selectors: [".dnd5e2.sheet.actor.et-sheet"],
     requiredRules: ["--dnd5e-background-card: #1d1a16", "--color-text-tertiary: #989083"],
     forbiddenPatterns: ["width:", "height:", "padding:", "margin:", "grid-template", "flex-direction:"],
     maxNestedContainers: 2,
     description:
-      "Regra 60-30-10 Warm Obsidian com elevação tonal, bordas hairline <= 0.16 e contraste calibrado por WCAG 2.1 AA/AAA.",
+      "Warm Obsidian 60-30-10 rule with tonal elevation, hairline borders <= 0.16, and WCAG 2.1 AA/AAA calibrated contrast.",
   },
   "context-menu": {
     id: "context-menu",
-    job: "Harmonizar apenas as cores do #context-menu nativo sem afetar geometria ou ícones de módulos.",
+    job: "Harmonize only the colors of native #context-menu without altering geometry or module icons.",
     selectors: ["#context-menu"],
     requiredRules: ["background: var(--et-obsidian-95)"],
     forbiddenPatterns: ["padding:", "min-width:", "font-size:", "#context-menu\\s+li\\.context-item\\s+i"],
     maxNestedContainers: 1,
-    description: "Preserva espaçamento vanilla, ícones FontAwesome Brands e cores injetadas por terceiros (ex: DAE).",
+    description:
+      "Preserves vanilla spacing, FontAwesome Brands icons, and colors injected by third-party modules (e.g., DAE).",
   },
 };
 
 /**
- * Executa a auditoria matemática determinística dos design tokens (WCAG 2.1, Anti-Halação e 60-30-10).
+ * Runs deterministic mathematical verification of registered design tokens (WCAG 2.1, anti-halation, and 60-30-10).
  */
 export function auditAgenticTokens(
   registry: Record<string, AgenticTokenDefinition> = AGENTIC_DESIGN_TOKENS
@@ -479,21 +492,24 @@ export function auditAgenticTokens(
     let passed = true;
     const reasons: string[] = [];
 
-    if (token.pairedSurface && (token.wcagMinContrast !== undefined || token.wcagMaxContrast !== undefined)) {
+    if (
+      token.pairedSurface &&
+      (token.wcagMinContrast !== undefined || token.wcagMaxContrast !== undefined)
+    ) {
       checkedContrastCount += 1;
       contrastRatio = getContrastRatio(token.$value, token.pairedSurface);
 
       if (token.wcagMinContrast !== undefined && contrastRatio < token.wcagMinContrast) {
         passed = false;
         reasons.push(
-          `contraste ${contrastRatio}:1 abaixo do mínimo WCAG ${token.wcagMinContrast}:1 sobre ${token.pairedSurface}`
+          `contrast ${contrastRatio}:1 below WCAG minimum ${token.wcagMinContrast}:1 over ${token.pairedSurface}`
         );
       }
 
       if (token.wcagMaxContrast !== undefined && contrastRatio > token.wcagMaxContrast) {
         passed = false;
         reasons.push(
-          `contraste ${contrastRatio}:1 excede teto anti-halaçao ${token.wcagMaxContrast}:1 sobre ${token.pairedSurface}`
+          `contrast ${contrastRatio}:1 exceeds anti-halation ceiling ${token.wcagMaxContrast}:1 over ${token.pairedSurface}`
         );
       }
     }
@@ -503,7 +519,9 @@ export function auditAgenticTokens(
       alpha = extractAlphaFromCssValue(token.$value);
       if (alpha > token.maxAlpha) {
         passed = false;
-        reasons.push(`opacidade ${alpha} acima do teto ${token.maxAlpha} (violação anti-wireframe 60-30-10)`);
+        reasons.push(
+          `alpha ${alpha} exceeds ceiling ${token.maxAlpha} (60-30-10 anti-wireframe violation)`
+        );
       }
     }
 

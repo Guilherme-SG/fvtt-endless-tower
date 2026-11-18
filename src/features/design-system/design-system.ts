@@ -1,9 +1,10 @@
 import { MODULE_ID, MODULE_TITLE } from "../../constants";
 import designSystemCss from "../../../styles/design-system.css?inline";
-import { DesignSystemSound } from "./sound-effects";
-import { BannerService, BannerOptions } from "./banner-service";
-import { ChatEnhancer } from "./chat-enhancer";
+import { startParticleCanvas, type ParticleController } from "../landing-scene";
+import { BannerService, type BannerOptions } from "./banner-service";
 import { registerEndlessTowerSheets } from "./celestial-sheets";
+import { ChatEnhancer } from "./chat-enhancer";
+import { GLOBAL_PARTICLE_COUNT, UI_TEXT } from "./config";
 import {
   AGENTIC_DESIGN_TOKENS,
   COMPONENT_CONTRACTS,
@@ -11,9 +12,13 @@ import {
   type AgenticTokenDefinition,
   type ComponentContract,
   type DesignSystemAuditReport,
-} from "./agentic-tokens";
-import { ParticleController, startParticleCanvas } from "../particle-canvas";
+} from "./rules";
+import { DesignSystemSound } from "./sound-effects";
 
+/**
+ * Master controller for the Celestial Chronicle Design System, coordinating theme styles,
+ * audio dispatch, banners, chat enhancement, opt-in actor sheets, and WCAG token audits.
+ */
 export class DesignSystem {
   private static instance: DesignSystem | null = null;
   private particleController: ParticleController | null = null;
@@ -32,18 +37,14 @@ export class DesignSystem {
     this.injectStyles();
     this.registerSettings();
 
-    // Inicializa subsistemas
     DesignSystemSound.getInstance().init();
     BannerService.getInstance().init();
     ChatEnhancer.getInstance().init();
 
     this.registerHooks();
-    console.log(`${MODULE_TITLE} | Celestial Chronicle Design System inicializado com sucesso.`);
+    console.log(`${MODULE_TITLE} | Celestial Chronicle Design System initialized.`);
   }
 
-  /**
-   * Injeta os estilos do Design System imediatamente no DOM para garantir renderização instantânea.
-   */
   private injectStyles(): void {
     if (document.getElementById("et-design-system-styles")) return;
     const styleEl = document.createElement("style");
@@ -57,8 +58,8 @@ export class DesignSystem {
     if (!s) return;
 
     s.register(MODULE_ID, "dsEnableTheme", {
-      name: "Design System: Tema Celestial Chronicle",
-      hint: "Aplica o visual unificado Dark Obsidian Glass & Celestial Gold em toda a interface do Foundry.",
+      name: UI_TEXT.settingThemeName,
+      hint: UI_TEXT.settingThemeHint,
       scope: "client",
       config: true,
       type: Boolean,
@@ -73,8 +74,8 @@ export class DesignSystem {
     });
 
     s.register(MODULE_ID, "dsEnableGlobalParticles", {
-      name: "Partículas Douradas Ambientais (Global)",
-      hint: "Adiciona uma camada suave de partículas douradas flutuantes no fundo da mesa de jogo.",
+      name: UI_TEXT.settingGlobalParticlesName,
+      hint: UI_TEXT.settingGlobalParticlesHint,
       scope: "client",
       config: true,
       type: Boolean,
@@ -97,8 +98,8 @@ export class DesignSystem {
     Hooks.once("ready", () => {
       document.body.classList.add("et-celestial-active");
 
-      // Inicia partículas se configurado
-      const enableParticles = (game as any).settings?.get?.(MODULE_ID, "dsEnableGlobalParticles") ?? false;
+      const enableParticles =
+        (game as any).settings?.get?.(MODULE_ID, "dsEnableGlobalParticles") ?? false;
       if (enableParticles) {
         this.startGlobalParticles();
       }
@@ -108,15 +109,15 @@ export class DesignSystem {
   public startGlobalParticles(): void {
     if (this.particleController) return;
 
-    let canvas = document.getElementById("et-global-particles") as HTMLCanvasElement | null;
-    if (!canvas) {
-      canvas = document.createElement("canvas");
-      canvas.id = "et-global-particles";
-      document.body.appendChild(canvas);
+    let canvasEl = document.getElementById("et-global-particles") as HTMLCanvasElement | null;
+    if (!canvasEl) {
+      canvasEl = document.createElement("canvas");
+      canvasEl.id = "et-global-particles";
+      document.body.appendChild(canvasEl);
     }
 
-    this.particleCanvasEl = canvas;
-    this.particleController = startParticleCanvas(canvas, 35);
+    this.particleCanvasEl = canvasEl;
+    this.particleController = startParticleCanvas(canvasEl, GLOBAL_PARTICLE_COUNT);
   }
 
   public stopGlobalParticles(): void {
@@ -130,42 +131,33 @@ export class DesignSystem {
     }
   }
 
-  /**
-   * Helper conveniente para exibir banners cinemáticos.
-   */
   public showBanner(options: BannerOptions): void {
     BannerService.getInstance().show(options);
   }
 
-  /**
-   * Helper conveniente para tocar sons de interface.
-   */
   public playSound(soundName: any, vol = 1.0): void {
     DesignSystemSound.getInstance().play(soundName, vol);
   }
 
-  /**
-   * Retorna o catálogo canônico de tokens em formato W3C DTCG.
-   */
   public getTokens(): Record<string, AgenticTokenDefinition> {
     return AGENTIC_DESIGN_TOKENS;
   }
 
-  /**
-   * Retorna os contratos de componentes ("1 componente por função").
-   */
   public getContracts(): Record<string, ComponentContract> {
     return COMPONENT_CONTRACTS;
   }
 
   /**
-   * Executa auditoria determinística WCAG 2.1 / anti-halaçao / regra 60-30-10 nos tokens registrados.
+   * Executes deterministic WCAG 2.1, anti-halation, and 60-30-10 audits across registered tokens.
    */
   public auditTokens(): DesignSystemAuditReport {
     return auditAgenticTokens();
   }
 }
 
+/**
+ * Registers and initializes the Celestial Chronicle Design System.
+ */
 export function registerDesignSystem(): void {
   DesignSystem.getInstance().init();
 }

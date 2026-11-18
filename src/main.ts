@@ -44,9 +44,9 @@ import {
 import {
   registerDesignSystem,
   DesignSystem,
-} from "./features/design-system/design-system";
-import { BannerService } from "./features/design-system/banner-service";
-import { DesignSystemSound } from "./features/design-system/sound-effects";
+  BannerService,
+  DesignSystemSound,
+} from "./features/design-system";
 import {
   registerCombatManeuvers,
   syncManeuversOnAllActors,
@@ -56,9 +56,9 @@ import {
 } from "./features/combat-maneuvers";
 
 Hooks.once("init", () => {
-  console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
+  console.log(`${MODULE_TITLE} | Initializing TypeScript module`);
 
-  // Registra features e hooks durante o 'init' para garantir que estejam ativos antes das fichas abrirem
+  // Register features and hooks during 'init' so they are active before sheets open
   registerJumpFeature();
   registerAbracadoPeloDestino();
   registerBlessRemember();
@@ -76,9 +76,9 @@ Hooks.once("init", () => {
 });
 
 Hooks.once("ready", () => {
-  console.log(`${MODULE_TITLE} | Pronto`);
+  console.log(`${MODULE_TITLE} | Ready`);
 
-  // Expor API para macros, scripts externos e console
+  // Expose public API for macros, external scripts, and console diagnostics
   const moduleData = (game.modules as any)?.get(MODULE_ID);
   if (moduleData) {
     moduleData.api = {

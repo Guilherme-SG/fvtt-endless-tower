@@ -1,7 +1,7 @@
 {
   "feature": "combat-maneuvers",
-  "timestamp": "2026-11-18T18:19:09.449Z",
-  "gitRev": "0b00071",
+  "timestamp": "2026-11-18T19:13:37.689Z",
+  "gitRev": "f2a2961",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
@@ -61,23 +61,23 @@
   "principles": {
     "P-003": {
       "status": "pass",
-      "testName": "Princípios da Constituição do Endless Tower @principle:P-003 Desacoplamento de lógica pura garantido @principle:P-003 Desacoplamento de lógica pura garantido"
+      "testName": "Endless Tower Constitution Principles @principle:P-003 enforces Vertical Slices and pure decoupled rules across all features @principle:P-003 enforces Vertical Slices and pure decoupled rules across all features"
     },
     "P-004": {
       "status": "pass",
-      "testName": "Princípios da Constituição do Endless Tower @principle:P-004 Reversibilidade visual possui método de parada e cleanup @principle:P-004 Reversibilidade visual possui método de parada e cleanup"
+      "testName": "Endless Tower Constitution Principles @principle:P-004 visual particle controller provides stop and cleanup listeners @principle:P-004 visual particle controller provides stop and cleanup listeners"
     },
     "P-005": {
       "status": "pass",
-      "testName": "Princípios da Constituição do Endless Tower @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon"
+      "testName": "Endless Tower Constitution Principles @principle:P-005 cinematic announcements use edge-to-edge ribbon layout @principle:P-005 cinematic announcements use edge-to-edge ribbon layout"
     },
     "P-006": {
       "status": "pass",
-      "testName": "Princípios da Constituição do Endless Tower @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas"
+      "testName": "Endless Tower Constitution Principles @principle:P-006 critical tables follow standardized HTML format and balanced DCs @principle:P-006 critical tables follow standardized HTML format and balanced DCs"
     },
     "P-011": {
       "status": "pass",
-      "testName": "Princípios da Constituição do Endless Tower @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting"
+      "testName": "Endless Tower Constitution Principles @principle:P-011 Agentic Design System enforces DTCG sync, WCAG 2.1 contrast, 60-30-10 rule, and anti-nesting contracts @principle:P-011 Agentic Design System enforces DTCG sync, WCAG 2.1 contrast, 60-30-10 rule, and anti-nesting contracts"
     }
   }
 }

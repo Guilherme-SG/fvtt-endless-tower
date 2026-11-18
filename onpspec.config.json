@@ -11,9 +11,8 @@
   ],
   "srcGlobs": [
     "src/features/design-system/**",
-    "src/features/celestial-chronicle.ts",
-    "src/features/combat-maneuvers.ts",
-    "src/rules/maneuvers.ts",
+    "src/features/celestial-chronicle/**",
+    "src/features/combat-maneuvers/**",
     "src/main.ts"
   ]
 }

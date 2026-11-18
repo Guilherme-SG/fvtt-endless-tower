@@ -4,13 +4,13 @@ import {
   isHalfCaster,
   hasPreparingClasses,
   calculateMaxPreparedSpells,
-} from "../src/rules/spellcasting";
-import { isUndeadCreature } from "../src/rules/undead";
+} from "../src/features/prepare-spells-reminder/rules";
+import { isUndeadCreature } from "../src/features/cemetery-bless/rules";
 import {
   calculateTokenGridCenters,
   measureMinDistanceChebyshev,
   isBearerIsolated,
-} from "../src/rules/combat";
+} from "../src/features/solitude/rules";
 
 describe("Regras Puras (P-003: Desacoplamento do Foundry)", () => {
   describe("Regras de Conjuração (spellcasting)", () => {
