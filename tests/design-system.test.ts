@@ -12,6 +12,7 @@ import {
   AGENTIC_DESIGN_TOKENS,
   COMPONENT_CONTRACTS,
   auditAgenticTokens,
+  getContrastRatio,
 } from "../src/features/design-system/agentic-tokens";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
@@ -76,6 +77,35 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(chronicleCss).toMatch(/\.et-quote-mark/);
       expect(chronicleCss).toMatch(/font-style:\s*normal\s*!important/);
       expect(chronicleCss).toMatch(/font-family:.*Georgia.*serif/);
+    });
+
+    /**
+     * @spec:AC-019
+     * Sincronia do DNA da Tela de Login (ouro acetinado, tinta imperial e cantoneiras celestiais não-intrusivas).
+     */
+    it("@spec:AC-019 sincroniza DNA da tela de login, cantoneiras celestiais não-intrusivas e contraste AAA de tinta sobre ouro", () => {
+      const tokensCss = read("styles/design-system/tokens.css");
+      const sheetsCss = read("styles/design-system/sheets.css");
+      const chatCss = read("styles/design-system/chat.css");
+      const buttonsCss = read("styles/design-system/buttons.css");
+
+      expect(tokensCss).toMatch(/--et-ink:\s*#3a2c10/);
+      expect(tokensCss).toMatch(/--et-gold-satin-top:\s*#fbefc6/);
+      expect(tokensCss).toMatch(/--et-gradient-login-btn:/);
+      expect(tokensCss).toMatch(/--et-glass-dropdown:/);
+      expect(tokensCss).toMatch(/--et-filigree-corner-tl:/);
+
+      expect(getContrastRatio("#3a2c10", "#d9b865")).toBeGreaterThanOrEqual(7.0);
+
+      expect(sheetsCss).toMatch(/--et-filigree-corner-tl/);
+      expect(sheetsCss).toMatch(/pointer-events:\s*none/);
+      expect(chatCss).toMatch(/--et-filigree-corner-tl/);
+      expect(chatCss).toMatch(/pointer-events:\s*none/);
+
+      expect(buttonsCss).toMatch(/var\(--et-gradient-login-btn\)/);
+      expect(buttonsCss).toMatch(/var\(--et-ink\)/);
+
+      expect(auditAgenticTokens().passed).toBe(true);
     });
   });
 

@@ -35,6 +35,27 @@ body.et-celestial-active .chat-message:not(.cm-msg):hover {
   border-color: rgba(243, 226, 176, 0.45) !important;
 }
 
+/* Cantoneiras Celestiais discretas e não-intrusivas nos cartões de chat */
+body.et-celestial-active .chat-message:not(.cm-msg)::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  pointer-events: none;
+  background-image:
+    var(--et-filigree-corner-tl),
+    var(--et-filigree-corner-tr),
+    var(--et-filigree-corner-bl),
+    var(--et-filigree-corner-br);
+  background-repeat: no-repeat;
+  background-position:
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+  background-size: 13px 13px;
+  opacity: 0.55;
+}
+
 /* --- Message Header (Compacto estilo Vanilla sem fundo de cor de jogador) --- */
 body.et-celestial-active .chat-message:not(.cm-msg) .message-header {
   border-bottom: 1px solid var(--et-glass-border-subtle) !important;

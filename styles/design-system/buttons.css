@@ -75,13 +75,13 @@ i.fa-brands {
   transform: none !important;
 }
 
-/* --- Variant: Primary Gilded Gold --- */
+/* --- Variant: Primary Gilded Gold (DNA Botão Join da Tela de Login) --- */
 .et-btn-primary {
-  background: var(--et-gradient-gold-btn) !important;
-  color: #1a140a !important;
-  border: 1px solid #ffeab3 !important;
+  background: var(--et-gradient-login-btn) !important;
+  color: var(--et-ink) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
   font-weight: 700 !important;
-  box-shadow: 0 2px 14px rgba(217, 184, 101, 0.45), 0 0 4px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 0 22px rgba(255, 226, 150, 0.45), 0 4px 14px rgba(0, 0, 0, 0.3) !important;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 

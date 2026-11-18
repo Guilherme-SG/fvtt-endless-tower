@@ -12,6 +12,8 @@
   --et-gold-bright: #ffeab3;
   --et-gold-deep: #d9b865;
   --et-gold-dark: #8a7139;
+  --et-gold-satin-top: #fbefc6;
+  --et-ink: #3a2c10;
   --et-gold-dim: rgba(217, 184, 101, 0.18);
   --et-gold-glow: rgba(243, 226, 176, 0.45);
   --et-gold-glow-subtle: rgba(217, 184, 101, 0.22);
@@ -27,6 +29,9 @@
   --et-obsidian-40: rgba(18, 15, 12, 0.40);
   --et-obsidian-card: rgba(16, 13, 11, 0.88);
   --et-obsidian-well: rgba(8, 7, 6, 0.75);
+  --et-glass-amber: rgba(34, 30, 26, 0.38);
+  --et-glass-dropdown: rgba(24, 20, 18, 0.78);
+  --et-glass-line: rgba(255, 244, 214, 0.50);
 
   /* --- Palette: Semantics & Accents --- */
   /* Crimson: Combat, Critical Encounter, Damage, Danger */
@@ -71,6 +76,7 @@
   /* --- Gradients --- */
   --et-gradient-gold-btn: linear-gradient(135deg, #f7e8be 0%, #d9b865 50%, #b8933b 100%);
   --et-gradient-gold-btn-hover: linear-gradient(135deg, #fff3d4 0%, #e6ca7e 50%, #c9a34b 100%);
+  --et-gradient-login-btn: linear-gradient(180deg, #fbefc6 0%, #d9b865 100%);
   --et-gradient-glass-ribbon: linear-gradient(90deg, transparent 0%, rgba(12, 10, 8, 0.72) 12%, rgba(16, 12, 11, 0.92) 50%, rgba(12, 10, 8, 0.72) 88%, transparent 100%);
   --et-gradient-razor-divider: linear-gradient(90deg, transparent 0%, rgba(217, 184, 101, 0.65) 50%, transparent 100%);
   --et-gradient-razor-crimson: linear-gradient(90deg, transparent 0%, rgba(217, 184, 101, 0.5) 20%, rgba(192, 57, 43, 0.85) 50%, rgba(217, 184, 101, 0.5) 80%, transparent 100%);
@@ -115,4 +121,10 @@
   --et-z-modal: 99990;
   --et-z-banner: 999990;
   --et-z-overlay: 999999;
+
+  /* --- Celestial Filigree Corner Brackets (SVG Inline) --- */
+  --et-filigree-corner-tl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M1 23V5C1 2.79 2.79 1 5 1H23' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M5 11V5H11' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='5' cy='5' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-tr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M23 23V5C23 2.79 21.21 1 19 1H1' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M19 11V5H13' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='19' cy='5' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-bl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M1 1V19C1 21.21 2.79 23 5 23H23' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M5 13V19H11' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='5' cy='19' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-br: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M23 1V19C23 21.21 21.21 23 19 23H1' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M19 13V19H13' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='19' cy='19' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
 }

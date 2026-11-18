@@ -33,6 +33,12 @@ Como usuário da mesa virtual, quero um conjunto canônico de variáveis CSS e t
 - **Quando** o texto da citação é renderizado em itálico
 - **Então** os caracteres de aspas devem ser isolados em elementos `.et-quote-mark` com `font-style: normal !important; font-family: "Georgia", serif;`, evitando o colapso do glifo em um único traço no Chromium.
 
+#### AC-019 — Sincronia do DNA da Tela de Login (Ouro Acetinado, Tinta Imperial e Cantoneiras Celestiais Não-Intrusivas)
+
+- **Dado** o conjunto de tokens visuais da tela de login (`--et-ink`, `--et-gold-satin-top`, `--et-gradient-login-btn`, `--et-glass-dropdown` e cantoneiras `--et-filigree-corner-*`)
+- **Quando** aplicados ao catálogo `agentic-tokens.ts`, `tokens.css`, `sheets.css`, `buttons.css` e `chat.css`
+- **Então** o contraste de `--et-ink` (`#3a2c10`) sobre `--et-gold-deep` (`#d9b865`) deve atingir nível WCAG 2.1 AAA (`>= 7.0:1`), as cantoneiras devem ser injetadas com `pointer-events: none` sem alterar nenhuma propriedade de layout (`width`, `height`, `padding`, `margin`, `grid-template`, `flex-direction`) em `sheets.css`, e o validador `auditAgenticTokens()` deve aprovar 100% dos tokens.
+
 ### US-002 — Escopo Estrito de Componentes e Não-Interferência
 
 Como Mestre da mesa, quero que os estilos do Endless Tower não alterem as fichas de personagem nem as janelas de configuração nativas do Foundry, para que o gerenciamento técnico do jogo permaneça intacto.

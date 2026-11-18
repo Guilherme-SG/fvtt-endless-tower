@@ -42,9 +42,15 @@
 
 ## T-007 — Suíte de Testes Automatizados Vitest [concluida]
 
-- Refs: US-001, US-002, US-003, US-004, US-005, US-006, AC-001, AC-002, AC-003, AC-004, AC-005, AC-006, AC-007, AC-008, AC-009, AC-010, AC-011, AC-012, AC-013, AC-014, AC-015, AC-016, AC-017, AC-018
+- Refs: US-001, US-002, US-003, US-004, US-005, US-006, AC-001, AC-002, AC-003, AC-004, AC-005, AC-006, AC-007, AC-008, AC-009, AC-010, AC-011, AC-012, AC-013, AC-014, AC-015, AC-016, AC-017, AC-018, AC-019
 - Arquivos: tests/design-system.test.ts
-- Notas: Testes executáveis para todos os critérios de aceitação AC-001 até AC-018 com anotações @spec e @principle.
+- Notas: Testes executáveis para todos os critérios de aceitação AC-001 até AC-019 com anotações @spec e @principle.
+
+## T-008 — Unificação do DNA Visual da Tela de Login e Cantoneiras Celestiais [concluida]
+
+- Refs: US-001, US-002, US-003, AC-019
+- Arquivos: styles/design-system/tokens.css, styles/design-system/sheets.css, styles/design-system/buttons.css, styles/design-system/chat.css, src/features/design-system/agentic-tokens.ts, tests/design-system.test.ts
+- Notas: Sincronizar paleta da tela de login (`--et-ink`, `--et-gold-satin-top`, `--et-gradient-login-btn`, vidro âmbar) e aplicar cantoneiras celestiais vetoriais SVG com `pointer-events: none` sem alteração de layout em fichas e chat.
 
 ## Documentos relacionados
 

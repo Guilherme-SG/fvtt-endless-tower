@@ -1,11 +1,11 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-18T02:48:09.287Z",
-  "gitRev": "40486e6",
+  "timestamp": "2026-11-18T03:56:29.443Z",
+  "gitRev": "938854e",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
-  "testsParsed": 30,
+  "testsParsed": 31,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -20,6 +20,11 @@
     "AC-003": {
       "status": "pass",
       "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-003 isola aspas de citações em Georgia serif normal para evitar colapso no Chromium @spec:AC-003 isola aspas de citações em Georgia serif normal para evitar colapso no Chromium",
+      "method": "vitest-json"
+    },
+    "AC-019": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-019 sincroniza DNA da tela de login, cantoneiras celestiais não-intrusivas e contraste AAA de tinta sobre ouro @spec:AC-019 sincroniza DNA da tela de login, cantoneiras celestiais não-intrusivas e contraste AAA de tinta sobre ouro",
       "method": "vitest-json"
     },
     "AC-004": {
