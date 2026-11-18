@@ -180,9 +180,17 @@ body.et-celestial-active .chat-message:not(.cm-msg) .message-content span:not([c
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Preserva cor semântica do título de Bênção de Calax */
-body.et-celestial-active .chat-message:not(.cm-msg) .et-abracado-chat-card .et-card-title span {
-  color: inherit !important;
+/* Mantém título de Bênção de Calax em marfim e aplica acento semântico ao ícone */
+body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracado-chat-card .et-card-title > span:last-child {
+  color: var(--et-ivory) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracado-chat-card.luck .et-card-title > span:first-child {
+  color: #2ecc71 !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracado-chat-card.empty .et-card-title > span:first-child {
+  color: #94a3b8 !important;
 }
 
 /* Negrito em Dourado Claro (substitui texto preto sem contraste) */

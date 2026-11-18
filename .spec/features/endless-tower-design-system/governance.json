@@ -11,12 +11,12 @@
   ],
   "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
   "review": {
-    "summary": "Revisao semantica atualizada apos restricao do #context-menu a cores (preservando espacamento e icones originais), correcao de FontAwesome 6 Brands para icones como Import (.fa-brands/.fab) e criacao das fichas opt-in Endless Tower Sheet (Player e NPC) isoladas em .et-sheet mantendo o layout 1:1 do D&D 5e.",
+    "summary": "Revisao semantica atualizada apos remocao do container redundante em .et-abracado-chat-card (integrado ao .chat-message como na referencia visual) e calibracao da paleta pelos criterios W3C WCAG 2.1 AA/AAA e SC 1.4.11 (--et-ivory-muted, #989083 e controles em 0.52 de opacidade).",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "6b9c6be796c669872562930eed250904100857fa54ed5eecef12c3871f68548a",
-    "ownFingerprint": "6b9c6be796c669872562930eed250904100857fa54ed5eecef12c3871f68548a",
-    "reviewedAt": "2026-11-17T22:11:11.178Z",
+    "fingerprint": "9d3f72637b0613cfb5732579008f30d4a02a3e86992e3fb27bb5d34bfb61faa4",
+    "ownFingerprint": "9d3f72637b0613cfb5732579008f30d4a02a3e86992e3fb27bb5d34bfb61faa4",
+    "reviewedAt": "2026-11-18T01:42:01.875Z",
     "documents": [
       ".spec/features/endless-tower-design-system/prd.md",
       ".spec/features/endless-tower-design-system/adr.md",

@@ -8,8 +8,18 @@ Guia de referência para as fichas personalizadas **Endless Tower Sheet**, criad
   - **Jogador (`character`)**: Estende `dnd5e.applications.actor.CharacterActorSheet`.
   - **NPC (`npc`)**: Estende `dnd5e.applications.actor.NPCActorSheet`.
 - Mantém **100% do layout, dimensões, grades, abas e automações originais** do sistema D&D 5e (sem sobrescrever templates HTML nem `makeDefault`).
-- Aplica exclusivamente a paleta tonal **Warm Obsidian** do Celestial Chronicle Design System por meio da classe isolada `.et-sheet`: elevação suave entre fundo (`#141210`) e cartões (`#1d1a16`), separação por bordas hairline sutis (regra 60-30-10), hierarquia de texto em 3 degraus (osso quente `#e6dfd3`, cinza médio `#aca496` e muted `#989083`), acentos focais em ouro envelhecido (`#b89b63`) e cabeçalhos de lista em carmesim profundo (`#4a1b22` → `#2d1418`).
+- Aplica exclusivamente a paleta tonal **Warm Obsidian** do Celestial Chronicle Design System por meio da classe isolada `.et-sheet`: elevação suave entre fundo (`#141210`) e cartões (`#1d1a16`), separação por bordas hairline sutis (regra 60-30-10), hierarquia de texto em 3 degraus calibrada pela **W3C WCAG 2.1** (osso quente `#e6dfd3`, cinza médio `#aca496` e muted `#989083`), acentos focais em ouro envelhecido (`#b89b63`) e cabeçalhos de lista em carmesim profundo (`#4a1b22` → `#2d1418`).
 - Preserva integralmente as fichas nativas do D&D 5e quando não selecionada.
+
+## Padrão W3C WCAG 2.1 (Contrastes sobre Cartão `#1d1a16`)
+
+| Nível / Papel | Token / Cor | Contraste | Critério WCAG 2.1 |
+|---|---|---|---|
+| Texto primário (nomes, valores) | `--color-text-primary` (`#e6dfd3`) | **12.9:1** | SC 1.4.6 AAA (>= 7:1) |
+| Texto secundário (descrições) | `--color-text-secondary` (`#aca496`) | **7.0:1** | SC 1.4.6 AAA (>= 7:1) |
+| Rótulos & metadados (*muted*) | `--color-text-tertiary` (`#989083`) | **5.4:1** | SC 1.4.3 AA (>= 4.5:1) |
+| Ouro envelhecido (títulos/foco) | `--dnd5e-color-gold` (`#b89b63`) | **6.5:1** | SC 1.4.3 AA (>= 4.5:1) |
+| Ícones e controles interativos | `--item-control-color` (`rgba(230, 223, 211, 0.52)`) | **~4.45:1** | SC 1.4.11 Non-text (>= 3:1) |
 
 ## Como alternar para a ficha
 

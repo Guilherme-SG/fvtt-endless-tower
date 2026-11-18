@@ -67,7 +67,8 @@
   --separated-list-item-background-color: #191613;
   --separated-list-item-border-color: rgba(230, 223, 211, 0.08);
 
-  /* --- Hierarquia Tipográfica em 3 Degraus --- */
+  /* --- Hierarquia Tipográfica em 3 Degraus (WCAG 2.1 sobre #1d1a16) --- */
+  /* #e6dfd3 = 12.9:1 (AAA) | #aca496 = 7.0:1 (AAA) | #989083 = 5.4:1 (AA) | #b89b63 = 6.5:1 (AA) */
   --color-text-emphatic: #efeae0;
   --color-text-primary: #e6dfd3;
   --color-text-secondary: #aca496;
@@ -80,13 +81,13 @@
   --dnd5e-heading-3-color: #b89b63;
   --dnd5e-ability-tab: url("data:image/svg+xml,%3Csvg width='67.694' height='59.982' version='1.1' viewBox='0 0 67.694 59.982' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(1.8331 1.9942)'%3E%3Cpath d='m31.98 0.18555-31.813 13.829 0.032772 41.945 63.606 0.02749 0.05216-42.028z' fill='%231d1a16' fill-rule='evenodd' stroke='%23332d25' stroke-dashoffset='34.18' stroke-linecap='square' stroke-width='4' style='paint-order:stroke fill markers'/%3E%3C/g%3E%3C/svg%3E");
 
-  /* --- Controles, Ícones, Pílulas e Campos --- */
+  /* --- Controles, Ícones, Pílulas e Campos (WCAG 2.1 SC 1.4.11 >= 3.0:1) --- */
   --activity-icon-color: #b89b63;
   --activity-row-border: 1px dotted rgba(230, 223, 211, 0.1);
   --activity-row-indent-color: rgba(184, 155, 99, 0.24);
   --damage-icon-color: #b89b63;
   --item-summary-background: rgba(15, 14, 12, 0.45);
-  --item-control-color: rgba(230, 223, 211, 0.38);
+  --item-control-color: rgba(230, 223, 211, 0.52);
   --item-control-interactive-color: #aca496;
   --item-control-active-color: #d4ba82;
   --item-control-header-color: #c5a972;
@@ -103,7 +104,7 @@
   --npc-header-input-background: rgba(15, 14, 12, 0.5);
   --npc-portrait-toggle-on: #b89b63;
   --npc-ability-score-filter: invert(1);
-  --filter-control-color: rgba(230, 223, 211, 0.42);
+  --filter-control-color: rgba(230, 223, 211, 0.52);
   --filter-control-active-color: #d4ba82;
   --context-entry-hover-background: rgba(184, 155, 99, 0.14);
   --slide-toggle-track-color-unchecked: #24201b;

@@ -88,10 +88,13 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(contextMenuBlock).not.toMatch(/font-size:/);
       expect(contextMenuBlock).not.toMatch(/#context-menu\s+li\.context-item\s+i/);
 
-      // Sheets opt-in isoladas em .et-sheet sem afetar .sheet genérico nem alterar layout
+      // Sheets opt-in isoladas em .et-sheet sem afetar .sheet genérico nem alterar layout + contrastes WCAG 2.1 AA
       expect(bundleCss).toMatch(/@import\s+["']\.\/design-system\/sheets\.css["']/);
       expect(sheetsCss).toMatch(/\.dnd5e2\.sheet\.actor\.et-sheet/);
       expect(sheetsCss).not.toMatch(/(?:^|\s)(?:width|height|padding|margin|grid-template|flex-direction):/m);
+      expect(sheetsCss).toMatch(/--color-text-tertiary:\s*#989083/);
+      expect(sheetsCss).toMatch(/--item-control-color:\s*rgba\(230,\s*223,\s*211,\s*0\.52\)/);
+      expect(sheetsCss).toMatch(/--filter-control-color:\s*rgba\(230,\s*223,\s*211,\s*0\.52\)/);
 
       // Subclasses puras para Character e NPC sem makeDefault: true
       class DummyChar {
@@ -216,6 +219,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(chatCss).toMatch(/overflow-wrap:\s*anywhere\s*!important/);
       expect(chatCss).toMatch(/\.message-sender \.subtitle[\s\S]*?font-size:\s*0\.68rem\s*!important/);
       expect(cardsCss).toMatch(/\.chat-message \.et-card-title[\s\S]*?white-space:\s*normal/);
+      expect(abracadoCss).toMatch(/\.et-abracado-chat-card\s*\{[\s\S]*?background:\s*transparent/);
+      expect(abracadoCss).toMatch(/\.et-abracado-chat-card\s*\{[\s\S]*?border:\s*none/);
       expect(abracadoCss).toMatch(/\.et-abracado-chat-card \.et-card-title[\s\S]*?white-space:\s*normal\s*!important/);
       expect(abracadoTs).not.toMatch(/outcomeBadge/);
 

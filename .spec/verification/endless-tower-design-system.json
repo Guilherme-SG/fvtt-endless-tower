@@ -1,7 +1,7 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-18T00:40:40.109Z",
-  "gitRev": "763df2d",
+  "timestamp": "2026-11-18T01:48:08.981Z",
+  "gitRev": "bf044f0",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
