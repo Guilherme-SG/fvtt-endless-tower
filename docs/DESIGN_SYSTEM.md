@@ -296,8 +296,21 @@ styles/
     └── effects.css                 # Partículas, god-rays e vinhetas
 
 src/features/design-system/
-├── design-system.ts                # Orquestrador mestre e injeção dinâmica
-├── sound-effects.ts                # Sistema de áudio UI e hooks de clique/janelas
+├── agentic-tokens.ts               # Catálogo W3C DTCG, contratos e auditoria WCAG 2.1 (P-011)
+├── celestial-sheets.ts             # Fichas opt-in Endless Tower Sheet (Player e NPC)
+├── design-system.ts                # Orquestrador mestre, API e injeção dinâmica
+├── sound-effects.ts                # Sistema de áudio UI e hooks de rolagem/banners
 ├── banner-service.ts               # Serviço de banners cinemáticos e sincronização socket
 └── chat-enhancer.ts                # Enriquecimento visual de rolagens críticas e sussurros
 ```
+
+---
+
+## 7. Agentic Design System Contracts (`P-011`)
+
+O **Celestial Chronicle Design System** expõe seus tokens e regras arquiteturais de forma determinística e auditável por agentes e testes automatizados em [agentic-tokens.ts](file:///d:/FoundryVTT/Data/modules/endless-tower/src/features/design-system/agentic-tokens.ts):
+
+- **Consulta em Runtime**:
+  - `game.modules.get('endless-tower').api.designSystem.getTokens()` — retorna o catálogo W3C DTCG sincronizado 1:1 com `tokens.css` e `sheets.css`.
+  - `game.modules.get('endless-tower').api.designSystem.getContracts()` — retorna o mapa "1 componente por função" (`chat-feature-card`, `cinematic-banner`, `modal-window`, `actor-sheet-theme`, `context-menu`).
+  - `game.modules.get('endless-tower').api.designSystem.auditTokens()` — calcula matematicamente as razões de contraste W3C WCAG 2.1 (SC 1.4.3 / 1.4.6 / 1.4.11), teto anti-halaçao (`<= 15:1`) e opacidade máxima das bordas estruturais (`<= 0.16`).

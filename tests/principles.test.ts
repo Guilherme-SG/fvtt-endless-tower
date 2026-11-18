@@ -1,6 +1,11 @@
 import { describe, it, expect } from "vitest";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import {
+  AGENTIC_DESIGN_TOKENS,
+  COMPONENT_CONTRACTS,
+  auditAgenticTokens,
+} from "../src/features/design-system/agentic-tokens";
 
 describe("Princípios da Constituição do Endless Tower", () => {
   /**
@@ -74,6 +79,49 @@ describe("Princípios da Constituição do Endless Tower", () => {
           expect([10, 15]).toContain(dc);
         }
       }
+    }
+  });
+
+  /**
+   * @principle:P-011
+   * Governança Agêntica do Design System: sincronia W3C DTCG <-> CSS, WCAG 2.1, anti-halaçao, 60-30-10 e anti-box-in-box.
+   */
+  it("@principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting", () => {
+    const rootDir = path.resolve(__dirname, "..");
+    const agenticTokensPath = path.join(rootDir, "src/features/design-system/agentic-tokens.ts");
+    const agenticContent = fs.readFileSync(agenticTokensPath, "utf-8");
+
+    // Módulo puro compatível com P-003 (sem globais do Foundry)
+    expect(agenticContent).not.toMatch(/\b(game|canvas|Hooks|ui)\b/);
+
+    // Guardrails 1, 2 e 3: auditoria matemática determinística
+    const report = auditAgenticTokens();
+    expect(report.violations).toEqual([]);
+    expect(report.passed).toBe(true);
+    expect(report.checkedContrastCount).toBeGreaterThanOrEqual(10);
+    expect(report.checkedAlphaCount).toBeGreaterThanOrEqual(3);
+
+    // Guardrail de sincronia 1:1 entre registro W3C DTCG e arquivos CSS
+    const fileCache = new Map<string, string>();
+    for (const [key, token] of Object.entries(AGENTIC_DESIGN_TOKENS)) {
+      if (!fileCache.has(token.sourceFile)) {
+        fileCache.set(token.sourceFile, fs.readFileSync(path.join(rootDir, token.sourceFile), "utf-8"));
+      }
+      const cssText = fileCache.get(token.sourceFile)!;
+      const escapedVar = token.cssVar.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const escapedVal = token.$value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+      const syncRegex = new RegExp(`${escapedVar}:\\s*${escapedVal}\\s*;`, "i");
+      expect(cssText, `Token ${key} (${token.cssVar}) dessincronizado em ${token.sourceFile}`).toMatch(syncRegex);
+    }
+
+    // Guardrail 4: contratos de componente ("1 componente por função") e anti-box-in-box no chat
+    const chatCardContract = COMPONENT_CONTRACTS["chat-feature-card"];
+    expect(chatCardContract).toBeDefined();
+    expect(chatCardContract.maxNestedContainers).toBe(1);
+
+    const abracadoCss = fs.readFileSync(path.join(rootDir, "styles/abracado-destino.css"), "utf-8");
+    for (const rule of chatCardContract.requiredRules) {
+      expect(abracadoCss).toContain(rule);
     }
   });
 });

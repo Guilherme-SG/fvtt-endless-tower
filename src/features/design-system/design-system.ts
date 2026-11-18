@@ -4,6 +4,14 @@ import { DesignSystemSound } from "./sound-effects";
 import { BannerService, BannerOptions } from "./banner-service";
 import { ChatEnhancer } from "./chat-enhancer";
 import { registerEndlessTowerSheets } from "./celestial-sheets";
+import {
+  AGENTIC_DESIGN_TOKENS,
+  COMPONENT_CONTRACTS,
+  auditAgenticTokens,
+  type AgenticTokenDefinition,
+  type ComponentContract,
+  type DesignSystemAuditReport,
+} from "./agentic-tokens";
 import { ParticleController, startParticleCanvas } from "../particle-canvas";
 
 export class DesignSystem {
@@ -134,6 +142,27 @@ export class DesignSystem {
    */
   public playSound(soundName: any, vol = 1.0): void {
     DesignSystemSound.getInstance().play(soundName, vol);
+  }
+
+  /**
+   * Retorna o catálogo canônico de tokens em formato W3C DTCG.
+   */
+  public getTokens(): Record<string, AgenticTokenDefinition> {
+    return AGENTIC_DESIGN_TOKENS;
+  }
+
+  /**
+   * Retorna os contratos de componentes ("1 componente por função").
+   */
+  public getContracts(): Record<string, ComponentContract> {
+    return COMPONENT_CONTRACTS;
+  }
+
+  /**
+   * Executa auditoria determinística WCAG 2.1 / anti-halaçao / regra 60-30-10 nos tokens registrados.
+   */
+  public auditTokens(): DesignSystemAuditReport {
+    return auditAgenticTokens();
   }
 }
 

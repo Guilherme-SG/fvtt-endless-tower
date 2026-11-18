@@ -1,15 +1,15 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-18T01:48:08.981Z",
-  "gitRev": "bf044f0",
+  "timestamp": "2026-11-18T02:48:09.287Z",
+  "gitRev": "40486e6",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
-  "testsParsed": 29,
+  "testsParsed": 30,
   "results": {
     "AC-001": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos e aprovados pelo validador DTCG @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos e aprovados pelo validador DTCG",
       "method": "vitest-json"
     },
     "AC-002": {
@@ -114,6 +114,10 @@
     "P-006": {
       "status": "pass",
       "testName": "Princípios da Constituição do Endless Tower @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas"
+    },
+    "P-011": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting"
     }
   }
 }

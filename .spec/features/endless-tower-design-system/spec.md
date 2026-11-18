@@ -15,11 +15,11 @@ Sistema de design unificado ("Celestial Chronicle") para o Foundry VTT v13 no mu
 
 Como usuário da mesa virtual, quero um conjunto canônico de variáveis CSS e tipografia cinematográfica elegante, para que todas as interfaces proprietárias da Torre possuam uma identidade visual coesa e ícones consistentes.
 
-#### AC-001 — Definição e integridade de variáveis CSS canônicas
+#### AC-001 — Definição e integridade de variáveis CSS canônicas e catálogo W3C DTCG
 
-- **Dado** o arquivo de estilos canônicos `styles/design-system/tokens.css` carregado no Foundry VTT
-- **Quando** o tema Celestial Chronicle é inicializado
-- **Então** os tokens essenciais `--et-obsidian`, `--et-gold`, `--et-ivory`, `--et-crimson`, `--et-font-cinematic` e `--et-glass-bg` devem estar definidos e disponíveis para consumo.
+- **Dado** o arquivo de estilos canônicos `styles/design-system/tokens.css` carregado no Foundry VTT e o registro estruturado `src/features/design-system/agentic-tokens.ts`
+- **Quando** o tema Celestial Chronicle é inicializado ou auditado via `api.designSystem.auditTokens()` / `auditAgenticTokens()`
+- **Então** os tokens essenciais `--et-obsidian`, `--et-gold`, `--et-ivory`, `--et-crimson`, `--et-font-cinematic` e `--et-glass-bg` devem estar definidos, sincronizados 1:1 com o catálogo W3C DTCG e aprovados pelos guardrails WCAG 2.1 / anti-halaçao / 60-30-10 (`P-011`).
 
 #### AC-002 — Blindagem explícita de ícones FontAwesome contra substituição de fontes
 

@@ -81,3 +81,13 @@ Artes de fundo, paisagens, splash screens e banners de alta resolução DEVEM se
 ## P-010 [RECOMENDADO] Progressive HUD sobre remoção estrita
 
 Em cenas imersivas e cutscenes, interfaces e HUDs essenciais (`#hotbar`, `#players`, `#controls`, `#navigation`) devem adotar opacidade atenuada (10% a 20%) com restauração suave para 100% sob hover (`:hover` ou `:focus-within`), evitando `display: none` rígido para não desorientar jogadores e Mestre.
+
+## P-011 [DEVE] Governança Agêntica do Design System (W3C DTCG, WCAG 2.1, 60-30-10 e Anti-Box-in-Box)
+
+Todo token visual e componente do Celestial Chronicle Design System DEVE ser governado pelo catálogo canônico W3C DTCG (`src/features/design-system/agentic-tokens.ts`) em sincronia 1:1 com os arquivos CSS e aprovado deterministicamente por guardrails executáveis:
+1. **W3C WCAG 2.1**: contraste luminoso calculado (`>= 7.0:1` para texto primário em fichas, `>= 4.5:1` AA para texto terciário/muted e acentos dourados, `>= 3.0:1` SC 1.4.11 para ícones de controle).
+2. **Anti-Halação**: textos em superfícies de leitura contínua DEVEM respeitar teto máximo `<= 15.0:1` (proibido `#ffffff` sobre `#000000`).
+3. **Anti-Wireframe (Regra 60-30-10)**: bordas estruturais internas (`role: "border-hairline"`) DEVEM manter opacidade `<= 0.16`, reservando ouro envelhecido para 10% focais.
+4. **Contratos Anti-Box-in-Box & Zero Layout Drift**: conteúdos customizados no chat (`.et-abracado-chat-card`) NÃO devem criar containers externos redundantes dentro de `.chat-message`, e variantes de ficha `.et-sheet` ou `#context-menu` NÃO devem sobrescrever layout nativo.
+
+- verificação(teste): @principle:P-011

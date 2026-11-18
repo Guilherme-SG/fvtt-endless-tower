@@ -8,6 +8,11 @@ import {
   ENDLESS_TOWER_SHEET_CLASS,
   ENDLESS_TOWER_SHEET_LABEL,
 } from "../src/features/design-system/celestial-sheets";
+import {
+  AGENTIC_DESIGN_TOKENS,
+  COMPONENT_CONTRACTS,
+  auditAgenticTokens,
+} from "../src/features/design-system/agentic-tokens";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
   const rootDir = path.resolve(__dirname, "..");
@@ -16,10 +21,11 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
   describe("US-001 — Tokens & Tipografia Celestial", () => {
     /**
      * @spec:AC-001
-     * Definição e integridade de variáveis CSS canônicas.
+     * Definição e integridade de variáveis CSS canônicas e catálogo W3C DTCG.
      */
-    it("@spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos", () => {
+    it("@spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos e aprovados pelo validador DTCG", () => {
       const tokensCss = read("styles/design-system/tokens.css");
+      const designSystemTs = read("src/features/design-system/design-system.ts");
 
       expect(tokensCss).toMatch(/--et-obsidian/);
       expect(tokensCss).toMatch(/--et-gold/);
@@ -28,6 +34,19 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(tokensCss).toMatch(/--et-font-cinematic/);
       expect(tokensCss).toMatch(/--et-gradient-glass-ribbon/);
       expect(tokensCss).toMatch(/--et-blur/);
+
+      expect(Object.keys(AGENTIC_DESIGN_TOKENS).length).toBeGreaterThanOrEqual(15);
+      expect(Object.keys(COMPONENT_CONTRACTS)).toEqual(
+        expect.arrayContaining([
+          "chat-feature-card",
+          "cinematic-banner",
+          "modal-window",
+          "actor-sheet-theme",
+          "context-menu",
+        ])
+      );
+      expect(auditAgenticTokens().passed).toBe(true);
+      expect(designSystemTs).toMatch(/auditTokens\(/);
     });
 
     /**

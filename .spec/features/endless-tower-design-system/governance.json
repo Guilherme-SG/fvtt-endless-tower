@@ -11,12 +11,12 @@
   ],
   "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
   "review": {
-    "summary": "Revisao semantica atualizada apos remocao do container redundante em .et-abracado-chat-card (integrado ao .chat-message como na referencia visual) e calibracao da paleta pelos criterios W3C WCAG 2.1 AA/AAA e SC 1.4.11 (--et-ivory-muted, #989083 e controles em 0.52 de opacidade).",
+    "summary": "Revisao semantica atualizada apos instituicao da Governanca Agentica do Design System (P-011): catalogo W3C DTCG em agentic-tokens.ts com sincronia 1:1 contra CSS, validador matematico WCAG 2.1 / anti-halacao / 60-30-10, contratos tipados em DESIGN_SYSTEM.md/AGENTS.md e API api.designSystem.auditTokens().",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "9d3f72637b0613cfb5732579008f30d4a02a3e86992e3fb27bb5d34bfb61faa4",
-    "ownFingerprint": "9d3f72637b0613cfb5732579008f30d4a02a3e86992e3fb27bb5d34bfb61faa4",
-    "reviewedAt": "2026-11-18T01:42:01.875Z",
+    "fingerprint": "8aa0c35ca63ede8744eb05c8baf0824fc3fda20ef6c5953762f924ffc5b3020f",
+    "ownFingerprint": "8aa0c35ca63ede8744eb05c8baf0824fc3fda20ef6c5953762f924ffc5b3020f",
+    "reviewedAt": "2026-11-18T02:48:04.424Z",
     "documents": [
       ".spec/features/endless-tower-design-system/prd.md",
       ".spec/features/endless-tower-design-system/adr.md",

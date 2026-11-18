@@ -50,8 +50,8 @@ flowchart TD
     Features --> Dispatcher["Camada 4: Despachante de Áudio & Eventos\n(sound-effects, pure rules)"]
 ```
 
-1. **Camada de Tokens (`tokens.css`)**:
-   Define variáveis CSS fundamentais: paleta obsidiana (`--et-obsidian-glass`, `--et-obsidian-solid`), ouro divino (`--et-gold`, `--et-gold-bright`, `--et-gold-dim`), marfim celestial (`--et-ivory`, `--et-ivory-dim`), carmesim de julgamento (`--et-crimson`), e fontes cinematográficas (`--et-font-cinematic`).
+1. **Camada de Tokens & Governança Agêntica (`tokens.css`, `agentic-tokens.ts`)**:
+   Define variáveis CSS fundamentais: paleta obsidiana (`--et-obsidian-glass`, `--et-obsidian-solid`), ouro divino (`--et-gold`, `--et-gold-bright`, `--et-gold-dim`), marfim celestial (`--et-ivory`, `--et-ivory-dim`), carmesim de julgamento (`--et-crimson`), e fontes cinematográficas (`--et-font-cinematic`). Complementada pelo catálogo estruturado em formato W3C DTCG (`AGENTIC_DESIGN_TOKENS`), contratos tipados (`COMPONENT_CONTRACTS`) e validador determinístico `auditAgenticTokens()` exposto em `api.designSystem.auditTokens()` (`P-011`).
 2. **Blindagem FontAwesome (`buttons.css`, `hud.css`)**:
    Regra de prioridade:
    ```css

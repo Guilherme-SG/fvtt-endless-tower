@@ -4,11 +4,11 @@
 
 > feature: endless-tower-design-system
 
-## T-001 — Estrutura de Tokens CSS e Blindagem FontAwesome [concluida]
+## T-001 — Estrutura de Tokens CSS, Catálogo W3C DTCG e Blindagem FontAwesome [concluida]
 
 - Refs: US-001, AC-001, AC-002, AC-003
-- Arquivos: styles/design-system/tokens.css, styles/design-system/buttons.css
-- Notas: Estabelecer paleta canônica e regra incondicional de proteção de fontes para classes FontAwesome.
+- Arquivos: styles/design-system/tokens.css, styles/design-system/buttons.css, src/features/design-system/agentic-tokens.ts
+- Notas: Estabelecer paleta canônica, catálogo estruturado W3C DTCG com auditoria matemática WCAG 2.1 (`P-011`) e regra incondicional de proteção de fontes para classes FontAwesome.
 
 ## T-002 — Escopo Estrito de Botões, Formulários, Janelas e Fichas Opt-In [concluida]
 
