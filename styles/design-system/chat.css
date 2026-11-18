@@ -22,6 +22,10 @@ body.et-celestial-active .chat-message:not(.cm-msg) {
   min-width: 0 !important;
   transition: all var(--et-transition-fast) !important;
   --dnd5e-roll-icon-filter: invert(0.92) sepia(0.35) saturate(1.5) hue-rotate(5deg) brightness(1.08) !important;
+  --dnd5e-color-success: var(--et-emerald-pale) !important;
+  --dnd5e-color-success-critical: var(--et-emerald) !important;
+  --dnd5e-color-failure: var(--et-crimson-pale) !important;
+  --dnd5e-color-failure-critical: var(--et-crimson-bright) !important;
   --dnd5e-color-failure-background: rgba(120, 30, 40, 0.32) !important;
   --dnd5e-color-success-background: rgba(28, 78, 50, 0.32) !important;
   --dnd5e-application-background: none !important;
@@ -885,9 +889,9 @@ body.et-celestial-active .dice-tray button.dice-tray__roll:hover {
 .et-maneuver-card .et-card-title,
 .et-temporal-chat-card .et-card-title {
   font-family: var(--et-font-cinematic);
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--et-ivory);
   margin: 0;
@@ -963,4 +967,39 @@ body.et-celestial-active .dice-tray button.dice-tray__roll:hover {
   font-size: 0.85rem;
   margin-top: 0.4rem;
   color: var(--et-ivory-muted);
+}
+
+/* --- Epic Rolls 5e Chat Recap High-Contrast Styling (WCAG 2.1 AAA) --- */
+body.et-celestial-active .chat-message:not(.cm-msg) .epic-rolls-chat-recap .flavor-text {
+  color: var(--et-gold) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .epic-rolls-chat-recap h1 {
+  color: var(--et-ivory-muted) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .epic-rolls-chat-recap .epic-rolls-dice-result.success {
+  background: var(--et-emerald-glass) !important;
+  border-color: var(--et-emerald-border) !important;
+  color: var(--et-emerald-pale) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .epic-rolls-chat-recap .epic-rolls-dice-result.failure {
+  background: var(--et-crimson-glass) !important;
+  border-color: var(--et-crimson-border) !important;
+  color: var(--et-crimson-pale) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .epic-rolls-chat-recap .epic-rolls-dice-result h4.dice-total {
+  font-family: var(--et-font-cinematic) !important;
+  font-size: 1.25rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 0.35rem 0.5rem !important;
+  margin: 0 !important;
+  color: inherit !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
 }

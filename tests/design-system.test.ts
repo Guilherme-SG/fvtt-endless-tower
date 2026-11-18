@@ -323,10 +323,12 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(chatCss).toMatch(/\.message-sender.*background:\s*transparent\s*!important/s);
       expect(chatEnhancerTs).toMatch(/sender\.style\.removeProperty\(["']background-color["']\)/);
 
-      // Estilização Celestial Chronicle para cards do Monk's Token Bar
+      // Estilização Celestial Chronicle para cards do Monk's Token Bar e Epic Rolls 5e
       expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.card-header h3/);
       expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.sheet \.items-list \.items-header/);
       expect(chatCss).toMatch(/\.monks-tokenbar\.chat-card \.card-footer button\.footer-button/);
+      expect(chatCss).toMatch(/\.epic-rolls-chat-recap \.epic-rolls-dice-result\.success[\s\S]*?var\(--et-emerald-pale\)/);
+      expect(chatCss).toMatch(/\.epic-rolls-chat-recap \.epic-rolls-dice-result\.failure[\s\S]*?var\(--et-crimson-pale\)/);
 
       // Alternância Monk's Token Bar (mtb) <-> Ripper's Epic Rolls (rer) no Midi-QoL
       const criticalEncounterTs = read("src/features/critical-encounter/adapter.ts");

@@ -1,7 +1,7 @@
 {
   "feature": "combat-maneuvers",
-  "timestamp": "2026-11-18T21:43:10.766Z",
-  "gitRev": "b033125",
+  "timestamp": "2026-11-18T23:45:12.577Z",
+  "gitRev": "2bc1bec",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
