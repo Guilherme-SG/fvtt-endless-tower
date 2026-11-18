@@ -1,0 +1,384 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Typography & Prose
+   Cinematic runic headers, classical drop caps, quotes, dividers and text tokens.
+   ========================================================================== */
+
+/* --- Base Typography Resets & Defaults --- */
+.et-font-cinematic {
+  font-family: var(--et-font-cinematic);
+}
+
+.et-font-body {
+  font-family: var(--et-font-body);
+}
+
+.et-font-mono {
+  font-family: var(--et-font-mono);
+}
+
+/* --- Headings Hierarchy --- */
+.et-heading-hero {
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  color: var(--et-ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  line-height: 1.15;
+  white-space: nowrap;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 24px var(--et-gold-glow);
+  margin: 0;
+  padding: 0;
+}
+
+.et-heading-xl,
+h1.et-heading {
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  color: var(--et-ivory);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85), 0 0 18px var(--et-gold-glow-subtle);
+  margin: 0.6rem 0 0.8rem;
+}
+
+.et-heading-lg,
+h2.et-heading {
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  color: var(--et-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+  margin: 0.5rem 0 0.6rem;
+}
+
+.et-heading-md,
+h3.et-heading {
+  font-family: var(--et-font-cinematic);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  color: var(--et-gold-deep);
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  margin: 0.4rem 0 0.5rem;
+}
+
+.et-heading-sm,
+h4.et-heading {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--et-ivory);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0.3rem 0 0.4rem;
+}
+
+.et-heading-xs,
+h5.et-heading {
+  font-family: var(--et-font-cinematic);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--et-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  margin: 0.2rem 0 0.3rem;
+}
+
+/* --- Body Text Hierarchy --- */
+.et-body-lead {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--et-ivory);
+  letter-spacing: 0.02em;
+}
+
+.et-body {
+  font-family: var(--et-font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--et-ivory-dim);
+}
+
+.et-caption {
+  font-family: var(--et-font-body);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--et-ivory-muted);
+  letter-spacing: 0.03em;
+}
+
+.et-code {
+  font-family: var(--et-font-mono);
+  font-size: 0.88rem;
+  background: rgba(14, 12, 10, 0.65);
+  border: 1px solid var(--et-glass-border-subtle);
+  border-radius: var(--et-radius-xs);
+  padding: 0.15rem 0.4rem;
+  color: var(--et-gold);
+}
+
+/* --- Drop Cap (Iniciais Capitulares Iluminadas para Lore e Diários) --- */
+.et-dropcap::first-letter,
+p.et-dropcap:first-letter {
+  float: left;
+  font-family: "Georgia", "Modesto Condensed", "Palatino", serif;
+  font-size: 3.6rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  color: var(--et-gold);
+  text-shadow: 0 0 16px var(--et-gold-glow), 0 2px 4px rgba(0, 0, 0, 0.9);
+  font-weight: 700;
+}
+
+/* --- Stylized Typographic Quotes --- */
+.et-quote {
+  position: relative;
+  margin: 1.2rem 0;
+  padding: 1rem 1.4rem;
+  background: rgba(14, 12, 10, 0.65);
+  border-left: 3px solid var(--et-gold-deep);
+  border-radius: 0 var(--et-radius-sm) var(--et-radius-sm) 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.et-quote-text {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--et-ivory);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.et-quote-mark {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: normal !important;
+  font-weight: 700;
+  color: var(--et-gold);
+  font-size: 1.3em;
+  line-height: 0;
+  vertical-align: -0.06em;
+  margin: 0 0.12em;
+  display: inline-block;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 4px var(--et-gold-glow));
+}
+
+.et-quote-author {
+  display: block;
+  font-family: var(--et-font-cinematic);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--et-gold-deep);
+  margin-top: 0.5rem;
+  text-align: right;
+  opacity: 0.9;
+}
+
+/* --- Dividers: Tapered Razor Lines --- */
+.et-divider {
+  width: 100%;
+  max-width: 520px;
+  height: 1px;
+  margin: 14px auto;
+  background: var(--et-gradient-razor-divider);
+  box-shadow: 0 0 8px var(--et-gold-glow-subtle);
+  border: none;
+}
+
+.et-divider-crimson {
+  width: 100%;
+  max-width: 520px;
+  height: 1px;
+  margin: 14px auto;
+  background: var(--et-gradient-razor-crimson);
+  box-shadow: 0 0 8px var(--et-crimson-glow);
+  border: none;
+}
+
+.et-divider-azure {
+  width: 100%;
+  max-width: 520px;
+  height: 1px;
+  margin: 14px auto;
+  background: linear-gradient(90deg, transparent 0%, rgba(123, 181, 230, 0.7) 50%, transparent 100%);
+  box-shadow: 0 0 8px var(--et-azure-glow);
+  border: none;
+}
+
+.et-divider-runic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.2rem auto;
+  width: min(560px, 92%);
+}
+
+.et-divider-runic::before,
+.et-divider-runic::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--et-gradient-razor-divider);
+}
+
+.et-divider-runic .et-rune-glyph {
+  color: var(--et-gold);
+  font-size: 0.95rem;
+  filter: drop-shadow(0 0 6px var(--et-gold-glow));
+  user-select: none;
+}
+
+/* --- Runic Crests & Sparkles --- */
+.et-rune-sparkle {
+  color: var(--et-gold-deep);
+  font-size: 0.85em;
+  opacity: 0.85;
+  user-select: none;
+  display: inline-block;
+  filter: drop-shadow(0 0 4px var(--et-gold-glow));
+}
+
+.et-rune-crest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--et-gold);
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 8px var(--et-gold-glow));
+  user-select: none;
+}
+
+/* --- Badges & Tags --- */
+.et-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--et-radius-pill);
+  font-family: var(--et-font-cinematic);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.et-badge-gold {
+  background: rgba(243, 226, 176, 0.12);
+  border: 1px solid var(--et-gold-deep);
+  color: var(--et-gold-bright);
+  box-shadow: 0 0 10px rgba(217, 184, 101, 0.25);
+}
+
+.et-badge-crimson {
+  background: rgba(158, 27, 27, 0.25);
+  border: 1px solid var(--et-crimson-border);
+  color: #ffcccc;
+  box-shadow: 0 0 12px var(--et-crimson-glow);
+}
+
+.et-badge-azure {
+  background: rgba(123, 181, 230, 0.18);
+  border: 1px solid var(--et-azure-border);
+  color: #d8eeff;
+  box-shadow: 0 0 10px var(--et-azure-glow);
+}
+
+.et-badge-emerald {
+  background: rgba(91, 200, 142, 0.18);
+  border: 1px solid var(--et-emerald-border);
+  color: #d6f7e4;
+  box-shadow: 0 0 10px var(--et-emerald-glow);
+}
+
+.et-badge-obsidian {
+  background: rgba(14, 12, 10, 0.85);
+  border: 1px solid var(--et-glass-border);
+  color: var(--et-ivory-dim);
+}
+
+/* --- Secrets & Spoilers --- */
+.et-secret {
+  background: rgba(14, 12, 10, 0.85);
+  border: 1px dashed var(--et-glass-border);
+  border-radius: var(--et-radius-sm);
+  padding: 0.8rem 1rem;
+  color: transparent;
+  text-shadow: 0 0 12px rgba(243, 226, 176, 0.6);
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.et-secret::after {
+  content: "✦ Toque ou passe o cursor para revelar segredo ✦";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--et-font-cinematic);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--et-gold);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.et-secret:hover,
+.et-secret:focus {
+  color: var(--et-ivory);
+  text-shadow: none;
+  user-select: text;
+  border-style: solid;
+  border-color: var(--et-gold-deep);
+  box-shadow: 0 0 14px var(--et-gold-glow-subtle);
+}
+
+.et-secret:hover::after,
+.et-secret:focus::after {
+  opacity: 0;
+}
+
+/* --- Global Celestial Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 8, 6, 0.5);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 184, 101, 0.35);
+  border-radius: 999px;
+  border: 1px solid rgba(243, 226, 176, 0.15);
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 226, 176, 0.7);
+  box-shadow: 0 0 8px var(--et-gold-glow);
+}

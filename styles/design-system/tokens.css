@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Tokens
+   Source of truth for colors, typography, glassmorphism, glows and metrics.
+   ========================================================================== */
+
+:root {
+  /* --- Palette: Luminous Ivory & Celestial Gold --- */
+  --et-ivory: #fff8e6;
+  --et-ivory-dim: rgba(255, 248, 230, 0.78);
+  --et-ivory-muted: rgba(255, 248, 230, 0.62);
+  --et-gold: #f3e2b0;
+  --et-gold-bright: #ffeab3;
+  --et-gold-deep: #d9b865;
+  --et-gold-dark: #8a7139;
+  --et-gold-satin-top: #fbefc6;
+  --et-ink: #3a2c10;
+  --et-gold-dim: rgba(217, 184, 101, 0.18);
+  --et-gold-glow: rgba(243, 226, 176, 0.45);
+  --et-gold-glow-subtle: rgba(217, 184, 101, 0.22);
+  --et-gold-glow-intense: rgba(255, 236, 180, 0.85);
+
+  /* --- Palette: Dark Obsidian & Frosted Glass --- */
+  --et-obsidian-pure: #000000;
+  --et-obsidian-void: #080605;
+  --et-obsidian-95: rgba(12, 10, 8, 0.95);
+  --et-obsidian-88: rgba(14, 12, 10, 0.88);
+  --et-obsidian-78: rgba(14, 12, 10, 0.78);
+  --et-obsidian-60: rgba(18, 15, 12, 0.60);
+  --et-obsidian-40: rgba(18, 15, 12, 0.40);
+  --et-obsidian-card: rgba(16, 13, 11, 0.88);
+  --et-obsidian-well: rgba(8, 7, 6, 0.75);
+  --et-glass-amber: rgba(34, 30, 26, 0.38);
+  --et-glass-dropdown: rgba(24, 20, 18, 0.78);
+  --et-glass-line: rgba(255, 244, 214, 0.50);
+
+  /* --- Palette: Semantics & Accents --- */
+  /* Crimson: Combat, Critical Encounter, Damage, Danger */
+  --et-crimson: #9e1b1b;
+  --et-crimson-light: #c0392b;
+  --et-crimson-glow: rgba(180, 25, 25, 0.45);
+  --et-crimson-glass: rgba(45, 10, 10, 0.82);
+  --et-crimson-border: rgba(230, 45, 45, 0.65);
+
+  /* Azure: Arcane, Mana, Secrets, Whispers, Wisdom */
+  --et-azure: #7bb5e6;
+  --et-azure-light: #a3cff5;
+  --et-azure-glow: rgba(123, 181, 230, 0.40);
+  --et-azure-glass: rgba(12, 24, 38, 0.82);
+  --et-azure-border: rgba(123, 181, 230, 0.55);
+
+  /* Emerald: Vitality, Healing, Success, Active Toggle, Blessings */
+  --et-emerald: #5bc88e;
+  --et-emerald-light: #82e0ad;
+  --et-emerald-glow: rgba(91, 200, 142, 0.40);
+  --et-emerald-glass: rgba(10, 35, 20, 0.82);
+  --et-emerald-border: rgba(91, 200, 142, 0.55);
+
+  /* Amber: Initiative, Concentration, Roll Pending, Warning */
+  --et-amber: #e6a73a;
+  --et-amber-light: #f7be5c;
+  --et-amber-glow: rgba(230, 167, 58, 0.45);
+  --et-amber-glass: rgba(38, 26, 10, 0.82);
+  --et-amber-border: rgba(230, 167, 58, 0.55);
+
+  /* Amethyst: Portents, Curses, Void, Omen */
+  --et-amethyst: #a57ee8;
+  --et-amethyst-glow: rgba(165, 126, 232, 0.40);
+  --et-amethyst-glass: rgba(26, 14, 38, 0.82);
+
+  /* --- Borders --- */
+  --et-glass-border-subtle: rgba(243, 226, 176, 0.14);
+  --et-glass-border: rgba(243, 226, 176, 0.28);
+  --et-glass-border-strong: rgba(243, 226, 176, 0.48);
+  --et-glass-border-focus: rgba(243, 226, 176, 0.75);
+
+  /* --- Gradients --- */
+  --et-gradient-gold-btn: linear-gradient(135deg, #f7e8be 0%, #d9b865 50%, #b8933b 100%);
+  --et-gradient-gold-btn-hover: linear-gradient(135deg, #fff3d4 0%, #e6ca7e 50%, #c9a34b 100%);
+  --et-gradient-login-btn: linear-gradient(180deg, #fbefc6 0%, #d9b865 100%);
+  --et-gradient-glass-ribbon: linear-gradient(90deg, transparent 0%, rgba(12, 10, 8, 0.72) 12%, rgba(16, 12, 11, 0.92) 50%, rgba(12, 10, 8, 0.72) 88%, transparent 100%);
+  --et-gradient-razor-divider: linear-gradient(90deg, transparent 0%, rgba(217, 184, 101, 0.65) 50%, transparent 100%);
+  --et-gradient-razor-crimson: linear-gradient(90deg, transparent 0%, rgba(217, 184, 101, 0.5) 20%, rgba(192, 57, 43, 0.85) 50%, rgba(217, 184, 101, 0.5) 80%, transparent 100%);
+  --et-gradient-header: linear-gradient(90deg, rgba(20, 16, 12, 0.95) 0%, rgba(32, 25, 17, 0.98) 50%, rgba(20, 16, 12, 0.95) 100%);
+
+  /* --- Typography --- */
+  --et-font-cinematic: "Signika", "Modesto Condensed", "Palatino", "Georgia", serif;
+  --et-font-body: "Signika", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --et-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* --- Glassmorphism & Blur --- */
+  --et-blur-sm: blur(8px);
+  --et-blur-md: blur(14px);
+  --et-blur-lg: blur(20px);
+
+  /* --- Shadows --- */
+  --et-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --et-shadow-md: 0 6px 24px rgba(0, 0, 0, 0.65), 0 0 16px var(--et-gold-glow-subtle);
+  --et-shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.85), 0 0 28px var(--et-gold-glow-subtle);
+  --et-shadow-glow: 0 0 20px var(--et-gold-glow);
+  --et-shadow-glow-crimson: 0 0 22px var(--et-crimson-glow);
+  --et-shadow-glow-azure: 0 0 20px var(--et-azure-glow);
+  --et-shadow-glow-emerald: 0 0 20px var(--et-emerald-glow);
+
+  /* --- Radiuses --- */
+  --et-radius-xs: 3px;
+  --et-radius-sm: 6px;
+  --et-radius-md: 10px;
+  --et-radius-lg: 16px;
+  --et-radius-pill: 9999px;
+
+  /* --- Transitions & Timings --- */
+  --et-transition-fast: 0.15s cubic-bezier(0.2, 0, 0.2, 1);
+  --et-transition-normal: 0.25s cubic-bezier(0.2, 0, 0.2, 1);
+  --et-transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* --- Z-Indices --- */
+  --et-z-hud: 40;
+  --et-z-tooltip: 100;
+  --et-z-window: 100;
+  --et-z-context: 9999;
+  --et-z-modal: 99990;
+  --et-z-banner: 999990;
+  --et-z-overlay: 999999;
+
+  /* --- Celestial Filigree Corner Brackets (SVG Inline) --- */
+  --et-filigree-corner-tl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M1 23V5C1 2.79 2.79 1 5 1H23' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M5 11V5H11' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='5' cy='5' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-tr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M23 23V5C23 2.79 21.21 1 19 1H1' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M19 11V5H13' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='19' cy='5' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-bl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M1 1V19C1 21.21 2.79 23 5 23H23' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M5 13V19H11' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='5' cy='19' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+  --et-filigree-corner-br: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M23 1V19C23 21.21 21.21 23 19 23H1' stroke='%23d9b865' stroke-opacity='0.65' stroke-width='1.25'/%3E%3Cpath d='M19 13V19H13' stroke='%23f3e2b0' stroke-opacity='0.45' stroke-width='1'/%3E%3Ccircle cx='19' cy='19' r='1.5' fill='%23f3e2b0' fill-opacity='0.75'/%3E%3C/svg%3E");
+}

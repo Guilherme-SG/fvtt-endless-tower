@@ -1,14 +1,9 @@
 {
-  "testCommand": "npx vitest run",
-  "reporter": "tap",
-  "testGlobs": [
-    "test/**",
-    "tests/**",
-    "src/**/*.test.*",
-    "src/**/*.spec.*",
-    "__tests__/**"
-  ],
+  "testCommand": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
+  "reporter": "vitest-json",
+  "reporterOutputFile": ".spec/verification/raw.json",
   "srcGlobs": [
-    "src/**"
+    "src/features/design-system/**",
+    "src/features/celestial-chronicle.ts"
   ]
 }

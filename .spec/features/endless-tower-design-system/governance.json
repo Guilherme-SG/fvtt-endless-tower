@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "large": true,
+  "documentationContract": "onp-docs-v1",
+  "domains": [
+    "ui",
+    "audio",
+    "chat",
+    "combat",
+    "foundry-v13"
+  ],
+  "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
+  "review": {
+    "summary": "Adicionada estilizacao completa do #sidebar-content e todas as sections internas (.sidebar-tab, .directory, .combat-sidebar, .playlists-sidebar, .settings-sidebar, popouts e buscas estilo pilula da tela de login) ao Celestial Chronicle Design System para Foundry v13 (AC-019 / T-008).",
+    "reviewer": "antigravity",
+    "conflicts": [],
+    "fingerprint": "17febead078668a4df2b0a7696890460564b9ce463670e5cd9f27d96093a5339",
+    "ownFingerprint": "17febead078668a4df2b0a7696890460564b9ce463670e5cd9f27d96093a5339",
+    "reviewedAt": "2026-11-18T07:05:50.426Z",
+    "documents": [
+      ".spec/features/endless-tower-design-system/prd.md",
+      ".spec/features/endless-tower-design-system/adr.md",
+      ".spec/features/endless-tower-design-system/design.md",
+      ".spec/features/endless-tower-design-system/spec.md",
+      ".spec/features/endless-tower-design-system/tasks.md",
+      ".spec/features/endless-tower-design-system/research.md",
+      ".spec/constituicao.md",
+      "onpspec.config.json"
+    ]
+  },
+  "decisions": []
+}

@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Forms & Controls
+   Scoped to .et-input, .et-select, .et-textarea, #chat-form and .et-card.
+   Does NOT alter native Foundry configuration dialogs (#client-settings) or sheets.
+   ========================================================================== */
+
+/* --- Inputs & Text Fields --- */
+.et-input,
+#chat-form input,
+.et-card input[type="text"],
+.et-card input[type="number"],
+.et-dialog input[type="text"],
+.et-dialog input[type="number"] {
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0.4rem 0.85rem;
+  background: var(--et-obsidian-well);
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-sm);
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  font-size: 0.95rem;
+  line-height: normal;
+  backdrop-filter: var(--et-blur-sm);
+  -webkit-backdrop-filter: var(--et-blur-sm);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+  transition: all var(--et-transition-fast);
+  outline: none;
+}
+
+.et-input:focus,
+#chat-form input:focus,
+.et-card input[type="text"]:focus,
+.et-card input[type="number"]:focus,
+.et-dialog input[type="text"]:focus,
+.et-dialog input[type="number"]:focus {
+  border-color: var(--et-gold);
+  background: rgba(18, 15, 12, 0.9);
+  box-shadow: 0 0 14px var(--et-gold-glow), inset 0 1px 4px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+}
+
+.et-input::placeholder {
+  color: var(--et-ivory-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* --- Select Dropdowns --- */
+.et-select,
+.et-card select,
+.et-dialog select {
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0.4rem 2.2rem 0.4rem 0.85rem;
+  background: var(--et-obsidian-well) url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%3E%3Cpath%20fill%3D%22%23f3e2b0%22%20d%3D%22M1%202l6%206%206-6%22%20stroke%3D%22%23d9b865%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E") no-repeat right 0.75rem center;
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-sm);
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  font-size: 0.95rem;
+  backdrop-filter: var(--et-blur-sm);
+  -webkit-backdrop-filter: var(--et-blur-sm);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  transition: all var(--et-transition-fast);
+}
+
+.et-select:focus,
+.et-card select:focus,
+.et-dialog select:focus {
+  border-color: var(--et-gold);
+  background-color: rgba(22, 18, 14, 0.95);
+  box-shadow: 0 0 14px var(--et-gold-glow);
+  color: #ffffff;
+}
+
+.et-select option,
+.et-card select option,
+.et-dialog select option {
+  background: #120f0c;
+  color: var(--et-ivory);
+  padding: 8px 12px;
+}
+
+/* --- Textarea --- */
+.et-textarea,
+.et-card textarea,
+.et-dialog textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  background: var(--et-obsidian-well);
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-sm);
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  backdrop-filter: var(--et-blur-sm);
+  -webkit-backdrop-filter: var(--et-blur-sm);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.65);
+  outline: none;
+  resize: vertical;
+  transition: all var(--et-transition-fast);
+}
+
+.et-textarea:focus,
+.et-card textarea:focus,
+.et-dialog textarea:focus {
+  border-color: var(--et-gold);
+  background: rgba(18, 15, 12, 0.92);
+  box-shadow: 0 0 14px var(--et-gold-glow);
+  color: #ffffff;
+}
+
+/* --- Range Sliders --- */
+.et-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(243, 226, 176, 0.18);
+  border: 1px solid rgba(243, 226, 176, 0.25);
+  border-radius: var(--et-radius-pill);
+  outline: none;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all var(--et-transition-fast);
+}
+
+.et-range:hover {
+  background: rgba(243, 226, 176, 0.28);
+  box-shadow: 0 0 8px var(--et-gold-glow-subtle);
+}
+
+.et-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--et-gradient-gold-btn);
+  border: 2px solid #fff8e6;
+  box-shadow: 0 0 10px rgba(243, 226, 176, 0.7), 0 2px 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform var(--et-transition-fast), box-shadow var(--et-transition-fast);
+}
+
+.et-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 16px var(--et-gold-glow), 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.et-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--et-gradient-gold-btn);
+  border: 2px solid #fff8e6;
+  box-shadow: 0 0 10px rgba(243, 226, 176, 0.7);
+  cursor: pointer;
+  transition: transform var(--et-transition-fast);
+}
+
+/* --- Celestial Toggle Switch --- */
+.et-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.et-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.et-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--et-obsidian-well);
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-pill);
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.et-switch-slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--et-gold-deep);
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.et-switch input:checked + .et-switch-slider {
+  background-color: rgba(91, 200, 142, 0.25);
+  border-color: var(--et-emerald);
+  box-shadow: 0 0 12px var(--et-emerald-glow);
+}
+
+.et-switch input:checked + .et-switch-slider::before {
+  transform: translateX(20px);
+  background: var(--et-emerald-light);
+  box-shadow: 0 0 8px var(--et-emerald-glow);
+}
+
+/* --- Form Labels --- */
+label.et-label {
+  display: block;
+  font-family: var(--et-font-cinematic);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--et-gold);
+  margin-bottom: 0.35rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Cards
+   Frosted dark glass cards with runic corner markers, gilded headers & badges.
+   ========================================================================== */
+
+/* --- Universal Card Component --- */
+.et-card {
+  position: relative;
+  background: var(--et-obsidian-card);
+  border: 1px solid var(--et-glass-border);
+  border-radius: var(--et-radius-md);
+  box-shadow: var(--et-shadow-md);
+  backdrop-filter: var(--et-blur-md);
+  -webkit-backdrop-filter: var(--et-blur-md);
+  padding: 1.2rem;
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  transition: all var(--et-transition-normal);
+  overflow: hidden;
+}
+
+.et-card:hover {
+  border-color: rgba(243, 226, 176, 0.45);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 20px var(--et-gold-glow-subtle);
+  transform: translateY(-2px);
+}
+
+/* Card Header */
+.et-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--et-glass-border-subtle);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.et-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.et-card-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: var(--et-radius-sm);
+  border: 1px solid var(--et-gold-deep);
+  box-shadow: 0 0 8px var(--et-gold-glow-subtle);
+  object-fit: cover;
+  background: var(--et-obsidian-well);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--et-gold);
+  font-size: 1.2rem;
+}
+
+.et-card-title {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--et-ivory);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-message .et-card-title {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.25;
+}
+
+.et-card-subtitle {
+  font-family: var(--et-font-cinematic);
+  font-size: 0.82rem;
+  color: var(--et-gold-deep);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+/* Card Body */
+.et-card-body {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--et-ivory-dim);
+  margin-bottom: 0.85rem;
+}
+
+/* Card Metadata Pill Grid */
+.et-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Card Footer */
+.et-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--et-glass-border-subtle);
+  padding-top: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--et-ivory-muted);
+}
+
+/* --- Card Variants --- */
+/* Spell Card */
+.et-spell-card {
+  border-color: rgba(123, 181, 230, 0.35);
+}
+
+.et-spell-card:hover {
+  border-color: var(--et-azure);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 20px var(--et-azure-glow);
+}
+
+/* Blessing / Legendary Card */
+.et-blessing-card {
+  border-color: rgba(243, 226, 176, 0.45);
+  background: linear-gradient(135deg, rgba(22, 18, 14, 0.92) 0%, rgba(14, 11, 8, 0.95) 100%);
+}
+
+.et-blessing-card:hover {
+  border-color: var(--et-gold-bright);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 24px var(--et-gold-glow);
+}
+
+/* Danger / Combat Threat Card */
+.et-threat-card {
+  border-color: rgba(158, 27, 27, 0.45);
+}
+
+.et-threat-card:hover {
+  border-color: var(--et-crimson-light);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 22px var(--et-crimson-glow);
+}
+
+/* Compact Card */
+.et-card-compact {
+  padding: 0.75rem 1rem;
+}
+
+.et-card-compact .et-card-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  font-size: 1rem;
+}
+
+.et-card-compact .et-card-title {
+  font-size: 1rem;
+}

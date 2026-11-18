@@ -27,6 +27,7 @@ import {
 import {
   registerCriticalEncounter,
   CriticalEncounterManager,
+  type MidiRollSystem,
 } from "./features/critical-encounter";
 import {
   registerSolitudeFeature,
@@ -35,6 +36,17 @@ import {
   isIsolated,
   getDistanceInFeet,
 } from "./features/solitude";
+import {
+  registerTemporalSynchronyFeature,
+  promptTemporalSynchrony,
+  getTemporalSynchronyUses,
+} from "./features/temporal-synchrony";
+import {
+  registerDesignSystem,
+  DesignSystem,
+} from "./features/design-system/design-system";
+import { BannerService } from "./features/design-system/banner-service";
+import { DesignSystemSound } from "./features/design-system/sound-effects";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -51,6 +63,8 @@ Hooks.once("init", () => {
   registerCelestialChronicleFeature();
   registerCriticalEncounter();
   registerSolitudeFeature();
+  registerTemporalSynchronyFeature();
+  registerDesignSystem();
 });
 
 Hooks.once("ready", () => {
@@ -68,11 +82,26 @@ Hooks.once("ready", () => {
       toggleLandingEffects,
       chronicle: CelestialChronicle.getInstance(),
       criticalEncounter: CriticalEncounterManager.getInstance(),
+      getRollSystem: () => CriticalEncounterManager.getInstance().getRollSystem(),
+      setRollSystem: (mode: MidiRollSystem, notify = true) =>
+        CriticalEncounterManager.getInstance().setRollSystem(mode, notify),
+      toggleRollSystem: () => CriticalEncounterManager.getInstance().toggleRollSystem(),
       abracadoDestino: AbracadoDestinoManager.getInstance(),
       checkSolitude,
       ensureIsolationEffect,
       isIsolated,
       getDistanceInFeet,
+      promptTemporalSynchrony,
+      getTemporalSynchronyUses,
+      designSystem: DesignSystem.getInstance(),
+      banner: BannerService.getInstance(),
+      sound: DesignSystemSound.getInstance(),
+      ui: {
+        showBanner: (opts: any) => BannerService.getInstance().show(opts),
+        playSound: (type: any, vol?: number) => DesignSystemSound.getInstance().play(type, vol),
+        startParticles: () => DesignSystem.getInstance().startGlobalParticles(),
+        stopParticles: () => DesignSystem.getInstance().stopGlobalParticles(),
+      },
     };
   }
 });

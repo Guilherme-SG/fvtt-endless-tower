@@ -1,0 +1,128 @@
+{
+  "feature": "endless-tower-design-system",
+  "timestamp": "2026-11-18T17:58:02.682Z",
+  "gitRev": "b2cb368",
+  "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
+  "reporter": "vitest-json",
+  "exitCode": 0,
+  "testsParsed": 31,
+  "results": {
+    "AC-001": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos e aprovados pelo validador DTCG @spec:AC-001 possui tokens canônicos de cor, vidro e tipografia definidos e aprovados pelo validador DTCG",
+      "method": "vitest-json"
+    },
+    "AC-002": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-002 blinda fontes de ícones FontAwesome com prioridade important @spec:AC-002 blinda fontes de ícones FontAwesome com prioridade important",
+      "method": "vitest-json"
+    },
+    "AC-003": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-003 isola aspas de citações em Georgia serif normal para evitar colapso no Chromium @spec:AC-003 isola aspas de citações em Georgia serif normal para evitar colapso no Chromium",
+      "method": "vitest-json"
+    },
+    "AC-019": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-001 — Tokens & Tipografia Celestial @spec:AC-019 sincroniza DNA da tela de login, HUD v13, chat/Midi-QoL sem textura e cantoneiras focais @spec:AC-019 sincroniza DNA da tela de login, HUD v13, chat/Midi-QoL sem textura e cantoneiras focais",
+      "method": "vitest-json"
+    },
+    "AC-004": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-004 não aplica estilos universais a .window-app ou .sheet, preserva espaçamento/ícones no #context-menu e registra Endless Tower Sheet (.et-sheet) @spec:AC-004 não aplica estilos universais a .window-app ou .sheet, preserva espaçamento/ícones no #context-menu e registra Endless Tower Sheet (.et-sheet)",
+      "method": "vitest-json"
+    },
+    "AC-005": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-005 inputs e selects utilizam classes dedicadas sem afetar Configure Settings nativo @spec:AC-005 inputs e selects utilizam classes dedicadas sem afetar Configure Settings nativo",
+      "method": "vitest-json"
+    },
+    "AC-006": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-006 botões usam .et-btn e protegem módulos de terceiros (.cm-msg e Token Action HUD) @spec:AC-006 botões usam .et-btn e protegem módulos de terceiros (.cm-msg e Token Action HUD)",
+      "method": "vitest-json"
+    },
+    "AC-007": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-007 garante contraste marfim/dourado, links compactos, contenção de overflow e isolamento de simraki-character-monitor @spec:AC-007 garante contraste marfim/dourado, links compactos, contenção de overflow e isolamento de simraki-character-monitor",
+      "method": "vitest-json"
+    },
+    "AC-008": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-008 posiciona selo de visibilidade com ícones nativos sem runa antes do cabeçalho flexrow @spec:AC-008 posiciona selo de visibilidade com ícones nativos sem runa antes do cabeçalho flexrow",
+      "method": "vitest-json"
+    },
+    "AC-009": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-003 — Chat e Cartões de Combate @spec:AC-009 restringe crítico e falha a rolagens de ataque e preserva alinhamento das colunas @spec:AC-009 restringe crítico e falha a rolagens de ataque e preserva alinhamento das colunas",
+      "method": "vitest-json"
+    },
+    "AC-010": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-004 — Banners Cinemáticos Souls-like (P-005) @spec:AC-010 banner cinemático ocupa 100vw com backdrop blur e sem bordas laterais @spec:AC-010 banner cinemático ocupa 100vw com backdrop blur e sem bordas laterais",
+      "method": "vitest-json"
+    },
+    "AC-011": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-004 — Banners Cinemáticos Souls-like (P-005) @spec:AC-011 título do banner cinemático mantém white-space nowrap @spec:AC-011 título do banner cinemático mantém white-space nowrap",
+      "method": "vitest-json"
+    },
+    "AC-012": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-004 — Banners Cinemáticos Souls-like (P-005) @spec:AC-012 BannerService possui fila FIFO de exibição para prevenir sobreposição @spec:AC-012 BannerService possui fila FIFO de exibição para prevenir sobreposição",
+      "method": "vitest-json"
+    },
+    "AC-013": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-005 — Pausa Celestial e Transições de Cena @spec:AC-013 barra de pausa possui largura ajustada ao conteúdo e limite máximo equilibrado @spec:AC-013 barra de pausa possui largura ajustada ao conteúdo e limite máximo equilibrado",
+      "method": "vitest-json"
+    },
+    "AC-014": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-005 — Pausa Celestial e Transições de Cena @spec:AC-014 transições de cena utilizam contêiner fixo no body desacoplado do PixiJS #board @spec:AC-014 transições de cena utilizam contêiner fixo no body desacoplado do PixiJS #board",
+      "method": "vitest-json"
+    },
+    "AC-015": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-005 — Pausa Celestial e Transições de Cena @spec:AC-015 efeitos dinâmicos suportam toggle e limpeza no canvasTearDown @spec:AC-015 efeitos dinâmicos suportam toggle e limpeza no canvasTearDown",
+      "method": "vitest-json"
+    },
+    "AC-016": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-006 — Despachante de Áudio de Interface Desacoplado @spec:AC-016 remove completamente som de clique genérico e listener global de clique @spec:AC-016 remove completamente som de clique genérico e listener global de clique",
+      "method": "vitest-json"
+    },
+    "AC-017": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-006 — Despachante de Áudio de Interface Desacoplado @spec:AC-017 disponibiliza perfis sonoros desacoplados para rolagens e banners @spec:AC-017 disponibiliza perfis sonoros desacoplados para rolagens e banners",
+      "method": "vitest-json"
+    },
+    "AC-018": {
+      "status": "pass",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-006 — Despachante de Áudio de Interface Desacoplado @spec:AC-018 cálculo de volume respeita limites entre 0 e 1 e silencia quando mutado @spec:AC-018 cálculo de volume respeita limites entre 0 e 1 e silencia quando mutado",
+      "method": "vitest-json"
+    }
+  },
+  "principles": {
+    "P-003": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-003 Desacoplamento de lógica pura garantido @principle:P-003 Desacoplamento de lógica pura garantido"
+    },
+    "P-004": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-004 Reversibilidade visual possui método de parada e cleanup @principle:P-004 Reversibilidade visual possui método de parada e cleanup"
+    },
+    "P-005": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon"
+    },
+    "P-006": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas"
+    },
+    "P-011": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting"
+    }
+  }
+}

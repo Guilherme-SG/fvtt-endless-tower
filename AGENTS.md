@@ -18,8 +18,10 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `styles/landing.css` — Cinematic Clean UI styles for the in-game Landing Page scene.
 - `styles/chronicle.css` — Styles for Celestial Chronicle (Pause mode & Scene Transitions).
 - `styles/critical-encounter.css` — Styles for Julgamento da Torre (Souls-like boss banner, encounter badge, critical cards).
+- `styles/design-system.css` — Master bundle of the Celestial Chronicle Design System (tokens, typography, buttons, forms, windows, chat, hud, banners, cards, effects).
 - `docs/LANDING_PAGE.md` — Guide and reference for the in-game Landing Page scene.
 - `docs/CELESTIAL_CHRONICLE.md` — Guide and reference for the Celestial Chronicle system.
+- `docs/DESIGN_SYSTEM.md` — Comprehensive specification and API reference for the Celestial Chronicle Design System.
 - `assets/fx/ragnarok-online-effects/` — VFX webm files registered via Sequencer.
 - `items/` — Single bleeding condition item JSON.
 
@@ -28,7 +30,11 @@ FoundryVTT module (v13, D&D 5e) with homebrew blessings, combat sounds, critical
 - `npm run dev` — Watch mode with Vite for development (`vite build --watch`).
 - `npm run build` — Production build with Vite (`vite build`).
 
-The module exposes its public API at `game.modules.get('endless-tower').api`.
+The module exposes its public API at `game.modules.get('endless-tower').api`:
+- `api.ui` — UI helpers (`showBanner(opts)`, `playSound(type, vol)`, `startParticles()`, `stopParticles()`).
+- `api.banner` — `BannerService.getInstance()` (cinematic edge-to-edge ribbons with socket sync).
+- `api.sound` — `DesignSystemSound.getInstance()` (UI audio dispatcher with volume control).
+- `api.designSystem` — `DesignSystem.getInstance()` (master design system controller).
 
 ## Runtime dependencies
 
@@ -222,6 +228,22 @@ In Foundry worlds hosting multiple campaigns or simultaneous split encounters:
 - **Zero Global State**: Never store encounter flags in global settings (`game.settings`) or client-side variables. Always persist state directly on the specific `Combat` document instance (`combat.setFlag(MODULE_ID, key, value)`).
 - **Token-Bound Combat Resolution**: When handling attack rolls or actor events, resolve the active combat via `token.combatant?.combat` (never `game.combat`, which only reflects the GM's currently viewed sidebar combat).
 - **Targeted Broadcasts**: Filter cinematic banners, screen overlays, and audio so they trigger only if the user is currently viewing the scene (`game.user.viewedScene === combat.scene?.id`) or controls a participant combatant.
+
+## Agentic Design System Contracts (P-011)
+
+Before creating or editing any UI component, sheet theme, or CSS file, consult `src/features/design-system/agentic-tokens.ts` (`AGENTIC_DESIGN_TOKENS` in W3C DTCG format and `COMPONENT_CONTRACTS`), enforced automatically by `@principle:P-011`:
+- **Guardrail 1 (W3C WCAG 2.1)**: Primary text `>= 7.0:1`, muted/accent gold `>= 4.5:1` (AA), and inactive UI icons/controls `>= 3.0:1` (SC 1.4.11). Never invent hex colors outside the token registry.
+- **Guardrail 2 (Anti-Halation)**: Never pair `#ffffff` on `#000000` on reading surfaces; keep continuous reading contrast `<= 15.0:1` (e.g. `#e6dfd3` on `#1d1a16` = `12.9:1`).
+- **Guardrail 3 (Anti-Wireframe 60-30-10)**: Structural internal borders (`border-hairline`) must stay `<= 0.16` alpha; reserve aged gold `#b89b63` strictly for the 10% focal accents.
+- **Guardrail 4 (One Component per Job / Anti-Box-in-Box & Zero Layout Drift)**:
+  | Contract ID | Job | Canonical Selectors | Rule |
+  |---|---|---|---|
+  | `chat-feature-card` | Render feature/blessing cards inside chat | `.et-abracado-chat-card` | `background: transparent; border: none;` (never wrap `.chat-message` in a redundant outer box) |
+  | `cinematic-banner` | Fullscreen boss/blessing alerts | `.et-abracado-banner-box`, `.et-boss-banner`, `.et-banner` | `100vw` edge-to-edge ribbon, `white-space: nowrap`, no side borders |
+  | `modal-window` | Module-owned dialogs & windows | `.et-window`, `.et-dialog` | Strict `.et-*` scoping; never style `.window-app` or `.sheet` |
+  | `actor-sheet-theme` | Opt-in Endless Tower Sheet | `.dnd5e2.sheet.actor.et-sheet` | Color/surface tokens only; zero layout overrides |
+  | `context-menu` | Color-only `#context-menu` harmonizing | `#context-menu` | Colors only; preserve vanilla padding, sizing, `.fa-brands`, and module icon colors |
+- **Runtime Audit Helper**: `game.modules.get('endless-tower').api.designSystem.auditTokens()` runs the deterministic WCAG/alpha validator anytime in console.
 
 ## Gotchas
 

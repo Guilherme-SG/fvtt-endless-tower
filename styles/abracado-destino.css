@@ -216,59 +216,53 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. Cards de Chat Estilo Celestial Chronicle
+   3. Conteúdo de Chat Integrado ao Card (Sem container externo redundante)
    -------------------------------------------------------------------------- */
 .et-abracado-chat-card {
   box-sizing: border-box;
-  background: linear-gradient(135deg, rgba(16, 14, 12, 0.94) 0%, rgba(24, 20, 18, 0.98) 100%);
-  border: 1px solid rgba(217, 184, 101, 0.35);
-  border-radius: 6px;
-  padding: 0.85rem;
-  margin: 0.35rem 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem 0;
   color: var(--et-ivory, #fff8e6);
   font-family: "Signika", sans-serif;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
+  box-shadow: none;
   position: relative;
-  overflow: hidden;
-}
-
-.et-abracado-chat-card.luck {
-  border-color: rgba(46, 204, 113, 0.55);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 12px rgba(39, 174, 96, 0.25);
-}
-
-.et-abracado-chat-card.empty {
-  border-color: rgba(148, 163, 184, 0.35);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+  overflow: visible;
 }
 
 .et-abracado-chat-card .et-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(217, 184, 101, 0.2);
-  padding-bottom: 0.4rem;
-  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 248, 230, 0.12);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.65rem;
 }
 
 .et-abracado-chat-card .et-card-title {
   font-family: var(--et-font-cinematic, serif);
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--et-gold, #f3e2b0);
+  color: var(--et-ivory, #fff8e6);
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.3;
 }
 
-.et-abracado-chat-card.luck .et-card-title {
+.et-abracado-chat-card.luck .et-card-title > span:first-child {
   color: #2ecc71;
 }
 
-.et-abracado-chat-card.empty .et-card-title {
+.et-abracado-chat-card.empty .et-card-title > span:first-child {
   color: #94a3b8;
 }
 

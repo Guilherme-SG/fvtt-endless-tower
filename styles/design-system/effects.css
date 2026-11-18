@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Visual Effects & Atmosphere
+   Particles, god-rays, breathing vignettes, glowing runes & corner accents.
+   ========================================================================== */
+
+/* --- Global Ambient Particles Canvas Overlay --- */
+#et-global-particles {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 15;
+  mix-blend-mode: screen;
+}
+
+/* --- Atmospheric God-Rays Overlay --- */
+.et-god-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 30%,
+    rgba(255, 235, 165, 0.18) 0%,
+    rgba(255, 215, 115, 0.08) 45%,
+    transparent 75%
+  );
+  animation: et-ray-breath 5s ease-in-out infinite alternate;
+}
+
+@keyframes et-ray-breath {
+  0% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+/* --- Ambient Cinematic Vignette --- */
+.et-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 60%, rgba(10, 8, 6, 0.55) 100%);
+}
+
+.et-vignette-heavy {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 85% 75% at 50% 50%, rgba(0, 0, 0, 0.15) 30%, rgba(20, 16, 12, 0.6) 80%, rgba(8, 6, 5, 0.92) 100%);
+}
+
+/* --- Golden Pulse Animation --- */
+@keyframes et-gold-pulse {
+  0% {
+    box-shadow: 0 0 8px var(--et-gold-glow-subtle);
+    filter: drop-shadow(0 0 4px var(--et-gold-glow-subtle));
+  }
+  100% {
+    box-shadow: 0 0 20px var(--et-gold-glow);
+    filter: drop-shadow(0 0 12px var(--et-gold-glow));
+  }
+}
+
+.et-pulse-gold {
+  animation: et-gold-pulse 2.8s ease-in-out infinite alternate;
+}
+
+/* --- Crimson Pulse Animation --- */
+@keyframes et-crimson-pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(180, 25, 25, 0.3);
+    filter: drop-shadow(0 0 4px rgba(180, 25, 25, 0.3));
+  }
+  100% {
+    box-shadow: 0 0 22px var(--et-crimson-glow);
+    filter: drop-shadow(0 0 14px var(--et-crimson-glow));
+  }
+}
+
+.et-pulse-crimson {
+  animation: et-crimson-pulse 2.2s ease-in-out infinite alternate;
+}
+
+/* --- Runic Corner Ornaments --- */
+.et-corner-tl,
+.et-corner-tr,
+.et-corner-bl,
+.et-corner-br {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  border-color: var(--et-gold-deep);
+  border-style: solid;
+  opacity: 0.75;
+  transition: opacity var(--et-transition-fast), border-color var(--et-transition-fast);
+}
+
+.et-corner-tl {
+  top: 4px;
+  left: 4px;
+  border-width: 2px 0 0 2px;
+}
+
+.et-corner-tr {
+  top: 4px;
+  right: 4px;
+  border-width: 2px 2px 0 0;
+}
+
+.et-corner-bl {
+  bottom: 4px;
+  left: 4px;
+  border-width: 0 0 2px 2px;
+}
+
+.et-corner-br {
+  bottom: 4px;
+  right: 4px;
+  border-width: 0 2px 2px 0;
+}
+
+.et-card:hover .et-corner-tl,
+.et-card:hover .et-corner-tr,
+.et-card:hover .et-corner-bl,
+.et-card:hover .et-corner-br {
+  opacity: 1;
+  border-color: var(--et-gold-bright);
+  filter: drop-shadow(0 0 4px var(--et-gold-glow));
+}
