@@ -9,7 +9,7 @@ i.fa,
 i.fas,
 i.far,
 i.fa-solid,
-[class*="fa-"]:not(.fab):not(.fa-brands):not([class*="fa-brands"]) {
+[class*="fa-"]:not(.fab):not(.fa-brands):not([class*="fa-brands"]):not(.fad):not(.fa-duotone):not([class*="fa-duotone"]) {
   font-family: var(--font-awesome, "Font Awesome 6 Pro", "Font Awesome 6 Free", "FontAwesome") !important;
   font-style: normal;
 }
@@ -17,6 +17,15 @@ i.fa-solid,
 i.fab,
 i.fa-brands {
   font-family: "Font Awesome 6 Brands" !important;
+  font-style: normal;
+}
+
+i.fad,
+i.fa-duotone,
+.fad,
+.fa-duotone,
+[class*="fa-duotone"] {
+  font-family: "Font Awesome 6 Duotone" !important;
   font-style: normal;
 }
 

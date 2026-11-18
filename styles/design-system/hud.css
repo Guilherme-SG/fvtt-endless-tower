@@ -276,7 +276,46 @@ body.et-celestial-active #sidebar-content .settings-sidebar a.button i {
   color: var(--et-gold) !important;
 }
 
+/* Primary CTA Buttons in Sidebar (Approach 1 — 60-30-10 Login & Roll Dice Tray DNA) */
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button[data-action="createEntry"],
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-entry,
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-document:not(.create-folder),
+body.et-celestial-active #sidebar-content .combat-sidebar button.combat-control-lg {
+  background: var(--et-gradient-login-btn) !important;
+  color: var(--et-ink) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 0 14px rgba(255, 226, 150, 0.35), var(--et-shadow-sm) !important;
+}
+
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button[data-action="createEntry"]:hover,
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-entry:hover,
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-document:not(.create-folder):hover,
+body.et-celestial-active #sidebar-content .combat-sidebar button.combat-control-lg:hover {
+  background: var(--et-gradient-gold-btn-hover) !important;
+  color: var(--et-ink) !important;
+  border-color: var(--et-ivory) !important;
+  box-shadow: 0 0 18px rgba(255, 234, 179, 0.7) !important;
+}
+
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button[data-action="createEntry"] i,
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-entry i,
+body.et-celestial-active #sidebar-content .directory-header .action-buttons button.create-document:not(.create-folder) i,
+body.et-celestial-active #sidebar-content .combat-sidebar button.combat-control-lg i {
+  color: var(--et-ink) !important;
+}
+
+body.et-celestial-active #sidebar-content .directory-header search {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
 body.et-celestial-active #sidebar-content .directory-header search input[type="search"] {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
   background: var(--et-glass-dropdown) !important;
   border: 1px solid var(--et-glass-line) !important;
   border-radius: var(--et-radius-pill) !important;
@@ -292,6 +331,13 @@ body.et-celestial-active #sidebar-content .directory-header search input[type="s
 }
 
 body.et-celestial-active #sidebar-content .directory-header search button.inline-control {
+  flex: 0 0 auto !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
   background: transparent !important;
   border: none !important;
   color: var(--et-gold) !important;

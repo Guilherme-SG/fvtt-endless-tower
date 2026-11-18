@@ -734,10 +734,10 @@
       "codigo": "VERIFY_OBSOLETO",
       "feature": "combat-maneuvers",
       "ref": "—",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-18T18:18:53.773Z",
-      "ultimaVez": "2026-11-18T18:18:53.773Z",
-      "gitRev": "0b00071"
+      "ultimaVez": "2026-11-18T20:24:01.499Z",
+      "gitRev": "cb84fd2"
     }
   }
 }

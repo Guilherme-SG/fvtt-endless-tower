@@ -74,6 +74,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(hasFaShield(buttonsCss) || hasFaShield(hudCss)).toBe(true);
       expect(buttonsCss).toMatch(/Font Awesome 6 Brands/);
       expect(buttonsCss).toMatch(/:not\(\.fa-brands\)/);
+      expect(buttonsCss).toMatch(/Font Awesome 6 Duotone/);
+      expect(buttonsCss).toMatch(/:not\(\.fa-duotone\)/);
     });
 
     /**
@@ -118,6 +120,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(hudCss).toMatch(/\.playlists-sidebar/);
       expect(hudCss).toMatch(/\.settings-sidebar/);
       expect(hudCss).toMatch(/--control-bg-color:/);
+      expect(hudCss).toMatch(/button\[data-action=["']createEntry["']\][\s\S]*?var\(--et-gradient-login-btn\)[\s\S]*?var\(--et-ink\)/);
+      expect(hudCss).toMatch(/\.directory-header\s+search\s*\{[\s\S]*?gap:\s*6px\s*!important/);
       expect(landingCss).toMatch(/#scene-controls/);
       expect(landingCss).toMatch(/#scene-navigation/);
 
