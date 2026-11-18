@@ -61,44 +61,29 @@
   line-height: 1.5 !important;
 }
 
-/* --- Context Menus (#context-menu) --- */
+/* --- Context Menus (#context-menu) — Color-only override preserving vanilla sizing & module icons --- */
 #context-menu {
   background: var(--et-obsidian-95) !important;
   border: 1px solid var(--et-glass-border) !important;
-  border-radius: var(--et-radius-sm) !important;
   backdrop-filter: var(--et-blur-md) !important;
   -webkit-backdrop-filter: var(--et-blur-md) !important;
   box-shadow: var(--et-shadow-lg) !important;
-  padding: 4px 0 !important;
   z-index: var(--et-z-context) !important;
-  min-width: 170px !important;
 }
 
 #context-menu li.context-item {
   color: var(--et-ivory) !important;
-  font-family: var(--et-font-cinematic) !important;
-  font-size: 0.9rem !important;
-  letter-spacing: 0.04em !important;
-  padding: 7px 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.6rem !important;
-  transition: all var(--et-transition-fast) !important;
-  cursor: pointer !important;
+  transition: background-color var(--et-transition-fast), color var(--et-transition-fast) !important;
 }
 
 #context-menu li.context-item:hover {
   background: rgba(243, 226, 176, 0.14) !important;
   color: var(--et-gold-bright) !important;
   text-shadow: 0 0 8px var(--et-gold-glow) !important;
-  padding-left: 18px !important;
 }
 
-#context-menu li.context-item i {
-  color: var(--et-gold) !important;
-  font-size: 0.88rem !important;
-  width: 16px !important;
-  text-align: center !important;
+#context-menu menu[data-group-id]:has(li)::before {
+  border-block-start-color: var(--et-glass-border) !important;
 }
 
 /* --- Global Tooltips (#tooltip, .locked-tooltip, .dnd5e-tooltip, .dnd5e2-tooltip) --- */

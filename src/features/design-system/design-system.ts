@@ -3,6 +3,7 @@ import designSystemCss from "../../../styles/design-system.css?inline";
 import { DesignSystemSound } from "./sound-effects";
 import { BannerService, BannerOptions } from "./banner-service";
 import { ChatEnhancer } from "./chat-enhancer";
+import { registerEndlessTowerSheets } from "./celestial-sheets";
 import { ParticleController, startParticleCanvas } from "../particle-canvas";
 
 export class DesignSystem {
@@ -81,6 +82,10 @@ export class DesignSystem {
   }
 
   private registerHooks(): void {
+    Hooks.once("setup", () => {
+      registerEndlessTowerSheets();
+    });
+
     Hooks.once("ready", () => {
       document.body.classList.add("et-celestial-active");
 

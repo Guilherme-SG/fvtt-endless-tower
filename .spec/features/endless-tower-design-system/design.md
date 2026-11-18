@@ -35,7 +35,7 @@ A ausência de fronteiras estritas de estilo comprometeu a usabilidade do sistem
   - Barra de pausa compacta (`fit-content`, largura contida) e transição de cena em DOM overlay.
   - Despachante de áudio desacoplado sem cliques genéricos de botão.
 - **Não Objetivos**:
-  - Não alterar nem reestilizar as fichas nativas de personagem (`.dnd5e.sheet`, Tidy5e).
+  - Não alterar globalmente nem substituir como padrão as fichas nativas de personagem (`.dnd5e.sheet`, Tidy5e); a estética Celestial de ficha existe apenas como alternativa opt-in via **`Endless Tower Sheet`** (`.et-sheet`), com layout 100% idêntico ao vanilla.
   - Não aplicar seletores globais a elementos nativos do Foundry fora do namespace `.et-*`.
   - Não implementar novos sons de clique nesta versão.
 

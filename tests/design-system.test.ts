@@ -3,6 +3,11 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { ChatEnhancer, isAttackRollCriticalOrFumble } from "../src/features/design-system/chat-enhancer";
 import { buildUpdatedMidiSaveSettings } from "../src/features/critical-encounter";
+import {
+  createEndlessTowerSheetClasses,
+  ENDLESS_TOWER_SHEET_CLASS,
+  ENDLESS_TOWER_SHEET_LABEL,
+} from "../src/features/design-system/celestial-sheets";
 
 describe("Endless Tower Design System (Celestial Chronicle)", () => {
   const rootDir = path.resolve(__dirname, "..");
@@ -27,7 +32,7 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
     /**
      * @spec:AC-002
-     * Blindagem explícita de ícones FontAwesome contra substituição de fontes.
+     * Blindagem explícita de ícones FontAwesome contra substituição de fontes (incluindo Brands).
      */
     it("@spec:AC-002 blinda fontes de ícones FontAwesome com prioridade important", () => {
       const buttonsCss = read("styles/design-system/buttons.css");
@@ -38,6 +43,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
         /i\.fa.*font-family:.*!important/s.test(css);
 
       expect(hasFaShield(buttonsCss) || hasFaShield(hudCss)).toBe(true);
+      expect(buttonsCss).toMatch(/Font Awesome 6 Brands/);
+      expect(buttonsCss).toMatch(/:not\(\.fa-brands\)/);
     });
 
     /**
@@ -56,15 +63,54 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
   describe("US-002 — Escopo Estrito de Componentes e Não-Interferência", () => {
     /**
      * @spec:AC-004
-     * Fichas de personagem D&D 5e e janelas nativas preservadas sem interferência global.
+     * Fichas de personagem D&D 5e e janelas nativas preservadas sem interferência global,
+     * #context-menu apenas em cores e fichas opt-in "Endless Tower Sheet" (.et-sheet).
      */
-    it("@spec:AC-004 não aplica estilos universais a .window-app ou .sheet", () => {
+    it("@spec:AC-004 não aplica estilos universais a .window-app ou .sheet, preserva espaçamento/ícones no #context-menu e registra Endless Tower Sheet (.et-sheet)", () => {
       const windowsCss = read("styles/design-system/windows.css");
+      const sheetsCss = read("styles/design-system/sheets.css");
+      const bundleCss = read("styles/design-system.css");
+      const celestialSheetsTs = read("src/features/design-system/celestial-sheets.ts");
 
       expect(windowsCss).not.toMatch(/^\.window-app\s*\{/m);
       expect(windowsCss).not.toMatch(/^\.sheet\s*\{/m);
       expect(windowsCss).toMatch(/\.et-window/);
       expect(windowsCss).toMatch(/\.et-dialog/);
+
+      // #context-menu altera somente cores (sem padding, font-size, gap ou cor forçada em ícones de terceiros)
+      const contextMenuBlock = windowsCss.slice(
+        windowsCss.indexOf("#context-menu {"),
+        windowsCss.indexOf("/* --- Global Tooltips"),
+      );
+      expect(contextMenuBlock).toMatch(/background:\s*var\(--et-obsidian-95\)/);
+      expect(contextMenuBlock).not.toMatch(/padding:/);
+      expect(contextMenuBlock).not.toMatch(/min-width:/);
+      expect(contextMenuBlock).not.toMatch(/font-size:/);
+      expect(contextMenuBlock).not.toMatch(/#context-menu\s+li\.context-item\s+i/);
+
+      // Sheets opt-in isoladas em .et-sheet sem afetar .sheet genérico nem alterar layout
+      expect(bundleCss).toMatch(/@import\s+["']\.\/design-system\/sheets\.css["']/);
+      expect(sheetsCss).toMatch(/\.dnd5e2\.sheet\.actor\.et-sheet/);
+      expect(sheetsCss).not.toMatch(/(?:^|\s)(?:width|height|padding|margin|grid-template|flex-direction):/m);
+
+      // Subclasses puras para Character e NPC sem makeDefault: true
+      class DummyChar {
+        static base = "char";
+      }
+      class DummyNPC {
+        static base = "npc";
+      }
+      const created = createEndlessTowerSheetClasses({
+        CharacterActorSheet: DummyChar,
+        NPCActorSheet: DummyNPC,
+      });
+      expect(created).not.toBeNull();
+      expect(Object.getPrototypeOf(created!.CharacterSheetClass)).toBe(DummyChar);
+      expect(Object.getPrototypeOf(created!.NPCSheetClass)).toBe(DummyNPC);
+      expect(created!.CharacterSheetClass.DEFAULT_OPTIONS.classes).toContain(ENDLESS_TOWER_SHEET_CLASS);
+      expect(created!.NPCSheetClass.DEFAULT_OPTIONS.classes).toContain(ENDLESS_TOWER_SHEET_CLASS);
+      expect(ENDLESS_TOWER_SHEET_LABEL).toBe("Endless Tower Sheet");
+      expect(celestialSheetsTs).toMatch(/makeDefault:\s*false/);
     });
 
     /**

@@ -1,7 +1,7 @@
 {
   "feature": "endless-tower-design-system",
-  "timestamp": "2026-11-17T20:53:35.267Z",
-  "gitRev": "ad2e193",
+  "timestamp": "2026-11-18T00:40:40.109Z",
+  "gitRev": "763df2d",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
@@ -24,7 +24,7 @@
     },
     "AC-004": {
       "status": "pass",
-      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-004 não aplica estilos universais a .window-app ou .sheet @spec:AC-004 não aplica estilos universais a .window-app ou .sheet",
+      "testName": "Endless Tower Design System (Celestial Chronicle) US-002 — Escopo Estrito de Componentes e Não-Interferência @spec:AC-004 não aplica estilos universais a .window-app ou .sheet, preserva espaçamento/ícones no #context-menu e registra Endless Tower Sheet (.et-sheet) @spec:AC-004 não aplica estilos universais a .window-app ou .sheet, preserva espaçamento/ícones no #context-menu e registra Endless Tower Sheet (.et-sheet)",
       "method": "vitest-json"
     },
     "AC-005": {

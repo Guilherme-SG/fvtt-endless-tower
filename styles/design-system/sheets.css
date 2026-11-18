@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Endless Tower: Celestial Chronicle Design System — Actor Sheets (.et-sheet)
+   Escopo estrito às fichas opt-in "Endless Tower Sheet" (Character e NPC).
+   Preserva 100% do layout vanilla D&D 5e v5.x; aplica paleta Warm Obsidian,
+   hierarquia tonal (60-30-10), ouro envelhecido e cabeçalhos carmesim profundos.
+   ========================================================================== */
+
+.dnd5e2.sheet.actor.et-sheet,
+.themed.theme-dark.dnd5e2.sheet.actor.et-sheet,
+.themed.theme-light.dnd5e2.sheet.actor.et-sheet {
+  /* --- Paleta Base: Warm Obsidian / Ouro Envelhecido / Osso Quente --- */
+  --dnd5e-color-gold: #b89b63;
+  --dnd5e-color-scrollbar: rgba(184, 155, 99, 0.28);
+  --dnd5e-color-blue-white: #e6dfd3;
+  --dnd5e-color-beige: #c8b58e;
+  --dnd5e-color-faint: #aca496;
+  --dnd5e-color-tan: #989083;
+  --dnd5e-color-dark-gray: #0f0e0c;
+  --dnd5e-color-blue-gray-1: rgba(230, 223, 211, 0.08);
+  --dnd5e-color-blue-gray-2: #1d1a16;
+  --dnd5e-color-blue-gray-3: rgba(184, 155, 99, 0.18);
+  --dnd5e-color-blue-gray-4: #26221d;
+  --dnd5e-color-maroon: #781e28;
+  --dnd5e-color-red: #b53838;
+  --dnd5e-color-blue: #6e9ec7;
+  --dnd5e-color-green: #4ba373;
+  --dnd5e-color-hp-1: #1c4e32;
+  --dnd5e-color-hp-2: #49a874;
+  --dnd5e-color-hp-3: #2b754c;
+  --dnd5e-color-hd-1: #4d191e;
+  --dnd5e-color-hd-2: #8e2832;
+  --dnd5e-color-hd-3: #631d24;
+
+  /* --- Camadas de Elevação (60% Warm Obsidian -> Cartões Elevados) --- */
+  --dnd5e-application-background:
+    radial-gradient(ellipse at top center, rgba(184, 155, 99, 0.06) 0%, transparent 58%),
+    linear-gradient(180deg, #161411 0%, #12100e 100%);
+  --dnd5e-background-card: #1d1a16;
+  --dnd5e-background-parchment: #1b1814;
+  --dnd5e-background-5: rgba(230, 223, 211, 0.04);
+  --dnd5e-background-10: rgba(230, 223, 211, 0.06);
+  --dnd5e-background-25: rgba(0, 0, 0, 0.28);
+  --dnd5e-background-alt-1: #12100e;
+  --dnd5e-background-alt-2: #1d1a16;
+  --dnd5e-gold-icon-background: #141210;
+  --meter-background: #0f0e0c;
+
+  /* --- Cabeçalhos Carmesim Profundo Celestial --- */
+  --dnd5e-card-header-1: #4a1b22;
+  --dnd5e-card-header-2: #2d1418;
+  --dnd5e-card-header-disabled-1: #241d1b;
+  --dnd5e-card-header-disabled-2: #191513;
+
+  /* --- Separação Tonal & Bordas Hairline (sem wireframe alto contraste) --- */
+  --dnd5e-border-gold: 1px solid rgba(184, 155, 99, 0.28);
+  --dnd5e-border-dark: 1px solid rgba(230, 223, 211, 0.08);
+  --dnd5e-border-dotted: 1px dotted rgba(230, 223, 211, 0.12);
+  --dnd5e-border-dashed: 1px dashed rgba(184, 155, 99, 0.16);
+  --dnd5e-border-dashed-faint: 1px dashed rgba(230, 223, 211, 0.09);
+  --dnd5e-border-heading-3: 1px solid rgba(184, 155, 99, 0.2);
+  --dnd5e-border-separator-faint: 1px solid rgba(230, 223, 211, 0.08);
+  --dnd5e-border-separator-heavy: 1px solid rgba(184, 155, 99, 0.18);
+  --dnd5e-border-separator-warning: 1px dotted rgba(184, 155, 99, 0.32);
+  --dnd5e-slot-border: 1px solid rgba(230, 223, 211, 0.1);
+  --filigree-background-color: #1d1a16;
+  --filigree-border-color: rgba(230, 223, 211, 0.11);
+  --separated-list-item-background-color: #191613;
+  --separated-list-item-border-color: rgba(230, 223, 211, 0.08);
+
+  /* --- Hierarquia Tipográfica em 3 Degraus --- */
+  --color-text-emphatic: #efeae0;
+  --color-text-primary: #e6dfd3;
+  --color-text-secondary: #aca496;
+  --color-text-tertiary: #989083;
+  --color-text-inactive: #59534a;
+  --color-text-title: #c5a972;
+  --dnd5e-attribute-color: #b89b63;
+  --dnd5e-ability-color: #b89b63;
+  --dnd5e-ability-mod-color: #e6dfd3;
+  --dnd5e-heading-3-color: #b89b63;
+  --dnd5e-ability-tab: url("data:image/svg+xml,%3Csvg width='67.694' height='59.982' version='1.1' viewBox='0 0 67.694 59.982' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate(1.8331 1.9942)'%3E%3Cpath d='m31.98 0.18555-31.813 13.829 0.032772 41.945 63.606 0.02749 0.05216-42.028z' fill='%231d1a16' fill-rule='evenodd' stroke='%23332d25' stroke-dashoffset='34.18' stroke-linecap='square' stroke-width='4' style='paint-order:stroke fill markers'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* --- Controles, Ícones, Pílulas e Campos --- */
+  --activity-icon-color: #b89b63;
+  --activity-row-border: 1px dotted rgba(230, 223, 211, 0.1);
+  --activity-row-indent-color: rgba(184, 155, 99, 0.24);
+  --damage-icon-color: #b89b63;
+  --item-summary-background: rgba(15, 14, 12, 0.45);
+  --item-control-color: rgba(230, 223, 211, 0.38);
+  --item-control-interactive-color: #aca496;
+  --item-control-active-color: #d4ba82;
+  --item-control-header-color: #c5a972;
+  --item-state-toggle-active: #b89b63;
+  --pill-transparent-color: #e6dfd3;
+  --pill-border: 1px solid rgba(230, 223, 211, 0.09);
+  --pill-colored-border: 1px solid rgba(184, 155, 99, 0.22);
+  --pill-border-dotted: 1px dotted rgba(230, 223, 211, 0.12);
+  --pill-background-color: #211d18;
+  --pill-colored-text-color: #e6dfd3;
+  --pill-empty-border: 2px dashed rgba(230, 223, 211, 0.18);
+  --pill-empty-text-color: #aca496;
+  --advancement-summary-link-color: #b89b63;
+  --npc-header-input-background: rgba(15, 14, 12, 0.5);
+  --npc-portrait-toggle-on: #b89b63;
+  --npc-ability-score-filter: invert(1);
+  --filter-control-color: rgba(230, 223, 211, 0.42);
+  --filter-control-active-color: #d4ba82;
+  --context-entry-hover-background: rgba(184, 155, 99, 0.14);
+  --slide-toggle-track-color-unchecked: #24201b;
+  --slide-toggle-track-color-checked: #b89b63;
+  --fieldset-legend-color: #c5a972;
+  --color-fieldset-border: rgba(230, 223, 211, 0.1);
+  --control-button-text-color: #b89b63;
+  --hint-icon-color: #b89b63;
+  --multi-select-tag-background: #211d18;
+  --multi-select-tag-border: rgba(230, 223, 211, 0.12);
+  --radio-list-hover: rgba(184, 155, 99, 0.08);
+  --window-resize-handle-filter: invert(1);
+  --dnd5e-roll-icon-filter: invert(1);
+  --dnd5e-condition-hover: rgba(184, 155, 99, 0.1);
+  --dnd5e-color-table-row-odd: #1a1713;
+  --dnd5e-color-table-row-even: #161310;
+  --dnd5e-color-table-border: rgba(230, 223, 211, 0.08);
+  --dnd5e-color-table-header-1: #4a1b22;
+  --dnd5e-color-table-header-2: #2d1418;
+  --dnd5e-block-background: #1d1a16;
+  --dnd5e-block-border-color: rgba(184, 155, 99, 0.35);
+  --dnd5e-statblock-border: rgba(184, 155, 99, 0.22);
+  --dnd5e-statblock-scroll: #781e28;
+  --dnd5e-statblock-separator: #781e28;
+  --dnd5e-statblock-title-border: rgba(184, 155, 99, 0.22);
+
+  background: var(--dnd5e-application-background);
+  color: var(--color-text-primary);
+}
+
+/* Moldura externa focal (10% ouro envelhecido + sombra ambiente) */
+.dnd5e2.sheet.actor.et-sheet.vertical-tabs::after {
+  border-color: rgba(184, 155, 99, 0.34);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.78);
+}
+
+/* Controles do cabeçalho da janela */
+.dnd5e2.sheet.actor.et-sheet .window-header {
+  color: #aca496;
+}
+
+.dnd5e2.sheet.actor.et-sheet .window-header button.header-control:hover,
+.dnd5e2.sheet.actor.et-sheet .window-header a:hover {
+  color: #e6dfd3;
+}
+
+/* Harmonização suave dos banners (Warm Obsidian / Carmesim) */
+.dnd5e2.sheet.actor.et-sheet.character:not(.minimized) .window-content::before {
+  filter: sepia(0.18) saturate(0.95) brightness(0.9);
+}
+
+.dnd5e2.sheet.actor.et-sheet.npc:not(.minimized)::before {
+  filter: sepia(0.18) brightness(0.92);
+}
+
+/* Barra de carga (Encumbrance) em bronze quente -> carmesim em vez de azul claro */
+.dnd5e2.sheet.actor.et-sheet .encumbrance .meter.progress::before,
+.dnd5e2.sheet.actor.et-sheet .difficulty .meter.progress::before {
+  --bar-color-2: color-mix(in oklab, #6e5a3b, #781e28 var(--bar-percentage));
+}
+
+.dnd5e2.sheet.actor.et-sheet .encumbrance .meter,
+.dnd5e2.sheet.actor.et-sheet .difficulty .meter {
+  --dnd5e-border-gold: 1px solid rgba(230, 223, 211, 0.14);
+}
+
+/* Cartões estruturais (Skills / Saving Throws) separados por elevação e sombra sutil */
+.dnd5e2.sheet.actor.et-sheet filigree-box {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Abas verticais laterais (foco em ouro apenas na aba ativa / hover) */
+.dnd5e2.sheet.actor.et-sheet nav.tabs > .item {
+  background: #141210;
+  color: rgba(184, 155, 99, 0.7);
+  --icon-fill: rgba(184, 155, 99, 0.7);
+  border-color: rgba(230, 223, 211, 0.06);
+}
+
+.dnd5e2.sheet.actor.et-sheet nav.tabs > .item::after {
+  border-color: rgba(184, 155, 99, 0.22);
+}
+
+.dnd5e2.sheet.actor.et-sheet nav.tabs > .item.active,
+.dnd5e2.sheet.actor.et-sheet nav.tabs > .item:hover {
+  background: #24201b;
+  color: #d4ba82;
+  --icon-fill: #d4ba82;
+  border-color: rgba(184, 155, 99, 0.5);
+  box-shadow: 0 0 8px rgba(184, 155, 99, 0.16);
+}
+
+/* Inputs e botões sutis dentro da ficha */
+.dnd5e2.sheet.actor.et-sheet input:not([type="range"]),
+.dnd5e2.sheet.actor.et-sheet select,
+.dnd5e2.sheet.actor.et-sheet textarea {
+  --input-background-color: rgba(15, 14, 12, 0.6);
+  --input-border-color: rgba(230, 223, 211, 0.1);
+  color: #e6dfd3;
+}
+
+.dnd5e2.sheet.actor.et-sheet button {
+  --button-border-color: rgba(230, 223, 211, 0.1);
+  --button-hover-border-color: rgba(184, 155, 99, 0.45);
+  --control-border-color: rgba(230, 223, 211, 0.12);
+  --control-active-background-color: rgba(15, 14, 12, 0.65);
+}

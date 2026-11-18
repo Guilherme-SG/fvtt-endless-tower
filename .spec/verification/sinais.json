@@ -86,10 +86,10 @@
       "codigo": "REVISAO_IMPACTO_PENDENTE",
       "feature": "endless-tower-design-system",
       "ref": ".spec\\features\\endless-tower-design-system\\governance.json",
-      "ocorrencias": 3,
+      "ocorrencias": 4,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-17T01:15:29.427Z",
-      "gitRev": "0a0fe3c"
+      "ultimaVez": "2026-11-17T22:10:29.565Z",
+      "gitRev": "763df2d"
     },
     "ARQUIVO_INEXISTENTE::endless-tower-design-system::T-001": {
       "codigo": "ARQUIVO_INEXISTENTE",
@@ -531,6 +531,15 @@
       "primeiraVez": "2026-11-17T01:15:29.428Z",
       "ultimaVez": "2026-11-17T01:15:29.428Z",
       "gitRev": "0a0fe3c"
+    },
+    "ARQUIVO_ORFAO::—::src/features/design-system/celestial-sheets.ts": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/features/design-system/celestial-sheets.ts",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-11-17T22:10:29.567Z",
+      "ultimaVez": "2026-11-17T22:10:29.567Z",
+      "gitRev": "763df2d"
     }
   }
 }

@@ -10,11 +10,11 @@
 - Arquivos: styles/design-system/tokens.css, styles/design-system/buttons.css
 - Notas: Estabelecer paleta canônica e regra incondicional de proteção de fontes para classes FontAwesome.
 
-## T-002 — Escopo Estrito de Botões, Formulários e Janelas [concluida]
+## T-002 — Escopo Estrito de Botões, Formulários, Janelas e Fichas Opt-In [concluida]
 
 - Refs: US-002, AC-004, AC-005, AC-006
-- Arquivos: styles/design-system/forms.css, styles/design-system/windows.css, styles/design-system/hud.css
-- Notas: Remover seletores universais em tags brutas; isolar `.et-btn`, `.et-input`, `.et-window` e garantir compatibilidade com Token Action HUD e YouTube Player.
+- Arquivos: styles/design-system/forms.css, styles/design-system/windows.css, styles/design-system/hud.css, styles/design-system/sheets.css, src/features/design-system/celestial-sheets.ts
+- Notas: Remover seletores universais em tags brutas; isolar `.et-btn`, `.et-input`, `.et-window`; restringir `#context-menu` a cores preservando espaçamento vanilla e ícones de módulos; registrar fichas opt-in "Endless Tower Sheet" (Player e NPC) escopadas em `.et-sheet`; garantir compatibilidade com Token Action HUD, YouTube Player e Character Monitor.
 
 ## T-003 — Chat Enhancer e Cartões de Combate Escuros [concluida]
 

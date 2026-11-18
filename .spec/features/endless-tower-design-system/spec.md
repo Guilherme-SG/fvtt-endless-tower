@@ -23,9 +23,9 @@ Como usuário da mesa virtual, quero um conjunto canônico de variáveis CSS e t
 
 #### AC-002 — Blindagem explícita de ícones FontAwesome contra substituição de fontes
 
-- **Dado** qualquer botão, controle de navegação ou elemento que contenha ícones FontAwesome (`i.fa`, `i.fas`, `[class*="fa-"]`)
+- **Dado** qualquer botão, controle de navegação ou elemento que contenha ícones FontAwesome (`i.fa`, `i.fas`, `i.fab`, `i.fa-brands`, `[class*="fa-"]`)
 - **Quando** os estilos do módulo Endless Tower são aplicados à página
-- **Então** os seletores de ícones devem manter obrigatoriamente a família de fontes FontAwesome protegida com prioridade `!important`, impedindo o surgimento de caixas de caractere ausente (`[X]`).
+- **Então** os seletores de ícones devem manter obrigatoriamente a família de fontes FontAwesome protegida com prioridade `!important`, preservando `"Font Awesome 6 Brands"` separadamente para ícones de marca (`.fab`, `.fa-brands` como *Import*) e impedindo o surgimento de caixas de caractere ausente (`[X]`).
 
 #### AC-003 — Isolamento tipográfico de aspas em citações sem colapso faux-italic
 
@@ -37,11 +37,11 @@ Como usuário da mesa virtual, quero um conjunto canônico de variáveis CSS e t
 
 Como Mestre da mesa, quero que os estilos do Endless Tower não alterem as fichas de personagem nem as janelas de configuração nativas do Foundry, para que o gerenciamento técnico do jogo permaneça intacto.
 
-#### AC-004 — Fichas de personagem D&D 5e e janelas nativas preservadas sem interferência global
+#### AC-004 — Fichas nativas preservadas, menu de contexto apenas em cores e fichas opt-in `Endless Tower Sheet`
 
-- **Dado** a abertura de uma ficha de personagem (`.dnd5e.sheet`, `.tidy5e-sheet`) ou janela nativa de configuração (`Configure Settings`)
-- **Quando** a folha de estilo `styles/design-system/windows.css` está ativa
-- **Então** nenhum estilo genérico em `.window-app` ou `.application` deve sobrescrever a largura ou o layout das fichas, ficando restrito a contêineres explícitos `.et-window` e `.et-dialog`.
+- **Dado** a abertura de uma ficha padrão D&D 5e, um menu de contexto (`#context-menu`) ou as fichas registradas **`Endless Tower Sheet`** (`character` e `npc`)
+- **Quando** o Design System Celestial Chronicle estiver ativo (`windows.css`, `sheets.css` e `celestial-sheets.ts`)
+- **Então** nenhum estilo genérico em `.window-app` ou `.sheet` deve afetar fichas nativas; `#context-menu` deve preservar tamanhos, espaçamentos, fonte e ícones/cores originais de módulos (aplicando somente cores da paleta Celestial); e as subclasses opt-in `EndlessTowerCharacterSheet` e `EndlessTowerNPCSheet` devem estender as fichas nativas adicionando estritamente a classe `.et-sheet` (`makeDefault: false`), replicando o layout 1:1 do D&D 5e e alterando apenas tokens de cor em `styles/design-system/sheets.css`.
 
 #### AC-005 — Formulários e inputs com escopo estrito .et-input e .et-select
 
@@ -145,7 +145,7 @@ Como usuário, quero que os efeitos sonoros da interface sejam pontuais e musica
 
 ## Fora de escopo
 
-- Redesenho de fichas de personagens de regras D&D 5e ou módulos terceiros de ficha (permanecem 100% nativas).
+- Alteração automática ou global das fichas padrão de personagens D&D 5e ou módulos terceiros de ficha (a ficha nativa permanece 100% intacta; a estética Celestial é aplicada apenas de forma opt-in via **`Endless Tower Sheet`**).
 - Novos sons de clique de botão (recurso postergado para avaliação e novo design sonoro futuro).
 - Suporte a navegadores legados sem suporte a CSS Custom Properties e `backdrop-filter`.
 
