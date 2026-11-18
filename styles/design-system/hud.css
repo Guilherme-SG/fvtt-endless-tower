@@ -133,40 +133,9 @@ body.et-celestial-active #controls .sub-controls {
   -webkit-backdrop-filter: var(--et-blur-md) !important;
 }
 
-/* --- 3. Bottom Macro Hotbar (#hotbar) --- */
-body.et-celestial-active #hotbar #action-bar {
-  background: var(--et-obsidian-88) !important;
-  border: 1px solid var(--et-glass-border) !important;
-  border-radius: var(--et-radius-md) !important;
-  box-shadow: var(--et-shadow-lg) !important;
-  backdrop-filter: var(--et-blur-md) !important;
-  -webkit-backdrop-filter: var(--et-blur-md) !important;
-}
-
-body.et-celestial-active #hotbar .macro,
-body.et-celestial-active #hotbar #action-bar .slot {
-  background: var(--et-obsidian-well) !important;
-  border: 1px solid var(--et-glass-border-subtle) !important;
-  border-radius: var(--et-radius-sm) !important;
-}
-
-body.et-celestial-active #hotbar .macro:hover,
-body.et-celestial-active #hotbar #action-bar .slot:hover {
-  border-color: var(--et-gold) !important;
-  box-shadow: 0 0 10px var(--et-gold-glow) !important;
-}
-
-body.et-celestial-active #hotbar .macro.active,
-body.et-celestial-active #hotbar #action-bar .slot.active {
-  border-color: var(--et-gold-bright) !important;
-  box-shadow: 0 0 14px var(--et-gold-glow) !important;
-}
-
-body.et-celestial-active #hotbar .macro .macro-key,
-body.et-celestial-active #hotbar #action-bar .slot .key {
-  color: var(--et-gold) !important;
-  font-family: var(--et-font-cinematic) !important;
-  font-weight: 700 !important;
+/* --- 3. Bottom Macro Hotbar (#hotbar) — Hidden per World Design --- */
+body.et-celestial-active #hotbar {
+  display: none !important;
 }
 
 /* --- 4. Bottom-Left Players Capsule (#players) --- */
@@ -422,6 +391,12 @@ body.et-celestial-active #sidebar-content .playlists-sidebar .global-control > h
 }
 
 /* Settings Sidebar (#settings / .settings-sidebar) */
+body.et-celestial-active #sidebar-content section#settings,
+body.et-celestial-active #sidebar-content .settings-sidebar {
+  text-align: center !important;
+}
+
+body.et-celestial-active #sidebar-content section#settings h4.divider,
 body.et-celestial-active #sidebar-content .settings-sidebar h4.divider {
   font-family: var(--et-font-cinematic) !important;
   color: var(--et-gold) !important;
@@ -429,12 +404,38 @@ body.et-celestial-active #sidebar-content .settings-sidebar h4.divider {
   text-transform: uppercase !important;
   border-bottom: 1px solid var(--et-glass-border) !important;
   padding-bottom: 4px !important;
+  text-align: center !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
+body.et-celestial-active #sidebar-content section#settings .info,
+body.et-celestial-active #sidebar-content .settings-sidebar .info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+body.et-celestial-active #sidebar-content section#settings .info .title,
 body.et-celestial-active #sidebar-content .settings-sidebar .info .title {
   font-family: var(--et-font-cinematic) !important;
   color: var(--et-ivory) !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 18px var(--et-gold-glow-subtle) !important;
+  text-align: center !important;
+}
+
+body.et-celestial-active #sidebar-content section#settings button,
+body.et-celestial-active #sidebar-content section#settings a.button,
+body.et-celestial-active #sidebar-content .settings-sidebar button,
+body.et-celestial-active #sidebar-content .settings-sidebar a.button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* --- Explicitly Exclude Token Action HUD and Third-Party Overlays --- */

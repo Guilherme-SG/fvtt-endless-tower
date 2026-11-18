@@ -141,6 +141,17 @@ export function createEndlessTowerSheetClasses(dnd5eActorApps: {
     };
   }
 
+  // Preserve base constructor names so third-party sheet adapters (e.g., Plutonium Level Up button)
+  // recognize Endless Tower opt-in sheets identically to native CharacterActorSheet / NPCActorSheet.
+  Object.defineProperty(EndlessTowerCharacterSheet, "name", {
+    value: BaseCharacterSheet.name || "CharacterActorSheet",
+    configurable: true,
+  });
+  Object.defineProperty(EndlessTowerNPCSheet, "name", {
+    value: BaseNPCSheet.name || "NPCActorSheet",
+    configurable: true,
+  });
+
   return {
     CharacterSheetClass: EndlessTowerCharacterSheet,
     NPCSheetClass: EndlessTowerNPCSheet,

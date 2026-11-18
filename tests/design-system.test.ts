@@ -121,6 +121,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(hudCss).toMatch(/\.combat-sidebar/);
       expect(hudCss).toMatch(/\.playlists-sidebar/);
       expect(hudCss).toMatch(/\.settings-sidebar/);
+      expect(hudCss).toMatch(/#hotbar\s*\{[\s\S]*?display:\s*none\s*!important/);
+      expect(hudCss).toMatch(/section#settings[\s\S]*?text-align:\s*center\s*!important/);
       expect(hudCss).toMatch(/--control-bg-color:/);
       expect(hudCss).toMatch(/button\[data-action=["']createEntry["']\][\s\S]*?var\(--et-gradient-login-btn\)[\s\S]*?var\(--et-ink\)/);
       expect(hudCss).toMatch(/\.directory-header\s+search\s*\{[\s\S]*?gap:\s*6px\s*!important/);
@@ -195,6 +197,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(created).not.toBeNull();
       expect(Object.getPrototypeOf(created!.CharacterSheetClass)).toBe(DummyChar);
       expect(Object.getPrototypeOf(created!.NPCSheetClass)).toBe(DummyNPC);
+      expect(created!.CharacterSheetClass.name).toBe(DummyChar.name);
+      expect(created!.NPCSheetClass.name).toBe(DummyNPC.name);
       expect(created!.CharacterSheetClass.DEFAULT_OPTIONS.classes).toContain(ENDLESS_TOWER_SHEET_CLASS);
       expect(created!.NPCSheetClass.DEFAULT_OPTIONS.classes).toContain(ENDLESS_TOWER_SHEET_CLASS);
       expect(ENDLESS_TOWER_SHEET_LABEL).toBe("Endless Tower Sheet");
