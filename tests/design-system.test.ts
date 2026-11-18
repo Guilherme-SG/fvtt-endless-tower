@@ -99,10 +99,15 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
       expect(getContrastRatio("#3a2c10", "#d9b865")).toBeGreaterThanOrEqual(7.0);
 
-      // HUD Foundry v13 (.ui-control, #scene-controls, #scene-navigation, #sidebar-tabs)
+      // HUD Foundry v13 (.ui-control, #scene-controls, #scene-navigation, #sidebar-tabs, #sidebar-content)
       expect(hudCss).toMatch(/#scene-controls/);
       expect(hudCss).toMatch(/#scene-navigation/);
       expect(hudCss).toMatch(/#sidebar-tabs\s+\.ui-control/);
+      expect(hudCss).toMatch(/#sidebar-content/);
+      expect(hudCss).toMatch(/\.sidebar-tab/);
+      expect(hudCss).toMatch(/\.combat-sidebar/);
+      expect(hudCss).toMatch(/\.playlists-sidebar/);
+      expect(hudCss).toMatch(/\.settings-sidebar/);
       expect(hudCss).toMatch(/--control-bg-color:/);
       expect(landingCss).toMatch(/#scene-controls/);
       expect(landingCss).toMatch(/#scene-navigation/);

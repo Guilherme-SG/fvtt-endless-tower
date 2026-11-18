@@ -50,7 +50,7 @@
 
 - Refs: US-001, US-002, US-003, AC-019
 - Arquivos: styles/design-system/tokens.css, styles/design-system/hud.css, styles/landing.css, styles/design-system/sheets.css, styles/design-system/buttons.css, styles/design-system/chat.css, src/features/design-system/agentic-tokens.ts, tests/design-system.test.ts
-- Notas: Sincronizar paleta da tela de login (`--et-ink`, `--et-gold-satin-top`, `--et-gradient-login-btn`, vidro âmbar), cobrir seletores HUD do Foundry v13 (`#scene-controls`, `#scene-navigation`, `#sidebar-tabs .ui-control`), remover textura cinza e container duplo no chat, corrigir contraste Midi-QoL e restringir cantoneiras SVG em `sheets.css` (`filigree-box:has(> h3)` e cantos inferiores).
+- Notas: Sincronizar paleta da tela de login (`--et-ink`, `--et-gold-satin-top`, `--et-gradient-login-btn`, vidro âmbar), cobrir seletores HUD do Foundry v13 (`#scene-controls`, `#scene-navigation`, `#sidebar-tabs .ui-control`) e estilizar `#sidebar-content` e suas sections internas (`.sidebar-tab`, `.directory`, `.combat-sidebar`, `.playlists-sidebar`, `.settings-sidebar`), remover textura cinza e container duplo no chat, corrigir contraste Midi-QoL e restringir cantoneiras SVG em `sheets.css` (`filigree-box:has(> h3)` e cantos inferiores).
 
 ## Documentos relacionados
 

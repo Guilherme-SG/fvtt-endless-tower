@@ -11,12 +11,12 @@
   ],
   "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
   "review": {
-    "summary": "Correcao visual completa Foundry v13 para AC-019 e T-008: suporte a seletores HUD v13 (.ui-control, #scene-controls, #scene-navigation, #sidebar-tabs), remocao da textura cinza manchada e caixa dupla no chat, contraste escuro WCAG em alvos/botoes Midi-QoL, estilização de .pinnedchatlog e .dice-tray, e cantoneiras focais em filigree-box:has(> h3) e cantos inferiores da ficha.",
+    "summary": "Adicionada estilizacao completa do #sidebar-content e todas as sections internas (.sidebar-tab, .directory, .combat-sidebar, .playlists-sidebar, .settings-sidebar, popouts e buscas estilo pilula da tela de login) ao Celestial Chronicle Design System para Foundry v13 (AC-019 / T-008).",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "1720537a459042912d29ff6492fca40283141aecd0e5d040e402a45b39267e5e",
-    "ownFingerprint": "1720537a459042912d29ff6492fca40283141aecd0e5d040e402a45b39267e5e",
-    "reviewedAt": "2026-11-18T06:08:39.883Z",
+    "fingerprint": "17febead078668a4df2b0a7696890460564b9ce463670e5cd9f27d96093a5339",
+    "ownFingerprint": "17febead078668a4df2b0a7696890460564b9ce463670e5cd9f27d96093a5339",
+    "reviewedAt": "2026-11-18T07:05:50.426Z",
     "documents": [
       ".spec/features/endless-tower-design-system/prd.md",
       ".spec/features/endless-tower-design-system/adr.md",
