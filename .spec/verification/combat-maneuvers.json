@@ -1,0 +1,83 @@
+{
+  "feature": "combat-maneuvers",
+  "timestamp": "2026-11-18T18:16:46.009Z",
+  "gitRev": "f8e8c92",
+  "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
+  "reporter": "vitest-json",
+  "exitCode": 0,
+  "testsParsed": 66,
+  "results": {
+    "AC-021": {
+      "status": "pass",
+      "testName": "AC-021: Itens de manobra criados e sincronizados em todos os atores @spec:AC-021 AC-021: Itens de manobra criados e sincronizados em todos os atores @spec:AC-021",
+      "method": "vitest-json"
+    },
+    "AC-022": {
+      "status": "pass",
+      "testName": "validateManeuverPrerequisites @spec:AC-022 — válido a 5 pés com mesmo tamanho (grapple) @spec:AC-022 — válido a 5 pés com mesmo tamanho (grapple)",
+      "method": "vitest-json"
+    },
+    "AC-023": {
+      "status": "pass",
+      "testName": "validateManeuverPrerequisites @spec:AC-023 — falha: Huge vs Medium no grapple (diferença > 1 categoria) @spec:AC-023 — falha: Huge vs Medium no grapple (diferença > 1 categoria)",
+      "method": "vitest-json"
+    },
+    "AC-024": {
+      "status": "pass",
+      "testName": "AC-024: Seletor de visibilidade pré-configurado com o modo do chat @spec:AC-024 AC-024: Seletor de visibilidade pré-configurado com o modo do chat @spec:AC-024",
+      "method": "vitest-json"
+    },
+    "AC-025": {
+      "status": "pass",
+      "testName": "AC-025: Prompt interativo de defesa para o dono do alvo @spec:AC-025 AC-025: Prompt interativo de defesa para o dono do alvo @spec:AC-025",
+      "method": "vitest-json"
+    },
+    "AC-026": {
+      "status": "pass",
+      "testName": "determineContestWinner @spec:AC-026 — empate favorece o defensor (15 vs 15) @spec:AC-026 — empate favorece o defensor (15 vs 15)",
+      "method": "vitest-json"
+    },
+    "AC-027": {
+      "status": "pass",
+      "testName": "AC-027: Aplicação da condição Agarrado (Grappled) @spec:AC-027 AC-027: Aplicação da condição Agarrado (Grappled) @spec:AC-027",
+      "method": "vitest-json"
+    },
+    "AC-028": {
+      "status": "pass",
+      "testName": "calculatePushVector @spec:AC-028 — empurrão para o Norte (atacante abaixo do alvo) @spec:AC-028 — empurrão para o Norte (atacante abaixo do alvo)",
+      "method": "vitest-json"
+    },
+    "AC-029": {
+      "status": "pass",
+      "testName": "AC-029: Notificação de Desarmar sem alteração destrutiva de inventário @spec:AC-029 AC-029: Notificação de Desarmar sem alteração destrutiva de inventário @spec:AC-029",
+      "method": "vitest-json"
+    },
+    "AC-030": {
+      "status": "pass",
+      "testName": "AC-030: Efeitos audiovisuais via Sequencer com configuração de desativação @spec:AC-030 AC-030: Efeitos audiovisuais via Sequencer com configuração de desativação @spec:AC-030",
+      "method": "vitest-json"
+    }
+  },
+  "principles": {
+    "P-003": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-003 Desacoplamento de lógica pura garantido @principle:P-003 Desacoplamento de lógica pura garantido"
+    },
+    "P-004": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-004 Reversibilidade visual possui método de parada e cleanup @principle:P-004 Reversibilidade visual possui método de parada e cleanup"
+    },
+    "P-005": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon @principle:P-005 Anúncios cinemáticos utilizam layout edge-to-edge ribbon"
+    },
+    "P-006": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas @principle:P-006 Tabelas críticas possuem estrutura HTML padronizada e DCs balanceadas"
+    },
+    "P-011": {
+      "status": "pass",
+      "testName": "Princípios da Constituição do Endless Tower @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting @principle:P-011 Agentic Design System garante sincronia DTCG, contrastes WCAG 2.1, regra 60-30-10 e contratos anti-nesting"
+    }
+  }
+}

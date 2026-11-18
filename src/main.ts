@@ -47,6 +47,13 @@ import {
 } from "./features/design-system/design-system";
 import { BannerService } from "./features/design-system/banner-service";
 import { DesignSystemSound } from "./features/design-system/sound-effects";
+import {
+  registerCombatManeuvers,
+  syncManeuversOnAllActors,
+  ensureManeuverItemsOnActor,
+  toggleManeuverEffects,
+  executeManeuverWorkflow,
+} from "./features/combat-maneuvers";
 
 Hooks.once("init", () => {
   console.log(`${MODULE_TITLE} | Inicializando modulo TypeScript`);
@@ -65,6 +72,7 @@ Hooks.once("init", () => {
   registerSolitudeFeature();
   registerTemporalSynchronyFeature();
   registerDesignSystem();
+  registerCombatManeuvers();
 });
 
 Hooks.once("ready", () => {
@@ -102,6 +110,10 @@ Hooks.once("ready", () => {
         startParticles: () => DesignSystem.getInstance().startGlobalParticles(),
         stopParticles: () => DesignSystem.getInstance().stopGlobalParticles(),
       },
+      syncManeuvers: syncManeuversOnAllActors,
+      ensureManeuvers: ensureManeuverItemsOnActor,
+      toggleManeuverEffects,
+      executeManeuver: executeManeuverWorkflow,
     };
   }
 });

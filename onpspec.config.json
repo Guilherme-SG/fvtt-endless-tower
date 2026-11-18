@@ -2,8 +2,18 @@
   "testCommand": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "reporterOutputFile": ".spec/verification/raw.json",
+  "testGlobs": [
+    "test/**",
+    "tests/**",
+    "src/**/*.test.*",
+    "src/**/*.spec.*",
+    "__tests__/**"
+  ],
   "srcGlobs": [
     "src/features/design-system/**",
-    "src/features/celestial-chronicle.ts"
+    "src/features/celestial-chronicle.ts",
+    "src/features/combat-maneuvers.ts",
+    "src/rules/maneuvers.ts",
+    "src/main.ts"
   ]
 }

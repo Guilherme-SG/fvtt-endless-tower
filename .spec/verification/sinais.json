@@ -86,10 +86,10 @@
       "codigo": "REVISAO_IMPACTO_PENDENTE",
       "feature": "endless-tower-design-system",
       "ref": ".spec\\features\\endless-tower-design-system\\governance.json",
-      "ocorrencias": 4,
+      "ocorrencias": 7,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-17T22:10:29.565Z",
-      "gitRev": "763df2d"
+      "ultimaVez": "2026-11-18T18:15:41.022Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_INEXISTENTE::endless-tower-design-system::T-001": {
       "codigo": "ARQUIVO_INEXISTENTE",
@@ -113,37 +113,37 @@
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/constants.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/abracado-canvas.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/abracado-canvas.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/abracado-pelo-destino.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/abracado-pelo-destino.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/bless-remember.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/bless-remember.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/celestial-chronicle.ts": {
       "codigo": "ARQUIVO_ORFAO",
@@ -158,19 +158,19 @@
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/cemetery-bless.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/critical-encounter.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/critical-encounter.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/design-system/banner-service.ts": {
       "codigo": "ARQUIVO_ORFAO",
@@ -212,91 +212,91 @@
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/jump.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/landing-scene.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/landing-scene.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/particle-canvas.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/particle-canvas.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/play-sounds.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/play-sounds.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/prepare-spells-reminder.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/prepare-spells-reminder.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/quote-manager.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/quote-manager.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/ragnarok-animations.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/ragnarok-animations.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/sensorial-deturpation.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/sensorial-deturpation.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/solitude.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/solitude.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/features/temporal-synchrony.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/features/temporal-synchrony.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/main.ts": {
       "codigo": "ARQUIVO_ORFAO",
@@ -311,46 +311,46 @@
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/rules/combat.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/rules/spellcasting.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/rules/spellcasting.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/rules/undead.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/rules/undead.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/types/chronicle.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/types/chronicle.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "ARQUIVO_ORFAO::—::src/types/vite-env.d.ts": {
       "codigo": "ARQUIVO_ORFAO",
       "feature": "—",
       "ref": "src/types/vite-env.d.ts",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-11-12T01:07:32.773Z",
-      "ultimaVez": "2026-11-12T01:07:32.773Z",
-      "gitRev": "34d7e69"
+      "ultimaVez": "2026-11-18T18:09:30.677Z",
+      "gitRev": "f8e8c92"
     },
     "STATUS_INVALIDO::endless-tower-design-system::.spec\\features\\endless-tower-design-system\\spec.md": {
       "codigo": "STATUS_INVALIDO",
@@ -540,6 +540,195 @@
       "primeiraVez": "2026-11-17T22:10:29.567Z",
       "ultimaVez": "2026-11-17T22:10:29.567Z",
       "gitRev": "763df2d"
+    },
+    "REVISAO_IMPACTO_PENDENTE::combat-maneuvers::.spec\\features\\combat-maneuvers\\governance.json": {
+      "codigo": "REVISAO_IMPACTO_PENDENTE",
+      "feature": "combat-maneuvers",
+      "ref": ".spec\\features\\combat-maneuvers\\governance.json",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-11-18T18:09:30.675Z",
+      "ultimaVez": "2026-11-18T18:15:41.020Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-001": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-001": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-002": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-003": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-003",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-002": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-004": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-004",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-005": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-005",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-006": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-006",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-003": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-003",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-007": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-007",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-008": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-008",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.676Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-009": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-009",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-004": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-004",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::AC-010": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "AC-010",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-005": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-005",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::US-006": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "US-006",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::ASM-001": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "ASM-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::ASM-002": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "ASM-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::Q-001": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "Q-001",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
+    },
+    "ID_DUPLICADO::endless-tower-design-system::Q-002": {
+      "codigo": "ID_DUPLICADO",
+      "feature": "endless-tower-design-system",
+      "ref": "Q-002",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-11-18T18:09:30.677Z",
+      "ultimaVez": "2026-11-18T18:11:48.669Z",
+      "gitRev": "f8e8c92"
     }
   }
 }

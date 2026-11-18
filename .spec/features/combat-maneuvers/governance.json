@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "large": true,
+  "documentationContract": "onp-docs-v1",
+  "domains": [],
+  "clientRequest": "Lets implement a generic feature to do disarm/shove/grapple automation. The 3 actions are manovers that all creatures can do and are based on Athletics vs Athletics or Acrobatics. The workflow must be: - Attacker select a target - Attacker uses the feature - Owner of attacker and attacked get prompt to roll check (The attacked chooses what they'll roll, Allows all kind of visibility, Can use other modules already provided)",
+  "review": {
+    "summary": "Revisão semântica de coexistência das manobras de combate com o sistema de design Celestial Chronicle. Nenhuma sobreposição de regras ou dependências conflitantes.",
+    "reviewer": "antigravity",
+    "conflicts": [],
+    "fingerprint": "a7a81ea5acd4ad2de308965b9b59a98ca8b39bfc9830965bb24cbba75481250e",
+    "ownFingerprint": "429c8330c83f12127e438f9660fa9f397fd2eef7dccd170680b0162fd4512256",
+    "reviewedAt": "2026-11-18T18:15:58.786Z",
+    "documents": [
+      ".spec/features/combat-maneuvers/prd.md",
+      ".spec/features/combat-maneuvers/adr.md",
+      ".spec/features/combat-maneuvers/design.md",
+      ".spec/features/combat-maneuvers/spec.md",
+      ".spec/features/combat-maneuvers/tasks.md",
+      ".spec/features/combat-maneuvers/research.md",
+      ".spec/features/endless-tower-design-system/prd.md",
+      ".spec/features/endless-tower-design-system/adr.md",
+      ".spec/features/endless-tower-design-system/design.md",
+      ".spec/features/endless-tower-design-system/spec.md",
+      ".spec/features/endless-tower-design-system/tasks.md",
+      ".spec/features/endless-tower-design-system/research.md",
+      ".spec/constituicao.md",
+      "onpspec.config.json"
+    ]
+  },
+  "decisions": []
+}
