@@ -1,11 +1,42 @@
 /* ==========================================================================
    Endless Tower: Celestial Chronicle Design System — HUD & Navigation
    Non-intrusive frosted glass backdrops for Scene Nav, Controls and Macro Hotbar.
+   Supports both Foundry v12 and v13 (ApplicationV2 .ui-control) selectors.
    Explicitly protects icon fonts, token action hud, and widget dimensions.
    ========================================================================== */
 
-/* --- 1. Top Scene Navigation (#navigation) --- */
-body.et-celestial-active #navigation #nav-toggle {
+/* --- 0. Foundry v13 ApplicationV2 UI Controls (--control-* & --toggle-*) --- */
+body.et-celestial-active .ui-control,
+body.et-celestial-active.theme-dark .ui-control,
+body.et-celestial-active .themed.theme-dark .ui-control,
+body.et-celestial-active #scene-controls .ui-control,
+body.et-celestial-active #scene-navigation .ui-control,
+body.et-celestial-active #sidebar-tabs .ui-control,
+body.et-celestial-active #hotbar .ui-control,
+body.et-celestial-active #chat-controls .ui-control {
+  --control-bg-color: var(--et-glass-dropdown) !important;
+  --control-border-color: var(--et-glass-border) !important;
+  --control-icon-color: var(--et-ivory-dim) !important;
+  --control-hover-bg-color: rgba(36, 29, 22, 0.94) !important;
+  --control-hover-border-color: var(--et-gold) !important;
+  --control-hover-icon-color: var(--et-ivory) !important;
+  --control-active-bg-color: rgba(48, 38, 24, 0.96) !important;
+  --control-active-border-color: var(--et-gold-deep) !important;
+  --control-active-icon-color: var(--et-gold-bright) !important;
+  --control-button-border-color: var(--et-glass-border) !important;
+  --control-button-hover-bg-color: rgba(36, 29, 22, 0.94) !important;
+  --control-button-hover-border-color: var(--et-gold) !important;
+  --toggle-bg-color: rgba(28, 22, 16, 0.88) !important;
+  --toggle-border-color: rgba(217, 184, 101, 0.45) !important;
+  --toggle-active-bg-color: rgba(58, 44, 22, 0.95) !important;
+  --toggle-active-border-color: var(--et-gold-bright) !important;
+  backdrop-filter: var(--et-blur-sm);
+  -webkit-backdrop-filter: var(--et-blur-sm);
+}
+
+/* --- 1. Top Scene Navigation (#navigation & v13 #scene-navigation) --- */
+body.et-celestial-active #navigation #nav-toggle,
+body.et-celestial-active #scene-navigation #scene-navigation-expand {
   background: var(--et-obsidian-88) !important;
   border: 1px solid var(--et-glass-border) !important;
   color: var(--et-gold) !important;
@@ -15,8 +46,9 @@ body.et-celestial-active #navigation #nav-toggle {
   -webkit-backdrop-filter: var(--et-blur-sm) !important;
 }
 
-body.et-celestial-active #navigation #scene-list .scene {
-  background: var(--et-obsidian-78) !important;
+body.et-celestial-active #navigation #scene-list .scene,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene {
+  background: var(--et-glass-dropdown) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-pill) !important;
   color: var(--et-ivory-dim) !important;
@@ -28,26 +60,31 @@ body.et-celestial-active #navigation #scene-list .scene {
   transition: all var(--et-transition-fast) !important;
 }
 
-body.et-celestial-active #navigation #scene-list .scene:hover {
+body.et-celestial-active #navigation #scene-list .scene:hover,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene:hover {
   background: rgba(26, 20, 14, 0.95) !important;
   border-color: var(--et-gold) !important;
   color: var(--et-gold-bright) !important;
 }
 
 body.et-celestial-active #navigation #scene-list .scene.view,
-body.et-celestial-active #navigation #scene-list .scene.active {
+body.et-celestial-active #navigation #scene-list .scene.active,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene.view,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene.active {
   background: linear-gradient(135deg, rgba(30, 24, 16, 0.95), rgba(45, 36, 22, 0.95)) !important;
   border-color: var(--et-gold-bright) !important;
-  color: #ffffff !important;
+  color: var(--et-ivory) !important;
   font-weight: 700 !important;
   box-shadow: 0 0 16px var(--et-gold-glow) !important;
 }
 
-/* --- 2. Left Scene Controls Toolbar (#controls) --- */
+/* --- 2. Left Scene Controls Toolbar (#controls & v13 #scene-controls) --- */
 /* Only style background and border — NEVER alter font-family, width or height of tools */
 body.et-celestial-active #controls .scene-control,
-body.et-celestial-active #controls .control-tool {
-  background: var(--et-obsidian-88) !important;
+body.et-celestial-active #controls .control-tool,
+body.et-celestial-active #scene-controls .ui-control.layer,
+body.et-celestial-active #scene-controls .ui-control.tool {
+  background: var(--et-glass-dropdown) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-sm) !important;
   box-shadow: var(--et-shadow-sm) !important;
@@ -56,10 +93,13 @@ body.et-celestial-active #controls .control-tool {
 }
 
 body.et-celestial-active #controls .scene-control.active,
-body.et-celestial-active #controls .control-tool.active {
+body.et-celestial-active #controls .control-tool.active,
+body.et-celestial-active #scene-controls .ui-control.layer[aria-pressed="true"],
+body.et-celestial-active #scene-controls .ui-control.tool[aria-pressed="true"] {
   background: linear-gradient(135deg, rgba(35, 28, 18, 0.95), rgba(50, 40, 24, 0.95)) !important;
   border-color: var(--et-gold-bright) !important;
-  box-shadow: 0 0 14px var(--et-gold-glow) !important;
+  color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 12px var(--et-gold-glow-subtle) !important;
 }
 
 body.et-celestial-active #controls .sub-controls {
@@ -81,23 +121,27 @@ body.et-celestial-active #hotbar #action-bar {
   -webkit-backdrop-filter: var(--et-blur-md) !important;
 }
 
-body.et-celestial-active #hotbar .macro {
+body.et-celestial-active #hotbar .macro,
+body.et-celestial-active #hotbar #action-bar .slot {
   background: var(--et-obsidian-well) !important;
   border: 1px solid var(--et-glass-border-subtle) !important;
   border-radius: var(--et-radius-sm) !important;
 }
 
-body.et-celestial-active #hotbar .macro:hover {
+body.et-celestial-active #hotbar .macro:hover,
+body.et-celestial-active #hotbar #action-bar .slot:hover {
   border-color: var(--et-gold) !important;
   box-shadow: 0 0 10px var(--et-gold-glow) !important;
 }
 
-body.et-celestial-active #hotbar .macro.active {
+body.et-celestial-active #hotbar .macro.active,
+body.et-celestial-active #hotbar #action-bar .slot.active {
   border-color: var(--et-gold-bright) !important;
   box-shadow: 0 0 14px var(--et-gold-glow) !important;
 }
 
-body.et-celestial-active #hotbar .macro .macro-key {
+body.et-celestial-active #hotbar .macro .macro-key,
+body.et-celestial-active #hotbar #action-bar .slot .key {
   color: var(--et-gold) !important;
   font-family: var(--et-font-cinematic) !important;
   font-weight: 700 !important;
@@ -137,18 +181,23 @@ body.et-celestial-active #players .player.self .player-name {
 
 /* --- 5. Right Sidebar Tab Navigation --- */
 body.et-celestial-active #sidebar-tabs {
-  background: var(--et-gradient-header) !important;
-  border-bottom: 1px solid var(--et-glass-border) !important;
+  background: transparent !important;
+  border-bottom: none !important;
 }
 
-body.et-celestial-active #sidebar-tabs a.item:hover {
+body.et-celestial-active #sidebar-tabs a.item:hover,
+body.et-celestial-active #sidebar-tabs .ui-control[data-action="tab"]:hover {
   color: var(--et-gold) !important;
+  border-color: var(--et-gold) !important;
   filter: drop-shadow(0 0 8px var(--et-gold-glow)) !important;
 }
 
-body.et-celestial-active #sidebar-tabs a.item.active {
+body.et-celestial-active #sidebar-tabs a.item.active,
+body.et-celestial-active #sidebar-tabs .ui-control[data-action="tab"][aria-pressed="true"] {
+  background: linear-gradient(135deg, rgba(35, 28, 18, 0.95), rgba(50, 40, 24, 0.95)) !important;
   color: var(--et-gold-bright) !important;
-  border-bottom: 2px solid var(--et-gold) !important;
+  border-color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 12px var(--et-gold-glow-subtle) !important;
   filter: drop-shadow(0 0 10px var(--et-gold-glow)) !important;
 }
 

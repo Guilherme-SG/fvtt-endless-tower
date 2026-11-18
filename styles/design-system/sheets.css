@@ -174,6 +174,10 @@
 /* Cartões estruturais (Skills / Saving Throws) separados por elevação e sombra sutil */
 .dnd5e2.sheet.actor.et-sheet filigree-box {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Cantoneiras Celestiais restritas aos blocos maiores com título (Skills e Saving Throws) */
+.dnd5e2.sheet.actor.et-sheet filigree-box:has(> h3) {
   background-image:
     var(--et-filigree-corner-tl),
     var(--et-filigree-corner-tr),
@@ -188,7 +192,7 @@
   background-size: 14px 14px;
 }
 
-/* Cantoneiras Celestiais não-intrusivas na moldura da ficha (zero impacto de layout) */
+/* Cantoneiras Celestiais nos cantos inferiores da janela da ficha (sem colidir com controles de topo) */
 .dnd5e2.sheet.actor.et-sheet .window-content::after {
   content: "";
   position: absolute;
@@ -196,14 +200,10 @@
   pointer-events: none;
   z-index: 2;
   background-image:
-    var(--et-filigree-corner-tl),
-    var(--et-filigree-corner-tr),
     var(--et-filigree-corner-bl),
     var(--et-filigree-corner-br);
   background-repeat: no-repeat;
   background-position:
-    top left,
-    top right,
     bottom left,
     bottom right;
   background-size: 20px 20px;

@@ -26,23 +26,29 @@ body.et-landing-active #players:focus-within {
   opacity: 1;
 }
 
-body.et-landing-active #controls {
+body.et-landing-active #controls,
+body.et-landing-active #scene-controls {
   opacity: 0.2;
   transition: opacity 0.3s ease;
 }
 
 body.et-landing-active #controls:hover,
-body.et-landing-active #controls:focus-within {
+body.et-landing-active #controls:focus-within,
+body.et-landing-active #scene-controls:hover,
+body.et-landing-active #scene-controls:focus-within {
   opacity: 1;
 }
 
-body.et-landing-active #navigation {
+body.et-landing-active #navigation,
+body.et-landing-active #scene-navigation {
   opacity: 0.3;
   transition: opacity 0.3s ease;
 }
 
 body.et-landing-active #navigation:hover,
-body.et-landing-active #navigation:focus-within {
+body.et-landing-active #navigation:focus-within,
+body.et-landing-active #scene-navigation:hover,
+body.et-landing-active #scene-navigation:focus-within {
   opacity: 1;
 }
 

@@ -6,7 +6,7 @@
 
 /* --- Universal Chat Message Card --- */
 body.et-celestial-active .chat-message:not(.cm-msg) {
-  background: var(--et-obsidian-card) !important;
+  background: var(--et-glass-dropdown) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-sm) !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), 0 0 10px var(--et-gold-glow-subtle) !important;
@@ -22,6 +22,16 @@ body.et-celestial-active .chat-message:not(.cm-msg) {
   min-width: 0 !important;
   transition: all var(--et-transition-fast) !important;
   --dnd5e-roll-icon-filter: invert(0.92) sepia(0.35) saturate(1.5) hue-rotate(5deg) brightness(1.08) !important;
+  --dnd5e-color-failure-background: rgba(120, 30, 40, 0.32) !important;
+  --dnd5e-color-success-background: rgba(28, 78, 50, 0.32) !important;
+  --dnd5e-application-background: none !important;
+}
+
+/* Remove a textura cinza manchada nativa (ui/texture-gray1.webp) para preservar o vidro âmbar liso */
+body.et-celestial-active .chat-message:not(.cm-msg)::before {
+  display: none !important;
+  background: none !important;
+  content: none !important;
 }
 
 body.et-celestial-active .chat-message:not(.cm-msg) .message-content {
@@ -33,27 +43,6 @@ body.et-celestial-active .chat-message:not(.cm-msg) .message-content {
 
 body.et-celestial-active .chat-message:not(.cm-msg):hover {
   border-color: rgba(243, 226, 176, 0.45) !important;
-}
-
-/* Cantoneiras Celestiais discretas e não-intrusivas nos cartões de chat */
-body.et-celestial-active .chat-message:not(.cm-msg)::after {
-  content: "";
-  position: absolute;
-  inset: 4px;
-  pointer-events: none;
-  background-image:
-    var(--et-filigree-corner-tl),
-    var(--et-filigree-corner-tr),
-    var(--et-filigree-corner-bl),
-    var(--et-filigree-corner-br);
-  background-repeat: no-repeat;
-  background-position:
-    top left,
-    top right,
-    bottom left,
-    bottom right;
-  background-size: 13px 13px;
-  opacity: 0.55;
 }
 
 /* --- Message Header (Compacto estilo Vanilla sem fundo de cor de jogador) --- */
@@ -174,18 +163,71 @@ body.et-celestial-active .chat-message.whisper:not(.cm-msg) .message-header .mes
 }
 
 /* --- High-Contrast Dark Obsidian Cards for D&D 5e & Midi-QoL --- */
-/* Resolves white-text-on-white-background issue completely & prevents horizontal overflow */
+/* Eliminates nested boxes (anti-box-in-box) & prevents horizontal overflow */
 body.et-celestial-active .chat-message:not(.cm-msg) .dnd5e.chat-card,
+body.et-celestial-active .chat-message:not(.cm-msg) .dnd5e2.chat-card,
+body.et-celestial-active .chat-message:not(.cm-msg) .chat-card,
 body.et-celestial-active .chat-message:not(.cm-msg) .midi-qol-item-card,
-body.et-celestial-active .chat-message:not(.cm-msg) .card-content,
-body.et-celestial-active .chat-message:not(.cm-msg) .description {
-  background: rgba(14, 12, 10, 0.95) !important;
+body.et-celestial-active .chat-message:not(.cm-msg) .card-content {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   color: var(--et-ivory) !important;
   border-radius: var(--et-radius-sm) !important;
   box-sizing: border-box !important;
   max-width: 100% !important;
   min-width: 0 !important;
   overflow-wrap: break-word !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .description {
+  background: var(--et-obsidian-well) !important;
+  border: none !important;
+  border-left: 2px solid rgba(217, 184, 101, 0.45) !important;
+  border-radius: 0 var(--et-radius-xs) var(--et-radius-xs) 0 !important;
+  color: var(--et-ivory) !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
+}
+
+/* --- Midi-QoL Target Rows & Damage Application Buttons (WCAG 2.1 High Contrast) --- */
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-results .target,
+body.et-celestial-active .chat-message:not(.cm-msg) .evaluation .target {
+  background: rgba(14, 12, 10, 0.55) !important;
+  border: 1px solid var(--et-glass-border-subtle) !important;
+  border-radius: var(--et-radius-xs) !important;
+  color: var(--et-ivory) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-results .target.failure,
+body.et-celestial-active .chat-message:not(.cm-msg) .evaluation .target.failure,
+body.et-celestial-active .chat-message:not(.cm-msg) .evaluation .target.miss {
+  background: rgba(120, 30, 40, 0.34) !important;
+  border: 1px solid rgba(192, 57, 43, 0.5) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-results .target.success,
+body.et-celestial-active .chat-message:not(.cm-msg) .evaluation .target.success,
+body.et-celestial-active .chat-message:not(.cm-msg) .evaluation .target.hit {
+  background: rgba(28, 78, 50, 0.34) !important;
+  border: 1px solid rgba(91, 200, 142, 0.5) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-qol-dmg-btn,
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-qol-dmg-multiplier,
+body.et-celestial-active .chat-message:not(.cm-msg) .xmidi-qol-flex-container button,
+body.et-celestial-active .chat-message:not(.cm-msg) .xmidi-qol-flex-container select {
+  background: var(--et-obsidian-well) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  color: var(--et-ivory) !important;
+}
+
+body.et-celestial-active .chat-message:not(.cm-msg) .midi-qol-dmg-btn:hover,
+body.et-celestial-active .chat-message:not(.cm-msg) .xmidi-qol-flex-container button:hover {
+  background: rgba(243, 226, 176, 0.16) !important;
+  border-color: var(--et-gold) !important;
 }
 
 body.et-celestial-active .chat-message:not(.cm-msg) .card-content p,
@@ -728,25 +770,88 @@ body.et-celestial-active .chat-message:not(.cm-msg) .monks-tokenbar.chat-card .c
   font-size: 0.72rem !important;
 }
 
-/* --- Chat Input Dock --- */
-body.et-celestial-active #chat-form {
+/* --- Chat Input Dock, Pinned Tabs & Dice Tray (Foundry v13 + Login DNA) --- */
+body.et-celestial-active #chat-form,
+body.et-celestial-active .chat-form {
   background: var(--et-obsidian-95) !important;
   border-top: 1px solid var(--et-glass-border) !important;
   padding: 6px 8px !important;
 }
 
+body.et-celestial-active .chat-form .ui-control {
+  --control-bg-color: var(--et-glass-dropdown) !important;
+  --control-border-color: var(--et-glass-border) !important;
+  --control-icon-color: var(--et-ivory-dim) !important;
+}
+
 body.et-celestial-active #chat-message {
-  background: var(--et-obsidian-well) !important;
-  border: 1px solid var(--et-glass-border) !important;
-  border-radius: var(--et-radius-sm) !important;
+  background: var(--et-glass-dropdown) !important;
+  border: 1px solid var(--et-glass-line) !important;
+  border-radius: var(--et-radius-md) !important;
   color: var(--et-ivory) !important;
   font-family: var(--et-font-body) !important;
   font-size: 0.95rem !important;
-  padding: 6px 8px !important;
+  padding: 6px 10px !important;
   margin: 0 !important;
+  backdrop-filter: var(--et-blur-sm) !important;
+  -webkit-backdrop-filter: var(--et-blur-sm) !important;
 }
 
 body.et-celestial-active #chat-message:focus {
   border-color: var(--et-gold) !important;
   box-shadow: 0 0 12px var(--et-gold-glow) !important;
+  outline: none !important;
+}
+
+/* Abas Default / Pinned (pinned-chat-message) */
+body.et-celestial-active .pinnedchatlog {
+  background: var(--et-obsidian-88) !important;
+}
+
+body.et-celestial-active .pinnedchatlog .tabs {
+  border-bottom: 1px solid var(--et-glass-border) !important;
+}
+
+body.et-celestial-active .pinnedchatlog .item {
+  color: var(--et-ivory-dim) !important;
+  font-family: var(--et-font-cinematic) !important;
+  letter-spacing: 0.04em !important;
+}
+
+body.et-celestial-active .pinnedchatlog .item.active {
+  color: var(--et-gold-bright) !important;
+  border: 1px solid var(--et-gold-deep) !important;
+  border-bottom: none !important;
+  box-shadow: 0 0 8px inset var(--et-gold-glow-subtle) !important;
+}
+
+/* Bandeja de Dados (dice-calculator .dice-tray) */
+body.et-celestial-active .dice-tray input[type="text"],
+body.et-celestial-active .dice-tray button {
+  background: var(--et-glass-dropdown) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-xs) !important;
+  color: var(--et-ivory) !important;
+}
+
+body.et-celestial-active .dice-tray button:hover {
+  background: rgba(36, 29, 22, 0.94) !important;
+  border-color: var(--et-gold) !important;
+  color: var(--et-gold-bright) !important;
+}
+
+body.et-celestial-active .dice-tray button.dice-tray__roll {
+  background: var(--et-gradient-login-btn) !important;
+  color: var(--et-ink) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 0 14px rgba(255, 226, 150, 0.35) !important;
+}
+
+body.et-celestial-active .dice-tray button.dice-tray__roll:hover {
+  filter: brightness(1.08) !important;
+  color: var(--et-ink) !important;
 }

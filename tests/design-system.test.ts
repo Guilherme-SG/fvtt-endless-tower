@@ -81,10 +81,12 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
     /**
      * @spec:AC-019
-     * Sincronia do DNA da Tela de Login (ouro acetinado, tinta imperial e cantoneiras celestiais não-intrusivas).
+     * Sincronia do DNA da Tela de Login, HUD Foundry v13, chat limpo, Midi-QoL e cantoneiras focais.
      */
-    it("@spec:AC-019 sincroniza DNA da tela de login, cantoneiras celestiais não-intrusivas e contraste AAA de tinta sobre ouro", () => {
+    it("@spec:AC-019 sincroniza DNA da tela de login, HUD v13, chat/Midi-QoL sem textura e cantoneiras focais", () => {
       const tokensCss = read("styles/design-system/tokens.css");
+      const hudCss = read("styles/design-system/hud.css");
+      const landingCss = read("styles/landing.css");
       const sheetsCss = read("styles/design-system/sheets.css");
       const chatCss = read("styles/design-system/chat.css");
       const buttonsCss = read("styles/design-system/buttons.css");
@@ -97,10 +99,24 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
 
       expect(getContrastRatio("#3a2c10", "#d9b865")).toBeGreaterThanOrEqual(7.0);
 
-      expect(sheetsCss).toMatch(/--et-filigree-corner-tl/);
+      // HUD Foundry v13 (.ui-control, #scene-controls, #scene-navigation, #sidebar-tabs)
+      expect(hudCss).toMatch(/#scene-controls/);
+      expect(hudCss).toMatch(/#scene-navigation/);
+      expect(hudCss).toMatch(/#sidebar-tabs\s+\.ui-control/);
+      expect(hudCss).toMatch(/--control-bg-color:/);
+      expect(landingCss).toMatch(/#scene-controls/);
+      expect(landingCss).toMatch(/#scene-navigation/);
+
+      // Chat sem textura cinza manchada, sem caixa dupla, Midi-QoL escuro, Pinned Tabs e Dice Tray
+      expect(chatCss).toMatch(/\.chat-message:not\(\.cm-msg\)::before[\s\S]*?display:\s*none\s*!important/);
+      expect(chatCss).toMatch(/\.midi-results\s+\.target\.failure/);
+      expect(chatCss).toMatch(/\.dice-tray\s+button\.dice-tray__roll/);
+      expect(chatCss).toMatch(/\.pinnedchatlog/);
+
+      // Fichas com cantoneiras restritas a blocos principais com título e cantos inferiores
+      expect(sheetsCss).toMatch(/filigree-box:has\(>\s*h3\)/);
+      expect(sheetsCss).toMatch(/--et-filigree-corner-bl/);
       expect(sheetsCss).toMatch(/pointer-events:\s*none/);
-      expect(chatCss).toMatch(/--et-filigree-corner-tl/);
-      expect(chatCss).toMatch(/pointer-events:\s*none/);
 
       expect(buttonsCss).toMatch(/var\(--et-gradient-login-btn\)/);
       expect(buttonsCss).toMatch(/var\(--et-ink\)/);
