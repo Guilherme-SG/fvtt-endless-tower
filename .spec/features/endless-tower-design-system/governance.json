@@ -11,12 +11,12 @@
   ],
   "clientRequest": "Let make the design system for this project. The foundry vtt world Endless Tower will have a unified UX/UI under the same system. With this system, all other chats and features will have visual coherence. The desired look is the one we created and called it as celestial chronical. The UI: menu, chat, card, popup, banner, forms, button, fonts, free text, visual/sound effect, everything.",
   "review": {
-    "summary": "Revisão semântica de coexistência do Celestial Design System com a automação de manobras de combate. A interface de manobras respeita os contratos de escopo e paleta do design system.",
+    "summary": "Revisão semântica de coexistência das manobras de combate com o sistema de design Celestial Chronicle.",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "6aa8b599b93ab2b863c4524b2656bf1e61da4fa878023b09704939b9baa10b20",
-    "ownFingerprint": "acf896761e56ea37c91bf22417054527e1a19fdc879346af0b82a4332e82b75e",
-    "reviewedAt": "2026-11-18T18:16:16.002Z",
+    "fingerprint": "0bfbf142b64e3eec936a805976272eb9fe652e75940ef7e3d62a738825dc2279",
+    "ownFingerprint": "b4cf9efadf707ac5a0ed97a5a5d965cc72590cdc19fd71069990e89292173ff4",
+    "reviewedAt": "2026-11-18T18:19:29.280Z",
     "documents": [
       ".spec/features/combat-maneuvers/prd.md",
       ".spec/features/combat-maneuvers/adr.md",

@@ -1,7 +1,7 @@
 {
   "feature": "combat-maneuvers",
-  "timestamp": "2026-11-18T18:16:46.009Z",
-  "gitRev": "f8e8c92",
+  "timestamp": "2026-11-18T18:19:09.449Z",
+  "gitRev": "0b00071",
   "command": "npx vitest run --reporter=json --outputFile=.spec/verification/raw.json",
   "reporter": "vitest-json",
   "exitCode": 0,
@@ -14,12 +14,12 @@
     },
     "AC-022": {
       "status": "pass",
-      "testName": "validateManeuverPrerequisites @spec:AC-022 — válido a 5 pés com mesmo tamanho (grapple) @spec:AC-022 — válido a 5 pés com mesmo tamanho (grapple)",
+      "testName": "AC-022: Bloqueio de alvos fora do alcance corpo a corpo @spec:AC-022 AC-022: Bloqueio de alvos fora do alcance corpo a corpo @spec:AC-022",
       "method": "vitest-json"
     },
     "AC-023": {
       "status": "pass",
-      "testName": "validateManeuverPrerequisites @spec:AC-023 — falha: Huge vs Medium no grapple (diferença > 1 categoria) @spec:AC-023 — falha: Huge vs Medium no grapple (diferença > 1 categoria)",
+      "testName": "AC-023: Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido @spec:AC-023 AC-023: Bloqueio de Agarrar/Empurrar em alvos com tamanho superior ao permitido @spec:AC-023",
       "method": "vitest-json"
     },
     "AC-024": {
@@ -34,7 +34,7 @@
     },
     "AC-026": {
       "status": "pass",
-      "testName": "determineContestWinner @spec:AC-026 — empate favorece o defensor (15 vs 15) @spec:AC-026 — empate favorece o defensor (15 vs 15)",
+      "testName": "AC-026: Disputa via Epic Rolls 5e e vitória do defensor no empate @spec:AC-026 AC-026: Disputa via Epic Rolls 5e e vitória do defensor no empate @spec:AC-026",
       "method": "vitest-json"
     },
     "AC-027": {
@@ -44,7 +44,7 @@
     },
     "AC-028": {
       "status": "pass",
-      "testName": "calculatePushVector @spec:AC-028 — empurrão para o Norte (atacante abaixo do alvo) @spec:AC-028 — empurrão para o Norte (atacante abaixo do alvo)",
+      "testName": "AC-028: Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés @spec:AC-028 AC-028: Escolha entre Derrubar Caído ou Deslocamento Vetorial de 5 pés @spec:AC-028",
       "method": "vitest-json"
     },
     "AC-029": {

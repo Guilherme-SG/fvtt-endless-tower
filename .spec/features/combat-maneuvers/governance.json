@@ -5,12 +5,12 @@
   "domains": [],
   "clientRequest": "Lets implement a generic feature to do disarm/shove/grapple automation. The 3 actions are manovers that all creatures can do and are based on Athletics vs Athletics or Acrobatics. The workflow must be: - Attacker select a target - Attacker uses the feature - Owner of attacker and attacked get prompt to roll check (The attacked chooses what they'll roll, Allows all kind of visibility, Can use other modules already provided)",
   "review": {
-    "summary": "Revisão semântica de coexistência das manobras de combate com o sistema de design Celestial Chronicle. Nenhuma sobreposição de regras ou dependências conflitantes.",
+    "summary": "Revisão semântica de coexistência das manobras de combate com o sistema de design Celestial Chronicle.",
     "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "a7a81ea5acd4ad2de308965b9b59a98ca8b39bfc9830965bb24cbba75481250e",
-    "ownFingerprint": "429c8330c83f12127e438f9660fa9f397fd2eef7dccd170680b0162fd4512256",
-    "reviewedAt": "2026-11-18T18:15:58.786Z",
+    "fingerprint": "b4dc300fa5a954dd40efe01c0ba0907a4a94d06ccc09a275096af47d0100646b",
+    "ownFingerprint": "bf6100c23ca895b16d68a2d1a275ea96fbfa02448fb9016514bfe8836b4ae036",
+    "reviewedAt": "2026-11-18T18:19:29.011Z",
     "documents": [
       ".spec/features/combat-maneuvers/prd.md",
       ".spec/features/combat-maneuvers/adr.md",
