@@ -34,9 +34,10 @@ body.et-celestial-active #chat-controls .ui-control {
   -webkit-backdrop-filter: var(--et-blur-sm);
 }
 
-/* --- 1. Top Scene Navigation (#navigation & v13 #scene-navigation) --- */
+/* --- 1. Top Scene Navigation (#navigation & v13 #scene-navigation + Monk's Scene Navigation) --- */
 body.et-celestial-active #navigation #nav-toggle,
-body.et-celestial-active #scene-navigation #scene-navigation-expand {
+body.et-celestial-active #scene-navigation #scene-navigation-expand,
+body.et-celestial-active #scene-navigation #scene-navigation-previous {
   background: var(--et-obsidian-88) !important;
   border: 1px solid var(--et-glass-border) !important;
   color: var(--et-gold) !important;
@@ -46,8 +47,17 @@ body.et-celestial-active #scene-navigation #scene-navigation-expand {
   -webkit-backdrop-filter: var(--et-blur-sm) !important;
 }
 
+body.et-celestial-active #scene-navigation.monks-navigation #scene-navigation-inactive,
+body.et-celestial-active #scene-navigation.monks-navigation .scene-navigation-menu .folder > menu {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 body.et-celestial-active #navigation #scene-list .scene,
-body.et-celestial-active #scene-navigation .scene-navigation-menu .scene {
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .folder {
   background: var(--et-glass-dropdown) !important;
   border: 1px solid var(--et-glass-border) !important;
   border-radius: var(--et-radius-pill) !important;
@@ -61,7 +71,8 @@ body.et-celestial-active #scene-navigation .scene-navigation-menu .scene {
 }
 
 body.et-celestial-active #navigation #scene-list .scene:hover,
-body.et-celestial-active #scene-navigation .scene-navigation-menu .scene:hover {
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene:hover,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .folder:hover {
   background: rgba(26, 20, 14, 0.95) !important;
   border-color: var(--et-gold) !important;
   color: var(--et-gold-bright) !important;
@@ -70,12 +81,23 @@ body.et-celestial-active #scene-navigation .scene-navigation-menu .scene:hover {
 body.et-celestial-active #navigation #scene-list .scene.view,
 body.et-celestial-active #navigation #scene-list .scene.active,
 body.et-celestial-active #scene-navigation .scene-navigation-menu .scene.view,
-body.et-celestial-active #scene-navigation .scene-navigation-menu .scene.active {
+body.et-celestial-active #scene-navigation .scene-navigation-menu .scene.active,
+body.et-celestial-active #scene-navigation .scene-navigation-menu .folder.expanded {
   background: linear-gradient(135deg, rgba(30, 24, 16, 0.95), rgba(45, 36, 22, 0.95)) !important;
   border-color: var(--et-gold-bright) !important;
   color: var(--et-ivory) !important;
   font-weight: 700 !important;
   box-shadow: 0 0 16px var(--et-gold-glow) !important;
+}
+
+body.et-celestial-active #scene-navigation.monks-navigation .scene-navigation-menu .folder::before {
+  color: var(--et-gold) !important;
+  opacity: 0.85 !important;
+}
+
+body.et-celestial-active #scene-navigation.monks-navigation .scene-navigation-menu .folder.expanded::before {
+  color: var(--et-gold-bright) !important;
+  opacity: 1 !important;
 }
 
 /* --- 2. Left Scene Controls Toolbar (#controls & v13 #scene-controls) --- */

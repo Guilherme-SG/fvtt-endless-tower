@@ -113,6 +113,8 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       // HUD Foundry v13 (.ui-control, #scene-controls, #scene-navigation, #sidebar-tabs, #sidebar-content)
       expect(hudCss).toMatch(/#scene-controls/);
       expect(hudCss).toMatch(/#scene-navigation/);
+      expect(hudCss).toMatch(/#scene-navigation\.monks-navigation/);
+      expect(hudCss).toMatch(/\.scene-navigation-menu\s+\.folder/);
       expect(hudCss).toMatch(/#sidebar-tabs\s+\.ui-control/);
       expect(hudCss).toMatch(/#sidebar-content/);
       expect(hudCss).toMatch(/\.sidebar-tab/);
