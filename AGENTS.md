@@ -33,8 +33,8 @@ Public module API at `game.modules.get('endless-tower').api`:
 
 ## Global Conventions
 
-- **Language**: All comments, UI text, and documentation in Brazilian Portuguese (except pre-game `/join` strings).
-- **Decoupled Pure Logic (`@principle:P-003`)**: Rules, math, probabilities, and quote decks must live in pure functions free of Foundry globals (`game`, `canvas`, `Hooks`, `ui`); `src/features/*` act as adapters.
+- **Language**: All file/folder names, identifiers, types, code comments, and console logs strictly in **English**. Player-facing text (UI, chat, banners, notifications, tooltips) strictly in **Brazilian Portuguese (PT-BR)**, grouped in a `UI_TEXT` (`as const`) object inside the feature's `config.ts` (except pre-game `/join` strings).
+- **Architecture & Pure Logic (`@principle:P-003`)**: Vertical Slices under `src/features/<feature-name>/` (`config.ts`, `rules.ts`, `adapter.ts`, `index.ts`). Rules and math live in `rules.ts` as pure functions free of Foundry globals (`game`, `canvas`, `Hooks`, `ui`, `ChatMessage`); see `.agents/rules/architecture.md`.
 - **Multi-Scene Isolation**: Persist combat flags on the `Combat` document (`combat.setFlag`), resolve combat via `token.combatant?.combat` (never `game.combat`), and filter broadcasts by `game.user.viewedScene`.
 - **Whisper Messages**: Ownership check uses `ownership[id] === 3` (OWNER level).
 - **Media Assets (`@principle:P-009`)**: Convert static splash arts and backgrounds to `.webp` (`cwebp -q 90`).

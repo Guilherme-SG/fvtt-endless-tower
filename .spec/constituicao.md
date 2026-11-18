@@ -25,9 +25,9 @@ Chaves de API, senhas e credenciais vêm de variáveis de ambiente (`.env`), nun
 
 - verificação(proibido): `(api[_-]?key|senha|password)\s*[:=]\s*['"][^'"]{8,}` em `src/**/*.ts`
 
-## P-003 [DEVE] Desacoplamento entre lógica de regras e hooks do Foundry
+## P-003 [DEVE] Desacoplamento entre lógica de regras e hooks do Foundry (Vertical Slices + Functional Core)
 
-Lógica matemática de regras, cálculos de combate, probabilidades, baralhos de frases e mecânicas de bênçãos DEVEM ser implementados como funções puras em módulos isolados, livres de referências globais (`game`, `canvas`, `Hooks`, `ui`). Arquivos em `src/features/*` atuam unicamente como adaptadores conectando os eventos do Foundry à lógica pura.
+Toda feature nova ou refatorada em `src/features/<feature-name>/` DEVE separar `config.ts` (constantes, DCs, caminhos de assets e `UI_TEXT` `as const`), `rules.ts` (lógica pura), `adapter.ts` (hooks e side-effects do Foundry) e `index.ts`. Lógica matemática de regras, cálculos de combate, probabilidades, baralhos de frases e mecânicas de bênçãos DEVEM residir em funções puras livres de referências globais (`game`, `canvas`, `Hooks`, `ui`, `ChatMessage`).
 
 - verificação(teste): @principle:P-003
 
@@ -91,3 +91,9 @@ Todo token visual e componente do Celestial Chronicle Design System DEVE ser gov
 4. **Contratos Anti-Box-in-Box & Zero Layout Drift**: conteúdos customizados no chat (`.et-abracado-chat-card`) NÃO devem criar containers externos redundantes dentro de `.chat-message`, e variantes de ficha `.et-sheet` ou `#context-menu` NÃO devem sobrescrever layout nativo.
 
 - verificação(teste): @principle:P-011
+
+## P-012 [DEVE] Padrão de idioma: código em Inglês e textos do jogador em PT-BR (`UI_TEXT`)
+
+Nomes de arquivos, pastas, identificadores, tipos, comentários de código e logs DEVEM ser escritos estritamente em **Inglês**. Textos voltados ao jogador (UI, chat, banners, notificações e tooltips) DEVEM ser escritos estritamente em **Português do Brasil (PT-BR)** e agrupados em um objeto `UI_TEXT` (`as const`) dentro do `config.ts` de cada feature.
+
+- verificação(gate): intrínseca ao audit
