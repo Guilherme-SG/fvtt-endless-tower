@@ -399,14 +399,19 @@ body.et-celestial-active #sidebar-content .settings-sidebar {
 body.et-celestial-active #sidebar-content section#settings h4.divider,
 body.et-celestial-active #sidebar-content .settings-sidebar h4.divider {
   font-family: var(--et-font-cinematic) !important;
+  font-size: 0.82rem !important;
   color: var(--et-gold) !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
-  border-bottom: 1px solid var(--et-glass-border) !important;
-  padding-bottom: 4px !important;
+  border-bottom: none !important;
+  padding: 0 4px 4px 4px !important;
   text-align: center !important;
   justify-content: center !important;
+  white-space: normal !important;
+  line-height: 1.25 !important;
+  max-width: 100% !important;
   width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 body.et-celestial-active #sidebar-content section#settings .info,
