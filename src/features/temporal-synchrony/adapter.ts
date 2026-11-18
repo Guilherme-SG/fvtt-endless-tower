@@ -286,7 +286,7 @@ export async function promptTemporalSynchrony(actor: any): Promise<void> {
       },
       default: "confirm",
     },
-    { width: DIALOG_WIDTH_PX }
+    { width: DIALOG_WIDTH_PX, classes: ["et-dialog"] }
   ).render(true);
 }
 

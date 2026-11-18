@@ -46,7 +46,7 @@
 
 .et-window .window-header a.close:hover,
 .et-dialog .window-header a.close:hover {
-  color: #ff6666 !important;
+  color: var(--et-crimson-bright) !important;
   filter: drop-shadow(0 0 10px rgba(255, 60, 60, 0.85)) !important;
   transform: rotate(90deg) scale(1.15) !important;
 }
@@ -59,6 +59,132 @@
   font-family: var(--et-font-body) !important;
   font-size: 0.95rem !important;
   line-height: 1.5 !important;
+}
+
+/* --- Dialog Internal Layout Utilities & Buttons (.et-dialog, .et-window) --- */
+.et-dialog .dialog-buttons,
+.et-window .form-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.et-dialog .dialog-button,
+.et-window .form-footer button {
+  background: var(--et-obsidian-78) !important;
+  border: 1px solid var(--et-glass-border) !important;
+  border-radius: var(--et-radius-sm) !important;
+  color: var(--et-ivory) !important;
+  font-family: var(--et-font-cinematic) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 0.45rem 0.9rem !important;
+  transition: all var(--et-transition-fast) !important;
+  cursor: pointer;
+}
+
+.et-dialog .dialog-button:hover,
+.et-window .form-footer button:hover {
+  background: rgba(26, 21, 16, 0.94) !important;
+  border-color: var(--et-gold) !important;
+  color: var(--et-gold-bright) !important;
+  box-shadow: 0 0 12px var(--et-gold-glow-subtle) !important;
+}
+
+.et-dialog .dialog-button.default,
+.et-dialog .dialog-button.yes,
+.et-window .form-footer button.default {
+  background: var(--et-gradient-login-btn) !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  color: var(--et-ink) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 16px rgba(255, 226, 150, 0.38), 0 4px 12px rgba(0, 0, 0, 0.35) !important;
+}
+
+.et-dialog .dialog-button.default:hover,
+.et-dialog .dialog-button.yes:hover,
+.et-window .form-footer button.default:hover {
+  background: var(--et-gradient-gold-btn-hover) !important;
+  color: var(--et-ink) !important;
+  border-color: var(--et-ivory) !important;
+  box-shadow: 0 0 20px rgba(255, 234, 179, 0.75) !important;
+}
+
+.et-dialog-body {
+  font-family: var(--et-font-body);
+  color: var(--et-ivory);
+  line-height: 1.5;
+  padding: 0.25rem 0;
+}
+
+.et-dialog-body p {
+  margin: 0 0 0.65rem 0;
+  color: var(--et-ivory-dim);
+}
+
+.et-dialog-body strong {
+  color: var(--et-gold);
+}
+
+.et-dialog-lead {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.05rem;
+  color: var(--et-ivory);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.et-dialog-subtitle {
+  font-size: 0.9rem;
+  color: var(--et-ivory-muted);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.et-dialog-callout {
+  background: var(--et-obsidian-well);
+  border-left: 3px solid var(--et-gold-deep);
+  border-radius: 0 var(--et-radius-xs) var(--et-radius-xs) 0;
+  padding: 0.55rem 0.75rem;
+  margin: 0.5rem 0 0.85rem 0;
+  font-size: 0.88rem;
+  color: var(--et-ivory-dim);
+}
+
+.et-dialog-callout p {
+  margin: 0.2rem 0;
+}
+
+.et-dialog-timer {
+  font-family: var(--et-font-cinematic);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--et-amber);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.et-dialog-list {
+  margin: 0 0 0.75rem 0;
+  padding-left: 1.25rem;
+  line-height: 1.55;
+  color: var(--et-ivory-dim);
+}
+
+.et-dialog-list li strong {
+  color: var(--et-gold);
+}
+
+.et-dialog-form-group {
+  margin-bottom: 0.75rem;
+}
+
+.et-dialog-form-group .et-select,
+.et-dialog-form-group select {
+  width: 100%;
 }
 
 /* --- Context Menus (#context-menu) — Color-only override preserving vanilla sizing & module icons --- */

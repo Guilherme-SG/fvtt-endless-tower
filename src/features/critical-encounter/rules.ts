@@ -113,7 +113,7 @@ export function buildCriticalAnnouncementHtml(title: string, subtitle: string): 
             </div>
             <div class="et-chat-body">
               <p>${subtitle}</p>
-              <p style="font-size:0.85rem;margin-top:6px;color:#a99885">
+              <p class="et-chat-subtext">
                 ${UI_TEXT.announcementDescription}
               </p>
             </div>

@@ -143,12 +143,12 @@
 
 /* Controles do cabeçalho da janela */
 .dnd5e2.sheet.actor.et-sheet .window-header {
-  color: #aca496;
+  color: var(--color-text-secondary);
 }
 
 .dnd5e2.sheet.actor.et-sheet .window-header button.header-control:hover,
 .dnd5e2.sheet.actor.et-sheet .window-header a:hover {
-  color: #e6dfd3;
+  color: var(--color-text-primary);
 }
 
 /* Harmonização suave dos banners (Warm Obsidian / Carmesim) */
@@ -163,7 +163,7 @@
 /* Barra de carga (Encumbrance) em bronze quente -> carmesim em vez de azul claro */
 .dnd5e2.sheet.actor.et-sheet .encumbrance .meter.progress::before,
 .dnd5e2.sheet.actor.et-sheet .difficulty .meter.progress::before {
-  --bar-color-2: color-mix(in oklab, #6e5a3b, #781e28 var(--bar-percentage));
+  --bar-color-2: color-mix(in oklab, var(--dnd5e-color-gold), var(--dnd5e-color-maroon) var(--bar-percentage));
 }
 
 .dnd5e2.sheet.actor.et-sheet .encumbrance .meter,
@@ -212,7 +212,7 @@
 
 /* Abas verticais laterais (foco em ouro apenas na aba ativa / hover) */
 .dnd5e2.sheet.actor.et-sheet nav.tabs > .item {
-  background: #141210;
+  background: var(--dnd5e-gold-icon-background);
   color: rgba(184, 155, 99, 0.7);
   --icon-fill: rgba(184, 155, 99, 0.7);
   border-color: rgba(230, 223, 211, 0.06);
@@ -224,9 +224,9 @@
 
 .dnd5e2.sheet.actor.et-sheet nav.tabs > .item.active,
 .dnd5e2.sheet.actor.et-sheet nav.tabs > .item:hover {
-  background: #24201b;
-  color: #d4ba82;
-  --icon-fill: #d4ba82;
+  background: var(--slide-toggle-track-color-unchecked);
+  color: var(--item-control-active-color);
+  --icon-fill: var(--item-control-active-color);
   border-color: rgba(184, 155, 99, 0.5);
   box-shadow: 0 0 8px rgba(184, 155, 99, 0.16);
 }
@@ -237,7 +237,7 @@
 .dnd5e2.sheet.actor.et-sheet textarea {
   --input-background-color: rgba(15, 14, 12, 0.6);
   --input-border-color: rgba(230, 223, 211, 0.1);
-  color: #e6dfd3;
+  color: var(--color-text-primary);
 }
 
 .dnd5e2.sheet.actor.et-sheet button {

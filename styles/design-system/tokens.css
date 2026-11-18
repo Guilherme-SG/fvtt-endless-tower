@@ -22,6 +22,7 @@
   /* --- Palette: Dark Obsidian & Frosted Glass --- */
   --et-obsidian-pure: #000000;
   --et-obsidian-void: #080605;
+  --et-obsidian-solid: #120f0c;
   --et-obsidian-95: rgba(12, 10, 8, 0.95);
   --et-obsidian-88: rgba(14, 12, 10, 0.88);
   --et-obsidian-78: rgba(14, 12, 10, 0.78);
@@ -37,6 +38,8 @@
   /* Crimson: Combat, Critical Encounter, Damage, Danger */
   --et-crimson: #9e1b1b;
   --et-crimson-light: #c0392b;
+  --et-crimson-bright: #ff6666;
+  --et-crimson-pale: #ffcccc;
   --et-crimson-glow: rgba(180, 25, 25, 0.45);
   --et-crimson-glass: rgba(45, 10, 10, 0.82);
   --et-crimson-border: rgba(230, 45, 45, 0.65);
@@ -44,6 +47,7 @@
   /* Azure: Arcane, Mana, Secrets, Whispers, Wisdom */
   --et-azure: #7bb5e6;
   --et-azure-light: #a3cff5;
+  --et-azure-pale: #bfe0fb;
   --et-azure-glow: rgba(123, 181, 230, 0.40);
   --et-azure-glass: rgba(12, 24, 38, 0.82);
   --et-azure-border: rgba(123, 181, 230, 0.55);
@@ -51,6 +55,7 @@
   /* Emerald: Vitality, Healing, Success, Active Toggle, Blessings */
   --et-emerald: #5bc88e;
   --et-emerald-light: #82e0ad;
+  --et-emerald-pale: #b8ebd0;
   --et-emerald-glow: rgba(91, 200, 142, 0.40);
   --et-emerald-glass: rgba(10, 35, 20, 0.82);
   --et-emerald-border: rgba(91, 200, 142, 0.55);
@@ -66,6 +71,12 @@
   --et-amethyst: #a57ee8;
   --et-amethyst-glow: rgba(165, 126, 232, 0.40);
   --et-amethyst-glass: rgba(26, 14, 38, 0.82);
+
+  /* Slate: Neutral, Indifferent Fate, Muted Stone */
+  --et-slate: #94a3b8;
+  --et-slate-light: #cbd5e1;
+  --et-slate-border: rgba(148, 163, 184, 0.45);
+  --et-slate-glass: rgba(100, 116, 139, 0.18);
 
   /* --- Borders --- */
   --et-glass-border-subtle: rgba(243, 226, 176, 0.14);

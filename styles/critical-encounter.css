@@ -1,25 +1,9 @@
 /* ==========================================================================
    Endless Tower: Julgamento da Torre (Encontros Críticos)
-   Perfeitamente alinhado com o Design System de Celestial Chronicle e Landing Scene:
-   - Frosted Glass (backdrop-filter: blur(16px))
-   - Paleta Ivory (#fff8e6), Deep Gold (#d9b865) e Acento Carmesim (#a31818)
-   - Tipografia Cinematográfica Rúnica ("Signika", "Modesto Condensed", serif)
+   Consumes canonical tokens from styles/design-system/tokens.css:
+   - Frosted Obsidian Glass & Celestial Gold / Semantic Crimson & Emerald
+   - Edge-to-Edge Ribbon Banners (P-005) & Anti-Box-in-Box Chat Cards (P-011)
    ========================================================================== */
-
-:root {
-  --et-ivory: #fff8e6;
-  --et-gold: #f3e2b0;
-  --et-gold-deep: #d9b865;
-  --et-gold-glow: rgba(243, 226, 176, 0.45);
-  --et-glass-dark: rgba(14, 12, 10, 0.78);
-  --et-glass-border: rgba(243, 226, 176, 0.32);
-  --et-font-cinematic: "Signika", "Modesto Condensed", "Palatino", "Georgia", serif;
-
-  --et-crit-crimson: #9e1b1b;
-  --et-crit-crimson-light: #c0392b;
-  --et-crit-crimson-glow: rgba(180, 25, 25, 0.45);
-  --et-crit-glass: rgba(16, 12, 11, 0.78);
-}
 
 /* ==========================================================================
    1. Banner Cinemático em Tela Cheia (Overlay)
@@ -28,7 +12,7 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 999999;
+  z-index: var(--et-z-overlay);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +41,7 @@
   max-width: 100vw;
   box-sizing: border-box;
   padding: 2.2rem 2rem;
-  background: linear-gradient(90deg, transparent 0%, rgba(12, 10, 8, 0.72) 12%, rgba(16, 12, 11, 0.9) 50%, rgba(12, 10, 8, 0.72) 88%, transparent 100%);
+  background: var(--et-gradient-glass-ribbon);
   border-top: 1px solid rgba(217, 184, 101, 0.4);
   border-bottom: 1px solid rgba(217, 184, 101, 0.4);
   border-left: none;
@@ -110,7 +94,7 @@
   width: min(480px, 65%);
   height: 1px;
   margin: 14px auto;
-  background: linear-gradient(90deg, transparent, rgba(217, 184, 101, 0.6), rgba(192, 57, 43, 0.8), rgba(217, 184, 101, 0.6), transparent);
+  background: var(--et-gradient-razor-crimson);
   box-shadow: 0 0 8px rgba(217, 184, 101, 0.35);
 }
 
@@ -153,61 +137,61 @@
    2. Botão de Gatilho e Badge no Combat Tracker e Carousel (Combat Dock)
    ========================================================================== */
 .et-critical-toggle-btn {
-  color: #999;
+  color: var(--et-ivory-muted);
   transition: all 0.25s ease;
   position: relative;
   cursor: pointer;
 }
 
 .et-critical-toggle-btn:hover {
-  color: #ff6666 !important;
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  color: var(--et-crimson-bright) !important;
+  text-shadow: 0 0 8px var(--et-crimson-glow);
 }
 
 .et-critical-toggle-btn.active {
-  color: #ff3333 !important;
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #8b0000 !important;
+  color: var(--et-crimson-bright) !important;
+  text-shadow: 0 0 10px var(--et-crimson-light), 0 0 20px var(--et-crimson) !important;
   animation: et-crit-icon-pulse 1.8s infinite alternate;
 }
 
 /* Botão no Combat Dock (Carousel) */
 .combat-dock .buttons-container .et-dock-toggle-btn {
-  color: #bbb;
+  color: var(--et-ivory-dim);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .combat-dock .buttons-container .et-dock-toggle-btn:hover {
-  color: #ff4d4d !important;
-  text-shadow: 0 0 10px rgba(255, 60, 60, 0.8) !important;
+  color: var(--et-crimson-bright) !important;
+  text-shadow: 0 0 10px var(--et-crimson-glow) !important;
   transform: scale(1.15);
 }
 
 .combat-dock .buttons-container .et-dock-toggle-btn.active {
-  color: #ff3333 !important;
-  text-shadow: 0 0 12px #ff0000, 0 0 20px #8b0000 !important;
+  color: var(--et-crimson-bright) !important;
+  text-shadow: 0 0 12px var(--et-crimson-light), 0 0 20px var(--et-crimson) !important;
   animation: et-crit-icon-pulse 1.8s infinite alternate;
 }
 
 /* Botão de Sistema de Salvaguardas (Monk's Token Bar <-> Ripper's Epic Rolls) */
 .et-roll-system-toggle-btn,
 .combat-dock .buttons-container .et-dock-roll-system-btn {
-  color: #b5b0a6;
+  color: var(--et-ivory-muted);
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .et-roll-system-toggle-btn:hover,
 .combat-dock .buttons-container .et-dock-roll-system-btn:hover {
-  color: #ffeab3 !important;
-  text-shadow: 0 0 10px rgba(243, 226, 176, 0.7) !important;
+  color: var(--et-gold-bright) !important;
+  text-shadow: 0 0 10px var(--et-gold-glow) !important;
   transform: scale(1.12);
 }
 
 .et-roll-system-toggle-btn.active,
 .combat-dock .buttons-container .et-dock-roll-system-btn.active {
-  color: #f3e2b0 !important;
-  text-shadow: 0 0 10px rgba(243, 226, 176, 0.85), 0 0 18px rgba(217, 184, 101, 0.65) !important;
+  color: var(--et-gold) !important;
+  text-shadow: 0 0 10px var(--et-gold-glow-intense), 0 0 18px rgba(217, 184, 101, 0.65) !important;
   animation: et-roll-sys-gold-pulse 2s infinite alternate;
 }
 
@@ -232,16 +216,16 @@
   align-items: center;
   gap: 8px;
   padding: 4px 16px;
-  background: linear-gradient(90deg, rgba(35, 5, 5, 0.95), rgba(75, 10, 10, 0.98), rgba(35, 5, 5, 0.95));
-  border: 1px solid rgba(230, 45, 45, 0.85);
-  border-radius: 4px;
-  color: #ffe6e6;
-  font-family: var(--et-crit-font);
+  background: var(--et-crimson-glass);
+  border: 1px solid var(--et-crimson-border);
+  border-radius: var(--et-radius-xs);
+  color: var(--et-crimson-pale);
+  font-family: var(--et-font-cinematic);
   font-size: 0.85rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 0 16px rgba(220, 30, 30, 0.65), inset 0 0 8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 16px var(--et-crimson-glow), inset 0 0 8px rgba(0, 0, 0, 0.8);
   pointer-events: none;
   z-index: 1000;
   white-space: nowrap;
@@ -249,18 +233,18 @@
 }
 
 .et-carousel-critical-badge i {
-  color: #ff4d4d;
+  color: var(--et-crimson-bright);
   font-size: 0.95rem;
 }
 
 @keyframes et-crit-icon-pulse {
   0% {
     transform: scale(1);
-    filter: drop-shadow(0 0 2px #ff0000);
+    filter: drop-shadow(0 0 2px var(--et-crimson));
   }
   100% {
     transform: scale(1.18);
-    filter: drop-shadow(0 0 8px #ff4444);
+    filter: drop-shadow(0 0 8px var(--et-crimson-bright));
   }
 }
 
@@ -272,21 +256,21 @@
   gap: 8px;
   padding: 5px 12px;
   margin: 6px 8px;
-  background: linear-gradient(90deg, rgba(40, 5, 5, 0.9), rgba(80, 10, 10, 0.95), rgba(40, 5, 5, 0.9));
-  border: 1px solid rgba(220, 50, 50, 0.7);
-  border-radius: 4px;
-  color: #ffcccc;
-  font-family: var(--et-crit-font);
+  background: var(--et-crimson-glass);
+  border: 1px solid var(--et-crimson-border);
+  border-radius: var(--et-radius-xs);
+  color: var(--et-crimson-pale);
+  font-family: var(--et-font-cinematic);
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  box-shadow: 0 0 12px rgba(180, 20, 20, 0.4);
+  box-shadow: 0 0 12px var(--et-crimson-glow);
   animation: et-crit-badge-glow 3s infinite alternate;
 }
 
 .et-critical-encounter-badge i {
-  color: #ff4d4d;
+  color: var(--et-crimson-bright);
 }
 
 @keyframes et-crit-badge-glow {
@@ -295,135 +279,140 @@
     box-shadow: 0 0 6px rgba(180, 20, 20, 0.3);
   }
   100% {
-    border-color: rgba(255, 70, 70, 0.9);
-    box-shadow: 0 0 16px rgba(220, 30, 30, 0.65);
+    border-color: var(--et-crimson-bright);
+    box-shadow: 0 0 16px var(--et-crimson-glow);
   }
 }
 
 /* ==========================================================================
-   3. Cards de Chat (Anúncio e Botões de Rolagem)
+   3. Cards de Chat (Anti-Box-in-Box Contract P-011)
    ========================================================================== */
 .et-critical-chat-announcement {
-  background: linear-gradient(135deg, rgba(25, 8, 8, 0.95), rgba(45, 12, 12, 0.95));
-  border: 1px solid var(--et-crit-crimson-light);
-  border-left: 5px solid var(--et-crit-crimson);
-  border-radius: 4px;
-  padding: 12px 14px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  color: #f0e6d6;
-  font-family: var(--et-crit-font);
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
+  box-shadow: none;
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
 }
 
 .et-critical-chat-announcement .et-chat-header {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: var(--et-crit-gold);
+  font-family: var(--et-font-cinematic);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--et-gold);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 1px solid rgba(243, 226, 176, 0.25);
-  padding-bottom: 6px;
-  margin-bottom: 8px;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--et-crimson-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.et-critical-chat-announcement .et-chat-header i {
+  color: var(--et-crimson-bright);
 }
 
 .et-critical-chat-announcement .et-chat-body {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-style: italic;
-  color: #d9c8b5;
+  color: var(--et-ivory-dim);
   line-height: 1.4;
 }
 
-/* Card de Ataque Crítico / Falha */
+/* Card de Ataque Crítico / Falha (Sem container externo redundante) */
 .et-critical-roll-card {
-  background: linear-gradient(135deg, rgba(20, 10, 10, 0.98), rgba(30, 12, 12, 0.98));
-  border-radius: 6px;
-  padding: 10px 12px;
-  margin: 6px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-  color: #f5eedb;
-  font-family: var(--et-crit-font);
-  overflow: hidden;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem 0;
+  box-shadow: none;
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  overflow: visible;
   position: relative;
-}
-
-.et-critical-roll-card.nat20 {
-  border: 1px solid rgba(46, 204, 113, 0.45);
-  border-left: 5px solid #2ecc71;
-  background: linear-gradient(135deg, rgba(10, 24, 14, 0.95), rgba(15, 35, 20, 0.95));
-}
-
-.et-critical-roll-card.nat1 {
-  border: 1px solid rgba(231, 76, 60, 0.45);
-  border-left: 5px solid #e74c3c;
-  background: linear-gradient(135deg, rgba(28, 10, 10, 0.95), rgba(40, 12, 12, 0.95));
 }
 
 .et-critical-roll-card .et-roll-header {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 6px;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--et-glass-border-subtle);
+  padding-bottom: 0.45rem;
+}
+
+.et-critical-roll-card.nat20 .et-roll-header {
+  border-bottom-color: var(--et-emerald-border);
+}
+
+.et-critical-roll-card.nat1 .et-roll-header {
+  border-bottom-color: var(--et-crimson-border);
 }
 
 .et-critical-roll-card .et-roll-badge {
+  font-family: var(--et-font-cinematic);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  opacity: 0.85;
+  opacity: 0.9;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
 .et-critical-roll-card.nat20 .et-roll-badge {
-  color: #a8e6cf;
+  color: var(--et-emerald-pale);
 }
 
 .et-critical-roll-card.nat1 .et-roll-badge {
-  color: #ffb3b3;
+  color: var(--et-crimson-pale);
 }
 
 .et-critical-roll-card .et-roll-main-title {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1.15rem;
+  font-family: var(--et-font-cinematic);
+  font-size: 1.1rem;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .et-critical-roll-card.nat20 .et-roll-main-title {
-  color: #2ecc71;
-  text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+  color: var(--et-emerald);
+  text-shadow: 0 0 10px var(--et-emerald-glow);
 }
 
 .et-critical-roll-card.nat1 .et-roll-main-title {
-  color: #e74c3c;
-  text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+  color: var(--et-crimson-bright);
+  text-shadow: 0 0 10px var(--et-crimson-glow);
 }
 
 .et-critical-roll-card .et-roll-body {
-  margin-bottom: 10px;
+  margin-bottom: 0.65rem;
 }
 
 .et-critical-roll-card .et-roll-narrative {
   font-size: 0.92rem;
-  line-height: 1.35;
-  margin: 0 0 6px 0;
-  color: #f0e6d6;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  color: var(--et-ivory-dim);
 }
 
 .et-critical-roll-card .et-roll-table-hint {
   font-size: 0.85rem;
-  padding: 5px 8px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.35);
+  padding: 0.45rem 0.65rem;
+  border-radius: 0 var(--et-radius-xs) var(--et-radius-xs) 0;
+  background: var(--et-obsidian-well);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -432,17 +421,17 @@
 }
 
 .et-critical-roll-card.nat20 .et-roll-table-hint {
-  color: #c7eedb;
-  border: 1px solid rgba(46, 204, 113, 0.25);
+  color: var(--et-emerald-pale);
+  border-left: 3px solid var(--et-emerald);
 }
 
 .et-critical-roll-card.nat1 .et-roll-table-hint {
-  color: #f7d2d2;
-  border: 1px solid rgba(231, 76, 60, 0.25);
+  color: var(--et-crimson-pale);
+  border-left: 3px solid var(--et-crimson-light);
 }
 
 .et-critical-roll-card .et-roll-footer {
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 .et-roll-table-btn {
@@ -453,42 +442,43 @@
   justify-content: center;
   gap: 8px;
   padding: 8px 12px;
-  border-radius: 4px;
-  font-family: var(--et-crit-font);
+  border-radius: var(--et-radius-xs);
+  font-family: var(--et-font-cinematic);
   font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease;
+  box-shadow: var(--et-shadow-sm);
+  transition: all var(--et-transition-fast);
   line-height: 1.2;
   text-align: center;
 }
 
 .et-critical-roll-card.nat20 .et-roll-table-btn {
-  background: linear-gradient(180deg, #1b6330, #0c3619);
-  border: 1px solid #2ecc71;
-  color: #ffffff;
+  background: var(--et-emerald-glass);
+  border: 1px solid var(--et-emerald-border);
+  color: var(--et-emerald-pale);
 }
 
 .et-critical-roll-card.nat1 .et-roll-table-btn {
-  background: linear-gradient(180deg, #7a1818, #420a0a);
-  border: 1px solid #e74c3c;
-  color: #ffffff;
+  background: var(--et-crimson-glass);
+  border: 1px solid var(--et-crimson-border);
+  color: var(--et-crimson-pale);
 }
 
 .et-roll-table-btn:hover:not(:disabled) {
-  filter: brightness(1.25);
+  filter: brightness(1.2);
   transform: translateY(-1px);
+  color: var(--et-ivory);
 }
 
 .et-critical-roll-card.nat20 .et-roll-table-btn:hover:not(:disabled) {
-  box-shadow: 0 0 12px rgba(46, 204, 113, 0.6);
+  box-shadow: 0 0 12px var(--et-emerald-glow);
 }
 
 .et-critical-roll-card.nat1 .et-roll-table-btn:hover:not(:disabled) {
-  box-shadow: 0 0 12px rgba(231, 76, 60, 0.6);
+  box-shadow: 0 0 12px var(--et-crimson-glow);
 }
 
 .et-roll-table-btn:disabled,
@@ -497,6 +487,7 @@
   cursor: not-allowed;
   transform: none;
   filter: grayscale(0.5);
-  background: #252525 !important;
-  border-color: #555555 !important;
+  background: var(--et-obsidian-well) !important;
+  border-color: var(--et-glass-border-subtle) !important;
+  color: var(--et-ivory-muted) !important;
 }

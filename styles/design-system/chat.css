@@ -117,7 +117,7 @@ body.et-celestial-active .chat-message:not(.cm-msg) .message-header a.message-de
 }
 
 body.et-celestial-active .chat-message:not(.cm-msg) .message-header a.message-delete:hover {
-  color: #ff6666 !important;
+  color: var(--et-crimson-bright) !important;
   filter: drop-shadow(0 0 6px rgba(255, 60, 60, 0.8)) !important;
 }
 
@@ -249,11 +249,11 @@ body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracad
 }
 
 body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracado-chat-card.luck .et-card-title > span:first-child {
-  color: #2ecc71 !important;
+  color: var(--et-emerald) !important;
 }
 
 body.et-celestial-active .chat-message:not(.cm-msg) .message-content .et-abracado-chat-card.empty .et-card-title > span:first-child {
-  color: #94a3b8 !important;
+  color: var(--et-slate) !important;
 }
 
 /* Negrito em Dourado Claro (substitui texto preto sem contraste) */
@@ -496,7 +496,7 @@ body.et-celestial-active .chat-message:not(.cm-msg) .dice-total.et-attack-fumble
 body.et-celestial-active .chat-message.et-chat-fumble:not(.cm-msg):not(:has(.midi-qol-damage-roll)) .dice-total {
   background: linear-gradient(135deg, rgba(40, 6, 6, 0.95), rgba(18, 4, 4, 0.95)) !important;
   border: 2px solid var(--et-crimson-light) !important;
-  color: #ffb3b3 !important;
+  color: var(--et-crimson-pale) !important;
   box-shadow: 0 0 18px var(--et-crimson-glow), inset 0 0 10px rgba(158, 27, 27, 0.6) !important;
 }
 
@@ -719,7 +719,7 @@ body.et-celestial-active .chat-message:not(.cm-msg) .monks-tokenbar.chat-card li
 body.et-celestial-active .chat-message:not(.cm-msg) .monks-tokenbar.chat-card li.item .dice-roll .dice-total a.result-failed.selected,
 body.et-celestial-active .chat-message:not(.cm-msg) .monks-tokenbar.chat-card li.item .dice-roll .dice-total .dice-result.fail .total,
 body.et-celestial-active .chat-message:not(.cm-msg) .monks-tokenbar.chat-card li.item .dice-roll .dice-total .dice-text.failed {
-  color: #ff8080 !important;
+  color: var(--et-crimson-bright) !important;
   text-shadow: 0 0 8px var(--et-crimson-glow) !important;
 }
 
@@ -854,4 +854,113 @@ body.et-celestial-active .dice-tray button.dice-tray__roll {
 body.et-celestial-active .dice-tray button.dice-tray__roll:hover {
   filter: brightness(1.08) !important;
   color: var(--et-ink) !important;
+}
+
+/* --- Feature Chat Cards: Anti-Box-in-Box Contract (P-011) --- */
+.et-maneuver-card,
+.et-temporal-chat-card {
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem 0;
+  box-shadow: none;
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
+  position: relative;
+  overflow: visible;
+}
+
+.et-maneuver-card .et-card-header,
+.et-temporal-chat-card .et-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--et-glass-border-subtle);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.65rem;
+}
+
+.et-maneuver-card .et-card-title,
+.et-temporal-chat-card .et-card-title {
+  font-family: var(--et-font-cinematic);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--et-ivory);
+  margin: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.25;
+}
+
+.et-maneuver-card.et-variant-disarm .et-card-title {
+  color: var(--et-gold-bright);
+}
+
+.et-temporal-chat-card .et-card-subtitle {
+  display: block;
+  font-family: var(--et-font-cinematic);
+  font-size: 0.8rem;
+  color: var(--et-gold);
+  font-style: italic;
+}
+
+.et-maneuver-card .et-card-roll-result,
+.et-temporal-chat-card .et-card-roll-result {
+  background: var(--et-obsidian-well);
+  border-left: 3px solid var(--et-gold-deep);
+  border-radius: 0 var(--et-radius-xs) var(--et-radius-xs) 0;
+  padding: 0.45rem 0.65rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--et-ivory);
+}
+
+.et-maneuver-card.et-variant-disarm .et-card-roll-result {
+  border-left-color: var(--et-amber);
+  color: var(--et-amber-light);
+  font-weight: 700;
+}
+
+.et-maneuver-card .et-card-body,
+.et-temporal-chat-card .et-card-body {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--et-ivory-dim);
+  margin-bottom: 0.5rem;
+}
+
+.et-maneuver-card .et-card-body p,
+.et-temporal-chat-card .et-card-body p {
+  margin: 0 0 0.4rem 0;
+}
+
+.et-maneuver-card .et-card-body p:last-child,
+.et-temporal-chat-card .et-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.et-maneuver-card .et-card-footer,
+.et-temporal-chat-card .et-card-footer {
+  margin-top: 0.55rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--et-glass-border-subtle);
+  font-size: 0.78rem;
+  color: var(--et-ivory-muted);
+  text-align: right;
+}
+
+.et-maneuver-card .et-card-footer {
+  text-align: left;
+  font-style: italic;
+}
+
+.et-chat-subtext {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  color: var(--et-ivory-muted);
 }

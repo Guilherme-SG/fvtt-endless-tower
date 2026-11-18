@@ -5,12 +5,12 @@
   "domains": [],
   "clientRequest": "Lets implement a generic feature to do disarm/shove/grapple automation. The 3 actions are manovers that all creatures can do and are based on Athletics vs Athletics or Acrobatics. The workflow must be: - Attacker select a target - Attacker uses the feature - Owner of attacker and attacked get prompt to roll check (The attacked chooses what they'll roll, Allows all kind of visibility, Can use other modules already provided)",
   "review": {
-    "summary": "Semantic review confirming Vertical Slices refactoring (config.ts, rules.ts, adapter.ts, index.ts), English code/comments/logs, and UI_TEXT in PT-BR align with P-003 and P-012 without altering behavioral contracts, CSS selectors, or public APIs.",
-    "reviewer": "antigravity-execution",
+    "summary": "Revisão semântica após mega revisão do Agentic Design System (P-011) e migração Vertical Slices (P-003/P-012): dialogs e chat cards de combat-maneuvers, temporal-synchrony, critical-encounter, jump e prepare-spells-reminder migrados para classes canônicas (.et-dialog, .et-maneuver-card, .et-temporal-chat-card) sem inline style e sem cores hexadecimais hardcoded; nenhum conflito de domínio entre combat-maneuvers e endless-tower-design-system.",
+    "reviewer": "antigravity",
     "conflicts": [],
-    "fingerprint": "ea067579ddb03b88b3da8298b6b02d6ade837610c75d72c9342a7bc83c30df25",
-    "ownFingerprint": "265817a77612a69f53d5be32441b543ebc73e71e6a3536e7c98bfeac55326136",
-    "reviewedAt": "2026-11-18T19:13:07.382Z",
+    "fingerprint": "b757e8a7191eab649544a79c9f348e48b5b9d51ce9909520d29e126e6b11c071",
+    "ownFingerprint": "dab89f88e6de5874421bf8a9682185b1bffbc9d0d53721c08106e1983f36b203",
+    "reviewedAt": "2026-11-18T19:52:41.881Z",
     "documents": [
       ".spec/features/combat-maneuvers/prd.md",
       ".spec/features/combat-maneuvers/adr.md",

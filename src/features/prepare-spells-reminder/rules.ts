@@ -62,9 +62,8 @@ export function calculateMaxPreparedSpells(classes: ClassSpellcastingInfo[]): nu
  */
 export function buildPrepareSpellsDialogHtml(preparedCount: number, maxPreparedCount: number): string {
   return `
-      <form>
-        <div class='prep-spells-dialog'>${UI_TEXT.dialogMessage}</div>
-        <br>
-        <div style='text-align: center; font-weight: bold; opacity: 0.5'>${UI_TEXT.preparedCountLabel(preparedCount, maxPreparedCount)}</div>
+      <form class="et-dialog-body">
+        <p class="prep-spells-dialog">${UI_TEXT.dialogMessage}</p>
+        <div class="et-dialog-callout">${UI_TEXT.preparedCountLabel(preparedCount, maxPreparedCount)}</div>
       </form>`;
 }

@@ -1,17 +1,8 @@
 /* ==========================================================================
    Endless Tower: Celestial Chronicle (Pause & Scene Transitions)
    Unified, state-aware atmosphere: Lower-third runic pause & Celestial Gate loading.
+   Consumes canonical design tokens from styles/design-system/tokens.css.
    ========================================================================== */
-
-:root {
-  --et-ivory: #fff8e6;
-  --et-gold: #f3e2b0;
-  --et-gold-deep: #d9b865;
-  --et-gold-glow: rgba(243, 226, 176, 0.45);
-  --et-glass-dark: rgba(14, 12, 10, 0.72);
-  --et-glass-border: rgba(243, 226, 176, 0.28);
-  --et-font-cinematic: "Signika", "Modesto Condensed", "Palatino", "Georgia", serif;
-}
 
 /* ==========================================================================
    1. Foundry Native & Third-Party Pause Overrides
@@ -69,12 +60,12 @@ body.mld-paused:after {
   width: fit-content;
   max-width: min(580px, 86vw);
   padding: 0.85rem 1.8rem;
-  background: rgba(14, 12, 10, 0.88);
+  background: var(--et-obsidian-88);
   border: 1px solid var(--et-glass-border);
-  border-radius: 9999px;
+  border-radius: var(--et-radius-pill);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 24px rgba(217, 184, 101, 0.25);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: var(--et-blur-md);
+  -webkit-backdrop-filter: var(--et-blur-md);
   transform: translateY(12px);
   transition: transform 0.45s cubic-bezier(0.15, 0.85, 0.35, 1.2);
   pointer-events: auto;
@@ -172,13 +163,13 @@ body.mld-paused:after {
 #et-transition-screen {
   position: fixed;
   inset: 0;
-  z-index: 99990;
+  z-index: var(--et-z-modal);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #0c0a08;
+  background-color: var(--et-obsidian-void);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.5s;
@@ -251,8 +242,8 @@ body.mld-paused:after {
   border: 1px solid var(--et-glass-border);
   border-radius: 14px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.75), 0 0 32px rgba(217, 184, 101, 0.18);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: var(--et-blur-md);
+  -webkit-backdrop-filter: var(--et-blur-md);
   text-align: center;
   transform: translateY(0);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;

@@ -7,6 +7,19 @@ import {
   auditAgenticTokens,
 } from "../src/features/design-system/agentic-tokens";
 
+function collectFilesRecursive(dir: string, ext: string): string[] {
+  const results: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...collectFilesRecursive(fullPath, ext));
+    } else if (entry.isFile() && entry.name.endsWith(ext)) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
 describe("Endless Tower Constitution Principles", () => {
   /**
    * @principle:P-003
@@ -136,10 +149,61 @@ describe("Endless Tower Constitution Principles", () => {
     const chatCardContract = COMPONENT_CONTRACTS["chat-feature-card"];
     expect(chatCardContract).toBeDefined();
     expect(chatCardContract.maxNestedContainers).toBe(1);
+    expect(chatCardContract.selectors).toEqual(
+      expect.arrayContaining([
+        ".et-abracado-chat-card",
+        ".et-critical-chat-announcement",
+        ".et-critical-roll-card",
+        ".et-maneuver-card",
+        ".et-temporal-chat-card",
+      ])
+    );
 
-    const abracadoCss = fs.readFileSync(path.join(rootDir, "styles/abracado-destino.css"), "utf-8");
-    for (const rule of chatCardContract.requiredRules) {
-      expect(abracadoCss).toContain(rule);
+    const combinedChatFeatureCss = [
+      fs.readFileSync(path.join(rootDir, "styles/abracado-destino.css"), "utf-8"),
+      fs.readFileSync(path.join(rootDir, "styles/critical-encounter.css"), "utf-8"),
+      fs.readFileSync(path.join(rootDir, "styles/design-system/chat.css"), "utf-8"),
+    ].join("\n");
+
+    for (const selector of chatCardContract.selectors) {
+      const escapedSel = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const blockMatch = combinedChatFeatureCss.match(new RegExp(`${escapedSel}[^{]*\\{([^}]*)\\}`));
+      expect(blockMatch, `Missing CSS rule block for ${selector}`).not.toBeNull();
+      const ruleBody = blockMatch![1];
+      for (const rule of chatCardContract.requiredRules) {
+        expect(ruleBody, `${selector} missing required rule "${rule}"`).toContain(rule);
+      }
+    }
+
+    // Zero hardcoded hex colors in CSS outside canonical tokens.css and the variable block of sheets.css
+    const cssFiles = collectFilesRecursive(path.join(rootDir, "styles"), ".css");
+    for (const cssFile of cssFiles) {
+      const relPath = path.relative(rootDir, cssFile).replace(/\\/g, "/");
+      if (relPath === "styles/design-system/tokens.css") continue;
+
+      let content = fs.readFileSync(cssFile, "utf-8");
+      if (relPath === "styles/design-system/sheets.css") {
+        const marker = "color: var(--color-text-primary);";
+        const idx = content.indexOf(marker);
+        if (idx !== -1) {
+          const blockClose = content.indexOf("}", idx);
+          if (blockClose !== -1) content = content.slice(blockClose + 1);
+        }
+      }
+
+      const withoutComments = content.replace(/\/\*[\s\S]*?\*\//g, "");
+      const hexMatches = withoutComments.match(/#[0-9a-fA-F]{3,8}(?![a-zA-Z0-9_-])/g);
+      expect(hexMatches, `Hardcoded hex colors found in ${relPath}`).toBeNull();
+    }
+
+    // Zero inline style="..." HTML attributes inside feature modules
+    const featureTsFiles = collectFilesRecursive(path.join(rootDir, "src/features"), ".ts");
+    for (const tsFile of featureTsFiles) {
+      const relPath = path.relative(rootDir, tsFile).replace(/\\/g, "/");
+      const tsContent = fs.readFileSync(tsFile, "utf-8");
+      expect(tsContent, `Inline style="..." attribute found in ${relPath}`).not.toMatch(
+        /\bstyle\s*=\s*["']/
+      );
     }
   });
 });

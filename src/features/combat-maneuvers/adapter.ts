@@ -227,11 +227,11 @@ async function promptVisibilityDialog(
 
   return new Promise((resolve) => {
     const content = `
-      <form class="et-maneuver-visibility-form" style="padding: 6px 0;">
-        <p style="margin-bottom: 10px;">${UI_TEXT.visibilityPromptIntro(maneuverName, targetName)}</p>
-        <div class="form-group" style="margin-bottom: 12px;">
-          <label style="display:block;margin-bottom:4px;font-weight:bold;">${UI_TEXT.visibilityModeLabel}</label>
-          <select name="rollMode" style="width:100%;height:32px;">
+      <form class="et-maneuver-visibility-form et-dialog-body">
+        <p>${UI_TEXT.visibilityPromptIntro(maneuverName, targetName)}</p>
+        <div class="et-dialog-form-group">
+          <label class="et-label">${UI_TEXT.visibilityModeLabel}</label>
+          <select name="rollMode" class="et-select">
             <option value="publicroll" ${currentRollMode === "publicroll" ? "selected" : ""}>${UI_TEXT.visibilityOptions.publicroll}</option>
             <option value="gmroll" ${currentRollMode === "gmroll" ? "selected" : ""}>${UI_TEXT.visibilityOptions.gmroll}</option>
             <option value="blindroll" ${currentRollMode === "blindroll" ? "selected" : ""}>${UI_TEXT.visibilityOptions.blindroll}</option>
@@ -241,27 +241,30 @@ async function promptVisibilityDialog(
       </form>
     `;
 
-    new (Dialog as any)({
-      title: UI_TEXT.visibilityDialogTitle(maneuverName),
-      content,
-      buttons: {
-        confirm: {
-          icon: '<i class="fas fa-dice-d20"></i>',
-          label: UI_TEXT.visibilityConfirmLabel,
-          callback: (html: any) => {
-            const form = html.find("select[name='rollMode']");
-            resolve(form.val() || currentRollMode);
+    new (Dialog as any)(
+      {
+        title: UI_TEXT.visibilityDialogTitle(maneuverName),
+        content,
+        buttons: {
+          confirm: {
+            icon: '<i class="fas fa-dice-d20"></i>',
+            label: UI_TEXT.visibilityConfirmLabel,
+            callback: (html: any) => {
+              const form = html.find("select[name='rollMode']");
+              resolve(form.val() || currentRollMode);
+            },
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: UI_TEXT.visibilityCancelLabel,
+            callback: () => resolve(null),
           },
         },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: UI_TEXT.visibilityCancelLabel,
-          callback: () => resolve(null),
-        },
+        default: "confirm",
+        close: () => resolve(null),
       },
-      default: "confirm",
-      close: () => resolve(null),
-    }).render(true);
+      { classes: ["et-dialog"] }
+    ).render(true);
   });
 }
 
@@ -293,35 +296,38 @@ async function showDefenseSelectionDialog(
       defaultSkill === "acr" ? UI_TEXT.skillAcrobatics : UI_TEXT.skillAthletics;
 
     const content = `
-      <div style="text-align:center;padding:8px 0;">
-        <p style="font-size:1.1em;margin-bottom:8px;">
+      <div class="et-dialog-body">
+        <p class="et-dialog-lead">
           ${UI_TEXT.defensePromptLead(attackerName, maneuverName)}
         </p>
-        <p style="color:#777;margin-bottom:12px;">${UI_TEXT.defensePromptSubtitle}</p>
-        <div id="et-defense-timer" style="font-size:0.9em;color:#e67e22;font-weight:bold;margin-bottom:8px;">
+        <p class="et-dialog-subtitle">${UI_TEXT.defensePromptSubtitle}</p>
+        <div id="et-defense-timer" class="et-dialog-timer">
           ${UI_TEXT.defenseTimerPrefix} <span id="et-seconds">${secondsLeft}</span>s ${UI_TEXT.defenseTimerFallback(fallbackLabel)}
         </div>
       </div>
     `;
 
-    const dialog = new (Dialog as any)({
-      title: UI_TEXT.defenseDialogTitle(maneuverName),
-      content,
-      buttons: {
-        athletics: {
-          icon: '<i class="fas fa-fist-raised"></i>',
-          label: UI_TEXT.defenseButtonAthletics(athSign),
-          callback: () => safeResolve("ath"),
+    const dialog = new (Dialog as any)(
+      {
+        title: UI_TEXT.defenseDialogTitle(maneuverName),
+        content,
+        buttons: {
+          athletics: {
+            icon: '<i class="fas fa-fist-raised"></i>',
+            label: UI_TEXT.defenseButtonAthletics(athSign),
+            callback: () => safeResolve("ath"),
+          },
+          acrobatics: {
+            icon: '<i class="fas fa-running"></i>',
+            label: UI_TEXT.defenseButtonAcrobatics(acrSign),
+            callback: () => safeResolve("acr"),
+          },
         },
-        acrobatics: {
-          icon: '<i class="fas fa-running"></i>',
-          label: UI_TEXT.defenseButtonAcrobatics(acrSign),
-          callback: () => safeResolve("acr"),
-        },
+        default: defaultSkill === "acr" ? "acrobatics" : "athletics",
+        close: () => safeResolve(defaultSkill),
       },
-      default: defaultSkill === "acr" ? "acrobatics" : "athletics",
-      close: () => safeResolve(defaultSkill),
-    });
+      { classes: ["et-dialog"] }
+    );
 
     dialog.render(true);
 
@@ -471,94 +477,109 @@ async function executeShoveOutcome(
   targetName: string
 ): Promise<void> {
   return new Promise((resolve) => {
-    new (Dialog as any)({
-      title: UI_TEXT.shoveDialogTitle,
-      content: `<div style="padding: 8px 0;">${UI_TEXT.shoveDialogPrompt(targetName)}</div>`,
-      buttons: {
-        prone: {
-          icon: '<i class="fas fa-bed"></i>',
-          label: UI_TEXT.shoveProneButton,
-          callback: async () => {
-            await applyConditionToActor(targetToken.actor, "prone", "Prone");
-            await ChatMessage.create({
-              speaker: ChatMessage.getSpeaker({ token: attackerToken }),
-              content: `<div class="et-maneuver-card">
-                <h3>${UI_TEXT.shoveSuccessTitle}</h3>
-                <p>${UI_TEXT.shoveProneBody(attackerName, targetName)}</p>
-              </div>`,
-            });
-            resolve();
+    new (Dialog as any)(
+      {
+        title: UI_TEXT.shoveDialogTitle,
+        content: `<div class="et-dialog-body">${UI_TEXT.shoveDialogPrompt(targetName)}</div>`,
+        buttons: {
+          prone: {
+            icon: '<i class="fas fa-bed"></i>',
+            label: UI_TEXT.shoveProneButton,
+            callback: async () => {
+              await applyConditionToActor(targetToken.actor, "prone", "Prone");
+              await ChatMessage.create({
+                speaker: ChatMessage.getSpeaker({ token: attackerToken }),
+                content: `<div class="et-maneuver-card">
+                  <header class="et-card-header">
+                    <h3 class="et-card-title">${UI_TEXT.shoveSuccessTitle}</h3>
+                  </header>
+                  <div class="et-card-body">
+                    <p>${UI_TEXT.shoveProneBody(attackerName, targetName)}</p>
+                  </div>
+                </div>`,
+              });
+              resolve();
+            },
           },
-        },
-        push: {
-          icon: '<i class="fas fa-arrow-right"></i>',
-          label: UI_TEXT.shovePushButton,
-          callback: async () => {
-            const gridSize = (canvas as any)?.grid?.size || DEFAULT_GRID_SIZE;
-            const feetPerGrid = (canvas as any)?.grid?.distance || DEFAULT_FEET_PER_GRID;
+          push: {
+            icon: '<i class="fas fa-arrow-right"></i>',
+            label: UI_TEXT.shovePushButton,
+            callback: async () => {
+              const gridSize = (canvas as any)?.grid?.size || DEFAULT_GRID_SIZE;
+              const feetPerGrid = (canvas as any)?.grid?.distance || DEFAULT_FEET_PER_GRID;
 
-            const attackerCenter = {
-              x: attackerToken.document.x + (attackerToken.document.width * gridSize) / 2,
-              y: attackerToken.document.y + (attackerToken.document.height * gridSize) / 2,
-            };
-            const targetCenter = {
-              x: targetToken.document.x + (targetToken.document.width * gridSize) / 2,
-              y: targetToken.document.y + (targetToken.document.height * gridSize) / 2,
-            };
+              const attackerCenter = {
+                x: attackerToken.document.x + (attackerToken.document.width * gridSize) / 2,
+                y: attackerToken.document.y + (attackerToken.document.height * gridSize) / 2,
+              };
+              const targetCenter = {
+                x: targetToken.document.x + (targetToken.document.width * gridSize) / 2,
+                y: targetToken.document.y + (targetToken.document.height * gridSize) / 2,
+              };
 
-            const destCenter = calculatePushVector(
-              attackerCenter,
-              targetCenter,
-              gridSize,
-              feetPerGrid
-            );
+              const destCenter = calculatePushVector(
+                attackerCenter,
+                targetCenter,
+                gridSize,
+                feetPerGrid
+              );
 
-            let hasCollision = false;
-            try {
-              if (typeof (Ray as any) !== "undefined" && (canvas as any)?.walls?.checkCollision) {
-                const ray = new (Ray as any)(targetCenter, destCenter);
-                hasCollision = (canvas as any).walls.checkCollision(ray, {
-                  type: "move",
-                  mode: "any",
+              let hasCollision = false;
+              try {
+                if (typeof (Ray as any) !== "undefined" && (canvas as any)?.walls?.checkCollision) {
+                  const ray = new (Ray as any)(targetCenter, destCenter);
+                  hasCollision = (canvas as any).walls.checkCollision(ray, {
+                    type: "move",
+                    mode: "any",
+                  });
+                }
+              } catch (err) {
+                console.warn(`${MODULE_TITLE} | Error checking wall collision:`, err);
+              }
+
+              if (hasCollision) {
+                (ui as any).notifications?.warn(UI_TEXT.shoveCollisionWarn(targetName));
+                await ChatMessage.create({
+                  speaker: ChatMessage.getSpeaker({ token: attackerToken }),
+                  content: `<div class="et-maneuver-card">
+                    <header class="et-card-header">
+                      <h3 class="et-card-title">${UI_TEXT.shoveCollisionTitle}</h3>
+                    </header>
+                    <div class="et-card-body">
+                      <p>${UI_TEXT.shoveCollisionBody(attackerName, targetName)}</p>
+                    </div>
+                  </div>`,
+                });
+              } else {
+                const targetDocX = destCenter.x - (targetToken.document.width * gridSize) / 2;
+                const targetDocY = destCenter.y - (targetToken.document.height * gridSize) / 2;
+
+                try {
+                  await targetToken.document.update({ x: targetDocX, y: targetDocY });
+                } catch (moveErr) {
+                  console.error(`${MODULE_TITLE} | Error shifting token position:`, moveErr);
+                }
+
+                await ChatMessage.create({
+                  speaker: ChatMessage.getSpeaker({ token: attackerToken }),
+                  content: `<div class="et-maneuver-card">
+                    <header class="et-card-header">
+                      <h3 class="et-card-title">${UI_TEXT.shoveSuccessTitle}</h3>
+                    </header>
+                    <div class="et-card-body">
+                      <p>${UI_TEXT.shovePushBody(attackerName, targetName)}</p>
+                    </div>
+                  </div>`,
                 });
               }
-            } catch (err) {
-              console.warn(`${MODULE_TITLE} | Error checking wall collision:`, err);
-            }
-
-            if (hasCollision) {
-              (ui as any).notifications?.warn(UI_TEXT.shoveCollisionWarn(targetName));
-              await ChatMessage.create({
-                speaker: ChatMessage.getSpeaker({ token: attackerToken }),
-                content: `<div class="et-maneuver-card">
-                  <h3>${UI_TEXT.shoveCollisionTitle}</h3>
-                  <p>${UI_TEXT.shoveCollisionBody(attackerName, targetName)}</p>
-                </div>`,
-              });
-            } else {
-              const targetDocX = destCenter.x - (targetToken.document.width * gridSize) / 2;
-              const targetDocY = destCenter.y - (targetToken.document.height * gridSize) / 2;
-
-              try {
-                await targetToken.document.update({ x: targetDocX, y: targetDocY });
-              } catch (moveErr) {
-                console.error(`${MODULE_TITLE} | Error shifting token position:`, moveErr);
-              }
-
-              await ChatMessage.create({
-                speaker: ChatMessage.getSpeaker({ token: attackerToken }),
-                content: `<div class="et-maneuver-card">
-                  <h3>${UI_TEXT.shoveSuccessTitle}</h3>
-                  <p>${UI_TEXT.shovePushBody(attackerName, targetName)}</p>
-                </div>`,
-              });
-            }
-            resolve();
+              resolve();
+            },
           },
         },
+        default: "prone",
       },
-      default: "prone",
-    }).render(true);
+      { classes: ["et-dialog"] }
+    ).render(true);
   });
 }
 
@@ -712,9 +733,15 @@ export async function executeManeuverWorkflow(item: any, actor: any): Promise<bo
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ token: targetToken }),
       content: `<div class="et-maneuver-card">
-        <h3>${UI_TEXT.resistedTitle}</h3>
-        <p>${UI_TEXT.resistedBody(targetToken.name, maneuverDef.name, actor.name)}</p>
-        <p>${UI_TEXT.resistedOutcome(defenderTotal, attackerTotal)}</p>
+        <header class="et-card-header">
+          <h3 class="et-card-title">${UI_TEXT.resistedTitle}</h3>
+        </header>
+        <div class="et-card-body">
+          <p>${UI_TEXT.resistedBody(targetToken.name, maneuverDef.name, actor.name)}</p>
+        </div>
+        <div class="et-card-roll-result">
+          ${UI_TEXT.resistedOutcome(defenderTotal, attackerTotal)}
+        </div>
       </div>`,
     });
     return false;
@@ -727,9 +754,15 @@ export async function executeManeuverWorkflow(item: any, actor: any): Promise<bo
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ token: attackerToken }),
       content: `<div class="et-maneuver-card">
-        <h3>${UI_TEXT.grappleSuccessTitle}</h3>
-        <p>${UI_TEXT.grappleSuccessBody(actor.name, targetToken.name)}</p>
-        <p>${UI_TEXT.grappleSuccessEffect}</p>
+        <header class="et-card-header">
+          <h3 class="et-card-title">${UI_TEXT.grappleSuccessTitle}</h3>
+        </header>
+        <div class="et-card-body">
+          <p>${UI_TEXT.grappleSuccessBody(actor.name, targetToken.name)}</p>
+        </div>
+        <div class="et-card-roll-result">
+          ${UI_TEXT.grappleSuccessEffect}
+        </div>
       </div>`,
     });
   } else if (maneuverType === "shove") {
@@ -743,13 +776,19 @@ export async function executeManeuverWorkflow(item: any, actor: any): Promise<bo
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ token: attackerToken }),
       content: `
-        <div class="et-maneuver-card" style="border-left: 4px solid #f39c12; padding: 8px 12px; background: rgba(0,0,0,0.3);">
-          <h3 style="margin-top:0; color:#f1c40f;">${UI_TEXT.disarmSuccessTitle}</h3>
-          <p>${UI_TEXT.disarmSuccessBody(actor.name, targetToken.name)}</p>
-          <p style="color:#e67e22; font-weight:bold; font-size:1.05em;">${UI_TEXT.disarmWeaponDropped(weaponName)}</p>
-          <p style="font-size:0.85em; color:#bbb; margin-bottom:0;">
+        <div class="et-maneuver-card et-variant-disarm">
+          <header class="et-card-header">
+            <h3 class="et-card-title">${UI_TEXT.disarmSuccessTitle}</h3>
+          </header>
+          <div class="et-card-body">
+            <p>${UI_TEXT.disarmSuccessBody(actor.name, targetToken.name)}</p>
+          </div>
+          <div class="et-card-roll-result">
+            ${UI_TEXT.disarmWeaponDropped(weaponName)}
+          </div>
+          <footer class="et-card-footer">
             ${UI_TEXT.disarmHitlNotice}
-          </p>
+          </footer>
         </div>
       `,
     });

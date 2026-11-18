@@ -186,13 +186,16 @@ export async function executeJump(actor: any, targetToken?: any): Promise<void> 
 
   if (DialogV2) {
     jumpType = await DialogV2.wait({
+      classes: ["et-dialog"],
       window: { title: UI_TEXT.dialogTitle(strength, actor.name) },
       content: `
-        <p style="margin-bottom: 10px;">${UI_TEXT.dialogPrompt}</p>
-        <ul style="margin-bottom: 12px; line-height: 1.5;">
-          <li><strong>${UI_TEXT.runningTypeLabel}:</strong> ${UI_TEXT.runningHint(runningDistance, units)}</li>
-          <li><strong>${UI_TEXT.standingTypeLabel}:</strong> ${UI_TEXT.standingHint(standingDistance, units)}</li>
-        </ul>
+        <div class="et-dialog-body">
+          <p>${UI_TEXT.dialogPrompt}</p>
+          <ul class="et-dialog-list">
+            <li><strong>${UI_TEXT.runningTypeLabel}:</strong> ${UI_TEXT.runningHint(runningDistance, units)}</li>
+            <li><strong>${UI_TEXT.standingTypeLabel}:</strong> ${UI_TEXT.standingHint(standingDistance, units)}</li>
+          </ul>
+        </div>
       `,
       buttons: [
         {
@@ -213,28 +216,35 @@ export async function executeJump(actor: any, targetToken?: any): Promise<void> 
     });
   } else {
     jumpType = await new Promise<"running" | "standing" | null>((resolve) => {
-      new (Dialog as any)({
-        title: UI_TEXT.dialogTitle(strength, actor.name),
-        content: `
-          <p>${UI_TEXT.dialogPrompt}</p>
-          <p>• <b>${UI_TEXT.runningTypeLabel}:</b> ${UI_TEXT.runningHint(runningDistance, units)}</p>
-          <p>• <b>${UI_TEXT.standingTypeLabel}:</b> ${UI_TEXT.standingHint(standingDistance, units)}</p>
-        `,
-        buttons: {
-          running: {
-            icon: '<i class="fas fa-running"></i>',
-            label: UI_TEXT.runningButtonLabel(runningDistance, units),
-            callback: () => resolve("running"),
+      new (Dialog as any)(
+        {
+          title: UI_TEXT.dialogTitle(strength, actor.name),
+          content: `
+            <div class="et-dialog-body">
+              <p>${UI_TEXT.dialogPrompt}</p>
+              <ul class="et-dialog-list">
+                <li><strong>${UI_TEXT.runningTypeLabel}:</strong> ${UI_TEXT.runningHint(runningDistance, units)}</li>
+                <li><strong>${UI_TEXT.standingTypeLabel}:</strong> ${UI_TEXT.standingHint(standingDistance, units)}</li>
+              </ul>
+            </div>
+          `,
+          buttons: {
+            running: {
+              icon: '<i class="fas fa-running"></i>',
+              label: UI_TEXT.runningButtonLabel(runningDistance, units),
+              callback: () => resolve("running"),
+            },
+            standing: {
+              icon: '<i class="fas fa-child"></i>',
+              label: UI_TEXT.standingButtonLabel(standingDistance, units),
+              callback: () => resolve("standing"),
+            },
           },
-          standing: {
-            icon: '<i class="fas fa-child"></i>',
-            label: UI_TEXT.standingButtonLabel(standingDistance, units),
-            callback: () => resolve("standing"),
-          },
+          default: "running",
+          close: () => resolve(null),
         },
-        default: "running",
-        close: () => resolve(null),
-      }).render(true);
+        { classes: ["et-dialog"] }
+      ).render(true);
     });
   }
 

@@ -291,21 +291,21 @@ p.et-dropcap:first-letter {
 .et-badge-crimson {
   background: rgba(158, 27, 27, 0.25);
   border: 1px solid var(--et-crimson-border);
-  color: #ffcccc;
+  color: var(--et-crimson-pale);
   box-shadow: 0 0 12px var(--et-crimson-glow);
 }
 
 .et-badge-azure {
   background: rgba(123, 181, 230, 0.18);
   border: 1px solid var(--et-azure-border);
-  color: #d8eeff;
+  color: var(--et-azure-pale);
   box-shadow: 0 0 10px var(--et-azure-glow);
 }
 
 .et-badge-emerald {
   background: rgba(91, 200, 142, 0.18);
   border: 1px solid var(--et-emerald-border);
-  color: #d6f7e4;
+  color: var(--et-emerald-pale);
   box-shadow: 0 0 10px var(--et-emerald-glow);
 }
 

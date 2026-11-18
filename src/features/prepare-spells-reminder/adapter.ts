@@ -39,15 +39,18 @@ export function registerPrepareSpellsReminder(): void {
       const numMaxPrepared = calculateMaxPreparedSpells(spellcastingInfos);
       const content = buildPrepareSpellsDialogHtml(numPrepared, numMaxPrepared);
 
-      new (Dialog as any)({
-        title: UI_TEXT.dialogTitle,
-        content,
-        buttons: {
-          yes: {
-            label: UI_TEXT.confirmButtonLabel,
+      new (Dialog as any)(
+        {
+          title: UI_TEXT.dialogTitle,
+          content,
+          buttons: {
+            yes: {
+              label: UI_TEXT.confirmButtonLabel,
+            },
           },
         },
-      }).render(true);
+        { classes: ["et-dialog"] }
+      ).render(true);
     }
   });
 }

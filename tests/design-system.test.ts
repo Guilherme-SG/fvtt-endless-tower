@@ -46,6 +46,15 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
           "context-menu",
         ])
       );
+      expect(COMPONENT_CONTRACTS["chat-feature-card"].selectors).toEqual(
+        expect.arrayContaining([
+          ".et-abracado-chat-card",
+          ".et-critical-chat-announcement",
+          ".et-critical-roll-card",
+          ".et-maneuver-card",
+          ".et-temporal-chat-card",
+        ])
+      );
       expect(auditAgenticTokens().passed).toBe(true);
       expect(designSystemTs).toMatch(/auditTokens\(/);
     });
@@ -294,6 +303,10 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
       expect(abracadoCss).toMatch(/\.et-abracado-chat-card\s*\{[\s\S]*?background:\s*transparent/);
       expect(abracadoCss).toMatch(/\.et-abracado-chat-card\s*\{[\s\S]*?border:\s*none/);
       expect(abracadoCss).toMatch(/\.et-abracado-chat-card \.et-card-title[\s\S]*?white-space:\s*normal\s*!important/);
+      const criticalCss = read("styles/critical-encounter.css");
+      expect(criticalCss).toMatch(/\.et-critical-chat-announcement\s*\{[\s\S]*?background:\s*transparent[\s\S]*?border:\s*none/);
+      expect(criticalCss).toMatch(/\.et-critical-roll-card\s*\{[\s\S]*?background:\s*transparent[\s\S]*?border:\s*none/);
+      expect(chatCss).toMatch(/\.et-maneuver-card[\s\S]*?\.et-temporal-chat-card\s*\{[\s\S]*?background:\s*transparent[\s\S]*?border:\s*none/);
       expect(abracadoTs).not.toMatch(/outcomeBadge/);
 
       // Garante que a cor do jogador não polui o nome do remetente (sem fundo colorido sem contraste)

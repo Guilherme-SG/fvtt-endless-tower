@@ -113,34 +113,34 @@
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  color: var(--et-gold, #f3e2b0);
+  color: var(--et-gold);
   font-size: 1.5rem;
   margin-bottom: 0.4rem;
-  filter: drop-shadow(0 0 10px rgba(243, 226, 176, 0.4));
+  filter: drop-shadow(0 0 10px var(--et-gold-glow));
 }
 
 .et-abracado-crest .et-rune-sparkle {
   font-size: 1rem;
-  color: var(--et-gold-deep, #d9b865);
+  color: var(--et-gold-deep);
   opacity: 0.85;
 }
 
 #et-abracado-overlay.luck .et-abracado-crest {
-  color: #2ecc71;
-  filter: drop-shadow(0 0 12px rgba(46, 204, 113, 0.6));
+  color: var(--et-emerald);
+  filter: drop-shadow(0 0 12px var(--et-emerald-glow));
 }
 
 #et-abracado-overlay.empty .et-abracado-crest {
-  color: #bdc3c7;
-  filter: drop-shadow(0 0 8px rgba(189, 195, 199, 0.3));
+  color: var(--et-slate-light);
+  filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.3));
 }
 
 /* Tipografia do Título Cinemático (Single-line, sem quebra) */
 .et-abracado-title {
-  font-family: var(--et-font-cinematic, "Signika", "Modesto Condensed", "Palatino", "Georgia", serif);
+  font-family: var(--et-font-cinematic);
   font-size: clamp(1.8rem, 3.6vw, 3.2rem);
   font-weight: 700;
-  color: var(--et-ivory, #fff8e6);
+  color: var(--et-ivory);
   text-transform: uppercase;
   letter-spacing: 0.16em;
   margin: 0;
@@ -150,12 +150,12 @@
 }
 
 #et-abracado-overlay.luck .et-abracado-title {
-  color: #fafff8;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 28px rgba(46, 204, 113, 0.55);
+  color: var(--et-emerald-pale);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 0 28px var(--et-emerald-glow);
 }
 
 #et-abracado-overlay.empty .et-abracado-title {
-  color: #e2e8f0;
+  color: var(--et-slate-light);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(148, 163, 184, 0.3);
 }
 
@@ -188,11 +188,11 @@
 
 /* Subtítulo */
 .et-abracado-subtitle {
-  font-family: var(--et-font-cinematic, "Signika", "Modesto Condensed", "Palatino", "Georgia", serif);
+  font-family: var(--et-font-cinematic);
   font-size: clamp(0.95rem, 1.4vw, 1.25rem);
   font-style: italic;
   letter-spacing: 0.08em;
-  color: var(--et-gold, #f3e2b0);
+  color: var(--et-gold);
   opacity: 0.92;
   margin: 0;
   padding: 0;
@@ -200,8 +200,8 @@
 }
 
 #et-abracado-overlay.empty .et-abracado-subtitle {
-  color: #cbd5e1;
-  opacity: 0.8;
+  color: var(--et-slate-light);
+  opacity: 0.85;
 }
 
 @keyframes et-abracado-card-reveal {
@@ -225,8 +225,8 @@
   border-radius: 0;
   padding: 0.5rem 0.75rem;
   margin: 0.25rem 0;
-  color: var(--et-ivory, #fff8e6);
-  font-family: "Signika", sans-serif;
+  color: var(--et-ivory);
+  font-family: var(--et-font-body);
   box-shadow: none;
   position: relative;
   overflow: visible;
@@ -236,18 +236,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 248, 230, 0.12);
+  border-bottom: 1px solid var(--et-glass-border-subtle);
   padding-bottom: 0.45rem;
   margin-bottom: 0.65rem;
 }
 
 .et-abracado-chat-card .et-card-title {
-  font-family: var(--et-font-cinematic, serif);
+  font-family: var(--et-font-cinematic);
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--et-ivory, #fff8e6);
+  color: var(--et-ivory);
   margin: 0;
   display: flex;
   align-items: center;
@@ -259,11 +259,11 @@
 }
 
 .et-abracado-chat-card.luck .et-card-title > span:first-child {
-  color: #2ecc71;
+  color: var(--et-emerald);
 }
 
 .et-abracado-chat-card.empty .et-card-title > span:first-child {
-  color: #94a3b8;
+  color: var(--et-slate);
 }
 
 .et-abracado-chat-card .et-card-badge {
@@ -272,43 +272,43 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   padding: 0.18rem 0.55rem;
-  border-radius: 4px;
+  border-radius: var(--et-radius-xs);
 }
 
 .et-abracado-chat-card.luck .et-card-badge {
-  background: rgba(39, 174, 96, 0.22);
-  border: 1px solid rgba(46, 204, 113, 0.6);
-  color: #2ecc71;
-  text-shadow: 0 0 6px rgba(46, 204, 113, 0.5);
+  background: var(--et-emerald-glass);
+  border: 1px solid var(--et-emerald-border);
+  color: var(--et-emerald-light);
+  text-shadow: 0 0 6px var(--et-emerald-glow);
 }
 
 .et-abracado-chat-card.empty .et-card-badge {
-  background: rgba(100, 116, 139, 0.18);
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  color: #cbd5e1;
+  background: var(--et-slate-glass);
+  border: 1px solid var(--et-slate-border);
+  color: var(--et-slate-light);
 }
 
 .et-abracado-chat-card .et-card-roll-result {
-  background: rgba(0, 0, 0, 0.35);
-  border-left: 3px solid rgba(217, 184, 101, 0.5);
+  background: var(--et-obsidian-well);
+  border-left: 3px solid var(--et-gold-deep);
   padding: 0.45rem 0.65rem;
   margin-bottom: 0.6rem;
   font-size: 0.92rem;
-  color: #f1f5f9;
+  color: var(--et-ivory);
 }
 
 .et-abracado-chat-card.luck .et-card-roll-result {
-  border-left-color: #2ecc71;
+  border-left-color: var(--et-emerald);
 }
 
 .et-abracado-chat-card.empty .et-card-roll-result {
-  border-left-color: #94a3b8;
+  border-left-color: var(--et-slate);
 }
 
 .et-abracado-chat-card .et-card-lore {
   font-style: italic;
   font-size: 0.85rem;
-  color: #cbd5e1;
+  color: var(--et-slate-light);
   margin: 0.4rem 0 0.6rem 0;
   line-height: 1.35;
 }
@@ -316,13 +316,13 @@
 .et-abracado-chat-card .et-card-body {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: var(--et-ivory, #fff8e6);
+  color: var(--et-ivory);
 }
 
 .et-abracado-chat-card .et-card-body b {
-  color: var(--et-gold, #f3e2b0);
+  color: var(--et-gold);
 }
 
 .et-abracado-chat-card.luck .et-card-body b {
-  color: #a7f3d0;
+  color: var(--et-emerald-pale);
 }
