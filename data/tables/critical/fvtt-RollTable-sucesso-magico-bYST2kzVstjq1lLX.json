@@ -1,7 +1,7 @@
 {
   "folder": "Pr1ImE57tVD3tll3",
   "name": "Sucesso Mágico",
-  "img": "icons/svg/d20-grey.svg",
+  "img": "icons/weapons/wands/wand-gem-pink.webp",
   "description": "",
   "results": [
     {
@@ -12,9 +12,9 @@
         1
       ],
       "_id": "j3ZbOM2O4l99PiZK",
-      "name": "",
+      "name": "Sobrecarga Arcana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">SobreCarga Arcana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A magia ressoa com energia excessiva, ampliando o impacto do feitiço.</em></p><p>O feitiço causa +1d8 de dano de força adicional.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A magia ressoa com energia excessiva, ampliando o impacto do feitiço.</p><div class=\"et-card-mechanic\"><p>O feitiço causa +1d8 de dano de força adicional.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -25,7 +25,7 @@
         "systemId": "dnd5e",
         "systemVersion": "5.2.5",
         "createdTime": 1789764973737,
-        "modifiedTime": 1789769060856,
+        "modifiedTime": 1790433563769,
         "lastModifiedBy": "Xlx5XgXv68kjaoEi"
       },
       "documentUuid": null
@@ -38,9 +38,9 @@
         2
       ],
       "_id": "1OxLOJ1MloSJFozl",
-      "name": "",
+      "name": "Surto de Mana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Surto de Mana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma onda de energia arcana pulsa do conjurador, intensificando sua próxima ação.</em></p><p>O conjurador ganha vantagem na sua próxima jogada de ataque com feitiço.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma onda de energia arcana pulsa do conjurador, intensificando sua próxima ação.</p><div class=\"et-card-mechanic\"><p>O conjurador ganha vantagem na sua próxima jogada de ataque com feitiço.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -63,9 +63,9 @@
         3
       ],
       "_id": "GFdoyuqI9S1lxKIh",
-      "name": "",
+      "name": "Erupção Elemental",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Erupção Elemental</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O feitiço explode em uma erupção de energia elemental ao atingir o alvo.</em></p><p>Criaturas em 3m do alvo (exceto o conjurador e o alvo) recebem 1d8 do tipo de dano do feitiço. [[/save dex dc=15]] para metade.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O feitiço explode em uma erupção de energia elemental ao atingir o alvo.</p><div class=\"et-card-mechanic\"><p>Criaturas em 3m do alvo (exceto o conjurador e o alvo) recebem 1d8 do tipo de dano do feitiço. [[/save dex dc=15]] para metade.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -88,9 +88,9 @@
         4
       ],
       "_id": "PPquaTmGGOn4hzhw",
-      "name": "",
+      "name": "Corrente de Relâmpagos Arcana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Corrente de Relâmpagos Arcana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A magia se transforma em uma corrente de energia arcoana que salta entre alvos.</em></p><p>O feitiço encadeia até 3 alvos adicionais dentro de 6m de cada alvo anterior. O conjurador escolhe os alvos. O primeiro encadeamento é automático (crítico). Encadeamentos subsequentes: [[/save dex dc=15]] ou recebem o dano completo. Cada salto reduz os dados de dano em 1 (mínimo 1 dado). Cada criatura só pode ser atingida uma vez.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A magia se transforma em uma corrente de energia arcoana que salta entre alvos.</p><div class=\"et-card-mechanic\"><p>O feitiço encadeia até 3 alvos adicionais dentro de 6m de cada alvo anterior. O conjurador escolhe os alvos. O primeiro encadeamento é automático (crítico). Encadeamentos subsequentes: [[/save dex dc=15]] ou recebem o dano completo. Cada salto reduz os dados de dano em 1 (mínimo 1 dado). Cada criatura só pode ser atingida uma vez.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -113,9 +113,9 @@
         5
       ],
       "_id": "niD6oHBe8DGfj6da",
-      "name": "",
+      "name": "Bolsão de Mana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Bolsão de Mana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma aura de energia pura emana do conjurador, fortalecendo seus aliados.</em></p><p>Criaturas não hostis em 10 pés do conjurador ganham +1 na CA. Duração: até o início do próximo turno do conjurador.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma aura de energia pura emana do conjurador, fortalecendo seus aliados.</p><div class=\"et-card-mechanic\"><p>Criaturas não hostis em 10 pés do conjurador ganham +1 na CA. Duração: até o início do próximo turno do conjurador.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -138,9 +138,9 @@
         6
       ],
       "_id": "lFzH7lwdAp2BWWo6",
-      "name": "",
+      "name": "Manto de Proteção",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Manto de Proteção</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Resíduos mágicos do feitiço se aderem ao conjurador como uma camada de proteção.</em></p><p>O conjurador ganha resistência ao tipo de dano do feitiço E reduz esse dano em 1 até o fim do próximo turno.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Resíduos mágicos do feitiço se aderem ao conjurador como uma camada de proteção.</p><div class=\"et-card-mechanic\"><p>O conjurador ganha resistência ao tipo de dano do feitiço E reduz esse dano em 1 até o fim do próximo turno.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -163,9 +163,9 @@
         7
       ],
       "_id": "QiDQ4wEJWc4iCExX",
-      "name": "",
+      "name": "Vínculo Arcano",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Vínculo Arcano</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um fio invisível de energia arcana conecta o conjurador ao alvo.</em></p><p>O alvo fica vinculado ao conjurador. Até o fim da cena, quando o conjurador sofre dano, o alvo sofre 1d4 de dano de força.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Um fio invisível de energia arcana conecta o conjurador ao alvo.</p><div class=\"et-card-mechanic\"><p>O alvo fica vinculado ao conjurador. Até o fim da cena, quando o conjurador sofre dano, o alvo sofre 1d4 de dano de força.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -188,9 +188,9 @@
         8
       ],
       "_id": "m7lIfYS3O85DBW3W",
-      "name": "",
+      "name": "Rastreio Arcano",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Rastreio Arcano</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um rastreador arcano brilhante se fixa no alvo, revelando sua posição.</em></p><p>O alvo é marcado por um rastreador arcano. O conjurador sempre sabe a posição do alvo. O alvo não consegue se beneficiar de não ser visto contra o conjurador.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Um rastreador arcano brilhante se fixa no alvo, revelando sua posição.</p><div class=\"et-card-mechanic\"><p>O alvo é marcado por um rastreador arcano. O conjurador sempre sabe a posição do alvo. O alvo não consegue se beneficiar de não ser visto contra o conjurador.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -213,9 +213,9 @@
         9
       ],
       "_id": "rZQyiLRmOIk2z9Vu",
-      "name": "",
+      "name": "Golpe do Aliado",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Golpe do Aliado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O conjurador canaliza energia em um aliado próximo, potencializando seu ataque.</em></p><p>O conjurador escolhe um aliado em alcance do feitiço. Até o fim do próximo turno do conjurador, esse aliado adiciona +2d6 de dano de impacto aos ataques e empurra alvos 10 pés.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O conjurador canaliza energia em um aliado próximo, potencializando seu ataque.</p><div class=\"et-card-mechanic\"><p>O conjurador escolhe um aliado em alcance do feitiço. Até o fim do próximo turno do conjurador, esse aliado adiciona +2d6 de dano de impacto aos ataques e empurra alvos 10 pés.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -238,9 +238,9 @@
         10
       ],
       "_id": "3EpqBq3fYdfIk3nJ",
-      "name": "",
+      "name": "Supressão Arcana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Supressão Arcana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O alvo é saturado de energia mágica pura, sobrecarregando seu corpo.</em></p><p>No início do turno do alvo, [[/save con dc=15]]: falha = 1d4 de dano de força. Sucesso = o efeito termina.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O alvo é saturado de energia mágica pura, sobrecarregando seu corpo.</p><div class=\"et-card-mechanic\"><p>No início do turno do alvo, [[/save con dc=15]]: falha = 1d4 de dano de força. Sucesso = o efeito termina.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -263,9 +263,9 @@
         11
       ],
       "_id": "N8hanT1vDZCfiU8H",
-      "name": "",
+      "name": "Escudo Mágico",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Escudo Mágico</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia residual do feitiço se condensa em um escudo protetor ao redor do conjurador.</em></p><p>O conjurador ganha 2d4+2 pontos de vida temporários.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A energia residual do feitiço se condensa em um escudo protetor ao redor do conjurador.</p><div class=\"et-card-mechanic\"><p>O conjurador ganha 2d4+2 pontos de vida temporários.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -288,9 +288,9 @@
         12
       ],
       "_id": "yMIerd89EMJdehTh",
-      "name": "",
+      "name": "Envenenamento Arcano",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Envenenamento Arcano</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O excesso de magia se transforma em veneno mágico no sangue do alvo.</em></p><p>[[/save con dc=15]]: falha = o alvo fica envenenado por 1d4 rodadas. O alvo pode repetir o teste ao fim de cada turno para encerrar o efeito antecipadamente.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O excesso de magia se transforma em veneno mágico no sangue do alvo.</p><div class=\"et-card-mechanic\"><p>[[/save con dc=15]]: falha = o alvo fica envenenado por 1d4 rodadas. O alvo pode repetir o teste ao fim de cada turno para encerrar o efeito antecipadamente.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -313,9 +313,9 @@
         13
       ],
       "_id": "sflDjweVILtc7414",
-      "name": "",
+      "name": "Invocação Caótica",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Invocação Caótica</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do crítico se manifesta em uma criatura caótica que aparece ao lado do alvo.</em></p><p>Uma criatura elemental caótica aparece ao lado do alvo e luta pelo conjurador por 1d4 rodadas. O Mestre tem as estatísticas da criatura. Ela prioriza atacar o alvo, mas usará qualquer meio para chegar até ele, mesmo atacando outros pelo caminho. Banimento e Dispel Magic matam a criatura, mas precisam passar no CD de magia do conjurador.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A energia do crítico se manifesta em uma criatura caótica que aparece ao lado do alvo.</p><div class=\"et-card-mechanic\"><p>Uma criatura elemental caótica aparece ao lado do alvo e luta pelo conjurador por 1d4 rodadas. O Mestre tem as estatísticas da criatura. Ela prioriza atacar o alvo, mas usará qualquer meio para chegar até ele, mesmo atacando outros pelo caminho. Banimento e Dispel Magic matam a criatura, mas precisam passar no CD de magia do conjurador.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -338,9 +338,9 @@
         14
       ],
       "_id": "9xslNkRU6J7tmRZ4",
-      "name": "",
+      "name": "Nevoeiro de Poder",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Nevoeiro de Poder</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O conjurador se envolve em uma nuvem de energia arcana, tornando-se impossível de ver.</em></p><p>O conjurador fica invisível até o fim do próximo turno ou até atacar.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O conjurador se envolve em uma nuvem de energia arcana, tornando-se impossível de ver.</p><div class=\"et-card-mechanic\"><p>O conjurador fica invisível até o fim do próximo turno ou até atacar.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -363,9 +363,9 @@
         15
       ],
       "_id": "00HPm7SOGFO39q0C",
-      "name": "",
+      "name": "Campo Magnético Arcano",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Campo Magnético Arcano</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma força magnética arcana puxa criaturas em direção ao alvo.</em></p><p>Criaturas em 6m do alvo devem fazer [[/check str dc=15]] ou serem puxadas 3m em direção ao alvo. O conjurador é imune a este efeito.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma força magnética arcana puxa criaturas em direção ao alvo.</p><div class=\"et-card-mechanic\"><p>Criaturas em 6m do alvo devem fazer [[/check str dc=15]] ou serem puxadas 3m em direção ao alvo. O conjurador é imune a este efeito.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -388,9 +388,9 @@
         16
       ],
       "_id": "mjd5XxCNICJZ2VSi",
-      "name": "",
+      "name": "Benção do Mana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Benção do Mana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A energia do crítico reverbera, restaurando parte do poder mágico do conjurador.</em></p><p>O conjurador recupera 1d4 níveis de espaço de magia (dividido como desejar, máximo 3º ciclo).</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A energia do crítico reverbera, restaurando parte do poder mágico do conjurador.</p><div class=\"et-card-mechanic\"><p>O conjurador recupera 1d4 níveis de espaço de magia (dividido como desejar, máximo 3º ciclo).</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -413,9 +413,9 @@
         17
       ],
       "_id": "cqepVnGGdU234SP3",
-      "name": "",
+      "name": "Visão do Futuro",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Visão do Futuro</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O conjurador vislumbra os momentos vindouros, prevendo os movimentos dos inimigos.</em></p><p>Ataques contra o conjurador têm desvantagem. O conjurador faz [[/save dex dc=15]] com vantagem. Duração: até o fim do próximo turno do conjurador.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O conjurador vislumbra os momentos vindouros, prevendo os movimentos dos inimigos.</p><div class=\"et-card-mechanic\"><p>Ataques contra o conjurador têm desvantagem. O conjurador faz [[/save dex dc=15]] com vantagem. Duração: até o fim do próximo turno do conjurador.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -438,9 +438,9 @@
         18
       ],
       "_id": "wVrXiSpWlX9BE6eB",
-      "name": "",
+      "name": "Fúria Arcana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fúria Arcana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Toda a energia arcana se concentra em um único feitiço devastador.</em></p><p>O próximo feitiço do conjurador neste turno causa dano máximo (sem rolagem de dados). Duração: até o fim do próximo turno do conjurador.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Toda a energia arcana se concentra em um único feitiço devastador.</p><div class=\"et-card-mechanic\"><p>O próximo feitiço do conjurador neste turno causa dano máximo (sem rolagem de dados). Duração: até o fim do próximo turno do conjurador.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -463,9 +463,9 @@
         19
       ],
       "_id": "0hmieKM8gbNKYw6X",
-      "name": "",
+      "name": "Bebida Arcana",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Bebida Arcana</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Uma onda de energia bêbada... digo, arcana, atinge o alvo.</em></p><p>O alvo fica mágicamente embriagado. Ele tem desvantagem em ataques, testes de habilidade e [[/save wis dc=15]]. Ele fala em discurso embolado. Duração: 1 minuto ou até o alvo passar em [[/save con dc=15]] ao fim de cada turno.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma onda de energia bêbada... digo, arcana, atinge o alvo.</p><div class=\"et-card-mechanic\"><p>O alvo fica mágicamente embriagado. Ele tem desvantagem em ataques, testes de habilidade e [[/save wis dc=15]]. Ele fala em discurso embolado. Duração: 1 minuto ou até o alvo passar em [[/save con dc=15]] ao fim de cada turno.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -488,9 +488,9 @@
         20
       ],
       "_id": "GD66jlablfozQJtB",
-      "name": "",
+      "name": "Feitiço em Cascata",
       "img": "icons/svg/d20-black.svg",
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Feitiço em Cascata</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>O feitiço se manifesta em uma cascata de energia que salta de alvo em alvo.</em></p><p>O feitiço encadeia para alvos escolhidos pelo conjurador, dentro do alcance, originando-se do alvo anterior. Se o novo ataque também for crítico, ele encadeia novamente. A margem de crítico aumenta com cada encadeamento (nível 5 = comece em 18, depois 19, depois 20). Continua até não haver mais alvos disponíveis ou o conjurador escolher parar. Cada criatura só pode ser atingida uma vez na cascata.</p>",
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O feitiço se manifesta em uma cascata de energia que salta de alvo em alvo.</p><div class=\"et-card-mechanic\"><p>O feitiço encadeia para alvos escolhidos pelo conjurador, dentro do alcance, originando-se do alvo anterior. Se o novo ataque também for crítico, ele encadeia novamente. A margem de crítico aumenta com cada encadeamento (nível 5 = comece em 18, depois 19, depois 20). Continua até não haver mais alvos disponíveis ou o conjurador escolher parar. Cada criatura só pode ser atingida uma vez na cascata.</p></div></div>",
       "drawn": false,
       "flags": {},
       "_stats": {
@@ -523,7 +523,7 @@
     "systemId": "dnd5e",
     "systemVersion": "5.2.5",
     "createdTime": 1789764970805,
-    "modifiedTime": 1789918418022,
+    "modifiedTime": 1795045881118,
     "lastModifiedBy": "Xlx5XgXv68kjaoEi"
   },
   "formula": "1d20",

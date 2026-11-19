@@ -522,6 +522,7 @@ export const COMPONENT_CONTRACTS: Record<string, ComponentContract> = {
       ".et-critical-roll-card",
       ".et-maneuver-card",
       ".et-temporal-chat-card",
+      ".et-critical-table-card",
     ],
     requiredRules: ["background: transparent", "border: none", "padding: 0.5rem 0.75rem"],
     forbiddenPatterns: ["box-shadow: 0 4px", "border: 1px solid"],

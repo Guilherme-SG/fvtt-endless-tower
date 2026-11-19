@@ -1,0 +1,545 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Sucesso Impactante",
+  "img": "icons/weapons/maces/mace-round-studded.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "5Mbgw5U2xOAhbRAR",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790551112843,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O golpe atinge o estômago do alvo com força devastadora.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>enjoado</strong> até o fim do seu próximo turno. Essa condição pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/mSbKLlx8UwsAAAAC/scooby-doo-sick.gif\" /></div></div>",
+      "name": "No Estômago!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "piIBbdZWxfek4pl2",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790551370808,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O som de ossos partindo ecoa pelo campo de batalha.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>-1 em testes de Força</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Essa condição também pode ser encerrada ao receber cura de 5+ pontos de vida de uma única fonte.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/Yas3qUEGgb4AAAAC/albi-back-breaker-mk11.gif\" /></div></div>",
+      "name": "Costelas Quebradas",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "4mIxRgGjka5M2aj7",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790551738479,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Um golpe pesado atinge a cabeça do alvo, turvando sua visão.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>atordoado</strong> até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/rvPiroUVSPYAAAAd/muppets-muppet-show.gif\" /></div></div>",
+      "name": "Pancada na Cabeça",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "6KQaQS3QV2uWVlxs",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790552220244,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Os ossos do alvom estala de forma dolorosa, enfraquecendo-o.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>vulnerável</strong> a dano de impacto e recebe +1 de dano extra de impacto até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Essa condição também pode ser encerrada ao receber cura de 5+ pontos de vida de uma única fonte.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/yIo9ekc-ZCcAAAAd/golf-swing.gif\" /></div></div>",
+      "name": "Ossos Fragilizados",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "fBzV82VoDhNpM2wJ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790614929537,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O impacto joga o alvo no chão com força.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>caído</strong> e sofre <strong>1d6 de dano de impacto</strong> adicional.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/BHlBRf2XRLUAAAAd/daemons-of-the-shadow-realm-yuru.gif\" /></div></div>",
+      "name": "Beijando o Chão",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "DqPjketV2P6g9avV",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790616166839,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O zumbido nos ouvidos do alvo é ensurdecedor.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>&amp;Reference[deafened]</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/WPFvje134ooAAAAC/loud-noisy.gif\" /></div></div>",
+      "name": "Ouvindo Sinos",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "VX6sLtZHeGVeNcl8",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790616451211,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O joelho do alvo cede sob o impacto, travando a articulação.</p><div class=\"et-card-mechanic\"><p>O deslocamento do alvo é reduzido em <strong>3ft</strong> (mínimo 1,5ft) até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Essa condição também pode ser encerrada ao receber cura de 5+ pontos de vida de uma única fonte.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/tElasHTqayYAAAAC/chazz-someone-stole-my-knees.gif\" /></div></div>",
+      "name": "Joelho Quebrado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "dI31cmImdQ6nmhEH",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1794322413309,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O golpe é irritante que o alvo só consegue pensar em descontar você.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>com raiva </strong>de você: até o fim do seu próximo turno, ele só pode usar suas ações e reações para realizar hostis contra <strong>você</strong>. No final de cada turno do alvo, [[/save wis dc=15]] para encerrar mais cedo.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/NEYl9_MvR0UAAAAC/taurus-charging.gif\" /></div></div>",
+      "name": "Touro Raivoso",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "oKZKaV3lNVYrKrtu",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790617391394,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O golpe que revira o mundo de ponta cabeça… Ou ao menos é o que parece.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>desvantagem nas jogadas de ataque</strong> até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/FZEM_DgLOuYAAAAd/pikachu-dizzy.gif\" /></div></div>",
+      "name": "Tudo Girando",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "LF9gZ4dH0KmubAyq",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790635264669,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma dor sobrenatural corta a essência do alvo.</p><div class=\"et-card-mechanic\"><p>O alvo perde <strong>1 espaço de magia</strong> do seu maior nível disponível. Se não tiver espaços, role a tabela novamente.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/3GnJRI85jS8AAAAC/bugs-bunny-anvil.gif\" /></div></div>",
+      "name": "Essa Doeu na Alma!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "Hy0gxX82SKJnHYAj",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O osso do alvo se parte com um estalo cru.</p><div class=\"et-card-mechanic\"><p>O alvo <strong>solta o item</strong> que estiver segurando e sofre <strong>-1 em testes e jogadas de ataque com Força</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" /></div></div>",
+      "name": "Braço Esmagado"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "VytqUMlCs9hoRNQN",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Uma pancada terrível atinge a cabeça do alvo, comprometendo suas funções cognitivas.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>desvantagem</strong> em jogadas de ataque com feitiços e testes de resistência de <strong>Destreza, Inteligência e Sabedoria</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Greater Restoration</em> ou cura de 5+ PV.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/PXk0bpnz7kkAAAAC/wait-a-minute-baymax.gif\" /></div></div>",
+      "name": "Lesão Cerebral"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "vNe7YlZTzmBaTtmA",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790617762001,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O golpe esvazia os pulmões do alvo.</p><div class=\"et-card-mechanic\"><p>O alvo precisa fazer [[/save con dc=15]] no <strong>início de cada turno</strong> ou não pode realizar <strong>ação bônus ou reação</strong> até o próximo turno. Dura até o fim do combate. Pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/p16UWvoiHHUAAAAd/teleportation-number-five.gif\" /></div></div>",
+      "name": "Falta de Ar",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "fk11ytTLl5mjDb2Q",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790621196155,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O impacto causa uma desorientação profunda no alvo.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>-1 em testes de habilidade</strong> até o fim do combate. No final de cada turno do alvo, [[/save int dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" /></div></div>",
+      "name": "Tontura",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "mv8HuBnjEn784zL5",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A força do golpe é avassaladora.</p><div class=\"et-card-mechanic\"><p><strong>Dobre a quantidade de dados de dano</strong> deste ataque.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/oEfsxiF4RGcAAAAC/monster-book.gif\" /></div></div>",
+      "name": "Golpe Brutal"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "f2SXoRG1LByKPjSJ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O golpe atinge uma articulação vital.</p><div class=\"et-card-mechanic\"><p>Você causa <strong>+1d6 de dano de impacto</strong> adicional e o alvo deve fazer [[/save con dc=15]] ou perde sua <strong>reação</strong>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/WQfjVtMqIcQAAAAC/evil-grin-evil.gif\" /></div></div>",
+      "name": "Quebra!"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "o6IRNqw45VeI0xzF",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A energia do impacto se solidifica em uma barreira de pedra ao redor de você.</p><div class=\"et-card-mechanic\"><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong> e <strong>resistência</strong> a dano de impacto até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/yRnmcp3217kAAAAC/feagonia-feagoni.gif\" /></div></div>",
+      "name": "Escudo de Pedra"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "0jGAYFrz5Y2Y21PP",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O impacto amassa a proteção do alvo.</p><div class=\"et-card-mechanic\"><p>A CA do alvo é reduzida em <strong>1</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" /></div></div>",
+      "name": "Armadura Amassada"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "Kc43jCgXsvkI9o3V",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O seu golpe inspira um aliado próximo.</p><div class=\"et-card-mechanic\"><p>Um aliado à sua escolha em até <strong>9m</strong> que viu sua ação tem <strong>uma condição</strong> removida (escolha qual).</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/LIIwq-bqfFkAAAAd/hajime-no-ippo-anime.gif\" /></div></div>",
+      "name": "Porrada Motivadora"
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "UlIksFteg3vNoC5M",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790633129072,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O crânio do alvo racha sob o impacto.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>2d8 de dano de impacto</strong> adicional e fica <strong>atordoado</strong> até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://j.gifs.com/XQMp7l.gif\" /></div></div>",
+      "name": "Crânio Esmagado",
+      "documentUuid": null
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.1.2",
+    "coreVersion": "13.351",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1795045905917,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "endless-tower",
+      "uuid": "RollTable.QEfEM5dwXOOwU9jr",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

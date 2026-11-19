@@ -90,23 +90,32 @@ describe("Endless Tower Constitution Principles", () => {
 
   /**
    * @principle:P-006
-   * Standardized HTML structure and balanced DCs for critical tables (DC 15 hits, DC 10 fumble saves).
+   * Standardized Celestial Chronicle HTML structure, zero inline styles, preserved media, and balanced DCs.
    */
-  it("@principle:P-006 critical tables follow standardized HTML format and balanced DCs", () => {
-    const tablesDir = path.resolve(__dirname, "../tables/critical");
+  it("@principle:P-006 critical tables follow standardized Design System HTML format and balanced DCs", () => {
+    const tablesDir = path.resolve(__dirname, "../data/tables/critical");
     const tableFiles = fs.readdirSync(tablesDir).filter((f) => f.endsWith(".json"));
 
-    expect(tableFiles.length).toBeGreaterThan(0);
+    expect(tableFiles.length).toBe(8);
 
     for (const file of tableFiles) {
       const filePath = path.join(tablesDir, file);
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const variant = file.includes("sucesso-") ? "is-hit" : "is-fumble";
 
       expect(data.results.length).toBe(20);
 
       for (const entry of data.results) {
-        expect(entry.description).toMatch(/<h3/);
-        expect(entry.description).toMatch(/style=/);
+        expect(entry.name.trim().length).toBeGreaterThan(0);
+        expect(entry.description).toContain(`<div class="et-critical-table-card ${variant}">`);
+        expect(entry.description).not.toMatch(/<h3\b/i);
+        expect(entry.description).toContain('<div class="et-card-mechanic">');
+        expect(entry.description).not.toMatch(/\bstyle\s*=\s*["']/i);
+        expect(entry.description).not.toMatch(/#[0-9a-fA-F]{3,8}(?![a-zA-Z0-9_-])/);
+
+        if (!file.includes("sucesso-magico")) {
+          expect(entry.description).toMatch(/<div class="et-card-media"><img\s+src="/);
+        }
 
         const dcMatches = [...entry.description.matchAll(/dc=(\d+)/gi)];
         for (const match of dcMatches) {
@@ -156,6 +165,7 @@ describe("Endless Tower Constitution Principles", () => {
         ".et-critical-roll-card",
         ".et-maneuver-card",
         ".et-temporal-chat-card",
+        ".et-critical-table-card",
       ])
     );
 

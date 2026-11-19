@@ -1,7 +1,7 @@
 {
   "folder": "Pr1ImE57tVD3tll3",
   "name": "Falha a Distância",
-  "img": "icons/svg/d20-grey.svg",
+  "img": "icons/weapons/bows/shortbow-white.webp",
   "description": "<p>Tabela de falhas críticas para ataques à distância.</p>",
   "results": [
     {
@@ -26,7 +26,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">COMO USA ISSO!?</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Se sua arma for mágica, rerole a tabela. Do contrário, ela quebra e fica inutilizável.</em></p><img src=\"https://media1.tenor.com/m/rzxkutYHamUAAAAd/shoot-fail.gif\" alt=\"Arco quebrando\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Se sua arma for mágica, rerole a tabela. Do contrário, ela quebra e fica inutilizável.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/rzxkutYHamUAAAAd/shoot-fail.gif\" alt=\"Arco quebrando\" /></div></div>",
       "name": "COMO USA ISSO!?",
       "documentUuid": null
     },
@@ -52,7 +52,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Pela Culatra</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Algo sai errado com a sua arma e você recebe [[/r 1d6]] pontos de dano do tipo da arma usada.</em></p><img src=\"https://media1.tenor.com/m/dPOCnwS9NVcAAAAd/bow-and.gif\" alt=\"Arma explodindo na cara\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Algo sai errado com a sua arma e você recebe [[/r 1d6]] pontos de dano do tipo da arma usada.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dPOCnwS9NVcAAAAd/bow-and.gif\" alt=\"Arma explodindo na cara\" /></div></div>",
       "name": "Pela Culatra",
       "documentUuid": null
     },
@@ -78,7 +78,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Fogo Amigo</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você acerta o aliado mais próximo de você.</em></p><img src=\"https://media1.tenor.com/m/l4rizQX48iYAAAAd/cod.gif\" alt=\"Acertando amigo por acidente\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Você acerta o aliado mais próximo de você.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/l4rizQX48iYAAAAd/cod.gif\" alt=\"Acertando amigo por acidente\" /></div></div>",
       "name": "Fogo Amigo",
       "documentUuid": null
     },
@@ -104,7 +104,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Bem Onde Dói</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você acerta em si mesmo bem onde dói, ficando &amp;Reference[restrained] até o início do seu próximo turno e lento até receber cura.</em></p><img src=\"https://media.tenor.com/apFoRHiNgRAAAAAC/me-rn-crying-sobbing-me-rn.gif\" alt=\"Atirando no próprio pé\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Você acerta em si mesmo bem onde dói, ficando &amp;Reference[restrained] até o início do seu próximo turno e lento até receber cura.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/apFoRHiNgRAAAAAC/me-rn-crying-sobbing-me-rn.gif\" alt=\"Atirando no próprio pé\" /></div></div>",
       "name": "Bem Onde Dói",
       "documentUuid": null
     },
@@ -130,7 +130,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Mecanismo Emperrado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A tensão da sua arma falha ou o mecanismo trava.</em></p><p>A arma fica inutilizada até você arruma-la com uma ação bônus. Para arruma-la deve passar em um [[/check dex dc=15]].</p><img src=\"https://media1.tenor.com/m/dpxP7bGoUBYAAAAd/weapon-shoot.gif\" alt=\"Arco falhando a tensão\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">A tensão da sua arma falha ou o mecanismo trava.</p><div class=\"et-card-mechanic\"><p>A arma fica inutilizada até você arruma-la com uma ação bônus. Para arruma-la deve passar em um [[/check dex dc=15]].</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dpxP7bGoUBYAAAAd/weapon-shoot.gif\" alt=\"Arco falhando a tensão\" /></div></div>",
       "name": "Mecanismo Emperrado",
       "documentUuid": null
     },
@@ -156,7 +156,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Mão Suada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A arma escorrega da sua mão no momento do disparo.</em></p><p>Role [[/r 1d8]], a arma escorrega da sua mão e voa 10 ft para uma direção conforme a tabela a seguir:</p><table><tbody><tr><td><p>1d8</p></td><td><p>Direção</p></td></tr><tr><td><p>1</p></td><td><p>Norte</p></td></tr><tr><td><p>2</p></td><td><p>Nordeste</p></td></tr><tr><td><p>3</p></td><td><p>Leste</p></td></tr><tr><td><p>4</p></td><td><p>Sudeste</p></td></tr><tr><td><p>5</p></td><td><p>Sul</p></td></tr><tr><td><p>6</p></td><td><p>Sudoeste</p></td></tr><tr><td><p>7</p></td><td><p>Oeste</p></td></tr><tr><td><p>8</p></td><td><p>Noroeste</p></td></tr></tbody></table><p>Se houver ao menos uma criatura no espaço que a arma cair, ela deve fazer uma [[/save dex dc=15]] para pegar ou desviar da arma. Se uma criatura não hostil falhar no teste, a arma bate nela causando [[/r 1d4]] de dano de impacto.</p><img src=\"https://media1.tenor.com/m/KdqZ8ECad80AAAAd/machine-gun-submachine-gun.gif\" alt=\"Deixando a arma cair\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">A arma escorrega da sua mão no momento do disparo.</p><div class=\"et-card-mechanic\"><p>Role [[/r 1d8]], a arma escorrega da sua mão e voa 10 ft para uma direção conforme a tabela a seguir:</p><table><tbody><tr><td><p>1d8</p></td><td><p>Direção</p></td></tr><tr><td><p>1</p></td><td><p>Norte</p></td></tr><tr><td><p>2</p></td><td><p>Nordeste</p></td></tr><tr><td><p>3</p></td><td><p>Leste</p></td></tr><tr><td><p>4</p></td><td><p>Sudeste</p></td></tr><tr><td><p>5</p></td><td><p>Sul</p></td></tr><tr><td><p>6</p></td><td><p>Sudoeste</p></td></tr><tr><td><p>7</p></td><td><p>Oeste</p></td></tr><tr><td><p>8</p></td><td><p>Noroeste</p></td></tr></tbody></table><p>Se houver ao menos uma criatura no espaço que a arma cair, ela deve fazer uma [[/save dex dc=15]] para pegar ou desviar da arma. Se uma criatura não hostil falhar no teste, a arma bate nela causando [[/r 1d4]] de dano de impacto.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/KdqZ8ECad80AAAAd/machine-gun-submachine-gun.gif\" alt=\"Deixando a arma cair\" /></div></div>",
       "name": "Mão Suada",
       "documentUuid": null
     },
@@ -182,7 +182,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Ai Minha Mão!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você fere a mão e recebe uma penalidade de -1 nas jogadas de ataque à distância até se curar ou realizar um descanso curto. No fim de cada um dos seus turnos, você pode realizar um [[/save con dc=15]] para encerrar a condição.</em></p><img src=\"https://media.tenor.com/tECSmgoDG6kAAAAd/brahmanandam-pain.gif\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Você fere a mão e recebe uma penalidade de -1 nas jogadas de ataque à distância até se curar ou realizar um descanso curto. No fim de cada um dos seus turnos, você pode realizar um [[/save con dc=15]] para encerrar a condição.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/tECSmgoDG6kAAAAd/brahmanandam-pain.gif\" /></div></div>",
       "name": "Ai Minha Mão!",
       "documentUuid": null
     },
@@ -208,7 +208,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Grito Vergonhoso</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Um guincho involuntário escapa de seus lábios no momento do disparo — agudo, indigno, inesperado. O silêncio que segue é pior que o grito.</em></p><p>Seus aliados até 15 ft que possam ouvir você devem realizar um [[/save cha dc=15]]. Quem falhar não consegue conter o sorriso e sofre desvantagem no próximo teste de Sabedoria (Percepção) até o final do seu próximo turno — estão rindo demais para prestar atenção.</p><img src=\"https://media1.tenor.com/m/w758C6aysnUAAAAC/supernatural-jensen-ackles.gif\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Um guincho involuntário escapa de seus lábios no momento do disparo — agudo, indigno, inesperado. O silêncio que segue é pior que o grito.</p><div class=\"et-card-mechanic\"><p>Seus aliados até 15 ft que possam ouvir você devem realizar um [[/save cha dc=15]]. Quem falhar não consegue conter o sorriso e sofre desvantagem no próximo teste de Sabedoria (Percepção) até o final do seu próximo turno — estão rindo demais para prestar atenção.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/w758C6aysnUAAAAC/supernatural-jensen-ackles.gif\" /></div></div>",
       "name": "Grito Vergonhoso",
       "documentUuid": null
     },
@@ -234,7 +234,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Preso no Chão</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu ataque aleja o aliado mais proximo de você. Ele fica &amp;Reference[restrained] até o início do seu próximo turno ou até receber cura mágica.</em></p><img src=\"https://media1.tenor.com/m/1fRk3RtHlEoAAAAd/we-are-number-one-robbie-rotten.gif\" alt=\"Preso no chão por flecha\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Seu ataque aleja o aliado mais proximo de você. Ele fica &amp;Reference[restrained] até o início do seu próximo turno ou até receber cura mágica.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/1fRk3RtHlEoAAAAd/we-are-number-one-robbie-rotten.gif\" alt=\"Preso no chão por flecha\" /></div></div>",
       "name": "Preso no Chão",
       "documentUuid": null
     },
@@ -260,7 +260,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Escorregão</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você deve passar em um [[/check acr dc=15]], ou ficará caído e seu turno encerra.</em></p><img src=\"https://media1.tenor.com/m/irM8uiNlaUMAAAAC/penguin-slide.gif\" alt=\"Escorregando desajeitado\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Você deve passar em um [[/check acr dc=15]], ou ficará caído e seu turno encerra.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/irM8uiNlaUMAAAAC/penguin-slide.gif\" alt=\"Escorregando desajeitado\" /></div></div>",
       "name": "Escorregão",
       "documentUuid": null
     },
@@ -286,7 +286,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Não Vejo Nada</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>A pressão caiu e agora está complicado de enxergar. Você fica &amp;Reference[blinded] por uma rodada.</em></p><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" alt=\"Pessoa sem enxergar nada\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>A pressão caiu e agora está complicado de enxergar. Você fica &amp;Reference[blinded] por uma rodada.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/E8cSQd7OHcEAAAAC/flashbang-guy-screaming.gif\" alt=\"Pessoa sem enxergar nada\" /></div></div>",
       "name": "Não Vejo Nada",
       "documentUuid": null
     },
@@ -312,7 +312,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Você Ativou Minha Carta Armadilha!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Quando foi que ele botou isso aí?</em></p><p>O alvo do seu ataque pode realizar uma reação, como se ele tivesse preparado uma ação ao seu ataque.</p><img src=\"https://media.tenor.com/KZbO6VVTHW4AAAAC/tw.gif\" alt=\"Inimigo reagindo rápido\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Quando foi que ele botou isso aí?</p><div class=\"et-card-mechanic\"><p>O alvo do seu ataque pode realizar uma reação, como se ele tivesse preparado uma ação ao seu ataque.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/KZbO6VVTHW4AAAAC/tw.gif\" alt=\"Inimigo reagindo rápido\" /></div></div>",
       "name": "Você Ativou Minha Carta Armadilha!",
       "documentUuid": null
     },
@@ -338,7 +338,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Que Vergonha</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu ataque é tão vergonhoso que suas rolagens de ataque, habilidade e salvaguarda tem desvantagem até o final do seu próximo turno.</em></p><img src=\"https://media1.tenor.com/m/ymfFrutucloAAAAd/shame-theoffice.gif\" alt=\"Reação de pura vergonha\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Seu ataque é tão vergonhoso que suas rolagens de ataque, habilidade e salvaguarda tem desvantagem até o final do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/ymfFrutucloAAAAd/shame-theoffice.gif\" alt=\"Reação de pura vergonha\" /></div></div>",
       "name": "Que Vergonha",
       "documentUuid": null
     },
@@ -364,7 +364,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sombra do Passado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Ao armar sua arma, uma memória invade: um tiro falhado, um amigo ferido, um momento de dúvida. Sua mão treme, e o tiro passa ao lado.</em></p><p>Você não pode atacar o mesmo alvo que errou até o final do seu próximo turno. Se não houver outro alvo válido, você pode tentar um [[/save wis dc=15]] no início do seu próximo turno para superar a memória e agir normalmente.</p><img src=\"https://media1.tenor.com/m/BEko-rtMEhIAAAAC/no.gif\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Ao armar sua arma, uma memória invade: um tiro falhado, um amigo ferido, um momento de dúvida. Sua mão treme, e o tiro passa ao lado.</p><div class=\"et-card-mechanic\"><p>Você não pode atacar o mesmo alvo que errou até o final do seu próximo turno. Se não houver outro alvo válido, você pode tentar um [[/save wis dc=15]] no início do seu próximo turno para superar a memória e agir normalmente.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/BEko-rtMEhIAAAAC/no.gif\" /></div></div>",
       "name": "Sombra do Passado",
       "documentUuid": null
     },
@@ -390,7 +390,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Alvo Errado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Seu ataque acerta uma criatura não hostil mais próximo do alvo.</em></p><img src=\"https://media1.tenor.com/m/sDY970t7BCUAAAAC/whas-netflix.gif\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Seu ataque acerta uma criatura não hostil mais próximo do alvo.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/sDY970t7BCUAAAAC/whas-netflix.gif\" /></div></div>",
       "name": "Alvo Errado",
       "documentUuid": null
     },
@@ -416,7 +416,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Cisco no Olho</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você recebe penalidade de -1 em testes de Sabedoria (Percepção) baseados em visão até receber cura magica ou fazer um descanso curto.</em></p><img src=\"https://media1.tenor.com/m/3VQbl8sV4aIAAAAC/i-have-something-in-my-eyes-wipe-eyes.gif\" alt=\"Esfregando cisco no olho\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Você recebe penalidade de -1 em testes de Sabedoria (Percepção) baseados em visão até receber cura magica ou fazer um descanso curto.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/3VQbl8sV4aIAAAAC/i-have-something-in-my-eyes-wipe-eyes.gif\" alt=\"Esfregando cisco no olho\" /></div></div>",
       "name": "Cisco no Olho",
       "documentUuid": null
     },
@@ -442,7 +442,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Munição de Promoção</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Toda a munição está com defeito. Até obter novas, ataques armados à distância com essa munição tem uma penalidade de -1d4 pontos de dano.</em></p><img src=\"https://media1.tenor.com/m/twKfmTzEZssAAAAC/downsign-bang.gif\" alt=\"Munição quebrando fácil\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Toda a munição está com defeito. Até obter novas, ataques armados à distância com essa munição tem uma penalidade de -1d4 pontos de dano.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/twKfmTzEZssAAAAC/downsign-bang.gif\" alt=\"Munição quebrando fácil\" /></div></div>",
       "name": "Munição de Promoção",
       "documentUuid": null
     },
@@ -468,7 +468,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Sangue!</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você se corta ao manusear a arma.</em></p><p>Perde 1 ponto de vida e fica sangrando.</p><img src=\"https://media.tenor.com/Ie7GdLFDincAAAAC/blood-on-my-hands-first-kill.gif\" alt=\"Corte na mão sangrando\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você se corta ao manusear a arma.</p><div class=\"et-card-mechanic\"><p>Perde 1 ponto de vida e fica sangrando.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/Ie7GdLFDincAAAAC/blood-on-my-hands-first-kill.gif\" alt=\"Corte na mão sangrando\" /></div></div>",
       "name": "Sangue!",
       "documentUuid": null
     },
@@ -494,7 +494,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Despreparado</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Você se desespera com a situação e trava no lugar.</em></p><p>Você fica incapacitado e tem sua posição revelada por uma rodada.</p><img src=\"https://media1.tenor.com/m/31MJQhL6sM8AAAAd/joe-rogan-surprised.gif\" alt=\"Atordoado e confuso\" />",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você se desespera com a situação e trava no lugar.</p><div class=\"et-card-mechanic\"><p>Você fica incapacitado e tem sua posição revelada por uma rodada.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/31MJQhL6sM8AAAAd/joe-rogan-surprised.gif\" alt=\"Atordoado e confuso\" /></div></div>",
       "name": "Despreparado",
       "documentUuid": null
     },
@@ -520,7 +520,7 @@
         "duplicateSource": null,
         "exportSource": null
       },
-      "description": "<h3 style=\"text-align:center;border-bottom:2px solid #5a0000;padding-bottom:5px\">Adversários Inflamados</h3><p style=\"font-style:italic;color:#d9d9d9;background-color:rgba(0, 0, 0, 0.4);padding:10px;border-left:4px solid #8b0000\"><em>Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</em></p><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p><div style=\"text-align:center;margin-top:10px\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" style=\"width:100%;border-radius:8px;border:1px solid #000\" /></div>",
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</p><div class=\"et-card-mechanic\"><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" /></div></div>",
       "name": "Adversários Inflamados",
       "documentUuid": null
     }
@@ -534,7 +534,7 @@
     "systemVersion": "2.3.1",
     "coreVersion": "13.351",
     "createdTime": 1681434818871,
-    "modifiedTime": 1789918331261,
+    "modifiedTime": 1795045729783,
     "lastModifiedBy": "Xlx5XgXv68kjaoEi",
     "compendiumSource": null,
     "duplicateSource": null,

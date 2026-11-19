@@ -53,6 +53,7 @@ describe("Endless Tower Design System (Celestial Chronicle)", () => {
           ".et-critical-roll-card",
           ".et-maneuver-card",
           ".et-temporal-chat-card",
+          ".et-critical-table-card",
         ])
       );
       expect(auditAgenticTokens().passed).toBe(true);

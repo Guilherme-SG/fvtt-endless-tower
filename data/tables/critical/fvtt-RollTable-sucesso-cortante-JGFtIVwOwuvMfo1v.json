@@ -1,0 +1,552 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Sucesso Cortante",
+  "img": "icons/weapons/swords/greatsword-guard.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "pF8zWdXVOAiKgXMB",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790202993309,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina abre um corte profundo que dificulta os movimentos do alvo.</p><div class=\"et-card-mechanic\"><p>O deslocamento do alvo é reduzido em 10ft (mantendo mínimo 5ft) até o fim do combate. No final de cada turno do alvo, ele pode realizar um [[/save con dc=15]] para encerrar a condição. Pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/st9QVBzFmIwAAAAd/hurt-cj-payne.gif\" /></div></div>",
+      "name": "Corte Dilacerante",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "yzG5O8xYyH9JQNbZ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1788235090106,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte é tão amplo que respinga em criaturas próximas.</p><div class=\"et-card-mechanic\"><p>Outro alvo à sua escolha em até <strong>5 ft</strong> do alvo original recebe <strong>metade do dano</strong> causado neste ataque.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/aYxWSN1Ufy8AAAAd/sword-flash.gif\" /></div></div>",
+      "name": "Corte Amplo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "So4hbrRLtpBbSkek",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790203503889,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina corta os tendões do alvo, limitando suas opções de combate.</p><div class=\"et-card-mechanic\"><p>O alvo não pode fazer <strong>investidas</strong> ou <strong>deslocamento adicional</strong> até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Pode ser encerrado com <em>Lesser Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/8kPbzVk3VF8AAAAd/frail-achilles.gif\" /></div></div>",
+      "name": "Corte nos Tendões",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "UkWlypRjJa8XT9op",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790204759772,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina abre o abdômen do alvo, causando pânico.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>&amp;Reference[frightened] por você</strong> até o fim do combate e sangrando. No fim de cada um dos turnos do alvo, ele pode realizar um [[/save wis dc=15]] para encerrar a condição &amp;Reference[frightened]. Se o sangramento causado por este efeito for encerrado, a condição &amp;Reference[frightened] por causa deste efeito também se encerra.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/mBdB1HtR_oAAAAAd/kony2012-psychicpebbles.gif\" /></div></div>",
+      "name": "Abrir o Bucho",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "1csGbCMqofCkSRvQ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790204766273,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O sangue do alvo jorra, inspirando medo nos inimigos.</p><div class=\"et-card-mechanic\"><p>Inimigos em até 30<strong>ft</strong> de você devem fazer [[/save wis dc=15]]. Quem falha fica <strong>&amp;Reference[frightened] por você</strong> até o fim do combate. Além disso, quem falha por 5 ou mais, recua 5ft para cada 5 pontos de diferença. No final de cada turno das criaturas afetadas, elas podem repetir o teste para encerrar a condição.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/ChFXIbaBugYAAAAC/stone-cold-steve-austin-bloody.gif\" /></div></div>",
+      "name": "Sujo de Sangue",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "HpwRnnJqcBVrWEkJ",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790214933031,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte é tão preciso que inspira confiança.</p><div class=\"et-card-mechanic\"><p>Você tem <strong>vantagem</strong> nas suas ações e reação até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/IYEOmk-q9BIAAAAd/mifune-naruto.gif\" /></div></div>",
+      "name": "Golpe com Estilo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "fHSTPI7aI9Ov286T",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790208959754,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina corta profundamente no braço do alvo, incapacitando-o.</p><div class=\"et-card-mechanic\"><p>O alvo <strong>solta o item</strong> que estiver segurando e não pode usar o braço afetado até o fim do combate. No final de cada turno do alvo, [[/save con dc=15]] para encerrar. Essa condição também pode ser encerrada ao receber cura de 5+ pontos de vida de uma única fonte.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/BTEi4nK9dMMAAAAd/big-daddy-head-nod.gif\" /></div></div>",
+      "name": "Braço Dilacerado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "frnfZsagPSfWSqcr",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790209135334,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte purifica o ar imediatamente a sua volta e canaliza vigor para você.</p><div class=\"et-card-mechanic\"><p>Você ganha <strong>2d4+2 pontos de vida temporários</strong>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/WieOeCMdmSEAAAAC/demon-slayer-kimetsu-no-yaiba.gif\" /></div></div>",
+      "name": "Corte Revigorante",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "eCFrprC8rM9w5Xzv",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790213842358,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina se entranha na carne do alvo, prendendo-o.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>&amp;Reference[grappled]</strong> por você. Enquanto o alvo estiver agarrado desta forma, seus ataques contra ele usando esta arma têm vantagem.</p><p><strong data-path-to-node=\"7,1\" data-index-in-node=\"0\">Remoção e Complicação.</strong> O agarrão termina se você atacar outra criatura com esta arma, soltá-la, ou se o alvo escapar do agarrão. Qualquer ação que remova a arma à força (como o alvo escapar ou a arma ser arrancada) aciona a Complicação.</p><p><strong>Complicação.</strong> A remoção abrupta rasga a carne do alvo, causando [[/damage 1d4+1 type=slashing average]]. No final do próximo turno de quem provocou este efeito, se o agarrão não foi desfeito, ele se desfaz e a arma se solta naturalmente sem causar esse dano.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/wcI4HRz1DfYAAAAd/axe-throw-throwing-an-axe.gif\" /></div></div>",
+      "name": "Lâmina Presa",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "4s23p0Qb1WWmGdhA",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790392529707,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina rasga o ar com uma precisão tão irreal que a inércia se recusa a parar, formando uma distorção contínua do que flui a partir do impacto.</p><div class=\"et-card-mechanic\"><p>Imediatamente após o acerto, a força do golpe cria uma linha de energia cortante de 20 ft de comprimento por 5 ft de largura, que origina de você e se estende na direção da criatura que você atacou. Cada criatura nessa área deve realizar uma <strong>[[/save dex dc=15]]</strong>. Em uma falha, a criatura sofre <strong>[[/damage 2d4 type=slashing average]]</strong>, ou metade desse dano em um sucesso.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/HxTcbINqNvEAAAAd/xeis-bleach-brave-souls.gif\" /></div></div>",
+      "name": "Onda de Choque",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "MXDWB2pTuo8kiGAt",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1794321858674,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte é tão limpo que abre oportunidade para um golpe seguinte.</p><div class=\"et-card-mechanic\"><p>Você pode fazer &amp;Reference[attack] <strong>adicional</strong> contra o mesmo alvo.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/39faFqZzr2UAAAAd/trunks.gif\" /></div></div>",
+      "name": "Corte Limpo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "qo9Iv1IIpuDryljh",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790392934993,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte abre espaço para uma investida relâmpago.</p><div class=\"et-card-mechanic\"><p>Seu movimento não provoca <strong>ataques de oportunidade</strong>, e você ganha um bônus de 10 ft de deslocamento, até o final do turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/c6L-sQVKUkYAAAAd/monty-python-and-the-holy-grail-stab.gif\" /></div></div>",
+      "name": "Cortar e Perseguir",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "ZrfwLV9r6ZmHfahL",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1794321931274,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina corta os lábios do alvo, resultando em marcas feias e incômodas que dificultam a performance de discursos e conjurações.</p><div class=\"et-card-mechanic\"><p>O alvo recebe uma penalidade de -1 em [[/check per ]] e em <strong>Spell Save DC</strong>, até recuperar 5 pontos de vida de uma única fonte de cura. Enquanto este efeito durar, o alvo recebe um bônus de +1 em [[/check itm]] por estar mais desagradável ao olhar.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/0ZWyerBK3yQAAAAd/rurouni-kenshin-saito.gif\" /></div></div>",
+      "name": "Corte na Boca",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "NNCrsCqlq8gLF4vL",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790440156534,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O reflexo de cortar é tão rápido que cria uma barreira defensiva.</p><div class=\"et-card-mechanic\"><p>Você ganha <strong>+2 na CA</strong> até o fim do seu próximo turno.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/hIbF_k8oG3UAAAAd/granblue-fantasy-anime.gif\" /></div></div>",
+      "name": "Parada Instinctiva",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "dFdgbhElJ8D4i3mR",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790440281756,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte enfraquece os músculos do alvo.</p><div class=\"et-card-mechanic\"><p>Todo dano que o alvo causar até o fim do combate é <strong>reduzido pela metade</strong>. No final de cada turno do alvo, [[/save con dc=15]] para encerrar.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/g1SwCH_A7FsAAAAC/pokemon-quagsire.gif\" /></div></div>",
+      "name": "Fraqueza Temporária",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "d053waJVbNwD51dU",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790440675384,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O corte é tão preciso que arranca um pedaço do cabelo do alvo. (Ele ganha um nível de paladino)</p><div class=\"et-card-mechanic\"><p>O alvo perde parte do seu cabelo/penas/cristas. Ele sofre <strong>desvantagem</strong> em testes de <strong>Carisma</strong> até completar um descanso longo ou usar <em>Greater Restoration</em>.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/ex21BlU6E3sAAAAC/bald-acceptance.gif\" /></div></div>",
+      "name": "Cortador de Cabelo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "0txH7K8Ze9C7t4KR",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790441149652,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina arranca uma camada de pele do alvo, deixando-o exposto.</p><div class=\"et-card-mechanic\"><p>O alvo sofre <strong>-1 na CA</strong> até o fim do combate. Pode ser encerrado com cura de 5 pontos de vida de uma única fonte.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/5VdZRM9TNyIAAAAd/%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0-%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB-%D1%87%D1%82%D0%BE-%D0%B2%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D1%83-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%BE.gif\" /></div></div>",
+      "name": "Pele Arrancada",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "BimrIEzfB9mGEnhg",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790441709309,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">A lâmina atinge a garganta do alvo com precisão cirúrgica.</p><div class=\"et-card-mechanic\"><p>O alvo fica &amp;Reference[incapacitated] até o fim do seu próximo turno. No inicio do próximo turno do alvo, ele deve fazer [[/save con dc=15]] para encerrar a condição mais cedo. Uma criatura pode realizar uma ação e ser bem-sucedida em [[/check med dc=15]] para encerrar a condição.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/KP8X9cmTwRkAAAAC/kk.gif\" /></div></div>",
+      "name": "Corte na Garganta",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "ojyjuJI0E7ZdsP3l",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790441790337,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">O sangue jorra do alvo, manchando tudo ao redor.</p><div class=\"et-card-mechanic\"><p>O alvo fica <strong>sangrando</strong> e o chão em 5ft ao redor dele fica coberto de sangue (terreno difícil).</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/IHbVx-OLEY4AAAAC/bloody-morbid.gif\" /></div></div>",
+      "name": "Sangue pra Todo Lado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "1SHmkZ2kBHPlJrjh",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1790442365586,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-hit\"><p class=\"et-card-lore\">Um golpe devastador para finalizar o oponente.</p><div class=\"et-card-mechanic\"><p>Você causa o valor máximo de dano no alvo.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/w-QTJxdIVp0AAAAC/anime-dragon-ball-z.gif\" /></div></div>",
+      "name": "Golpe Final",
+      "documentUuid": null
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.3.1",
+    "coreVersion": "13.351",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1795045822752,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "endless-tower",
+      "uuid": "RollTable.JGFtIVwOwuvMfo1v",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "folder": "Pr1ImE57tVD3tll3",
+  "name": "Falha Desarmada/Arma Natural",
+  "img": "icons/commodities/claws/claws-white.webp",
+  "description": "",
+  "results": [
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "XphZYMuculkUY1wn",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789937658008,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">O impacto do erro foi tão desajeitado que enviou uma onda de choque pelo seu corpo, dormentando os nervos do membro usado no ataque.</p><div class=\"et-card-mechanic\"><p>Você não pode realizar ataques com esta arma natural (ou desarmado) até o efeito encerrar.</p><ul><li><p>Uma criatura adjacente pode usar uma <strong>Ação</strong> para fazer um [[/check med dc=15]] para massagear o músculo travado ou aplicar um ponto de pressão, liberando o movimento e encerrando a condição em um sucesso.</p></li><li><p>O efeito se encerra instantaneamente se você receber <strong>5 ou mais pontos de cura</strong> de uma única fonte, ou for alvo de um efeito que remova explicitamente a condição &amp;Reference[paralyzed].</p></li><li><p>O efeito se encerra automaticamente ao finalizar um <strong>Descanso Curto ou Longo</strong>.</p></li></ul></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/Luis0vIOTpEAAAAd/awesomeness-tv-awesomeness-tvgi-fs.gif\" /></div></div>",
+      "name": "Nervos Dormentes",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "2Dn1XOr17EoMa2d4",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782511196381,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você aparentemente acerta o alvo, mas…</p><div class=\"et-card-mechanic\"><p>Até o final do seu próximo turno, seus ataques armados e desarmados recebem uma penalidade de -1d4 no dano causado.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/g1IhXP5ZBCkAAAAC/dragon-ball-dbz.gif\" /></div></div>",
+      "name": "Soca Fofo",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "S3fhJwkaLRC1IOuV",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789938143564,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Seu dedo trava em ângulo errado no meio do soco/chute. A dor sobe pelo braço/perna como um raio, e seus companheiros ouvem o estalo.</p><div class=\"et-card-mechanic\"><p>Você tem desvantagem em rolagens que utilizem sua modificador de Força ou Destreza, até receber pelo menos 5 pontos de vida por cura. Se você tem a feature <strong>Ambidestro</strong>, ao invés de desvantagem, você não adiciona seu bônus de proficiência nessas rolagens.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/yuzkM_PW5ZcAAAAC/iino-miko-iino.gif\" /></div></div>",
+      "name": "Dedo Travado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "Tb7wG1hadu1Nf830",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1782420218435,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você perde a confiança em si mesmo e sente que seus aliados também perderam.</p><div class=\"et-card-mechanic\"><p>Até o final do seu próximo turno, você sofre os seguintes efeitos:</p><ul><li><p>Você não pode receber vantagem em suas jogadas de ataque, testes de habilidade ou salvaguardas, e não pode conceder vantagem a criaturas amigáveis.</p></li><li><p>Você não pode se beneficiar ou fornecer os benefícios de flanqueamento.</p></li><li><p>Qualquer acerto crítico que você realizar é considerado um acerto normal.</p></li></ul></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/fndaS1mT7zcAAAAd/k-on-tired.gif\" /></div></div>",
+      "name": "Desacreditado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "8l6zsVmU1kqO8X0l",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789938998692,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você bateu forte demais na coisa errada.</p><div class=\"et-card-mechanic\"><p>Você perde 1 de vida, e recebe uma penalidade de -1 de AC até o início do seu próximo turno ou até receber cura mágica.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/4YIPXSl-LsQAAAAd/chougne-scary.gif\" /></div></div>",
+      "name": "Lataria Amassada",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "UjvlAmBwfenNcK5u",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789939008621,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><div class=\"et-card-mechanic\"><p>Até o início do seu próximo turno, você não pode realizar ataques de oportunidade, e qualquer criatura pode se mover pelo seu espaço.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/JUh8BbwGE24AAAAC/the-door-is-open-you-may-leave.gif\" /></div></div>",
+      "name": "Convite para Passar",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "_id": "ibHKobOrVmcBaaFy",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789939195402,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">O ombro estala com um som que todos ao redor ouvem. Seu braço dominante cai mole ao lado do corpo como um pano molhado.</p><div class=\"et-card-mechanic\"><p>Você sofre desvantagem em todas as jogadas de ataque corpo a corpo e testes de Força até receber cura mágica ou terminar um descanso longo.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/DXCbXEo1mawAAAAd/good-game.gif\" /></div></div>",
+      "name": "Ombro Deslocado",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "_id": "PuY5fUuA4jj1fB9m",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943367631,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Um guincho involuntário escapa de seus lábios no momento do disparo — agudo, indigno, inesperado. O silêncio que segue é pior que o grito.</p><div class=\"et-card-mechanic\"><p>Seus aliados até 15 ft que possam ouvir você devem realizar um [[/save cha dc=15]]. Quem falhar não consegue conter o sorriso e sofre desvantagem no próximo teste de Sabedoria (Percepção) até o final do seu próximo turno — estão rindo demais para prestar atenção.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/w758C6aysnUAAAAC/supernatural-jensen-ackles.gif\" /></div></div>",
+      "name": "Grito Involuntário",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "_id": "ey8HwXtVhrzHgJpz",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789759360165,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">O mau uso do seu corpo abre um ferimento e convida o sangue a se retirar corpo.</p><div class=\"et-card-mechanic\"><p>Você perde 1 ponto de vida e fica sangrando.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/QRCU4F-rMcoAAAAi/bleeding-dead.gif\" /></div></div>",
+      "name": "Esse Sangue É Meu!?",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "_id": "lt2CwkdGJoI7Wg1k",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943497968,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Seu soco passa tão longe do alvo que a força do golpe gira você como um pião de praça central. Você cambaleia, tenta se equilibrar, e termina sentado no chão com a dignidade ferida e os olhos arregalados.</p><div class=\"et-card-mechanic\"><p>Você fica caído.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/4Yprn4FzFOkAAAAd/spinning-lisasourcandy.gif\" /></div></div>",
+      "name": "Pião da Casa Própria",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "_id": "Gd7DyLTO5rFkDxYl",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943529712,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Uma cólica brutal agarra seu torso no meio do combo. Você se dobra ofegante, incapaz de continuar, e todos veem sua guarda se abrir.</p><div class=\"et-card-mechanic\"><p>Você não pode usar reações até o final do seu próximo turno. A primeira criatura que atacar você antes disso terá vantagem.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/eMGUQ4Z1eCgAAAAi/tired-damn.gif\" /></div></div>",
+      "name": "Córego nas Costelas",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "_id": "rNCMqXksvuAcPN25",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943537714,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Quando foi que ele botou isso aí?</p><div class=\"et-card-mechanic\"><p>O alvo do seu ataque pode usar uma reação, como se ele tivesse preparado uma ação ao seu ataque.</p></div><div class=\"et-card-media\"><img src=\"https://media.tenor.com/KZbO6VVTHW4AAAAC/tw.gif\" alt=\"Inimigo reagindo rápido\" /></div></div>",
+      "name": "Você Ativou Minha Carta Armadilha!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "_id": "rIhH4kT6xHmekh01",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789944469383,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você bate a cabeça e fica confuso até o fim do seu próximo turno.</p><div class=\"et-card-mechanic\"><p>Agora e no início do próximo turno, role 1d10 para definir o que você faz:</p><table><thead><tr><th>d10</th><th>Comportamento</th></tr></thead><tbody><tr><td>1</td><td>A criatura usa todo o seu movimento para se mover em uma direção aleatória. Para determinar a direção, jogue um d8 e atribua uma direção para cada face do dado. A criatura não realiza uma ação neste turno.</td></tr><tr><td>2-6</td><td>A criatura não se move nem realiza ações neste turno.</td></tr><tr><td>7-8</td><td>A criatura usa sua ação para realizar um ataque corpo a corpo contra uma criatura aleatoriamente determinada ao seu alcance. Se não houver nenhuma criatura ao seu alcance, a criatura não faz nada neste turno.</td></tr><tr><td>9-10</td><td>A criatura pode agir e se mover normalmente.</td></tr></tbody></table></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dwVkKNY2s1MAAAAd/pokemon-piplup.gif\" /></div></div>",
+      "name": "Bateu a Cabeça",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "_id": "izM0kPZiebT6XwAk",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789944694688,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Seu corpo traí suas intenções — em vez de acertar o inimigo, você instintivamente empurra o aliado mais próximo para fora do caminho, ou se joga na frente dele. Seu ataque é desperdiçado.</p><div class=\"et-card-mechanic\"><p>Você não pode realizar ações hostis até o início do seu próximo turno. Se houver uma criatura não hostil, ela deve devem realizar um [[/save str dc=15]] ou [[/save dex dc=15]], e se falhar será empurrado 5 ft na direção oposta a você.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/Cwjp3AGG1zwAAAAd/penguin.gif\" /></div></div>",
+      "name": "Impulso de Proteção",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "_id": "oohzFpGlabNikrrW",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943773950,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Se o alvo do ataque tem 0 de deslocamento por qualquer motivo que não seja por estar agarrado, rerole a tabela.</p><div class=\"et-card-mechanic\"><p>O alvo do ataque pode usar uma reação e realizar um [[/check acr dc=15]]. Ele se move um número de ft igual ao resultado do teste, desviando dos ataques. Este deslocamento não provoca ataque de oportunidade.</p><p>Se o alvo estava agarrado, quem estava o agarrando deve ser bem-sucedido em um [[/check ath]] (CD igual ao teste de Acrobacia do alvo), para manter o agarrão e impedir que ele se mova.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/IvqVuIJx6mUAAAAd/elden-ring.gif\" /></div></div>",
+      "name": "PvP em Souls Like",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "_id": "JmvzflK8DP7lY7fK",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789943816186,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você dá mal jeito na execução do ataque e torce o pé.</p><div class=\"et-card-mechanic\"><p>Você fica lento até o final do seu próximo turno ou até receber cura mágica. Além disto, você deve passar em uma [[/save con dc=15]] ou ficará caído.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/StDzQsd1-cQAAAAd/markiplier-creepy.gif\" /></div></div>",
+      "name": "Pé Torcido",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "_id": "3dyQtzRL2RAYrDAI",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789944095152,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Você se mete uma situação complicada e fica preso nela.</p><div class=\"et-card-mechanic\"><p>Você fica &amp;Reference[restrained]. Com uma ação, faça um [[/check ath dc=15]], libertando-se em um sucesso. O efeito também encerra imediatamente se você sair do seu espaço atual.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/ZliCxFlu6hwAAAAd/kitty-cute-kitty.gif\" /></div></div>",
+      "name": "Rabo Preso",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "_id": "INSwa8Owkw58x9D6",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789944117626,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">No meio do golpe, uma realização profunda o atinge: violência não é a resposta. Sua mão hesita, e o momento se perde.</p><div class=\"et-card-mechanic\"><p>Você não pode realizar ações hostis até o final do seu próximo turno. No início do seu próximo turno, pode tentar um [[/save wis dc=15]] para superar a crise de fé e agir normalmente. Se falhar, só pode usar Esquiva ou Recuar.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dXZniYoGoQoAAAAC/nervous-nervous-anime.gif\" /></div></div>",
+      "name": "Epifania Inoportuna",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "_id": "9EofukKxUrKyJOee",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789944163761,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Se você é imune a amedrontado, rerole a tabela.</p><div class=\"et-card-mechanic\"><p>Do contrário, você fica &amp;Reference[frightened] pelo alvo até o fim do combate. No final de cada um dos seus turnos, faça [[/save wis dc=15]]. Em sucesso, a condição encerra.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/dTBB2FfnBVUAAAAC/hot-horror.gif\" /></div></div>",
+      "name": "Ele Está Armado!",
+      "documentUuid": null
+    },
+    {
+      "type": "text",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "_id": "hjIUJGbLnNwnOVcd",
+      "img": "icons/svg/d20-black.svg",
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": 1789764730320,
+        "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      },
+      "description": "<div class=\"et-critical-table-card is-fumble\"><p class=\"et-card-lore\">Sua falha grave destrói a sua moral. Ao verem você vacilar e escancarar a sua guarda, os adversários se inflamam com um fogo interno que culmina em um estrondoso grito de guerra enquanto avançam.</p><div class=\"et-card-mechanic\"><p>O alvo e os aliados dele ganham <strong>1 Dado de Convicção (1d6)</strong>. Eles podem gastá-lo (sem requerer ação) para somar a uma rolagem de <strong>Ataque, Dano ou Teste de Resistência</strong> até o fim do combate. O dado pode ser rolado após ver o resultado do d20 original, mas antes do Mestre declarar as consequências da rolagem.</p></div><div class=\"et-card-media\"><img src=\"https://media1.tenor.com/m/SNK7q18oN-MAAAAd/ao-t-attack-on-titan.gif\" /></div></div>",
+      "name": "Adversários Inflamados",
+      "documentUuid": null
+    }
+  ],
+  "formula": "1d20",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.1.2",
+    "coreVersion": "13.351",
+    "createdTime": 1681434818871,
+    "modifiedTime": 1795045701514,
+    "lastModifiedBy": "Xlx5XgXv68kjaoEi",
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "endless-tower",
+      "uuid": "RollTable.zOTdS9OTm2ShnOJa",
+      "coreVersion": "13.351",
+      "systemId": "dnd5e",
+      "systemVersion": "5.2.5"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

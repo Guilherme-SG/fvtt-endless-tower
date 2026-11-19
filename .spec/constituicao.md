@@ -48,11 +48,10 @@ Avisos de combate épicos, chefes e alertas cinemáticos DEVEM usar o layout Edg
 
 ## P-006 [DEVE] Estrutura padronizada e equilíbrio de tabelas críticas
 
-Tabelas de acertos e falhas críticas (`tables/critical/`) DEVEM seguir a formatação HTML com cabeçalho `<h3>` centralizado para o título do golpe, bloco escuro com borda lateral para flavor text e parágrafo de mecânica utilizando notação de rolagem interativa do Foundry (`[[/save ...]]` ou `[[/check ...]]`).
+Tabelas de acertos e falhas críticas (`data/tables/critical/`) DEVEM manter o título do efeito no campo `name` de cada entrada (sem duplicação com `<h3>` dentro de `description`) e usar a estrutura HTML semântica do Celestial Chronicle Design System (`.et-critical-table-card` com variante `.is-hit` ou `.is-fumble`), contendo parágrafo opcional `<p class="et-card-lore">`, bloco `<div class="et-card-mechanic">` utilizando notação de rolagem interativa do Foundry (`[[/save ...]]` ou `[[/check ...]]`) e `<div class="et-card-media">` preservando os `<img>` originais quando existentes, sem `style=` inline nem cores hexadecimais hardcoded.
 As Classes de Dificuldade (DCs) DEVEM ser padronizadas:
 - CD fixa **15** para testes de resistência ou perícias em acertos críticos.
 - CD fixa **10** para testes de Constituição de recuperação em falhas críticas.
-*(Nota: As colorações e temas visuais específicos poderão evoluir de acordo com a maturação do Design System).*
 
 - verificação(teste): @principle:P-006
 
@@ -88,7 +87,7 @@ Todo token visual e componente do Celestial Chronicle Design System DEVE ser gov
 1. **W3C WCAG 2.1**: contraste luminoso calculado (`>= 7.0:1` para texto primário em fichas, `>= 4.5:1` AA para texto terciário/muted e acentos dourados, `>= 3.0:1` SC 1.4.11 para ícones de controle).
 2. **Anti-Halação**: textos em superfícies de leitura contínua DEVEM respeitar teto máximo `<= 15.0:1` (proibido `#ffffff` sobre `#000000`).
 3. **Anti-Wireframe (Regra 60-30-10)**: bordas estruturais internas (`role: "border-hairline"`) DEVEM manter opacidade `<= 0.16`, reservando ouro envelhecido para 10% focais.
-4. **Contratos Anti-Box-in-Box & Zero Layout Drift**: conteúdos customizados no chat (`.et-abracado-chat-card`) NÃO devem criar containers externos redundantes dentro de `.chat-message`, e variantes de ficha `.et-sheet` ou `#context-menu` NÃO devem sobrescrever layout nativo.
+4. **Contratos Anti-Box-in-Box & Zero Layout Drift**: conteúdos customizados no chat (`.et-abracado-chat-card`, `.et-critical-table-card`) NÃO devem criar containers externos redundantes dentro de `.chat-message`, e variantes de ficha `.et-sheet` ou `#context-menu` NÃO devem sobrescrever layout nativo.
 
 - verificação(teste): @principle:P-011
 
